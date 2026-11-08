@@ -1515,6 +1515,10 @@
         <span>+</span> Nueva Pieza
       </button>
 
+      <button class="btn-lock-session" onclick="openSyncMigrationModal()" title="Migrar o respaldar tus APIs y modificaciones entre el archivo local y la Web" style="border-color: rgba(35, 131, 226, 0.35); color: #2383e2;">
+        <span>🔄</span> Migrar Datos / APIs
+      </button>
+
       <a href="../" class="btn-lock-session" style="text-decoration: none;" title="Ir a la Landing Pública (@soyorostegui)">
         <span>🌐</span> Hub
       </a>
@@ -1522,6 +1526,69 @@
       <button class="btn-lock-session" onclick="lockStudioSession()" title="Bloquear sesión del estudio">
         <span>🔒</span> Bloquear
       </button>
+    </div>
+  </div>
+
+  <!-- BANNER AUTOMÁTICO DE MIGRACIÓN EN 1 CLIC (SOLO APARECE EN ARCHIVO LOCAL CON DATOS) -->
+  <div id="localToWebMigrationBanner" style="display: none; margin-bottom: 18px; padding: 14px 18px; border-radius: 10px; background: linear-gradient(90deg, rgba(35, 131, 226, 0.12) 0%, rgba(144, 101, 176, 0.12) 100%); border: 1.5px solid rgba(35, 131, 226, 0.4); align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 22px;">🚀</span>
+      <div>
+        <div style="font-size: 13.5px; font-weight: 700; color: var(--text-main);">¡Tus APIs y modificaciones están guardadas en este navegador local!</div>
+        <div style="font-size: 12px; color: var(--text-muted);">Como el navegador aísla la memoria entre <code>file://</code> y <code>soyorostegui.github.io</code>, pásalas a tu web oficial con un solo clic:</div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <button onclick="pushLocalDataToWebOneClick()" style="background: #2383e2; color: #fff; border: none; padding: 9px 14px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(35,131,226,0.25);">
+        ⚡ Enviar mis APIs y Cambios a soyorostegui.github.io (1 Clic)
+      </button>
+      <button onclick="downloadFullStudioBackup()" style="background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
+        💾 Descargar Respaldo (.json)
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL DE MIGRACIÓN Y RESPALDO COMPLETO (APIs + PIEZAS + HISTORIAL) -->
+  <div id="syncMigrationModal" class="modal-overlay" onclick="if(event.target===this) closeSyncMigrationModal()">
+    <div class="modal-card" style="max-width: 560px;">
+      <div class="modal-header">
+        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #2383e2; margin-bottom: 4px;">Sincronización Local ↔ Web</div>
+        <h3 style="font-size: 18px; font-weight: 700;">🔄 Migrar y Respaldar APIs + Modificaciones</h3>
+      </div>
+      <div class="modal-body" style="display: flex; flex-direction: column; gap: 14px; font-size: 13px; line-height: 1.5;">
+        <p style="color: var(--text-muted);">
+          Por seguridad web, los navegadores guardan tus claves API y los cambios que haces en las tarjetas dentro de la memoria local de cada dirección (<code>file://</code> en tu PC vs. <code>https://soyorostegui.github.io</code> en la web). Además, GitHub bloquea automáticamente cualquier clave API si se sube escrita dentro del código público.
+        </p>
+
+        <div style="padding: 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border);">
+          <div style="font-weight: 700; margin-bottom: 6px;">Opción 1: Envío Directo en 1 Clic (Desde tu archivo local a la Web)</div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">
+            Si estás abriendo el archivo local donde ya tenías tus APIs y modificaciones, pulsa este botón y se abrirá tu web oficial con todo cargado automáticamente:
+          </p>
+          <button onclick="pushLocalDataToWebOneClick()" style="width: 100%; background: #2383e2; color: #fff; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer;">
+            🚀 Enviar todo a https://soyorostegui.github.io/studio/ ahora
+          </button>
+        </div>
+
+        <div style="padding: 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border);">
+          <div style="font-weight: 700; margin-bottom: 6px;">Opción 2: Archivo de Respaldo Completo (.json)</div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">
+            Descarga un archivo con tus APIs, piezas editadas e historial de chat para cargarlo en cualquier otro navegador o celular:
+          </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button onclick="downloadFullStudioBackup()" style="flex: 1; background: var(--text-main); color: #fff; border: none; padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 600; cursor: pointer;">
+              📥 Descargar mis Datos + APIs (.json)
+            </button>
+            <label style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 600; cursor: pointer; text-align: center;">
+              📤 Cargar Archivo (.json)
+              <input type="file" accept=".json" style="display: none;" onchange="importFullStudioBackupFile(event)">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="justify-content: flex-end;">
+        <button class="btn-secondary" onclick="closeSyncMigrationModal()">Cerrar</button>
+      </div>
     </div>
   </div>
 
@@ -5119,8 +5186,157 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       }
     }
 
+    // ============================================================
+    // PUENTE DE MIGRACIÓN EN 1 CLIC (LOCAL file:// <-> WEB GITHUB)
+    // ============================================================
+    function collectAllStudioStorageData() {
+      const data = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith("po_")) {
+          data[k] = localStorage.getItem(k);
+        }
+      }
+      return data;
+    }
+
+    function applyStudioStorageBundle(bundle) {
+      if (!bundle || typeof bundle !== "object") return 0;
+      let count = 0;
+      for (const [k, v] of Object.entries(bundle)) {
+        if (k && k.startsWith("po_") && typeof v === "string") {
+          localStorage.setItem(k, v);
+          count++;
+        }
+      }
+      // Recargar variables en memoria
+      try {
+        const savedPosts = JSON.parse(localStorage.getItem("po_posts_v6"));
+        if (Array.isArray(savedPosts) && savedPosts.length) {
+          posts = savedPosts;
+        }
+      } catch (e) {}
+      try {
+        const rawVault = localStorage.getItem("po_api_vault");
+        if (rawVault) apiVault = JSON.parse(rawVault);
+      } catch (e) {}
+      storedKey = sanitizeApiKey(localStorage.getItem("po_ai_key") || localStorage.getItem("po_gemini_key") || "");
+      currentAiProvider = localStorage.getItem("po_ai_provider") || currentAiProvider || "deepseek";
+      return count;
+    }
+
+    function encodeUtf8Base64Url(str) {
+      const bytes = new TextEncoder().encode(str);
+      let bin = "";
+      for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+      return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    }
+
+    function decodeUtf8Base64Url(b64url) {
+      let b64 = b64url.replace(/-/g, "+").replace(/_/g, "/");
+      while (b64.length % 4) b64 += "=";
+      const bin = atob(b64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      return new TextDecoder().decode(bytes);
+    }
+
+    function checkIncomingWebMigrationHash() {
+      const h = window.location.hash || "";
+      if (!h.startsWith("#po_sync=")) return;
+      try {
+        const encoded = h.slice("#po_sync=".length);
+        const jsonStr = decodeUtf8Base64Url(encoded);
+        const bundle = JSON.parse(jsonStr);
+        const restoredCount = applyStudioStorageBundle(bundle);
+        // Limpiar hash inmediatamente de la barra de direcciones por seguridad
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, "", window.location.pathname + window.location.search);
+        } else {
+          window.location.hash = "";
+        }
+        if (restoredCount > 0) {
+          unlockStudioUI();
+          setTimeout(() => {
+            alert(`✅ ¡Migración exitosa! Se transfirieron tus claves API, modificaciones de tarjetas e historial (${restoredCount} registros) a tu web oficial.`);
+          }, 250);
+        }
+      } catch (err) {
+        console.error("Error al importar paquete #po_sync:", err);
+      }
+    }
+
+    function pushLocalDataToWebOneClick() {
+      const bundle = collectAllStudioStorageData();
+      const keys = Object.keys(bundle);
+      if (!keys.length) {
+        alert("⚠️ En esta pestaña aún no hay APIs ni cambios guardados. Abre el archivo local donde tenías tus APIs puestas y haz clic allí en este botón.");
+        return;
+      }
+      const jsonStr = JSON.stringify(bundle);
+      const encoded = encodeUtf8Base64Url(jsonStr);
+      const targetUrl = "https://soyorostegui.github.io/studio/#po_sync=" + encoded;
+      window.open(targetUrl, "_blank");
+    }
+
+    function downloadFullStudioBackup() {
+      const bundle = collectAllStudioStorageData();
+      const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "respaldo_soyorostegui_studio.json";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function importFullStudioBackupFile(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const bundle = JSON.parse(String(e.target.result || "{}"));
+          const count = applyStudioStorageBundle(bundle);
+          renderCurrentView();
+          updateApiKeyStatus();
+          updateQuickAiSwitchers();
+          closeSyncMigrationModal();
+          alert(`✅ ¡Respaldo restaurado con éxito! (${count} bloques de datos y APIs cargados).`);
+        } catch (err) {
+          alert("❌ El archivo seleccionado no es un respaldo JSON válido.");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function openSyncMigrationModal() {
+      const m = document.getElementById("syncMigrationModal");
+      if (m) m.classList.add("open");
+    }
+
+    function closeSyncMigrationModal() {
+      const m = document.getElementById("syncMigrationModal");
+      if (m) m.classList.remove("open");
+    }
+
+    function checkShowLocalMigrationBanner() {
+      if (window.location.protocol === "file:") {
+        const hasVault = !!localStorage.getItem("po_api_vault") || !!localStorage.getItem("po_ai_key");
+        const hasPosts = !!localStorage.getItem("po_posts_v6");
+        if (hasVault || hasPosts) {
+          const banner = document.getElementById("localToWebMigrationBanner");
+          if (banner) banner.style.display = "flex";
+        }
+      }
+    }
+
     // Inicializar
+    checkIncomingWebMigrationHash();
     initStudioAuth();
+    checkShowLocalMigrationBanner();
     renderCurrentView();
     updateApiKeyStatus();
     updateQuickAiSwitchers();
