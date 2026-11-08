@@ -1529,65 +1529,73 @@
     </div>
   </div>
 
-  <!-- BANNER AUTOMÁTICO DE MIGRACIÓN EN 1 CLIC (SOLO APARECE EN ARCHIVO LOCAL CON DATOS) -->
+  <!-- BANNER AUTOMÁTICO DE MIGRACIÓN EN 1 CLIC (APARECE SI HAY DATOS LOCALES) -->
   <div id="localToWebMigrationBanner" style="display: none; margin-bottom: 18px; padding: 14px 18px; border-radius: 10px; background: linear-gradient(90deg, rgba(35, 131, 226, 0.12) 0%, rgba(144, 101, 176, 0.12) 100%); border: 1.5px solid rgba(35, 131, 226, 0.4); align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;">
     <div style="display: flex; align-items: center; gap: 12px;">
       <span style="font-size: 22px;">🚀</span>
       <div>
-        <div style="font-size: 13.5px; font-weight: 700; color: var(--text-main);">¡Tus APIs y modificaciones están guardadas en este navegador local!</div>
-        <div style="font-size: 12px; color: var(--text-muted);">Como el navegador aísla la memoria entre <code>file://</code> y <code>soyorostegui.github.io</code>, pásalas a tu web oficial con un solo clic:</div>
+        <div style="font-size: 13.5px; font-weight: 700; color: var(--text-main);" id="migrationBannerTitle">¡Tus APIs y modificaciones están guardadas en esta ventana!</div>
+        <div style="font-size: 12px; color: var(--text-muted);" id="migrationBannerDesc">Pásalas a tu web oficial <code>soyorostegui.github.io/studio</code> con un clic o copiando tu código de migración:</div>
       </div>
     </div>
     <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-      <button onclick="pushLocalDataToWebOneClick()" style="background: #2383e2; color: #fff; border: none; padding: 9px 14px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(35,131,226,0.25);">
-        ⚡ Enviar mis APIs y Cambios a soyorostegui.github.io (1 Clic)
-      </button>
-      <button onclick="downloadFullStudioBackup()" style="background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
-        💾 Descargar Respaldo (.json)
+      <a id="bannerDirectSyncAnchor" href="https://soyorostegui.github.io/studio/" target="_blank" onclick="refreshSyncLinksAndCopy()" style="text-decoration: none; background: #2383e2; color: #fff; border: none; padding: 9px 14px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(35,131,226,0.25); display: inline-flex; align-items: center; gap: 6px;">
+        ⚡ Abrir Web con mis APIs y Cambios (1 Clic)
+      </a>
+      <button type="button" onclick="openSyncMigrationModal()" style="background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
+        📋 Copiar / Pegar Código de Migración
       </button>
     </div>
   </div>
 
   <!-- MODAL DE MIGRACIÓN Y RESPALDO COMPLETO (APIs + PIEZAS + HISTORIAL) -->
   <div id="syncMigrationModal" class="modal-overlay" onclick="if(event.target===this) closeSyncMigrationModal()">
-    <div class="modal-card" style="max-width: 560px;">
-      <div class="modal-header">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #2383e2; margin-bottom: 4px;">Sincronización Local ↔ Web</div>
-        <h3 style="font-size: 18px; font-weight: 700;">🔄 Migrar y Respaldar APIs + Modificaciones</h3>
+    <div class="modal-card" style="max-width: 580px;">
+      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #2383e2; margin-bottom: 4px;">Sincronización Local ↔ Web</div>
+          <h3 style="font-size: 18px; font-weight: 700;">🔄 Migrar y Respaldar APIs + Modificaciones</h3>
+        </div>
+        <button type="button" onclick="closeSyncMigrationModal()" style="background:none; border:none; font-size:18px; cursor:pointer; color:var(--text-muted);">✕</button>
       </div>
       <div class="modal-body" style="display: flex; flex-direction: column; gap: 14px; font-size: 13px; line-height: 1.5;">
-        <p style="color: var(--text-muted);">
-          Por seguridad web, los navegadores guardan tus claves API y los cambios que haces en las tarjetas dentro de la memoria local de cada dirección (<code>file://</code> en tu PC vs. <code>https://soyorostegui.github.io</code> en la web). Además, GitHub bloquea automáticamente cualquier clave API si se sube escrita dentro del código público.
-        </p>
+        <div id="syncModalStatusMsg" style="display: none; padding: 10px 12px; border-radius: 8px; font-weight: 600; font-size: 12.5px;"></div>
 
         <div style="padding: 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border);">
-          <div style="font-weight: 700; margin-bottom: 6px;">Opción 1: Envío Directo en 1 Clic (Desde tu archivo local a la Web)</div>
-          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">
-            Si estás abriendo el archivo local donde ya tenías tus APIs y modificaciones, pulsa este botón y se abrirá tu web oficial con todo cargado automáticamente:
+          <div style="font-weight: 700; margin-bottom: 6px;">Opción A (Más infalible): Código Rápido Copiar / Pegar</div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
+            1️⃣ En la ventana donde tienes tus APIs y cambios, pulsa <strong>«📋 Copiar mis Datos + APIs»</strong>.<br>
+            2️⃣ Entra a <code>soyorostegui.github.io/studio/</code>, abre este mismo botón <strong>🔄 Migrar Datos / APIs</strong>, pega el código aquí abajo y pulsa <strong>«✅ Restaurar Todo Aquí»</strong>:
           </p>
-          <button onclick="pushLocalDataToWebOneClick()" style="width: 100%; background: #2383e2; color: #fff; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer;">
-            🚀 Enviar todo a https://soyorostegui.github.io/studio/ ahora
-          </button>
+          <textarea id="syncTokenInput" rows="3" placeholder="Aquí aparecerá tu código de respaldo o pega aquí el código copiado..." style="width: 100%; font-family: monospace; font-size: 11px; padding: 8px 10px; border-radius: 7px; border: 1px solid var(--border-strong); background: #fff; color: var(--text-main); resize: vertical; margin-bottom: 8px;"></textarea>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" onclick="copyStudioSyncCode()" style="flex: 1; background: #2383e2; color: #fff; border: none; padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer;">
+              📋 Copiar mis Datos + APIs
+            </button>
+            <button type="button" onclick="restoreStudioFromSyncCode()" style="flex: 1; background: #18794e; color: #fff; border: none; padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer;">
+              ✅ Restaurar Código Pegado Aquí
+            </button>
+          </div>
         </div>
 
         <div style="padding: 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border);">
-          <div style="font-weight: 700; margin-bottom: 6px;">Opción 2: Archivo de Respaldo Completo (.json)</div>
-          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">
-            Descarga un archivo con tus APIs, piezas editadas e historial de chat para cargarlo en cualquier otro navegador o celular:
-          </p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <button onclick="downloadFullStudioBackup()" style="flex: 1; background: var(--text-main); color: #fff; border: none; padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 600; cursor: pointer;">
-              📥 Descargar mis Datos + APIs (.json)
+          <div style="font-weight: 700; margin-bottom: 6px;">Opción B: Enlace Directo en 1 Clic o Archivo (.json)</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
+            <a id="modalDirectSyncAnchor" href="https://soyorostegui.github.io/studio/" target="_blank" onclick="refreshSyncLinksAndCopy()" style="flex: 1; text-decoration: none; text-align: center; background: var(--text-main); color: #fff; padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600;">
+              🚀 Abrir Web con Datos (1 Clic)
+            </a>
+            <button type="button" onclick="downloadFullStudioBackup()" style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
+              📥 Descargar .JSON
             </button>
-            <label style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 600; cursor: pointer; text-align: center;">
-              📤 Cargar Archivo (.json)
+            <label style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; text-align: center;">
+              📤 Subir .JSON
               <input type="file" accept=".json" style="display: none;" onchange="importFullStudioBackupFile(event)">
             </label>
           </div>
         </div>
       </div>
       <div class="modal-footer" style="justify-content: flex-end;">
-        <button class="btn-secondary" onclick="closeSyncMigrationModal()">Cerrar</button>
+        <button type="button" class="btn-secondary" onclick="closeSyncMigrationModal()">Cerrar</button>
       </div>
     </div>
   </div>
@@ -5241,6 +5249,86 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       return new TextDecoder().decode(bytes);
     }
 
+    function showSyncModalStatus(text, isError) {
+      const box = document.getElementById("syncModalStatusMsg");
+      if (!box) return;
+      box.style.display = "block";
+      box.style.background = isError ? "var(--tag-red-bg)" : "var(--tag-green-bg)";
+      box.style.color = isError ? "var(--tag-red-text)" : "var(--tag-green-text)";
+      box.textContent = text;
+    }
+
+    function buildCurrentSyncToken() {
+      const bundle = collectAllStudioStorageData();
+      if (!Object.keys(bundle).length) return "";
+      return encodeUtf8Base64Url(JSON.stringify(bundle));
+    }
+
+    function refreshSyncLinksAndCopy() {
+      const token = buildCurrentSyncToken();
+      const targetUrl = token
+        ? "https://soyorostegui.github.io/studio/#po_sync=" + token
+        : "https://soyorostegui.github.io/studio/";
+      const a1 = document.getElementById("bannerDirectSyncAnchor");
+      const a2 = document.getElementById("modalDirectSyncAnchor");
+      if (a1) a1.href = targetUrl;
+      if (a2) a2.href = targetUrl;
+      const inp = document.getElementById("syncTokenInput");
+      if (inp && token) inp.value = token;
+      if (token && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(token).catch(() => {});
+      }
+    }
+
+    function copyStudioSyncCode() {
+      const token = buildCurrentSyncToken();
+      const inp = document.getElementById("syncTokenInput");
+      if (!token) {
+        showSyncModalStatus("⚠️ En esta ventana aún no hay claves API ni cambios guardados para copiar.", true);
+        return;
+      }
+      if (inp) {
+        inp.value = token;
+        inp.focus();
+        inp.select();
+      }
+      try {
+        document.execCommand("copy");
+      } catch (e) {}
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(token).catch(() => {});
+      }
+      showSyncModalStatus("✅ ¡Código copiado al portapapeles! Ahora ve a soyorostegui.github.io/studio/, abre '🔄 Migrar Datos / APIs', pégalo en esta misma caja y pulsa 'Restaurar Código Pegado Aquí'.", false);
+    }
+
+    function restoreStudioFromSyncCode() {
+      const inp = document.getElementById("syncTokenInput");
+      let raw = inp ? inp.value.trim() : "";
+      if (!raw) {
+        showSyncModalStatus("⚠️ Primero pega el código de respaldo en la caja de texto de arriba.", true);
+        return;
+      }
+      try {
+        if (raw.includes("#po_sync=")) {
+          raw = raw.split("#po_sync=")[1].trim();
+        }
+        let bundle = null;
+        if (raw.startsWith("{")) {
+          bundle = JSON.parse(raw);
+        } else {
+          const decoded = decodeUtf8Base64Url(raw);
+          bundle = JSON.parse(decoded);
+        }
+        const count = applyStudioStorageBundle(bundle);
+        renderCurrentView();
+        updateApiKeyStatus();
+        updateQuickAiSwitchers();
+        showSyncModalStatus(`✅ ¡Listo! Se restauraron tus APIs, tarjetas modificadas e historial (${count} registros). Ya puedes cerrar esta ventana.`, false);
+      } catch (err) {
+        showSyncModalStatus("❌ El código pegado está incompleto o no es válido. Vuelve a copiarlo completo.", true);
+      }
+    }
+
     function checkIncomingWebMigrationHash() {
       const h = window.location.hash || "";
       if (!h.startsWith("#po_sync=")) return;
@@ -5249,7 +5337,6 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
         const jsonStr = decodeUtf8Base64Url(encoded);
         const bundle = JSON.parse(jsonStr);
         const restoredCount = applyStudioStorageBundle(bundle);
-        // Limpiar hash inmediatamente de la barra de direcciones por seguridad
         if (window.history && window.history.replaceState) {
           window.history.replaceState(null, "", window.location.pathname + window.location.search);
         } else {
@@ -5257,26 +5344,18 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
         }
         if (restoredCount > 0) {
           unlockStudioUI();
-          setTimeout(() => {
-            alert(`✅ ¡Migración exitosa! Se transfirieron tus claves API, modificaciones de tarjetas e historial (${restoredCount} registros) a tu web oficial.`);
-          }, 250);
+          const banner = document.getElementById("localToWebMigrationBanner");
+          const title = document.getElementById("migrationBannerTitle");
+          const desc = document.getElementById("migrationBannerDesc");
+          if (banner && title && desc) {
+            banner.style.display = "flex";
+            title.textContent = "✅ ¡Tus APIs y modificaciones ya quedaron cargadas en tu Web Oficial!";
+            desc.textContent = `Se importaron automáticamente ${restoredCount} bloques de configuración (Bóveda Multi-IA, piezas editadas e historial).`;
+          }
         }
       } catch (err) {
         console.error("Error al importar paquete #po_sync:", err);
       }
-    }
-
-    function pushLocalDataToWebOneClick() {
-      const bundle = collectAllStudioStorageData();
-      const keys = Object.keys(bundle);
-      if (!keys.length) {
-        alert("⚠️ En esta pestaña aún no hay APIs ni cambios guardados. Abre el archivo local donde tenías tus APIs puestas y haz clic allí en este botón.");
-        return;
-      }
-      const jsonStr = JSON.stringify(bundle);
-      const encoded = encodeUtf8Base64Url(jsonStr);
-      const targetUrl = "https://soyorostegui.github.io/studio/#po_sync=" + encoded;
-      window.open(targetUrl, "_blank");
     }
 
     function downloadFullStudioBackup() {
@@ -5290,6 +5369,7 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       a.click();
       a.remove();
       URL.revokeObjectURL(url);
+      showSyncModalStatus("✅ Archivo respaldo_soyorostegui_studio.json descargado.", false);
     }
 
     function importFullStudioBackupFile(event) {
@@ -5303,27 +5383,28 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
           renderCurrentView();
           updateApiKeyStatus();
           updateQuickAiSwitchers();
-          closeSyncMigrationModal();
-          alert(`✅ ¡Respaldo restaurado con éxito! (${count} bloques de datos y APIs cargados).`);
+          showSyncModalStatus(`✅ ¡Archivo restaurado con éxito! (${count} bloques de datos y APIs cargados).`, false);
         } catch (err) {
-          alert("❌ El archivo seleccionado no es un respaldo JSON válido.");
+          showSyncModalStatus("❌ El archivo seleccionado no es un respaldo JSON válido.", true);
         }
       };
       reader.readAsText(file);
     }
 
     function openSyncMigrationModal() {
+      refreshSyncLinksAndCopy();
       const m = document.getElementById("syncMigrationModal");
-      if (m) m.classList.add("open");
+      if (m) m.style.display = "flex";
     }
 
     function closeSyncMigrationModal() {
       const m = document.getElementById("syncMigrationModal");
-      if (m) m.classList.remove("open");
+      if (m) m.style.display = "none";
     }
 
     function checkShowLocalMigrationBanner() {
-      if (window.location.protocol === "file:") {
+      refreshSyncLinksAndCopy();
+      if (window.location.hostname !== "soyorostegui.github.io") {
         const hasVault = !!localStorage.getItem("po_api_vault") || !!localStorage.getItem("po_ai_key");
         const hasPosts = !!localStorage.getItem("po_posts_v6");
         if (hasVault || hasPosts) {
