@@ -1515,10 +1515,6 @@
         <span>+</span> Nueva Pieza
       </button>
 
-      <button class="btn-lock-session" onclick="openSyncMigrationModal()" title="Migrar o respaldar tus APIs y modificaciones entre el archivo local y la Web" style="border-color: rgba(35, 131, 226, 0.35); color: #2383e2;">
-        <span>🔄</span> Migrar Datos / APIs
-      </button>
-
       <a href="../" class="btn-lock-session" style="text-decoration: none;" title="Ir a la Landing Pública (@soyorostegui)">
         <span>🌐</span> Hub
       </a>
@@ -1526,102 +1522,6 @@
       <button class="btn-lock-session" onclick="lockStudioSession()" title="Bloquear sesión del estudio">
         <span>🔒</span> Bloquear
       </button>
-    </div>
-  </div>
-
-  <!-- BANNER AUTOMÁTICO DE MIGRACIÓN EN 1 CLIC (APARECE SI HAY DATOS LOCALES) -->
-  <div id="localToWebMigrationBanner" style="display: none; margin-bottom: 18px; padding: 14px 18px; border-radius: 10px; background: linear-gradient(90deg, rgba(35, 131, 226, 0.12) 0%, rgba(144, 101, 176, 0.12) 100%); border: 1.5px solid rgba(35, 131, 226, 0.4); align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;">
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <span style="font-size: 22px;">🚀</span>
-      <div>
-        <div style="font-size: 13.5px; font-weight: 700; color: var(--text-main);" id="migrationBannerTitle">¡Tus APIs y modificaciones están guardadas en esta ventana!</div>
-        <div style="font-size: 12px; color: var(--text-muted);" id="migrationBannerDesc">Pásalas a tu web oficial <code>soyorostegui.github.io/studio</code> con un clic o copiando tu código de migración:</div>
-      </div>
-    </div>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-      <a id="bannerDirectSyncAnchor" href="https://soyorostegui.github.io/studio/" target="_blank" onclick="refreshSyncLinksAndCopy()" style="text-decoration: none; background: #2383e2; color: #fff; border: none; padding: 9px 14px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(35,131,226,0.25); display: inline-flex; align-items: center; gap: 6px;">
-        ⚡ Abrir Web con mis APIs y Cambios (1 Clic)
-      </a>
-      <button type="button" onclick="openSyncMigrationModal()" style="background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
-        📋 Copiar / Pegar Código de Migración
-      </button>
-    </div>
-  </div>
-
-  <!-- MODAL DE MIGRACIÓN Y RESPALDO COMPLETO (APIs + PIEZAS + HISTORIAL) -->
-  <div id="syncMigrationModal" class="modal-overlay" onclick="if(event.target===this) closeSyncMigrationModal()">
-    <div class="modal-card" style="max-width: 580px;">
-      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #2383e2; margin-bottom: 4px;">Sincronización Local ↔ Web</div>
-          <h3 style="font-size: 18px; font-weight: 700;">🔄 Migrar y Respaldar APIs + Modificaciones</h3>
-        </div>
-        <button type="button" onclick="closeSyncMigrationModal()" style="background:none; border:none; font-size:18px; cursor:pointer; color:var(--text-muted);">✕</button>
-      </div>
-      <div class="modal-body" style="display: flex; flex-direction: column; gap: 14px; font-size: 13px; line-height: 1.5;">
-        <div id="syncModalStatusMsg" style="display: none; padding: 10px 12px; border-radius: 8px; font-weight: 600; font-size: 12.5px;"></div>
-
-        <!-- NUEVO: GUARDADO AUTOMÁTICO EN EL REPOSITORIO GITHUB -->
-        <div style="padding: 14px; border-radius: 10px; background: linear-gradient(135deg, rgba(35, 131, 226, 0.08) 0%, rgba(144, 101, 176, 0.08) 100%); border: 1.5px solid rgba(35, 131, 226, 0.35);">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
-            <div style="font-weight: 700; color: var(--text-main);">☁️ Memoria en el Repositorio (<code>studio-cloud-state.json</code>)</div>
-            <span id="ghCloudStatusBadge" style="font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 99px; background: var(--bg-secondary); color: var(--text-muted);">🔄 Verificando repo...</span>
-          </div>
-          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
-            Cuando abres la web en otro dispositivo, carga automáticamente <code>studio/studio-cloud-state.json</code> desde tu repositorio (con el contexto del chat IA, tus piezas y tus APIs cifradas con tu clave del estudio). Para que el navegador <strong>guarde solo en GitHub cada nuevo mensaje del chat IA</strong> desde cualquier lugar, pega aquí una vez un <a href="https://github.com/settings/tokens/new?description=SoyOrostegui-Studio-Sync&scopes=repo" target="_blank" style="color:#2383e2; font-weight:600;">Token de GitHub (scope: repo)</a>:
-          </p>
-          <div style="display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
-            <input type="password" id="ghRepoTokenInput" placeholder="ghp_... o github_pat_... (se guarda cifrado)" style="flex: 1; min-width: 200px; padding: 8px 10px; border-radius: 7px; border: 1px solid var(--border-strong); font-size: 12px;">
-            <button type="button" onclick="saveGitHubRepoTokenAndPush()" style="background: #2383e2; color: #fff; border: none; padding: 8px 12px; border-radius: 7px; font-size: 12px; font-weight: 700; cursor: pointer;">
-              ☁️ Conectar y Guardar en Repo
-            </button>
-          </div>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <button type="button" onclick="pushStateToGitHubRepoNow(true)" style="flex: 1; background: var(--text-main); color: #fff; border: none; padding: 8px 10px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
-              ⬆️ Subir Contexto IA + Cambios al Repo Ahora
-            </button>
-            <button type="button" onclick="pullStateFromGitHubRepoNow(true)" style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 8px 10px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
-              ⬇️ Cargar Último Contexto desde el Repo
-            </button>
-          </div>
-        </div>
-
-        <div style="padding: 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border);">
-          <div style="font-weight: 700; margin-bottom: 6px;">Opción A (Sin Token): Código Rápido Copiar / Pegar</div>
-          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
-            1️⃣ En la ventana donde tienes tus APIs y cambios, pulsa <strong>«📋 Copiar mis Datos + APIs»</strong>.<br>
-            2️⃣ Entra a <code>soyorostegui.github.io/studio/</code> (o pégamelo en el chat de Antigravity para subirlo yo al repositorio), pega el código aquí abajo y pulsa <strong>«✅ Restaurar Todo Aquí»</strong>:
-          </p>
-          <textarea id="syncTokenInput" rows="3" placeholder="Aquí aparecerá tu código de respaldo o pega aquí el código copiado..." style="width: 100%; font-family: monospace; font-size: 11px; padding: 8px 10px; border-radius: 7px; border: 1px solid var(--border-strong); background: #fff; color: var(--text-main); resize: vertical; margin-bottom: 8px;"></textarea>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <button type="button" onclick="copyStudioSyncCode()" style="flex: 1; background: #2383e2; color: #fff; border: none; padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer;">
-              📋 Copiar mis Datos + APIs
-            </button>
-            <button type="button" onclick="restoreStudioFromSyncCode()" style="flex: 1; background: #18794e; color: #fff; border: none; padding: 9px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 700; cursor: pointer;">
-              ✅ Restaurar Código Pegado Aquí
-            </button>
-          </div>
-        </div>
-
-        <div style="padding: 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border);">
-          <div style="font-weight: 700; margin-bottom: 6px;">Opción B: Enlace Directo en 1 Clic o Archivo (.json)</div>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
-            <a id="modalDirectSyncAnchor" href="https://soyorostegui.github.io/studio/" target="_blank" onclick="refreshSyncLinksAndCopy()" style="flex: 1; text-decoration: none; text-align: center; background: var(--text-main); color: #fff; padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600;">
-              🚀 Abrir Web con Datos (1 Clic)
-            </a>
-            <button type="button" onclick="downloadFullStudioBackup()" style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
-              📥 Descargar .JSON
-            </button>
-            <label style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 9px 12px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; text-align: center;">
-              📤 Subir .JSON
-              <input type="file" accept=".json" style="display: none;" onchange="importFullStudioBackupFile(event)">
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer" style="justify-content: flex-end;">
-        <button type="button" class="btn-secondary" onclick="closeSyncMigrationModal()">Cerrar</button>
-      </div>
     </div>
   </div>
 
@@ -1905,6 +1805,20 @@
         </div>
       </div>
 
+      <!-- SINCRONIZACIÓN DE CONTEXTO Y BÓVEDA EN REPOSITORIO GITHUB -->
+      <div style="margin-top: 8px; padding: 10px 12px; border-radius: 8px; background: #f8fafc; border: 1px solid var(--border); font-size: 11.5px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-bottom: 6px; flex-wrap: wrap;">
+          <span style="font-weight: 700; color: var(--text-main);">☁️ Persistencia en Repositorio GitHub (Multi-Dispositivo)</span>
+          <span id="ghCloudStatusBadge" style="font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 99px; background: var(--bg-secondary); color: var(--text-muted);">🔄 Verificando...</span>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <input type="password" id="ghRepoTokenInput" class="form-input" placeholder="Token GitHub (ghp_...) para auto-guardar en la nube" style="flex: 1; min-width: 180px; padding: 6px 9px; font-size: 11.5px;">
+          <button type="button" class="ai-inline-btn" style="padding: 6px 10px; font-size: 11.5px; font-weight: 700;" onclick="saveGitHubRepoTokenAndPush()">☁️ Conectar Repo</button>
+          <button type="button" class="ai-inline-btn" style="padding: 6px 10px; font-size: 11.5px;" onclick="pullStateFromGitHubRepoNow(true)" title="Traer último contexto guardado en GitHub">⬇️ Traer</button>
+        </div>
+        <div id="syncModalStatusMsg" style="display: none; margin-top: 6px; padding: 6px 9px; border-radius: 6px; font-weight: 600; font-size: 11px;"></div>
+      </div>
+
       <div class="key-status-box" id="keyStatusBox" style="display:none;"></div>
 
       <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:6px; flex-wrap:wrap;">
@@ -1946,11 +1860,11 @@
       <div style="display:flex; align-items:center; justify-content:space-between; width:100%; gap:4px; flex-wrap:wrap;">
         <div style="display:flex; align-items:center; gap:5px;">
           <span>🧠 <strong>Memoria:</strong> <span id="ctxMsgCountBadge">0</span> msgs</span>
-          <span id="ctxDiskSyncStatus" style="font-size:10.5px; color:#6b7280;">(Guardado en navegador)</span>
+          <span id="ctxDiskSyncStatus" style="font-size:10.5px; color:#6b7280;">(Sincronizado en Repo)</span>
         </div>
         <div style="display:flex; align-items:center; gap:4px; flex-wrap:wrap;">
-          <button class="ai-ctx-btn" id="btnLinkDiskContext" onclick="linkLocalContextFile()" title="Vincular un archivo .MD en tu carpeta para que cada mensaje se guarde automáticamente en tu disco duro">🔗 Auto-guardar .MD</button>
-          <button class="ai-ctx-btn" onclick="exportContextFile('md')" title="Descargar archivo CONTEXTO_CONVERSACIONES_IA.md con toda la memoria y acuerdos">📥 Descargar .MD</button>
+          <button class="ai-ctx-btn" onclick="pushStateToGitHubRepoNow(true)" title="Guardar inmediatamente esta conversación y cambios en tu repositorio GitHub">☁️ Guardar en Repo</button>
+          <button class="ai-ctx-btn" onclick="exportContextFile('md')" title="Descargar archivo CONTEXTO_CONVERSACIONES_IA.md con toda la memoria y acuerdos">📥 .MD</button>
           <button class="ai-ctx-btn" onclick="document.getElementById('ctxFileInput').click()" title="Cargar archivo de contexto (.md o .json) previo">📂 Cargar</button>
           <button class="ai-ctx-btn" onclick="clearChatHistory()" title="Reiniciar historial de conversación" style="color:#b91c1c; border-color:#fecaca;">🗑️</button>
           <input type="file" id="ctxFileInput" accept=".md,.json,.txt" style="display:none;" onchange="importContextFile(event)">
@@ -5223,60 +5137,6 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       }
     }
 
-    // ============================================================
-    // PUENTE DE MIGRACIÓN EN 1 CLIC (LOCAL file:// <-> WEB GITHUB)
-    // ============================================================
-    function collectAllStudioStorageData() {
-      const data = {};
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i);
-        if (k && k.startsWith("po_")) {
-          data[k] = localStorage.getItem(k);
-        }
-      }
-      return data;
-    }
-
-    function applyStudioStorageBundle(bundle) {
-      if (!bundle || typeof bundle !== "object") return 0;
-      let count = 0;
-      for (const [k, v] of Object.entries(bundle)) {
-        if (k && k.startsWith("po_") && typeof v === "string") {
-          localStorage.setItem(k, v);
-          count++;
-        }
-      }
-      // Recargar variables en memoria
-      try {
-        const savedPosts = JSON.parse(localStorage.getItem("po_posts_v6"));
-        if (Array.isArray(savedPosts) && savedPosts.length) {
-          posts = savedPosts;
-        }
-      } catch (e) {}
-      try {
-        const rawVault = localStorage.getItem("po_api_vault");
-        if (rawVault) apiVault = JSON.parse(rawVault);
-      } catch (e) {}
-      try {
-        const rawChat = localStorage.getItem("po_ai_chat_history");
-        if (rawChat) chatHistory = JSON.parse(rawChat);
-      } catch (e) {}
-      importedCustomContextNotes = localStorage.getItem("po_ai_imported_notes") || "";
-      storedKey = sanitizeApiKey(localStorage.getItem("po_ai_key") || localStorage.getItem("po_gemini_key") || "");
-      currentAiProvider = localStorage.getItem("po_ai_provider") || currentAiProvider || "deepseek";
-      currentAiKey = storedKey || (apiVault[currentAiProvider]?.key || "");
-      currentAiModel = localStorage.getItem("po_ai_model") || (apiVault[currentAiProvider]?.model || AI_PROVIDERS[currentAiProvider]?.defaultModel || "deepseek-v4-pro");
-      if (typeof renderSavedChatHistory === "function") renderSavedChatHistory();
-      return count;
-    }
-
-    function encodeUtf8Base64Url(str) {
-      const bytes = new TextEncoder().encode(str);
-      let bin = "";
-      for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
-      return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-    }
-
     function decodeUtf8Base64Url(b64url) {
       let b64 = b64url.replace(/-/g, "+").replace(/_/g, "/");
       while (b64.length % 4) b64 += "=";
@@ -5293,154 +5153,6 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       box.style.background = isError ? "var(--tag-red-bg)" : "var(--tag-green-bg)";
       box.style.color = isError ? "var(--tag-red-text)" : "var(--tag-green-text)";
       box.textContent = text;
-    }
-
-    function buildCurrentSyncToken() {
-      const bundle = collectAllStudioStorageData();
-      if (!Object.keys(bundle).length) return "";
-      return encodeUtf8Base64Url(JSON.stringify(bundle));
-    }
-
-    function refreshSyncLinksAndCopy() {
-      const token = buildCurrentSyncToken();
-      const targetUrl = token
-        ? "https://soyorostegui.github.io/studio/#po_sync=" + token
-        : "https://soyorostegui.github.io/studio/";
-      const a1 = document.getElementById("bannerDirectSyncAnchor");
-      const a2 = document.getElementById("modalDirectSyncAnchor");
-      if (a1) a1.href = targetUrl;
-      if (a2) a2.href = targetUrl;
-      const inp = document.getElementById("syncTokenInput");
-      if (inp && token) inp.value = token;
-      if (token && navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(token).catch(() => {});
-      }
-    }
-
-    function copyStudioSyncCode() {
-      const token = buildCurrentSyncToken();
-      const inp = document.getElementById("syncTokenInput");
-      if (!token) {
-        showSyncModalStatus("⚠️ En esta ventana aún no hay claves API ni cambios guardados para copiar.", true);
-        return;
-      }
-      if (inp) {
-        inp.value = token;
-        inp.focus();
-        inp.select();
-      }
-      try {
-        document.execCommand("copy");
-      } catch (e) {}
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(token).catch(() => {});
-      }
-      showSyncModalStatus("✅ ¡Código copiado al portapapeles! Ahora ve a soyorostegui.github.io/studio/, abre '🔄 Migrar Datos / APIs', pégalo en esta misma caja y pulsa 'Restaurar Código Pegado Aquí'.", false);
-    }
-
-    function restoreStudioFromSyncCode() {
-      const inp = document.getElementById("syncTokenInput");
-      let raw = inp ? inp.value.trim() : "";
-      if (!raw) {
-        showSyncModalStatus("⚠️ Primero pega el código de respaldo en la caja de texto de arriba.", true);
-        return;
-      }
-      try {
-        if (raw.includes("#po_sync=")) {
-          raw = raw.split("#po_sync=")[1].trim();
-        }
-        let bundle = null;
-        if (raw.startsWith("{")) {
-          bundle = JSON.parse(raw);
-        } else {
-          const decoded = decodeUtf8Base64Url(raw);
-          bundle = JSON.parse(decoded);
-        }
-        const count = applyStudioStorageBundle(bundle);
-        renderCurrentView();
-        updateApiKeyStatus();
-        updateQuickAiSwitchers();
-        showSyncModalStatus(`✅ ¡Listo! Se restauraron tus APIs, tarjetas modificadas e historial (${count} registros). Ya puedes cerrar esta ventana.`, false);
-      } catch (err) {
-        showSyncModalStatus("❌ El código pegado está incompleto o no es válido. Vuelve a copiarlo completo.", true);
-      }
-    }
-
-    function checkIncomingWebMigrationHash() {
-      const h = window.location.hash || "";
-      if (!h.startsWith("#po_sync=")) return;
-      try {
-        const encoded = h.slice("#po_sync=".length);
-        const jsonStr = decodeUtf8Base64Url(encoded);
-        const bundle = JSON.parse(jsonStr);
-        const restoredCount = applyStudioStorageBundle(bundle);
-        if (window.history && window.history.replaceState) {
-          window.history.replaceState(null, "", window.location.pathname + window.location.search);
-        } else {
-          window.location.hash = "";
-        }
-        if (restoredCount > 0) {
-          unlockStudioUI();
-          const banner = document.getElementById("localToWebMigrationBanner");
-          const title = document.getElementById("migrationBannerTitle");
-          const desc = document.getElementById("migrationBannerDesc");
-          if (banner && title && desc) {
-            banner.style.display = "flex";
-            title.textContent = "✅ ¡Tus APIs y modificaciones ya quedaron cargadas en tu Web Oficial!";
-            desc.textContent = `Se importaron automáticamente ${restoredCount} bloques de configuración (Bóveda Multi-IA, piezas editadas e historial).`;
-          }
-        }
-      } catch (err) {
-        console.error("Error al importar paquete #po_sync:", err);
-      }
-    }
-
-    function downloadFullStudioBackup() {
-      const bundle = collectAllStudioStorageData();
-      const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: "application/json;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "respaldo_soyorostegui_studio.json";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      showSyncModalStatus("✅ Archivo respaldo_soyorostegui_studio.json descargado.", false);
-    }
-
-    function importFullStudioBackupFile(event) {
-      const file = event.target.files && event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        try {
-          const bundle = JSON.parse(String(e.target.result || "{}"));
-          const count = applyStudioStorageBundle(bundle);
-          renderCurrentView();
-          updateApiKeyStatus();
-          updateQuickAiSwitchers();
-          showSyncModalStatus(`✅ ¡Archivo restaurado con éxito! (${count} bloques de datos y APIs cargados).`, false);
-        } catch (err) {
-          showSyncModalStatus("❌ El archivo seleccionado no es un respaldo JSON válido.", true);
-        }
-      };
-      reader.readAsText(file);
-    }
-
-    function openSyncMigrationModal() {
-      refreshSyncLinksAndCopy();
-      updateGhCloudStatusUI();
-      const tokInp = document.getElementById("ghRepoTokenInput");
-      const savedTok = localStorage.getItem("po_gh_repo_token") || "";
-      if (tokInp && savedTok) tokInp.value = savedTok;
-      const m = document.getElementById("syncMigrationModal");
-      if (m) m.style.display = "flex";
-    }
-
-    function closeSyncMigrationModal() {
-      const m = document.getElementById("syncMigrationModal");
-      if (m) m.style.display = "none";
     }
 
     // ============================================================
@@ -5556,8 +5268,11 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
 
     function updateGhCloudStatusUI(text, colorBg, colorText) {
       const badge = document.getElementById("ghCloudStatusBadge");
+      const savedTok = localStorage.getItem("po_gh_repo_token") || "";
+      const tokInp = document.getElementById("ghRepoTokenInput");
+      if (tokInp && savedTok && !tokInp.value) tokInp.value = savedTok;
       if (!badge) return;
-      const hasToken = !!(localStorage.getItem("po_gh_repo_token") || "").trim();
+      const hasToken = !!savedTok.trim();
       if (text) {
         badge.textContent = text;
         if (colorBg) badge.style.background = colorBg;
@@ -5567,7 +5282,7 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
         badge.style.background = "var(--tag-green-bg)";
         badge.style.color = "var(--tag-green-text)";
       } else {
-        badge.textContent = "🔵 Lectura del Repo Activa (Falta Token para Auto-Subir)";
+        badge.textContent = "🔵 Lectura del Repo Activa";
         badge.style.background = "var(--tag-blue-bg)";
         badge.style.color = "var(--tag-blue-text)";
       }
@@ -5575,7 +5290,7 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
 
     async function pullStateFromGitHubRepoNow(manualTrigger) {
       try {
-        updateGhCloudStatusUI("🔄 Descargando del repo...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
+        updateGhCloudStatusUI("🔄 Descargando...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
         const token = sanitizeApiKey(localStorage.getItem("po_gh_repo_token") || "");
         let cloudObj = null;
 
@@ -5605,7 +5320,6 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
         }
 
         if (!cloudObj) {
-          if (manualTrigger) showSyncModalStatus("⚠️ Aún no hay un estado guardado en el repositorio o se está publicando.", true);
           updateGhCloudStatusUI();
           return;
         }
@@ -5674,12 +5388,13 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       const token = sanitizeApiKey(localStorage.getItem("po_gh_repo_token") || document.getElementById("ghRepoTokenInput")?.value || "");
       if (!token) {
         if (manualTrigger) {
-          showSyncModalStatus("⚠️ Para subir cambios directo desde el navegador a GitHub, pega primero tu Token de GitHub arriba (o pégale tu código de la Opción A a Antigravity en el chat para que él lo suba por ti).", true);
+          openKeyModal();
+          showSyncModalStatus("⚠️ Pega arriba tu Token de GitHub (ghp_...) una sola vez para activar el guardado directo en tu repositorio.", true);
         }
         return;
       }
       try {
-        updateGhCloudStatusUI("☁️ Guardando en GitHub...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
+        updateGhCloudStatusUI("☁️ Guardando...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
         localStorage.setItem("po_last_updated_at", String(Date.now()));
         const stateJson = JSON.stringify(buildCloudStateObject(), null, 2);
         const contextMd = buildContextMarkdown();
@@ -5687,13 +5402,16 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
         await putFileToGitHubRepo(token, GH_STATE_PATH, stateJson, "sync(studio): actualizar contexto IA, piezas y estado en nube");
         await putFileToGitHubRepo(token, GH_CONTEXT_MD_PATH, contextMd, "docs(contexto): actualizar CONTEXTO_CONVERSACIONES_IA.md");
 
-        updateGhCloudStatusUI("🟢 Guardado en Repo (" + new Date().toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" }) + ")", "var(--tag-green-bg)", "var(--tag-green-text)");
+        const timeStr = new Date().toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" });
+        updateGhCloudStatusUI("🟢 Guardado en Repo (" + timeStr + ")", "var(--tag-green-bg)", "var(--tag-green-text)");
+        const syncStatus = document.getElementById("ctxDiskSyncStatus");
+        if (syncStatus) syncStatus.innerText = `☁️ Guardado en Repo (${timeStr})`;
         if (manualTrigger) {
-          showSyncModalStatus("✅ ¡Guardado exitoso en tu repositorio! Tanto studio-cloud-state.json como CONTEXTO_CONVERSACIONES_IA.md ya están en GitHub para cualquier dispositivo.", false);
+          showSyncModalStatus("✅ ¡Guardado exitoso en tu repositorio GitHub!", false);
         }
       } catch (err) {
         console.error("Error subiendo estado a GitHub:", err);
-        updateGhCloudStatusUI("⚠️ Error al subir a GitHub", "var(--tag-red-bg)", "var(--tag-red-text)");
+        updateGhCloudStatusUI("⚠️ Error al subir", "var(--tag-red-bg)", "var(--tag-red-text)");
         if (manualTrigger) {
           showSyncModalStatus("❌ Error al guardar en GitHub: " + err.message, true);
         }
@@ -5720,26 +5438,13 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       }, 3500);
     }
 
-    function checkShowLocalMigrationBanner() {
-      refreshSyncLinksAndCopy();
-      if (window.location.hostname !== "soyorostegui.github.io") {
-        const hasVault = !!localStorage.getItem("po_api_vault") || !!localStorage.getItem("po_ai_key");
-        const hasPosts = !!localStorage.getItem("po_posts_v6");
-        if (hasVault || hasPosts) {
-          const banner = document.getElementById("localToWebMigrationBanner");
-          if (banner) banner.style.display = "flex";
-        }
-      }
-    }
-
     // Inicializar
-    checkIncomingWebMigrationHash();
     initStudioAuth();
-    checkShowLocalMigrationBanner();
     renderCurrentView();
     updateApiKeyStatus();
     updateQuickAiSwitchers();
     restoreCopilotPanelState();
+    updateGhCloudStatusUI();
     pullStateFromGitHubRepoNow(false);
   </script>
 </body>
