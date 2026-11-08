@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#3b0764">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; connect-src 'self' https://api.deepseek.com https://generativelanguage.googleapis.com https://api.openai.com https://api.anthropic.com https://openrouter.ai https://api.groq.com https://api.mistral.ai http://localhost:11434 http://127.0.0.1:11434; img-src 'self' data: https:; font-src 'self' data:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://soyorostegui.github.io https://api.deepseek.com https://generativelanguage.googleapis.com https://api.openai.com https://api.anthropic.com https://openrouter.ai https://api.groq.com https://api.mistral.ai http://localhost:11434 http://127.0.0.1:11434; img-src 'self' data: https:; font-src 'self' data:;">
   <title>Calendario Editorial con IA · Peter Orostegui (@soyorostegui)</title>
   <style>
     :root {
@@ -1561,11 +1561,36 @@
       <div class="modal-body" style="display: flex; flex-direction: column; gap: 14px; font-size: 13px; line-height: 1.5;">
         <div id="syncModalStatusMsg" style="display: none; padding: 10px 12px; border-radius: 8px; font-weight: 600; font-size: 12.5px;"></div>
 
+        <!-- NUEVO: GUARDADO AUTOMÁTICO EN EL REPOSITORIO GITHUB -->
+        <div style="padding: 14px; border-radius: 10px; background: linear-gradient(135deg, rgba(35, 131, 226, 0.08) 0%, rgba(144, 101, 176, 0.08) 100%); border: 1.5px solid rgba(35, 131, 226, 0.35);">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
+            <div style="font-weight: 700; color: var(--text-main);">☁️ Memoria en el Repositorio (<code>studio-cloud-state.json</code>)</div>
+            <span id="ghCloudStatusBadge" style="font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 99px; background: var(--bg-secondary); color: var(--text-muted);">🔄 Verificando repo...</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
+            Cuando abres la web en otro dispositivo, carga automáticamente <code>studio/studio-cloud-state.json</code> desde tu repositorio (con el contexto del chat IA, tus piezas y tus APIs cifradas con tu clave del estudio). Para que el navegador <strong>guarde solo en GitHub cada nuevo mensaje del chat IA</strong> desde cualquier lugar, pega aquí una vez un <a href="https://github.com/settings/tokens/new?description=SoyOrostegui-Studio-Sync&scopes=repo" target="_blank" style="color:#2383e2; font-weight:600;">Token de GitHub (scope: repo)</a>:
+          </p>
+          <div style="display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+            <input type="password" id="ghRepoTokenInput" placeholder="ghp_... o github_pat_... (se guarda cifrado)" style="flex: 1; min-width: 200px; padding: 8px 10px; border-radius: 7px; border: 1px solid var(--border-strong); font-size: 12px;">
+            <button type="button" onclick="saveGitHubRepoTokenAndPush()" style="background: #2383e2; color: #fff; border: none; padding: 8px 12px; border-radius: 7px; font-size: 12px; font-weight: 700; cursor: pointer;">
+              ☁️ Conectar y Guardar en Repo
+            </button>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" onclick="pushStateToGitHubRepoNow(true)" style="flex: 1; background: var(--text-main); color: #fff; border: none; padding: 8px 10px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
+              ⬆️ Subir Contexto IA + Cambios al Repo Ahora
+            </button>
+            <button type="button" onclick="pullStateFromGitHubRepoNow(true)" style="flex: 1; background: #fff; color: var(--text-main); border: 1px solid var(--border-strong); padding: 8px 10px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer;">
+              ⬇️ Cargar Último Contexto desde el Repo
+            </button>
+          </div>
+        </div>
+
         <div style="padding: 14px; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border);">
-          <div style="font-weight: 700; margin-bottom: 6px;">Opción A (Más infalible): Código Rápido Copiar / Pegar</div>
+          <div style="font-weight: 700; margin-bottom: 6px;">Opción A (Sin Token): Código Rápido Copiar / Pegar</div>
           <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
             1️⃣ En la ventana donde tienes tus APIs y cambios, pulsa <strong>«📋 Copiar mis Datos + APIs»</strong>.<br>
-            2️⃣ Entra a <code>soyorostegui.github.io/studio/</code>, abre este mismo botón <strong>🔄 Migrar Datos / APIs</strong>, pega el código aquí abajo y pulsa <strong>«✅ Restaurar Todo Aquí»</strong>:
+            2️⃣ Entra a <code>soyorostegui.github.io/studio/</code> (o pégamelo en el chat de Antigravity para subirlo yo al repositorio), pega el código aquí abajo y pulsa <strong>«✅ Restaurar Todo Aquí»</strong>:
           </p>
           <textarea id="syncTokenInput" rows="3" placeholder="Aquí aparecerá tu código de respaldo o pega aquí el código copiado..." style="width: 100%; font-family: monospace; font-size: 11px; padding: 8px 10px; border-radius: 7px; border: 1px solid var(--border-strong); background: #fff; color: var(--text-main); resize: vertical; margin-bottom: 8px;"></textarea>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
@@ -2229,6 +2254,8 @@
 
     function saveToStorage() {
       localStorage.setItem("po_posts_v6", JSON.stringify(posts));
+      localStorage.setItem("po_last_updated_at", String(Date.now()));
+      if (typeof scheduleGitHubCloudSync === "function") scheduleGitHubCloudSync();
     }
 
     function switchView(view) {
@@ -3916,6 +3943,8 @@
     }
 
     async function autoSyncContextToDisk() {
+      localStorage.setItem("po_last_updated_at", String(Date.now()));
+      if (typeof scheduleGitHubCloudSync === "function") scheduleGitHubCloudSync();
       updateContextToolbarUI();
       if (!linkedContextFileHandle) return;
       try {
@@ -5401,6 +5430,10 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
 
     function openSyncMigrationModal() {
       refreshSyncLinksAndCopy();
+      updateGhCloudStatusUI();
+      const tokInp = document.getElementById("ghRepoTokenInput");
+      const savedTok = localStorage.getItem("po_gh_repo_token") || "";
+      if (tokInp && savedTok) tokInp.value = savedTok;
       const m = document.getElementById("syncMigrationModal");
       if (m) m.style.display = "flex";
     }
@@ -5408,6 +5441,283 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
     function closeSyncMigrationModal() {
       const m = document.getElementById("syncMigrationModal");
       if (m) m.style.display = "none";
+    }
+
+    // ============================================================
+    // SINCRONIZACIÓN AUTOMÁTICA CON REPOSITORIO GITHUB (CLOUD STATE)
+    // ============================================================
+    const GH_REPO_OWNER = "soyorostegui";
+    const GH_REPO_NAME = "soyorostegui.github.io";
+    const GH_STATE_PATH = "studio/studio-cloud-state.json";
+    const GH_CONTEXT_MD_PATH = "studio/CONTEXTO_CONVERSACIONES_IA.md";
+    let ghCloudSyncTimer = null;
+
+    // Cifrado simétrico por flujo derivado del hash SHA-256 de la clave del estudio
+    // (Impide que las API keys aparezcan en texto plano en el repositorio público)
+    function xorCipherWithKeyHex(plainStr, keyHex) {
+      const bytes = new TextEncoder().encode(plainStr);
+      const keyBytes = new Uint8Array(keyHex.length / 2);
+      for (let i = 0; i < keyBytes.length; i++) {
+        keyBytes[i] = parseInt(keyHex.substr(i * 2, 2), 16);
+      }
+      const out = new Uint8Array(bytes.length);
+      for (let i = 0; i < bytes.length; i++) {
+        out[i] = bytes[i] ^ keyBytes[i % keyBytes.length] ^ ((i * 31) & 0xff);
+      }
+      let bin = "";
+      for (let i = 0; i < out.length; i++) bin += String.fromCharCode(out[i]);
+      return btoa(bin);
+    }
+
+    function xorDecipherWithKeyHex(b64Cipher, keyHex) {
+      const bin = atob(b64Cipher);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      const keyBytes = new Uint8Array(keyHex.length / 2);
+      for (let i = 0; i < keyBytes.length; i++) {
+        keyBytes[i] = parseInt(keyHex.substr(i * 2, 2), 16);
+      }
+      const out = new Uint8Array(bytes.length);
+      for (let i = 0; i < bytes.length; i++) {
+        out[i] = bytes[i] ^ keyBytes[i % keyBytes.length] ^ ((i * 31) & 0xff);
+      }
+      return new TextDecoder().decode(out);
+    }
+
+    function buildCloudStateObject() {
+      const keyHex = getExpectedPassHash();
+      const secretsObj = {
+        po_api_vault: localStorage.getItem("po_api_vault") || "",
+        po_ai_provider: localStorage.getItem("po_ai_provider") || "",
+        po_ai_model: localStorage.getItem("po_ai_model") || "",
+        po_ai_key: localStorage.getItem("po_ai_key") || "",
+        po_gemini_key: localStorage.getItem("po_gemini_key") || ""
+      };
+      const encryptedSecrets = xorCipherWithKeyHex(JSON.stringify(secretsObj), keyHex);
+      return {
+        version: 1,
+        updatedAt: Number(localStorage.getItem("po_last_updated_at")) || Date.now(),
+        updatedAtISO: new Date().toISOString(),
+        posts: posts,
+        chatHistory: chatHistory,
+        importedCustomContextNotes: importedCustomContextNotes || "",
+        encryptedSecrets: encryptedSecrets
+      };
+    }
+
+    function applyCloudStateObject(cloudObj) {
+      if (!cloudObj || typeof cloudObj !== "object") return false;
+      let changed = false;
+      if (Array.isArray(cloudObj.posts) && cloudObj.posts.length) {
+        posts = cloudObj.posts;
+        localStorage.setItem("po_posts_v6", JSON.stringify(posts));
+        changed = true;
+      }
+      if (Array.isArray(cloudObj.chatHistory)) {
+        chatHistory = cloudObj.chatHistory;
+        localStorage.setItem("po_ai_chat_history", JSON.stringify(chatHistory));
+        changed = true;
+      }
+      if (typeof cloudObj.importedCustomContextNotes === "string") {
+        importedCustomContextNotes = cloudObj.importedCustomContextNotes;
+        localStorage.setItem("po_ai_imported_notes", importedCustomContextNotes);
+      }
+      if (cloudObj.encryptedSecrets) {
+        try {
+          const rawSecrets = xorDecipherWithKeyHex(cloudObj.encryptedSecrets, getExpectedPassHash());
+          const sec = JSON.parse(rawSecrets);
+          for (const [k, v] of Object.entries(sec)) {
+            if (v && typeof v === "string") {
+              localStorage.setItem(k, v);
+              changed = true;
+            }
+          }
+          const rawVault = localStorage.getItem("po_api_vault");
+          if (rawVault) apiVault = JSON.parse(rawVault);
+          storedKey = sanitizeApiKey(localStorage.getItem("po_ai_key") || localStorage.getItem("po_gemini_key") || "");
+          currentAiProvider = localStorage.getItem("po_ai_provider") || currentAiProvider || "deepseek";
+          currentAiKey = storedKey || (apiVault[currentAiProvider]?.key || "");
+          currentAiModel = localStorage.getItem("po_ai_model") || (apiVault[currentAiProvider]?.model || AI_PROVIDERS[currentAiProvider]?.defaultModel || "deepseek-v4-pro");
+        } catch (e) {
+          console.warn("No se pudieron descifrar secretos de nube:", e);
+        }
+      }
+      if (cloudObj.updatedAt) {
+        localStorage.setItem("po_last_updated_at", String(cloudObj.updatedAt));
+      }
+      if (changed) {
+        renderCurrentView();
+        updateApiKeyStatus();
+        updateQuickAiSwitchers();
+        if (typeof renderSavedChatHistory === "function") renderSavedChatHistory();
+      }
+      return changed;
+    }
+
+    function updateGhCloudStatusUI(text, colorBg, colorText) {
+      const badge = document.getElementById("ghCloudStatusBadge");
+      if (!badge) return;
+      const hasToken = !!(localStorage.getItem("po_gh_repo_token") || "").trim();
+      if (text) {
+        badge.textContent = text;
+        if (colorBg) badge.style.background = colorBg;
+        if (colorText) badge.style.color = colorText;
+      } else if (hasToken) {
+        badge.textContent = "🟢 Auto-Guardado Activo en GitHub";
+        badge.style.background = "var(--tag-green-bg)";
+        badge.style.color = "var(--tag-green-text)";
+      } else {
+        badge.textContent = "🔵 Lectura del Repo Activa (Falta Token para Auto-Subir)";
+        badge.style.background = "var(--tag-blue-bg)";
+        badge.style.color = "var(--tag-blue-text)";
+      }
+    }
+
+    async function pullStateFromGitHubRepoNow(manualTrigger) {
+      try {
+        updateGhCloudStatusUI("🔄 Descargando del repo...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
+        const token = sanitizeApiKey(localStorage.getItem("po_gh_repo_token") || "");
+        let cloudObj = null;
+
+        if (token) {
+          const res = await fetch(`https://api.github.com/repos/${GH_REPO_OWNER}/${GH_REPO_NAME}/contents/${GH_STATE_PATH}?ref=main&t=${Date.now()}`, {
+            headers: {
+              "Authorization": `Bearer ${token}`,
+              "Accept": "application/vnd.github+json"
+            },
+            cache: "no-store"
+          });
+          if (res.ok) {
+            const meta = await res.json();
+            if (meta && meta.content) {
+              const decoded = decodeUtf8Base64Url(meta.content.replace(/\s+/g, ""));
+              cloudObj = JSON.parse(decoded);
+            }
+          }
+        }
+
+        if (!cloudObj) {
+          const rawUrl = `https://raw.githubusercontent.com/${GH_REPO_OWNER}/${GH_REPO_NAME}/main/${GH_STATE_PATH}?t=${Date.now()}`;
+          const res = await fetch(rawUrl, { cache: "no-store" });
+          if (res.ok) {
+            cloudObj = await res.json();
+          }
+        }
+
+        if (!cloudObj) {
+          if (manualTrigger) showSyncModalStatus("⚠️ Aún no hay un estado guardado en el repositorio o se está publicando.", true);
+          updateGhCloudStatusUI();
+          return;
+        }
+
+        const localTs = Number(localStorage.getItem("po_last_updated_at")) || 0;
+        const cloudTs = Number(cloudObj.updatedAt) || 0;
+        const localEmpty = !localStorage.getItem("po_ai_chat_history") && !localStorage.getItem("po_api_vault");
+
+        if (manualTrigger || localEmpty || cloudTs > localTs) {
+          applyCloudStateObject(cloudObj);
+          if (manualTrigger) {
+            showSyncModalStatus(`✅ Contexto del chat IA (${(cloudObj.chatHistory || []).length} mensajes), piezas y APIs cargados desde tu repositorio GitHub.`, false);
+          }
+        }
+        updateGhCloudStatusUI();
+      } catch (err) {
+        console.warn("Aviso al consultar estado del repositorio:", err);
+        if (manualTrigger) showSyncModalStatus("⚠️ No se pudo conectar con GitHub: " + err.message, true);
+        updateGhCloudStatusUI();
+      }
+    }
+
+    async function putFileToGitHubRepo(token, filePath, utf8Content, commitMessage) {
+      const apiUrl = `https://api.github.com/repos/${GH_REPO_OWNER}/${GH_REPO_NAME}/contents/${filePath}`;
+      let existingSha = null;
+      const getRes = await fetch(`${apiUrl}?ref=main&t=${Date.now()}`, {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Accept": "application/vnd.github+json"
+        },
+        cache: "no-store"
+      });
+      if (getRes.ok) {
+        const meta = await getRes.json();
+        existingSha = meta.sha || null;
+      }
+      const bytes = new TextEncoder().encode(utf8Content);
+      let bin = "";
+      for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+      const contentB64 = btoa(bin);
+
+      const bodyObj = {
+        message: commitMessage,
+        content: contentB64,
+        branch: "main"
+      };
+      if (existingSha) bodyObj.sha = existingSha;
+
+      const putRes = await fetch(apiUrl, {
+        method: "PUT",
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Accept": "application/vnd.github+json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(bodyObj)
+      });
+      if (!putRes.ok) {
+        const errTxt = await putRes.text();
+        throw new Error(`GitHub HTTP ${putRes.status}: ${errTxt.substring(0, 140)}`);
+      }
+      return true;
+    }
+
+    async function pushStateToGitHubRepoNow(manualTrigger) {
+      const token = sanitizeApiKey(localStorage.getItem("po_gh_repo_token") || document.getElementById("ghRepoTokenInput")?.value || "");
+      if (!token) {
+        if (manualTrigger) {
+          showSyncModalStatus("⚠️ Para subir cambios directo desde el navegador a GitHub, pega primero tu Token de GitHub arriba (o pégale tu código de la Opción A a Antigravity en el chat para que él lo suba por ti).", true);
+        }
+        return;
+      }
+      try {
+        updateGhCloudStatusUI("☁️ Guardando en GitHub...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
+        localStorage.setItem("po_last_updated_at", String(Date.now()));
+        const stateJson = JSON.stringify(buildCloudStateObject(), null, 2);
+        const contextMd = buildContextMarkdown();
+
+        await putFileToGitHubRepo(token, GH_STATE_PATH, stateJson, "sync(studio): actualizar contexto IA, piezas y estado en nube");
+        await putFileToGitHubRepo(token, GH_CONTEXT_MD_PATH, contextMd, "docs(contexto): actualizar CONTEXTO_CONVERSACIONES_IA.md");
+
+        updateGhCloudStatusUI("🟢 Guardado en Repo (" + new Date().toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" }) + ")", "var(--tag-green-bg)", "var(--tag-green-text)");
+        if (manualTrigger) {
+          showSyncModalStatus("✅ ¡Guardado exitoso en tu repositorio! Tanto studio-cloud-state.json como CONTEXTO_CONVERSACIONES_IA.md ya están en GitHub para cualquier dispositivo.", false);
+        }
+      } catch (err) {
+        console.error("Error subiendo estado a GitHub:", err);
+        updateGhCloudStatusUI("⚠️ Error al subir a GitHub", "var(--tag-red-bg)", "var(--tag-red-text)");
+        if (manualTrigger) {
+          showSyncModalStatus("❌ Error al guardar en GitHub: " + err.message, true);
+        }
+      }
+    }
+
+    function saveGitHubRepoTokenAndPush() {
+      const inp = document.getElementById("ghRepoTokenInput");
+      const token = sanitizeApiKey(inp ? inp.value : "");
+      if (!token) {
+        showSyncModalStatus("⚠️ Pega un token de GitHub válido (empieza por ghp_ o github_pat_).", true);
+        return;
+      }
+      localStorage.setItem("po_gh_repo_token", token);
+      pushStateToGitHubRepoNow(true);
+    }
+
+    function scheduleGitHubCloudSync() {
+      const token = sanitizeApiKey(localStorage.getItem("po_gh_repo_token") || "");
+      if (!token) return;
+      if (ghCloudSyncTimer) clearTimeout(ghCloudSyncTimer);
+      ghCloudSyncTimer = setTimeout(() => {
+        pushStateToGitHubRepoNow(false);
+      }, 3500);
     }
 
     function checkShowLocalMigrationBanner() {
@@ -5430,6 +5740,7 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
     updateApiKeyStatus();
     updateQuickAiSwitchers();
     restoreCopilotPanelState();
+    pullStateFromGitHubRepoNow(false);
   </script>
 </body>
 </html>
