@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794202875267,
-  "updatedAtISO": "2026-11-09T05:41:15.267Z",
+  "updatedAt": 1794202935768,
+  "updatedAtISO": "2026-11-09T05:42:15.768Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -623,36 +623,39 @@
       "order": 1
     },
     {
+      "time": "09:00",
+      "context": "Tres slides con las variables que determinan un presupuesto: alcance, entregables y número de aplicaciones. Formaliza la conversación de precio y evita el «¿cuánto cuesta un logo?» en DM.",
+      "formatDetail": "",
       "id": "st-1794202219509-869",
       "name": "Cómo cotizar un proyecto de branding",
       "date": "2026-11-23",
-      "time": "09:00",
       "highlightId": "hl-calle",
       "format": "Carrusel",
       "status": "Idea",
-      "context": "Tres slides con las variables que determinan un presupuesto: alcance, entregables y número de aplicaciones. Formaliza la conversación de precio y evita el «¿cuánto cuesta un logo?» en DM.",
       "order": 0
     },
     {
+      "time": "12:00",
+      "context": "Slide por etapa: brief, propuesta, producción y entrega. Muestra método y reduce el riesgo percibido por un cliente que contrata por primera vez.",
+      "formatDetail": "",
       "id": "st-1794202219512-548",
       "name": "Mi proceso de trabajo en 4 pasos",
       "date": "2026-11-24",
-      "time": "12:00",
       "highlightId": "hl-calle",
       "format": "Carrusel",
       "status": "Idea",
-      "context": "Slide por etapa: brief, propuesta, producción y entrega. Muestra método y reduce el riesgo percibido por un cliente que contrata por primera vez.",
       "order": 0
     },
     {
+      "time": "18:00",
+      "context": "Cierre del cronograma con disponibilidad declarada y enlace a Behance. Convierte el interés del lanzamiento en conversaciones reales de trabajo, que es el objetivo final de la campaña.",
+      "formatDetail": "",
       "id": "st-1794202219515-974",
       "name": "Agenda abierta: proyectos para 2027",
       "date": "2026-11-25",
-      "time": "18:00",
       "highlightId": "hl-calle",
       "format": "Foto",
       "status": "Idea",
-      "context": "Cierre del cronograma con disponibilidad declarada y enlace a Behance. Convierte el interés del lanzamiento en conversaciones reales de trabajo, que es el objetivo final de la campaña.",
       "order": 0
     }
   ],
@@ -1945,6 +1948,13 @@
       "plainText": "Confirmado. Cada entrada tiene su control de eliminar, y ese detalle explica los dos intentos fallidos: **mis respuestas se cortaron a mitad del JSON**, quedó una llave abierta y el intérprete descartó el lote completo. No fue que el comando estuviera mal escrito: nunca llegó entero.\n\nLas tres entradas a borrar, con nombre exacto para que las ubiques en la lista:\n\n- **`st-6`** — «Marcas de corte y sangría en archivo real» · 11.11 · SETUP\n- **`st-14`** — «El orden de capas en un archivo maestro» · 14.11 · SETUP\n- **`st-25`** — «Comprobando resolución a escala 1:1» · 18.11 · SETUP\n\nPuedes eliminarlas con el botón si te resulta más rápido; los bloques de abajo hacen lo mismo.\n\n## Corrección de método\n\nDejo de mandar 34 bloques en una sola respuesta. Van **por lotes de 6 a 8**, uno detrás de otro, para que nada se trunque. Este primer lote es solo el borrado:\n\n```json\n{ \"action\": \"delete_story\", \"id\": \"st-6\" }\n{ \"action\": \"delete_story\", \"id\": \"st-14\" }\n{ \"action\": \"delete_story\", \"id\": \"st-25\" }\n```\n\nCuando confirmes que desaparecieron, sigo con el lote 2: las ocho historias que salen de CONTACT y se reparten entre SETUP (instalación y montaje) y PORTFOLIO (pieza terminada).",
       "actionData": null,
       "timestamp": "9/11/2026, 12:41:12 a. m."
+    },
+    {
+      "sender": "user",
+      "html": "No se está eliminando nada",
+      "plainText": "No se está eliminando nada",
+      "actionData": null,
+      "timestamp": "9/11/2026, 12:42:13 a. m."
     }
   ],
   "importedCustomContextNotes": ""
