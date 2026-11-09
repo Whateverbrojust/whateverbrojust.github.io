@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204404578,
-  "updatedAtISO": "2026-11-09T06:06:44.578Z",
+  "updatedAt": 1794204423813,
+  "updatedAtISO": "2026-11-09T06:07:03.814Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -227,18 +227,6 @@
       "order": 0
     },
     {
-      "time": "13:00",
-      "context": "Complementa la foto de la mañana con el gesto técnico: curvas de Bézier moviéndose en pantalla. Refuerza en formato video lo que el post-li-1 argumenta en texto sobre afinar el criterio en el taller.",
-      "formatDetail": "Video corto",
-      "id": "st-2",
-      "date": "2026-11-09",
-      "name": "Pantalla con vectores y curvas en Illustrator",
-      "highlightId": "hl-proceso",
-      "format": "Video",
-      "status": "Idea",
-      "order": 1
-    },
-    {
       "time": "19:00",
       "context": "Cierra el día convirtiendo la expectativa en conversación. Sirve además como sondeo previo al lanzamiento: las respuestas anticipan qué proyecto interesa más antes del 20.11.",
       "formatDetail": "Sticker interactivo",
@@ -371,18 +359,6 @@
       "order": 0
     },
     {
-      "time": "18:00",
-      "context": "Cierra el ciclo abierto por st-15 con la respuesta a la pregunta más votada. Va en PTR porque el rostro y la voz son el activo de marca personal, no el taller ni el proceso.",
-      "formatDetail": "Hablando a cámara",
-      "id": "st-16",
-      "date": "2026-11-15",
-      "name": "Respondiendo la pregunta más votada",
-      "highlightId": "hl-ptr",
-      "format": "Otro",
-      "status": "Idea",
-      "order": 1
-    },
-    {
       "time": "08:30",
       "context": "Abre la semana del OOH con la prueba de lectura real a velocidad de circulación. Refuerza el post-ig-7 del mismo día: 3 segundos para captar la atención de quien maneja.",
       "formatDetail": "Video en movimiento",
@@ -431,18 +407,6 @@
       "order": 0
     },
     {
-      "time": "14:00",
-      "context": "Prueba técnica previa, con el operador ajustando desde el control. Documenta la parte que el público nunca ve y que sostiene todo el espectáculo visual de la noche.",
-      "formatDetail": "Video prueba luces",
-      "id": "st-21",
-      "date": "2026-11-17",
-      "name": "Prueba de pantallas LED en tarima de concierto",
-      "highlightId": "hl-proceso",
-      "format": "Video",
-      "status": "Idea",
-      "order": 1
-    },
-    {
       "time": "22:00",
       "context": "Cierre del bloque musical: la pantalla ya en uso real con el público delante. Solo se publica después del evento, cuando ya no hay riesgo de revelar la producción antes de tiempo.",
       "formatDetail": "Foto de multitud",
@@ -465,18 +429,6 @@
       "format": "Foto",
       "status": "Idea",
       "order": 0
-    },
-    {
-      "time": "13:30",
-      "context": "Refuerza el texto del sneak peek sobre identidad que se viste. El troquel es la prueba física de que el sistema de marca se extiende a objetos de merchandising reales.",
-      "formatDetail": "",
-      "id": "st-24",
-      "date": "2026-11-18",
-      "name": "Pegatinas troqueladas listas en la mesa",
-      "highlightId": "hl-hito",
-      "format": "Boomerang",
-      "status": "Idea",
-      "order": 1
     },
     {
       "time": "09:00",
@@ -2644,6 +2596,30 @@
       "plainText": "Ya te dije que solo deben quedar 30 historias.",
       "actionData": null,
       "timestamp": "9/11/2026, 1:06:42 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Tienes razón y el error es mío: te prometí bloques que nunca emití. No vuelvo a decir «van» sin los comandos abajo.<br><br>Para pasar de <strong>34 a 30</strong> hay que eliminar <strong>4</strong>. No me dijiste cuáles, así que propongo las que duplican función dentro del mismo día y no aportan información nueva:<br><br>| Historia | Motivo |<br>|---|---|<br>| <code>st-2</code> (09.11) | Misma jornada y mismo taller que <code>st-1</code>. Dos piezas seguidas de mesa de trabajo compiten entre sí. |<br>| <code>st-21</code> (17.11) | El 17.11 ya tiene caravana (<code>st-20</code>) y concierto (<code>st-22</code>). La prueba de LED es la que menos se entiende sin contexto. |<br>| <code>st-16</code> (15.11) | Es la continuación de <code>st-15</code>. Se lee como una sola historia en dos pantallas; estorba en el feed. |<br>| <code>st-24</code> (18.11) | El 18.11 abre con el macro de bordado (<code>st-23</code>), que es más fuerte visualmente que las pegatinas en mesa. |<br><br><strong>Quedarían así:</strong> SETUP 8 · PORTFOLIO 7 · DAILY 7 · CONTACT 5 · PTR 3 = <strong>30</strong>.<br><br>Si prefieres cambiar alguna candidata, dime el nombre y ajusto el lote antes de que confirmes. Estas cuatro salen de una sola vez:<br><br>Cuando confirmes y veas <strong>30</strong> en pantalla, el paso siguiente —horas y contexto— irá en un mensaje con los bloques completos, ya no en descripciones.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00123 USD</strong> (Acumulado sesión: $0.15052 USD)</span>\n          <span style=\"color:#64748b;\">8086 in + 1660 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Tienes razón y el error es mío: te prometí bloques que nunca emití. No vuelvo a decir «van» sin los comandos abajo.\n\nPara pasar de **34 a 30** hay que eliminar **4**. No me dijiste cuáles, así que propongo las que duplican función dentro del mismo día y no aportan información nueva:\n\n| Historia | Motivo |\n|---|---|\n| `st-2` (09.11) | Misma jornada y mismo taller que `st-1`. Dos piezas seguidas de mesa de trabajo compiten entre sí. |\n| `st-21` (17.11) | El 17.11 ya tiene caravana (`st-20`) y concierto (`st-22`). La prueba de LED es la que menos se entiende sin contexto. |\n| `st-16` (15.11) | Es la continuación de `st-15`. Se lee como una sola historia en dos pantallas; estorba en el feed. |\n| `st-24` (18.11) | El 18.11 abre con el macro de bordado (`st-23`), que es más fuerte visualmente que las pegatinas en mesa. |\n\n**Quedarían así:** SETUP 8 · PORTFOLIO 7 · DAILY 7 · CONTACT 5 · PTR 3 = **30**.\n\nSi prefieres cambiar alguna candidata, dime el nombre y ajusto el lote antes de que confirmes. Estas cuatro salen de una sola vez:\n\nCuando confirmes y veas **30** en pantalla, el paso siguiente —horas y contexto— irá en un mensaje con los bloques completos, ya no en descripciones.",
+      "actionData": [
+        {
+          "type": "delete_items",
+          "entity": "story",
+          "ids": [
+            "st-2",
+            "st-21",
+            "st-16",
+            "st-24"
+          ],
+          "names": [
+            "Pantalla con vectores y curvas en Illustrator",
+            "Prueba de pantallas LED en tarima de concierto",
+            "Respondiendo la pregunta más votada",
+            "Pegatinas troqueladas listas en la mesa"
+          ]
+        }
+      ],
+      "timestamp": "9/11/2026, 1:07:01 a. m."
     }
   ],
   "importedCustomContextNotes": ""
