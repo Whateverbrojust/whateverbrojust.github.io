@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:45:46 a. m.
+**Última actualización:** 9/11/2026, 12:45:50 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.13418 USD (514258 tokens)
+**Gasto Acumulado en Sesión:** $0.13478 USD (522495 tokens)
 
 ---
 
@@ -85,7 +85,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (37 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (38 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1106,4 +1106,17 @@ Presiona ese botón y, si desaparece, te mando el de `st-25` en el siguiente men
 
 ### [37] 👤 **Peter Orostegui** — *9/11/2026, 12:45:43 a. m.*
 Manda todos los botones juntos
+
+### [38] ✨ **Copilot IA** — *9/11/2026, 12:45:47 a. m.*
+Aquí van las dos que quedan. Solo son dos, así que hay buena chance de que pasen juntas.
+
+**Eliminar `st-14`** — «El orden de capas en un archivo maestro» · 14.11 · SETUP
+**Eliminar `st-25`** — «Comprobando resolución a escala 1:1» · 18.11 · SETUP
+
+```json
+{ "action": "delete_story", "id": "st-14" }
+{ "action": "delete_story", "id": "st-25" }
+```
+
+Si desaparecen las dos, el borrado queda cerrado y arranco con las horas de las 33 historias activas. Si vuelve a procesar solo una, me dices cuál quedó y te mando la otra sola.
 
