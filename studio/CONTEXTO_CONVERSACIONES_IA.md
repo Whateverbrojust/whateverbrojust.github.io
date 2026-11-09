@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 1:12:34 a. m.
+**Última actualización:** 9/11/2026, 1:12:44 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.15338 USD (633330 tokens)
+**Gasto Acumulado en Sesión:** $0.15430 USD (641160 tokens)
 
 ---
 
@@ -82,7 +82,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (61 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (62 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1428,4 +1428,13 @@ Queda a las **08:00 del 09.11** para que abra el día antes de `st-1` (09:00). S
 
 ### [61] 👤 **Peter Orostegui** — *9/11/2026, 1:12:32 a. m.*
 Sigue sin verse el cambio
+
+### [62] ✨ **Copilot IA** — *9/11/2026, 1:12:42 a. m.*
+El motivo es el mismo de antes y lo asumo: mi mensaje anterior anunció el bloque pero no lo emitió. Sin JSON no hay cambio en pantalla. Aquí va el comando, sobre la historia de café que ya existe (`st-1794204531446-673`), que es la que toca actualizar en lugar de sumar una nueva:
+
+- **Hora 08:00** del 09.11, para abrir el día antes de `st-1` (09:00).
+- **Frase:** «Café en la U. La sangría que olvidé ayer.»
+- **Status:** En Diseño, porque se graba hoy.
+
+Un detalle: en el 09.11 quedan dos historias de café, esta y `st-1794204588972-274` («Café en la universidad: la manía de medir todo»). Se pisan entre sí. Dime si la segunda la borro o la reconvierto en algo distinto y lo cierro.
 
