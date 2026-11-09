@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794203103604,
-  "updatedAtISO": "2026-11-09T05:45:03.604Z",
+  "updatedAt": 1794203107863,
+  "updatedAtISO": "2026-11-09T05:45:07.863Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -1983,6 +1983,18 @@
       "plainText": "Manda los botones de cada eliminacion separados en el chat y yo los presiono",
       "actionData": null,
       "timestamp": "9/11/2026, 12:45:01 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Hecho. Como solo se procesa un bloque por respuesta, va uno solo y espero tu confirmación.<br><br><strong>Eliminar <code>st-14</code></strong> — «El orden de capas en un archivo maestro» · 14.11 · SETUP<br><br><br><br>Presiona ese botón y, si desaparece, te mando el de <code>st-25</code> en el siguiente mensaje. Después de esas dos, retomo las horas y el contexto de las 33 historias activas, también de una en una.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00064 USD</strong> (Acumulado sesión: $0.13418 USD)</span>\n          <span style=\"color:#64748b;\">8523 in + 418 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Hecho. Como solo se procesa un bloque por respuesta, va uno solo y espero tu confirmación.\n\n**Eliminar `st-14`** — «El orden de capas en un archivo maestro» · 14.11 · SETUP\n\n\n\nPresiona ese botón y, si desaparece, te mando el de `st-25` en el siguiente mensaje. Después de esas dos, retomo las horas y el contexto de las 33 historias activas, también de una en una.",
+      "actionData": [
+        {
+          "type": "delete_story",
+          "id": "st-14"
+        }
+      ],
+      "timestamp": "9/11/2026, 12:45:05 a. m."
     }
   ],
   "importedCustomContextNotes": ""
