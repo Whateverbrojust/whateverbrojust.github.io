@@ -1812,7 +1812,7 @@
           <span id="ghCloudStatusBadge" style="font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 99px; background: var(--bg-secondary); color: var(--text-muted);">🔄 Verificando...</span>
         </div>
         <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-          <input type="password" id="ghRepoTokenInput" class="form-input" placeholder="Token GitHub (ghp_...) para auto-guardar en la nube" style="flex: 1; min-width: 180px; padding: 6px 9px; font-size: 11.5px;">
+          <input type="password" id="ghRepoTokenInput" class="form-input" placeholder="Pega tu Token GitHub (ghp_...) aquí para auto-guardar en la nube" style="flex: 1; min-width: 180px; padding: 6px 9px; font-size: 11.5px;" oninput="onGitHubTokenInput(this.value)">
           <button type="button" class="ai-inline-btn" style="padding: 6px 10px; font-size: 11.5px; font-weight: 700;" onclick="saveGitHubRepoTokenAndPush()">☁️ Conectar Repo</button>
           <button type="button" class="ai-inline-btn" style="padding: 6px 10px; font-size: 11.5px;" onclick="pullStateFromGitHubRepoNow(true)" title="Traer último contexto guardado en GitHub">⬇️ Traer</button>
         </div>
@@ -1860,10 +1860,9 @@
       <div style="display:flex; align-items:center; justify-content:space-between; width:100%; gap:4px; flex-wrap:wrap;">
         <div style="display:flex; align-items:center; gap:5px;">
           <span>🧠 <strong>Memoria:</strong> <span id="ctxMsgCountBadge">0</span> msgs</span>
-          <span id="ctxDiskSyncStatus" style="font-size:10.5px; color:#6b7280;">(Sincronizado en Repo)</span>
+          <span id="ctxDiskSyncStatus" style="font-size:10.5px; color:#15803d; font-weight:600;">(Auto-guardado activo)</span>
         </div>
         <div style="display:flex; align-items:center; gap:4px; flex-wrap:wrap;">
-          <button class="ai-ctx-btn" onclick="pushStateToGitHubRepoNow(true)" title="Guardar inmediatamente esta conversación y cambios en tu repositorio GitHub">☁️ Guardar en Repo</button>
           <button class="ai-ctx-btn" onclick="exportContextFile('md')" title="Descargar archivo CONTEXTO_CONVERSACIONES_IA.md con toda la memoria y acuerdos">📥 .MD</button>
           <button class="ai-ctx-btn" onclick="document.getElementById('ctxFileInput').click()" title="Cargar archivo de contexto (.md o .json) previo">📂 Cargar</button>
           <button class="ai-ctx-btn" onclick="clearChatHistory()" title="Reiniciar historial de conversación" style="color:#b91c1c; border-color:#fecaca;">🗑️</button>
@@ -2703,12 +2702,16 @@
       apiVault[prov].model = model || AI_PROVIDERS[prov]?.defaultModel || "";
       if (endpoint || prov === "custom") apiVault[prov].endpoint = endpoint;
       localStorage.setItem("po_api_vault", JSON.stringify(apiVault));
+      localStorage.setItem("po_last_updated_at", String(Date.now()));
+      if (typeof scheduleGitHubCloudSync === "function") scheduleGitHubCloudSync();
     }
 
     function deleteVaultEntry(prov) {
       if (apiVault[prov]) {
         delete apiVault[prov];
         localStorage.setItem("po_api_vault", JSON.stringify(apiVault));
+        localStorage.setItem("po_last_updated_at", String(Date.now()));
+        if (typeof scheduleGitHubCloudSync === "function") scheduleGitHubCloudSync();
       }
     }
 
@@ -3773,27 +3776,17 @@
       const badge = document.getElementById("ctxMsgCountBadge");
       if (badge) badge.innerText = String(chatHistory.length);
       const syncStatus = document.getElementById("ctxDiskSyncStatus");
-      const linkBtn = document.getElementById("btnLinkDiskContext");
-      if (linkedContextFileHandle) {
-        if (syncStatus) {
-          syncStatus.innerText = "✅ Sincronizado en disco (.MD)";
-          syncStatus.style.color = "#15803d";
-          syncStatus.style.fontWeight = "600";
-        }
-        if (linkBtn) {
-          linkBtn.classList.add("active-sync");
-          linkBtn.innerText = "💾 Auto-guardado Activo";
-        }
+      if (!syncStatus) return;
+      const hasToken = !!(localStorage.getItem("po_gh_repo_token") || "").trim();
+      const lastSaved = localStorage.getItem("po_last_saved_time_str");
+      if (hasToken) {
+        syncStatus.innerText = lastSaved ? `☁️ Auto-guardado en GitHub (${lastSaved})` : "☁️ Auto-guardado en GitHub activo";
+        syncStatus.style.color = "#15803d";
+        syncStatus.style.fontWeight = "600";
       } else {
-        if (syncStatus) {
-          syncStatus.innerText = "(Auto-guardado en navegador)";
-          syncStatus.style.color = "#6b7280";
-          syncStatus.style.fontWeight = "400";
-        }
-        if (linkBtn) {
-          linkBtn.classList.remove("active-sync");
-          linkBtn.innerText = "🔗 Auto-guardar .MD";
-        }
+        syncStatus.innerText = "(Auto-guardado en este navegador)";
+        syncStatus.style.color = "#6b7280";
+        syncStatus.style.fontWeight = "400";
       }
     }
 
@@ -4062,25 +4055,30 @@
       if (actionData) {
         const actionBox = document.createElement("div");
         actionBox.className = "chat-action-box";
+        actionBox.style.cssText = "display: flex; justify-content: space-between; align-items: center; gap: 8px; border-left: 3px solid #16a34a; background: #f0fdf4; padding: 10px 12px; border-radius: 8px; margin-top: 8px;";
         
         if (actionData.type === "update_post") {
+          if (persist) {
+            applyDirectUpdate(actionData);
+          }
           const info = document.createElement("div");
-          info.innerHTML = `<strong>⚡ Modificación Detectada:</strong><br><span>Post: <strong>${actionData.title || actionData.id}</strong> (Fecha: ${actionData.date || 'Sin cambio'} · Estado: ${actionData.status || 'Sin cambio'})</span>`;
-          const btn = document.createElement("button");
-          btn.className = "btn-apply-ai";
-          btn.innerText = "✅ Aplicar Modificación al Calendario";
-          btn.onclick = () => applyDirectUpdate(actionData, btn);
+          info.innerHTML = `<strong>⚡ Modificación Aplicada Automáticamente:</strong><br><span style="font-size:12px; color:#166534;">Post: <strong>${actionData.title || actionData.id}</strong> (Fecha: ${actionData.date || 'Sin cambio'} · Estado: ${actionData.status || 'Sin cambio'})</span>`;
+          const badge = document.createElement("span");
+          badge.style.cssText = "font-size: 11px; font-weight: 700; color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 99px; white-space: nowrap;";
+          badge.innerText = "✅ Guardado";
           actionBox.appendChild(info);
-          actionBox.appendChild(btn);
+          actionBox.appendChild(badge);
         } else if (actionData.type === "create_post") {
+          if (persist) {
+            applyDirectCreate(actionData);
+          }
           const info = document.createElement("div");
-          info.innerHTML = `<strong>✨ Nueva Pieza Lista:</strong><br><span><strong>${actionData.title}</strong> (${actionData.channel} · ${actionData.date})</span>`;
-          const btn = document.createElement("button");
-          btn.className = "btn-apply-ai";
-          btn.innerText = "✅ Agregar al Calendario";
-          btn.onclick = () => applyDirectCreate(actionData, btn);
+          info.innerHTML = `<strong>✨ Nueva Pieza Guardada Automáticamente:</strong><br><span style="font-size:12px; color:#166534;"><strong>${actionData.title}</strong> (${actionData.channel} · ${actionData.date})</span>`;
+          const badge = document.createElement("span");
+          badge.style.cssText = "font-size: 11px; font-weight: 700; color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 99px; white-space: nowrap;";
+          badge.innerText = "✅ Guardado";
           actionBox.appendChild(info);
-          actionBox.appendChild(btn);
+          actionBox.appendChild(badge);
         }
         div.appendChild(actionBox);
       }
@@ -5384,36 +5382,60 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       return true;
     }
 
-    async function pushStateToGitHubRepoNow(manualTrigger) {
+    let ghCloudSyncInProgress = false;
+    let ghCloudSyncPending = false;
+
+    function onGitHubTokenInput(val) {
+      const token = sanitizeApiKey(val || "");
+      if (!token) return;
+      localStorage.setItem("po_gh_repo_token", token);
+      updateGhCloudStatusUI("🟢 Conectado · Auto-guardando...", "var(--tag-green-bg)", "var(--tag-green-text)");
+      scheduleGitHubCloudSync(true);
+    }
+
+    async function pushStateToGitHubRepoNow(manualTrigger = false) {
       const token = sanitizeApiKey(localStorage.getItem("po_gh_repo_token") || document.getElementById("ghRepoTokenInput")?.value || "");
       if (!token) {
-        if (manualTrigger) {
-          openKeyModal();
-          showSyncModalStatus("⚠️ Pega arriba tu Token de GitHub (ghp_...) una sola vez para activar el guardado directo en tu repositorio.", true);
-        }
+        updateGhCloudStatusUI();
         return;
       }
+      if (ghCloudSyncInProgress) {
+        ghCloudSyncPending = true;
+        return;
+      }
+      ghCloudSyncInProgress = true;
       try {
-        updateGhCloudStatusUI("☁️ Guardando...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
+        updateGhCloudStatusUI("☁️ Auto-guardando...", "var(--tag-blue-bg)", "var(--tag-blue-text)");
+        const syncStatus = document.getElementById("ctxDiskSyncStatus");
+        if (syncStatus) {
+          syncStatus.innerText = "☁️ Auto-guardando en GitHub...";
+          syncStatus.style.color = "#2563eb";
+        }
         localStorage.setItem("po_last_updated_at", String(Date.now()));
         const stateJson = JSON.stringify(buildCloudStateObject(), null, 2);
         const contextMd = buildContextMarkdown();
 
-        await putFileToGitHubRepo(token, GH_STATE_PATH, stateJson, "sync(studio): actualizar contexto IA, piezas y estado en nube");
-        await putFileToGitHubRepo(token, GH_CONTEXT_MD_PATH, contextMd, "docs(contexto): actualizar CONTEXTO_CONVERSACIONES_IA.md");
+        await putFileToGitHubRepo(token, GH_STATE_PATH, stateJson, "sync(studio): auto-guardar contexto IA y estado");
+        await putFileToGitHubRepo(token, GH_CONTEXT_MD_PATH, contextMd, "docs(contexto): auto-guardar CONTEXTO_CONVERSACIONES_IA.md");
 
         const timeStr = new Date().toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" });
-        updateGhCloudStatusUI("🟢 Guardado en Repo (" + timeStr + ")", "var(--tag-green-bg)", "var(--tag-green-text)");
-        const syncStatus = document.getElementById("ctxDiskSyncStatus");
-        if (syncStatus) syncStatus.innerText = `☁️ Guardado en Repo (${timeStr})`;
+        localStorage.setItem("po_last_saved_time_str", timeStr);
+        updateGhCloudStatusUI("🟢 Auto-Guardado en GitHub (" + timeStr + ")", "var(--tag-green-bg)", "var(--tag-green-text)");
+        if (syncStatus) {
+          syncStatus.innerText = `☁️ Auto-guardado en GitHub (${timeStr})`;
+          syncStatus.style.color = "#15803d";
+        }
         if (manualTrigger) {
-          showSyncModalStatus("✅ ¡Guardado exitoso en tu repositorio GitHub!", false);
+          showSyncModalStatus("✅ ¡Auto-guardado activo en tu repositorio GitHub!", false);
         }
       } catch (err) {
-        console.error("Error subiendo estado a GitHub:", err);
-        updateGhCloudStatusUI("⚠️ Error al subir", "var(--tag-red-bg)", "var(--tag-red-text)");
-        if (manualTrigger) {
-          showSyncModalStatus("❌ Error al guardar en GitHub: " + err.message, true);
+        console.error("Error auto-guardando en GitHub:", err);
+        updateGhCloudStatusUI("⚠️ Error al sincronizar", "var(--tag-red-bg)", "var(--tag-red-text)");
+      } finally {
+        ghCloudSyncInProgress = false;
+        if (ghCloudSyncPending) {
+          ghCloudSyncPending = false;
+          scheduleGitHubCloudSync(true);
         }
       }
     }
@@ -5429,13 +5451,14 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       pushStateToGitHubRepoNow(true);
     }
 
-    function scheduleGitHubCloudSync() {
+    function scheduleGitHubCloudSync(immediate = false) {
       const token = sanitizeApiKey(localStorage.getItem("po_gh_repo_token") || "");
       if (!token) return;
       if (ghCloudSyncTimer) clearTimeout(ghCloudSyncTimer);
+      const delay = immediate ? 100 : 2500;
       ghCloudSyncTimer = setTimeout(() => {
         pushStateToGitHubRepoNow(false);
-      }, 3500);
+      }, delay);
     }
 
     // Inicializar
