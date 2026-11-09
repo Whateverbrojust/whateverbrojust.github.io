@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:47:22 a. m.
+**Última actualización:** 9/11/2026, 12:47:42 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.13584 USD (530945 tokens)
+**Gasto Acumulado en Sesión:** $0.13786 USD (541277 tokens)
 
 ---
 
@@ -41,12 +41,12 @@
 
 ### Destacadas (5)
 - `hl-criterio` ◼ **DAILY** — 7 historia(s) · Criterio + proceso diario
-- `hl-proceso` ▲ **SETUP** — 11 historia(s) · Taller + preprensa
+- `hl-proceso` ▲ **SETUP** — 10 historia(s) · Taller + preprensa
 - `hl-hito` ● **PORTFOLIO** — 8 historia(s) · Behance + lanzamiento 20.11
 - `hl-calle` ◈ **CONTACT** — 5 historia(s) · Proyectos + colaboraciones
 - `hl-ptr` ▮ **PTR** — 4 historia(s) · Peter Orostegui + diseño gráfico
 
-### Historias (35)
+### Historias (34)
 - `st-1` #1 · 2026-11-09 08:15 · SETUP · **Detrás de cámaras de la mesa de trabajo** · Foto · Idea · Contexto: Plano cenital de la mesa real con recortes, café y herramientas. Abre SETUP mostrando que el taller existe y está en uso.
 - `st-2` #2 · 2026-11-09 12:00 · SETUP · **Pantalla con vectores y curvas en Illustrator** · Video · Idea · Contexto: Grabación de pantalla de 10 s manipulando nodos y curvas Bézier. Demuestra dominio técnico sin revelar el proyecto del lanzamiento.
 - `st-3` #3 · 2026-11-09 19:00 · DAILY · **Caja de preguntas: «¿Qué se viene?»** · Sticker · Idea · Contexto: Sticker de preguntas en horario nocturno para captar curiosidad antes del primer spoiler. Alimenta el banco de respuestas para st-16.
@@ -69,23 +69,22 @@
 - `st-22` #20 · 2026-11-17 21:00 · PORTFOLIO · **El concierto en vivo lleno de visuales** · Foto · Idea · Contexto: Foto del recinto lleno con los visuales en pantalla. Es el resultado funcionando ante público: creación terminada, va a PORTFOLIO.
 - `st-23` #21 · 2026-11-18 11:00 · PORTFOLIO · **Detalle macro de hilo y bordado en gorra** · Foto · Idea · Contexto: Macro extremo que muestra la puntada y el relieve del bordado. Detalle de pieza terminada, no de taller: funciona como calidad de acabado en PORTFOLIO.
 - `st-24` #22 · 2026-11-18 16:00 · PORTFOLIO · **Pegatinas troqueladas listas en la mesa** · Boomerang · Idea · Contexto: Boomerang de las pegatinas ya troqueladas sobre la mesa. El corte preciso es el argumento: pieza terminada, no proceso.
-- `st-25` #23 · 2026-11-18 19:30 · SETUP · **Comprobando resolución a escala 1:1** · Captura · Idea · Contexto: Captura del archivo al 100 % con el pixelado visible si no está a resolución. Cierra el bloque técnico justo antes del countdown.
-- `st-26` #24 · 2026-11-19 07:00 · PORTFOLIO · **Sticker oficial de Countdown: 24 Horas** · Sticker · Idea · Contexto: Cuenta regresiva activada a primera hora para que el contador corra todo el día. Es la pieza de lanzamiento más importante del calendario.
-- `st-27` #25 · 2026-11-19 12:00 · PORTFOLIO · **Mesa con los 4 tomos encuadernados listos** · Foto · Idea · Contexto: Foto cenitalde los cuatro tomos encuadernados recién salidos del taller, apilados con el lomo legible y la mesa despejada. Muestra el entregable físico completo y respalda lo que se sustenta al día siguiente.
-- `st-28` #26 · 2026-11-19 21:00 · PTR · **Reflexión previa al día de entrega** · Texto · Idea · Contexto: Texto en fondo negro, sin imagen, con una reflexión breve sobre cerrar una etapa. Va en PTR porque es personal, no técnico, y cierra la noche antes del lanzamiento.
-- `st-29` #27 · 2026-11-20 10:00 · PORTFOLIO · **Sustentación del portafolio en directo** · Foto · Idea · Contexto: Foto del momento de la sustentación: proyector, jurado, los cuatro tomos sobre la mesa. Es el hito de la jornada y prueba de que el lanzamiento ocurrió.
-- `st-30` #28 · 2026-11-20 18:00 · PORTFOLIO · **¡Portafolio online en Behance! Desliza arriba** · Sticker · Idea · Contexto: Sticker de enlace directo a Behance publicado en horario nocturno, cuando hay pico de consumo. Es la conversión del lanzamiento: la única historia con link que debe clicarse.
-- `st-1794196266553-508` #29 · 2026-11-21 10:00 · CONTACT · **Hablemos de diseño: proyectos y colaboraciones** · Sticker · Idea · Contexto: Primera historia post-lanzamiento: abre el canal formal justo cuando el portafolio ya es público. Sticker de preguntas orientado a recibir briefs, no a conversar.
-- `st-1794196266555-622` #30 · 2026-11-21 17:00 · CONTACT · **Respuesta en menos de 24 h — contacto directo** · Foto · Idea · Contexto: Foto del correo o del teléfono mostrando una bandeja en orden, con el correo legible. Concreta la promesa de respuesta rápida y reduce la fricción para escribir.
-- `st-1794196266559-552` #31 · 2026-11-22 12:00 · PTR · **8 semestres de formación, taller propio** · Foto · Idea · Contexto: Retrato en el taller, sin posar frente a la pantalla: el espacio real detrás. Cierra la campaña con la persona, no con el proyecto.
-- `st-1794196266562-575` #32 · 2026-11-22 20:00 · PTR · **La firma: PTR** · Foto · Idea · Contexto: Detalle del monograma PTR aplicado en papel o estampado. Última historia del cronograma y cierre de marca: deja la firma como huella visual del perfil.
-- `st-1794202219509-869` #33 · 2026-11-23 09:00 · CONTACT · **Cómo cotizar un proyecto de branding** · Carrusel · Idea · Contexto: Tres slides con las variables que determinan un presupuesto: alcance, entregables y número de aplicaciones. Formaliza la conversación de precio y evita el «¿cuánto cuesta un logo?» en DM.
-- `st-1794202219512-548` #34 · 2026-11-24 12:00 · CONTACT · **Mi proceso de trabajo en 4 pasos** · Carrusel · Idea · Contexto: Slide por etapa: brief, propuesta, producción y entrega. Muestra método y reduce el riesgo percibido por un cliente que contrata por primera vez.
-- `st-1794202219515-974` #35 · 2026-11-25 18:00 · CONTACT · **Agenda abierta: proyectos para 2027** · Foto · Idea · Contexto: Cierre del cronograma con disponibilidad declarada y enlace a Behance. Convierte el interés del lanzamiento en conversaciones reales de trabajo, que es el objetivo final de la campaña.
+- `st-26` #23 · 2026-11-19 07:00 · PORTFOLIO · **Sticker oficial de Countdown: 24 Horas** · Sticker · Idea · Contexto: Cuenta regresiva activada a primera hora para que el contador corra todo el día. Es la pieza de lanzamiento más importante del calendario.
+- `st-27` #24 · 2026-11-19 12:00 · PORTFOLIO · **Mesa con los 4 tomos encuadernados listos** · Foto · Idea · Contexto: Foto cenitalde los cuatro tomos encuadernados recién salidos del taller, apilados con el lomo legible y la mesa despejada. Muestra el entregable físico completo y respalda lo que se sustenta al día siguiente.
+- `st-28` #25 · 2026-11-19 21:00 · PTR · **Reflexión previa al día de entrega** · Texto · Idea · Contexto: Texto en fondo negro, sin imagen, con una reflexión breve sobre cerrar una etapa. Va en PTR porque es personal, no técnico, y cierra la noche antes del lanzamiento.
+- `st-29` #26 · 2026-11-20 10:00 · PORTFOLIO · **Sustentación del portafolio en directo** · Foto · Idea · Contexto: Foto del momento de la sustentación: proyector, jurado, los cuatro tomos sobre la mesa. Es el hito de la jornada y prueba de que el lanzamiento ocurrió.
+- `st-30` #27 · 2026-11-20 18:00 · PORTFOLIO · **¡Portafolio online en Behance! Desliza arriba** · Sticker · Idea · Contexto: Sticker de enlace directo a Behance publicado en horario nocturno, cuando hay pico de consumo. Es la conversión del lanzamiento: la única historia con link que debe clicarse.
+- `st-1794196266553-508` #28 · 2026-11-21 10:00 · CONTACT · **Hablemos de diseño: proyectos y colaboraciones** · Sticker · Idea · Contexto: Primera historia post-lanzamiento: abre el canal formal justo cuando el portafolio ya es público. Sticker de preguntas orientado a recibir briefs, no a conversar.
+- `st-1794196266555-622` #29 · 2026-11-21 17:00 · CONTACT · **Respuesta en menos de 24 h — contacto directo** · Foto · Idea · Contexto: Foto del correo o del teléfono mostrando una bandeja en orden, con el correo legible. Concreta la promesa de respuesta rápida y reduce la fricción para escribir.
+- `st-1794196266559-552` #30 · 2026-11-22 12:00 · PTR · **8 semestres de formación, taller propio** · Foto · Idea · Contexto: Retrato en el taller, sin posar frente a la pantalla: el espacio real detrás. Cierra la campaña con la persona, no con el proyecto.
+- `st-1794196266562-575` #31 · 2026-11-22 20:00 · PTR · **La firma: PTR** · Foto · Idea · Contexto: Detalle del monograma PTR aplicado en papel o estampado. Última historia del cronograma y cierre de marca: deja la firma como huella visual del perfil.
+- `st-1794202219509-869` #32 · 2026-11-23 09:00 · CONTACT · **Cómo cotizar un proyecto de branding** · Carrusel · Idea · Contexto: Tres slides con las variables que determinan un presupuesto: alcance, entregables y número de aplicaciones. Formaliza la conversación de precio y evita el «¿cuánto cuesta un logo?» en DM.
+- `st-1794202219512-548` #33 · 2026-11-24 12:00 · CONTACT · **Mi proceso de trabajo en 4 pasos** · Carrusel · Idea · Contexto: Slide por etapa: brief, propuesta, producción y entrega. Muestra método y reduce el riesgo percibido por un cliente que contrata por primera vez.
+- `st-1794202219515-974` #34 · 2026-11-25 18:00 · CONTACT · **Agenda abierta: proyectos para 2027** · Foto · Idea · Contexto: Cierre del cronograma con disponibilidad declarada y enlace a Behance. Convierte el interés del lanzamiento en conversaciones reales de trabajo, que es el objetivo final de la campaña.
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (41 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (42 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1147,4 +1146,54 @@ Dos aclaraciones antes de seguir con el reordenamiento:
 
 ### [41] 👤 **Peter Orostegui** — *9/11/2026, 12:47:19 a. m.*
 Revsa, 35 activas en mi pantalla.
+
+### [42] ✨ **Copilot IA** — *9/11/2026, 12:47:40 a. m.*
+Verifiqué entrada por entrada. **Tu pantalla y mi lista coinciden: 35.** Antes dije «33» y me equivoqué; ese número lo saqué sin contar, no de la lista.
+
+## Desglose por día
+
+| Fecha | Historias | Total |
+|---|---|---|
+| 09.11 | st-1, st-2, st-3 | 3 |
+| 10.11 | st-4, st-5 | 2 |
+| 11.11 | st-7 | 1 |
+| 12.11 | st-8, st-9, st-10 | 3 |
+| 13.11 | st-11, st-12 | 2 |
+| 14.11 | st-13 | 1 |
+| 15.11 | st-15, st-16 | 2 |
+| 16.11 | st-17, st-18, st-19 | 3 |
+| 17.11 | st-20, st-21, st-22 | 3 |
+| 18.11 | st-23, st-24, st-25 | 3 |
+| 19.11 | st-26, st-27, st-28 | 3 |
+| 20.11 | st-29, st-30 | 2 |
+| 21.11 | …553-508, …555-622 | 2 |
+| 22.11 | …559-552, …562-575 | 2 |
+| 23.11 | …509-869 | 1 |
+| 24.11 | …512-548 | 1 |
+| 25.11 | …515-974 | 1 |
+| | **Total** | **35** |
+
+## Desglose por destacada
+
+- **SETUP** — 11: st-1, st-2, st-4, st-7, st-10, st-11, st-17, st-19, st-20, st-21, st-25
+- **PORTFOLIO** — 8: st-18, st-22, st-23, st-24, st-26, st-27, st-29, st-30
+- **DAILY** — 7: st-3, st-5, st-8, st-9, st-12, st-13, st-15
+- **CONTACT** — 5: …553-508, …555-622, …509-869, …512-548, …515-974
+- **PTR** — 4: st-16, st-28, …559-552, …562-575
+
+Las 35 están en estado **Idea**. Formatos: 12 Foto, 7 Video, 6 Sticker, 2 Encuesta, 2 Captura, 2 Boomerang, 2 Carrusel, 1 Texto, 1 Otro.
+
+## Lo que esto revela
+
+`st-6` y `st-14` **no aparecen en mi lista**, así que o ya no existían antes de esta conversación o se borraron y el conteo cuadra de todas formas.
+
+Pero **`st-25` sigue en mi lista**, en el 18.11 bajo SETUP. Si tú ves lo mismo, su borrado no se aplicó. Con el conteo en 35 en ambos lados, la lectura honesta es que **ningún bloque mío ha cambiado la base de datos**; lo de `st-6` lo resolviste en tu interfaz.
+
+Si quieres hacer una última prueba con el único formato que sí respondió, va un bloque solo:
+
+
+
+Si tras eso tu pantalla marca **34**, el canal sirve y rearmo las horas de las 35 (34) de una en una. Si sigue en **35**, borra `st-25` con el botón de tu interfaz y pasamos directo a las horas, que es lo que realmente aporta valor.
+
+> **Acción estructurada generada:** `[{"type":"delete_story","id":"st-25"}]`
 
