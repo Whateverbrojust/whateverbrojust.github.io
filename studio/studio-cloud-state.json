@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794203717984,
-  "updatedAtISO": "2026-11-09T05:55:17.984Z",
+  "updatedAt": 1794203733522,
+  "updatedAtISO": "2026-11-09T05:55:33.522Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -215,8 +215,8 @@
   ],
   "stories": [
     {
-      "time": "08:15",
-      "context": "Plano cenital de la mesa con hojas impresas, regla metálica y taza. Se publica a primera hora para abrir la campaña mostrando el espacio antes que el resultado: el espectador ve dónde se fabrica, no qué se fabricó. Deja sensación de taller activo sin revelar ninguna pieza del portafolio.",
+      "time": "09:00",
+      "context": "Plano cenital de la mesa real: reglas, escalímetro, lápices y pruebas de color encima. Abre el día mostrando que hay un taller detrás y no solo una pantalla.",
       "formatDetail": "Foto con retícula",
       "id": "st-1",
       "date": "2026-11-09",
@@ -227,8 +227,8 @@
       "order": 0
     },
     {
-      "time": "12:00",
-      "context": "Grabación de pantalla de 10 s manipulando nodos y curvas Bézier. Demuestra dominio técnico sin revelar el proyecto del lanzamiento.",
+      "time": "13:00",
+      "context": "Grabación de 6-8 s con zoom lento sobre los nodos mientras se ajusta una curva Bézier. Traduce el proceso técnico a algo que se entiende sin explicación.",
       "formatDetail": "Video corto",
       "id": "st-2",
       "date": "2026-11-09",
@@ -239,8 +239,8 @@
       "order": 1
     },
     {
-      "time": "19:00",
-      "context": "Sticker de preguntas en horario nocturno para captar curiosidad antes del primer spoiler. Alimenta el banco de respuestas para st-16.",
+      "time": "18:00",
+      "context": "Sticker de preguntas al cierre del día, con fondo neutro y texto grande. Sin revelar el lanzamiento: recoge expectativa y alimenta respuestas para las historias del 15.11.",
       "formatDetail": "Sticker interactivo",
       "id": "st-3",
       "date": "2026-11-09",
@@ -2068,6 +2068,47 @@
       "plainText": "Ahora si puedes eliminarlas de golpe, intenta",
       "actionData": null,
       "timestamp": "9/11/2026, 12:55:15 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "No hay nada que eliminar de golpe. Ese es el punto y prefiero decirlo antes de disparar comandos a ciegas.<br><br><div class=\"ai-md-h\">Por qué</div><br>Con <strong>34</strong> en tu pantalla, el borrado ya está terminado: <code>st-6</code>, <code>st-14</code> y <code>st-25</code> quedaron fuera. Las 34 restantes son las historias activas de la campaña; ninguna está marcada para borrar. Si armo un <code>delete_items</code> ahora, tendría que inventar ids, y un lote con ids inexistentes no prueba nada: va a devolver «no encontrado» y vamos a confundir eso con un fallo del canal.<br><br>Lo que sí queda pendiente son <strong>dos actualizaciones</strong>, no borrados:<br><br><div class=\"ai-md-li\" style=\"padding-left:4px;\">• <code>st-10</code> cambia de SETUP a PORTFOLIO.</div><div class=\"ai-md-li\" style=\"padding-left:4px;\">• Horas y contexto para las 34.</div><br><div class=\"ai-md-h\">La prueba que sí sirve</div><br>Como lo que quieres verificar es si el intérprete acepta <strong>varios bloques de golpe</strong>, lo pruebo con actualizaciones: tres historias del 09.11, una hora cada una. Si tu pantalla queda con las tres horas, el lote pasó y rearmo todo de un tirón. Si solo queda la primera, confirmamos el límite de uno por respuesta.<br><br><br><br><br><br>Dime qué ves en el 09.11 —<strong>tres horas</strong> o <strong>solo las 09:00</strong>— y con eso decido si el reordenamiento va en un mensaje o en treinta y cuatro.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00138 USD</strong> (Acumulado sesión: $0.14025 USD)</span>\n          <span style=\"color:#64748b;\">6959 in + 2056 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "No hay nada que eliminar de golpe. Ese es el punto y prefiero decirlo antes de disparar comandos a ciegas.\n\n## Por qué\n\nCon **34** en tu pantalla, el borrado ya está terminado: `st-6`, `st-14` y `st-25` quedaron fuera. Las 34 restantes son las historias activas de la campaña; ninguna está marcada para borrar. Si armo un `delete_items` ahora, tendría que inventar ids, y un lote con ids inexistentes no prueba nada: va a devolver «no encontrado» y vamos a confundir eso con un fallo del canal.\n\nLo que sí queda pendiente son **dos actualizaciones**, no borrados:\n\n- `st-10` cambia de SETUP a PORTFOLIO.\n- Horas y contexto para las 34.\n\n## La prueba que sí sirve\n\nComo lo que quieres verificar es si el intérprete acepta **varios bloques de golpe**, lo pruebo con actualizaciones: tres historias del 09.11, una hora cada una. Si tu pantalla queda con las tres horas, el lote pasó y rearmo todo de un tirón. Si solo queda la primera, confirmamos el límite de uno por respuesta.\n\n\n\n\n\nDime qué ves en el 09.11 —**tres horas** o **solo las 09:00**— y con eso decido si el reordenamiento va en un mensaje o en treinta y cuatro.",
+      "actionData": [
+        {
+          "type": "update_story",
+          "id": "st-1",
+          "name": "Detrás de cámaras de la mesa de trabajo",
+          "date": "2026-11-09",
+          "time": "09:00",
+          "highlight": "SETUP",
+          "format": "Foto",
+          "status": "Idea",
+          "context": "Plano cenital de la mesa real: reglas, escalímetro, lápices y pruebas de color encima. Abre el día mostrando que hay un taller detrás y no solo una pantalla."
+        },
+        {
+          "type": "update_story",
+          "id": "st-2",
+          "name": "Pantalla con vectores y curvas en Illustrator",
+          "date": "2026-11-09",
+          "time": "13:00",
+          "highlight": "SETUP",
+          "format": "Video",
+          "status": "Idea",
+          "context": "Grabación de 6-8 s con zoom lento sobre los nodos mientras se ajusta una curva Bézier. Traduce el proceso técnico a algo que se entiende sin explicación."
+        },
+        {
+          "type": "update_story",
+          "id": "st-3",
+          "name": "Caja de preguntas: «¿Qué se viene?»",
+          "date": "2026-11-09",
+          "time": "18:00",
+          "highlight": "DAILY",
+          "format": "Sticker",
+          "status": "Idea",
+          "context": "Sticker de preguntas al cierre del día, con fondo neutro y texto grande. Sin revelar el lanzamiento: recoge expectativa y alimenta respuestas para las historias del 15.11."
+        }
+      ],
+      "timestamp": "9/11/2026, 12:55:31 a. m."
     }
   ],
   "importedCustomContextNotes": ""
