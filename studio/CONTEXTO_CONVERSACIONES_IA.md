@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 11:22:34 p. m.
+**Última actualización:** 9/11/2026, 12:19:13 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.09705 USD (318822 tokens)
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (18 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (19 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -690,4 +690,7 @@ Ahí está el problema real: **PORTFOLIO y PTR no tienen arco, tienen final.** A
 Muevo `st-25` a SETUP, que es el único error objetivo de clasificación. Antes dime tú: **¿muevo `st-5` a SETUP y dejamos DAILY en 5?** Y si quieres cerrar los arcos de PORTFOLIO y PTR, creo las historias de apertura que hoy faltan (2 en cada una, fechas 09–10.11) para que ninguna carpeta empiece por el final.
 
 > **Acción estructurada generada:** `[{"type":"update_story","id":"st-25","name":"Comprobando resolución a escala 1:1","date":"2026-11-18","time":"18:30","highlight":"SETUP","format":"Captura","status":"Idea","context":"Verificación técnica en pantalla: archivo abierto al 100% con la regla de escala visible junto a una prueba impresa. Va en SETUP porque es control de archivo, no proyecto instalado. Demuestra rigor de preprensa, no cliente."}]`
+
+### [19] 👤 **Peter Orostegui** — *9/11/2026, 12:19:10 a. m.*
+Creo que debemos entender que concepto maneja cada destacada, segun lo que a mi me parezca.
 
