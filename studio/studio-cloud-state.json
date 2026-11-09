@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204586419,
-  "updatedAtISO": "2026-11-09T06:09:46.419Z",
+  "updatedAt": 1794204591484,
+  "updatedAtISO": "2026-11-09T06:09:51.484Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -224,7 +224,7 @@
       "highlightId": "hl-proceso",
       "format": "Foto",
       "status": "Idea",
-      "order": 1
+      "order": 2
     },
     {
       "time": "19:00",
@@ -236,7 +236,7 @@
       "highlightId": "hl-criterio",
       "format": "Sticker",
       "status": "Idea",
-      "order": 2
+      "order": 3
     },
     {
       "time": "09:30",
@@ -584,6 +584,17 @@
       "status": "Idea",
       "context": "Foto cenital de la taza junto al tablero de artes finales, con la marca de sangría visible en el impreso. Abre el día antes del carrusel de expectativa y siembra el tema del criterio sin revelar el portafolio: el cierre ('criterio también es saber esperar') invita a responder y deja la conversación lista para la caja de preguntas de la tarde.",
       "order": 0
+    },
+    {
+      "id": "st-1794204588972-274",
+      "name": "Café en la universidad: la manía de medir todo",
+      "date": "2026-11-09",
+      "time": "08:00",
+      "highlightId": "hl-criterio",
+      "format": "Foto",
+      "status": "Idea",
+      "context": "Foto casual en la universidad, taza y cuaderno sobre la mesa, con la frase en cuerpo pequeño. Abre la campaña desde lo cotidiano antes del carrusel de expectativa: muestra al diseñador pensando el oficio en su día normal, sin spoilers del portafolio.",
+      "order": 1
     }
   ],
   "highlights": [
@@ -2663,6 +2674,24 @@
       "plainText": "La foto será en la universidad y será casual, solo tendrá el mensaje de diseño o una frase espontanea no te enrolles tanto.",
       "actionData": null,
       "timestamp": "9/11/2026, 1:09:43 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Va corto. Una sola frase, casual, como si la pensaras ahí mismo:<br><br><div class=\"ai-md-quote\"><strong>Café en la U. Pensando en la sangría que olvidé ayer.</strong></div><div class=\"ai-md-quote\"><em>(o más seco: «Café en la U. La manía de medir todo.»)</em></div><br>Fondo: mesa, taza, cuaderno. Sin texto encima o con la frase en cuerpo pequeño abajo.<br><br>Sobre el conteo, lo dejo pendiente: cuando confirmes las 5 bajamos a 30.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00063 USD</strong> (Acumulado sesión: $0.15242 USD)</span>\n          <span style=\"color:#64748b;\">7548 in + 512 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Va corto. Una sola frase, casual, como si la pensaras ahí mismo:\n\n> **Café en la U. Pensando en la sangría que olvidé ayer.**\n> *(o más seco: «Café en la U. La manía de medir todo.»)*\n\nFondo: mesa, taza, cuaderno. Sin texto encima o con la frase en cuerpo pequeño abajo.\n\nSobre el conteo, lo dejo pendiente: cuando confirmes las 5 bajamos a 30.",
+      "actionData": [
+        {
+          "type": "create_story",
+          "name": "Café en la universidad: la manía de medir todo",
+          "date": "2026-11-09",
+          "time": "08:00",
+          "highlight": "DAILY",
+          "format": "Foto",
+          "status": "Idea",
+          "context": "Foto casual en la universidad, taza y cuaderno sobre la mesa, con la frase en cuerpo pequeño. Abre la campaña desde lo cotidiano antes del carrusel de expectativa: muestra al diseñador pensando el oficio en su día normal, sin spoilers del portafolio."
+        }
+      ],
+      "timestamp": "9/11/2026, 1:09:48 a. m."
     }
   ],
   "importedCustomContextNotes": ""
