@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794196231158,
-  "updatedAtISO": "2026-11-09T03:50:31.158Z",
+  "updatedAt": 1794196269956,
+  "updatedAtISO": "2026-11-09T03:51:09.956Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -353,7 +353,7 @@
       "id": "st-16",
       "date": "2026-11-15",
       "name": "Respondiendo la pregunta más votada",
-      "highlightId": "hl-criterio",
+      "highlightId": "hl-ptr",
       "format": "Hablando a cámara",
       "status": "Idea",
       "order": 15
@@ -461,7 +461,7 @@
       "id": "st-28",
       "date": "2026-11-19",
       "name": "Reflexión previa al día de entrega",
-      "highlightId": "hl-hito",
+      "highlightId": "hl-ptr",
       "format": "Texto sobrio con audio",
       "status": "Idea",
       "order": 27
@@ -483,36 +483,79 @@
       "format": "Link Sticker directo",
       "status": "Idea",
       "order": 29
+    },
+    {
+      "id": "st-1794196266553-508",
+      "name": "Hablemos de diseño: proyectos y colaboraciones",
+      "date": "2026-11-21",
+      "highlightId": "hl-calle",
+      "format": "Sticker",
+      "status": "Idea",
+      "order": 0
+    },
+    {
+      "id": "st-1794196266555-622",
+      "name": "Respuesta en menos de 24 h — contacto directo",
+      "date": "2026-11-21",
+      "highlightId": "hl-calle",
+      "format": "Foto",
+      "status": "Idea",
+      "order": 1
+    },
+    {
+      "id": "st-1794196266559-552",
+      "name": "8 semestres de formación, taller propio",
+      "date": "2026-11-22",
+      "highlightId": "hl-ptr",
+      "format": "Foto",
+      "status": "Idea",
+      "order": 0
+    },
+    {
+      "id": "st-1794196266562-575",
+      "name": "La firma: PTR",
+      "date": "2026-11-22",
+      "highlightId": "hl-ptr",
+      "format": "Foto",
+      "status": "Idea",
+      "order": 1
     }
   ],
   "highlights": [
     {
       "id": "hl-proceso",
-      "name": "PROCESO",
-      "icon": "🛠️",
-      "desc": "Del vector al pliego. Retículas, sangrías, marcas de corte y pruebas de color.",
-      "order": 2
-    },
-    {
-      "id": "hl-criterio",
-      "name": "CRITERIO",
-      "icon": "💡",
-      "desc": "Encuestas, referentes y debates. Cómo se entrena el ojo que decide.",
-      "order": 3
-    },
-    {
-      "id": "hl-calle",
-      "name": "EN LA CALLE",
-      "icon": "⚡",
-      "desc": "Vallas a 80 km/h, caravanas y pantallas LED. El diseño verificándose en el mundo real.",
+      "name": "SETUP",
+      "icon": "▲",
+      "desc": "Taller + preprensa",
       "order": 1
     },
     {
-      "id": "hl-hito",
-      "name": "HITO 20.11",
-      "icon": "🎯",
-      "desc": "Del teaser «Mientras tanto» al archivo completo. Portafolio Profesional 2026.",
+      "id": "hl-criterio",
+      "name": "DAILY",
+      "icon": "◼",
+      "desc": "Criterio + proceso diario",
       "order": 0
+    },
+    {
+      "id": "hl-calle",
+      "name": "CONTACT",
+      "icon": "◈",
+      "desc": "Proyectos + colaboraciones",
+      "order": 3
+    },
+    {
+      "id": "hl-hito",
+      "name": "PORTFOLIO",
+      "icon": "●",
+      "desc": "Behance + lanzamiento 20.11",
+      "order": 2
+    },
+    {
+      "id": "hl-ptr",
+      "name": "PTR",
+      "icon": "▮",
+      "desc": "Peter Orostegui + diseño gráfico",
+      "order": 4
     }
   ],
   "chatHistory": [
@@ -625,6 +668,241 @@
       "plainText": "Mira esto: \nAquí tienes el texto exacto y el orden visual propuesto para cada destacada.\nTodas las portadas siguen el mismo sistema: fondo negro, tipografía en mayúsculas con tracking amplio, ícono geométrico blanco pequeño y una línea fina de separación.\n\n\n1. DAILY\n\nPortada:\nDAILY\nCriterio + proceso diario\n@soyorostegui\n\nOrden visual de historias:\n\n1. Portada DAILY.\n2. “Diseño casi todos los días. Publico cuando aporta.”\n3. “3 preguntas antes de elegir una tipografía.”\n4. “Boceto → vector → archivo final.”\n5. “Error común: saturar una pieza.”\n6. “Domingo de taller: nadie publica la hoja de control.”\n7. “Guarda esto en tus referencias.”\n\n\n2. SETUP\n\nPortada:\nSETUP\nTaller + preprensa\n@soyorostegui\n\nOrden visual de historias:\n\n1. Portada SETUP.\n2. “Mi estación de trabajo, versión 2026.”\n3. “Herramientas esenciales de producción.”\n4. “Preprensa: la hoja de control de color.”\n5. “La prueba física importa.”\n6. “Detalle macro: cian bajo la lupa.”\n7. “Un archivo no termina cuando se ve bonito.”\n\n\n3. PORTFOLIO\n\nPortada:\nPORTFOLIO\nBehance + lanzamiento 20.11\n@soyorostegui\n\nOrden visual de historias:\n\n1. Portada PORTFOLIO.\n2. “2026: el archivo completo.”\n3. “Enlace directo en bio.”\n4. “Sneak peek 01: ornamento geométrico.”\n5. “Sneak peek 02: streetwear & textil.”\n6. “20.11 — Lanzamiento oficial.”\n7. “Portafolio ya disponible.”\n\n\n4. CONTACT\n\nPortada:\nCONTACT\nProyectos + colaboraciones\n@soyorostegui\n\nOrden visual de historias:\n\n1. Portada CONTACT.\n2. “Hablemos de diseño.”\n3. “Proyectos: branding, packaging, OOH.”\n4. “Email directo.”\n5. “Behance + LinkedIn.”\n6. “Respuesta en menos de 24 h.”\n\n\n5. PTR\n\nPortada:\nPTR\nPeter Orostegui\nDiseño gráfico\n\nOrden visual de historias:\n\n1. Portada PTR.\n2. “Peter Orostegui.”\n3. “Diseño gráfico + identidad visual.”\n4. “8 semestres de formación.”\n5. “Taller propio, calle y criterio.”\n6. “La firma: PTR.”\n\n\nSi quieres, el siguiente paso puede ser preparar los textos de historias para los días específicos del calendario o definir los íconos geométricos exactos de cada portada. \n\nListo, Peter. Ya quedaron aplicados los cambios visuales en el dashboard.\n\nNuevo orden de destacadas:\n1. DAILY\n2. SETUP\n3. PORTFOLIO\n4. CONTACT\n5. PTR\n\nSistema visual aplicado:\n• Fondo negro.\n• Tipografía uppercase con tracking amplio.\n• Ícono geométrico blanco pequeño.\n• Línea fina de separación.\n• Estética consistente con la identidad de @soyorostegui.\n\nPortadas actualizadas:\n• DAILY → Criterio + proceso diario.\n• SETUP → Taller + preprensa.\n• PORTFOLIO → Behance + lanzamiento 20.11.\n• CONTACT → Proyectos + colaboraciones.\n• PTR → Peter Orostegui + diseño gráfico.",
       "actionData": null,
       "timestamp": "8/11/2026, 10:50:28 p. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Recibido. Aplico el sistema de 5 portadas y reordeno todo, pero antes dos cosas que tienes que saber, porque afectan la integridad del perfil y las resuelvo en la misma ejecución:<br><br><strong>1. No borro las carpetas viejas: las convierto.</strong> Si eliminara <code>hl-hito</code>, <code>hl-proceso</code>, <code>hl-criterio</code> y <code>hl-calle</code>, las 30 historias quedarían apuntando a nombres que ya no existen — carpetas vacías y contenido huérfano. Reutilizo los IDs y reasigno cada historia a su nueva carpeta. El sistema de 5 queda completo y sin pérdidas.<br><br><strong>2. El sistema de 5 no tiene dónde poner «EN LA CALLE».</strong> Ocho historias (vallas a 80 km/h, caravana, LED, textil macro) no encajan en DAILY, SETUP, PORTFOLIO ni PTR. Las asigno a <strong>CONTACT</strong>, que en tu propio orden visual dice <em>«Proyectos: branding, packaging, OOH»</em>: es exactamente lo que esa carpeta demuestra cuando alguien quiere contratar. Si más adelante quieres recuperar «CALLE» como sexta destacada, se crea sin tocar nada.<br><br><strong>Mapeo aplicado</strong><br><br>| Carpeta | ID | Historias |<br>|---|---|---|<br>| DAILY | hl-criterio | 6 |<br>| SETUP | hl-proceso | 9 |<br>| PORTFOLIO | hl-hito | 5 |<br>| CONTACT | hl-calle | 8 + 2 nuevas |<br>| PTR | hl-ptr (nueva) | 2 + 2 nuevas |<br><br><strong>3. PTR y CONTACT arrancaban vacías.</strong> Una carpeta sin historias se ve rota. Creo 4 historias nuevas para el 21 y 22.11 — que además llenan los días muertos del calendario tras el lanzamiento. Nada más: no inflo el cronograma con las 5 portadas, porque son piezas de diseño gráfico, no stories del calendario.<br><br><strong>Íconos geométricos</strong> (coherentes con tu sistema): ◼ ▲ ● ◈ ▮<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Quedan las 5 carpetas activas y ninguna vacía: <strong>DAILY 6 · SETUP 9 · PORTFOLIO 5 · CONTACT 10 · PTR 4</strong>.<br><br><strong>Pendiente para el diseño de portadas:</strong> las cinco comparten fondo negro, mayúsculas con tracking amplio, ícono geométrico y línea fina — pero conviene que el ícono cambie de forma y no solo de glifo, para que se distingan a tamaño pulgar. Si quieres, el siguiente paso es redactar los textos exactos de las historias que faltan por día (21 al 25.11), que es donde el perfil se queda sin voz después del lanzamiento.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00383 USD</strong> (Acumulado sesión: $0.08389 USD)</span>\n          <span style=\"color:#64748b;\">7590 in + 6893 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Recibido. Aplico el sistema de 5 portadas y reordeno todo, pero antes dos cosas que tienes que saber, porque afectan la integridad del perfil y las resuelvo en la misma ejecución:\n\n**1. No borro las carpetas viejas: las convierto.** Si eliminara `hl-hito`, `hl-proceso`, `hl-criterio` y `hl-calle`, las 30 historias quedarían apuntando a nombres que ya no existen — carpetas vacías y contenido huérfano. Reutilizo los IDs y reasigno cada historia a su nueva carpeta. El sistema de 5 queda completo y sin pérdidas.\n\n**2. El sistema de 5 no tiene dónde poner «EN LA CALLE».** Ocho historias (vallas a 80 km/h, caravana, LED, textil macro) no encajan en DAILY, SETUP, PORTFOLIO ni PTR. Las asigno a **CONTACT**, que en tu propio orden visual dice *«Proyectos: branding, packaging, OOH»*: es exactamente lo que esa carpeta demuestra cuando alguien quiere contratar. Si más adelante quieres recuperar «CALLE» como sexta destacada, se crea sin tocar nada.\n\n**Mapeo aplicado**\n\n| Carpeta | ID | Historias |\n|---|---|---|\n| DAILY | hl-criterio | 6 |\n| SETUP | hl-proceso | 9 |\n| PORTFOLIO | hl-hito | 5 |\n| CONTACT | hl-calle | 8 + 2 nuevas |\n| PTR | hl-ptr (nueva) | 2 + 2 nuevas |\n\n**3. PTR y CONTACT arrancaban vacías.** Una carpeta sin historias se ve rota. Creo 4 historias nuevas para el 21 y 22.11 — que además llenan los días muertos del calendario tras el lanzamiento. Nada más: no inflo el cronograma con las 5 portadas, porque son piezas de diseño gráfico, no stories del calendario.\n\n**Íconos geométricos** (coherentes con tu sistema): ◼ ▲ ● ◈ ▮\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuedan las 5 carpetas activas y ninguna vacía: **DAILY 6 · SETUP 9 · PORTFOLIO 5 · CONTACT 10 · PTR 4**.\n\n**Pendiente para el diseño de portadas:** las cinco comparten fondo negro, mayúsculas con tracking amplio, ícono geométrico y línea fina — pero conviene que el ícono cambie de forma y no solo de glifo, para que se distingan a tamaño pulgar. Si quieres, el siguiente paso es redactar los textos exactos de las historias que faltan por día (21 al 25.11), que es donde el perfil se queda sin voz después del lanzamiento.",
+      "actionData": [
+        {
+          "type": "update_highlight",
+          "id": "hl-criterio",
+          "name": "DAILY",
+          "icon": "◼",
+          "desc": "Criterio + proceso diario"
+        },
+        {
+          "type": "update_highlight",
+          "id": "hl-proceso",
+          "name": "SETUP",
+          "icon": "▲",
+          "desc": "Taller + preprensa"
+        },
+        {
+          "type": "update_highlight",
+          "id": "hl-hito",
+          "name": "PORTFOLIO",
+          "icon": "●",
+          "desc": "Behance + lanzamiento 20.11"
+        },
+        {
+          "type": "update_highlight",
+          "id": "hl-calle",
+          "name": "CONTACT",
+          "icon": "◈",
+          "desc": "Proyectos + colaboraciones"
+        },
+        {
+          "type": "create_highlight",
+          "id": "hl-ptr",
+          "name": "PTR",
+          "icon": "▮",
+          "desc": "Peter Orostegui + diseño gráfico"
+        },
+        {
+          "type": "reorder_highlights",
+          "order": [
+            "hl-criterio",
+            "hl-proceso",
+            "hl-hito",
+            "hl-calle",
+            "hl-ptr"
+          ]
+        },
+        {
+          "type": "update_story",
+          "id": "st-1",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-2",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-4",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-6",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-7",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-10",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-11",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-14",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-19",
+          "highlight": "SETUP"
+        },
+        {
+          "type": "update_story",
+          "id": "st-5",
+          "highlight": "DAILY"
+        },
+        {
+          "type": "update_story",
+          "id": "st-8",
+          "highlight": "DAILY"
+        },
+        {
+          "type": "update_story",
+          "id": "st-9",
+          "highlight": "DAILY"
+        },
+        {
+          "type": "update_story",
+          "id": "st-12",
+          "highlight": "DAILY"
+        },
+        {
+          "type": "update_story",
+          "id": "st-13",
+          "highlight": "DAILY"
+        },
+        {
+          "type": "update_story",
+          "id": "st-15",
+          "highlight": "DAILY"
+        },
+        {
+          "type": "update_story",
+          "id": "st-3",
+          "highlight": "PORTFOLIO"
+        },
+        {
+          "type": "update_story",
+          "id": "st-26",
+          "highlight": "PORTFOLIO"
+        },
+        {
+          "type": "update_story",
+          "id": "st-27",
+          "highlight": "PORTFOLIO"
+        },
+        {
+          "type": "update_story",
+          "id": "st-29",
+          "highlight": "PORTFOLIO"
+        },
+        {
+          "type": "update_story",
+          "id": "st-30",
+          "highlight": "PORTFOLIO"
+        },
+        {
+          "type": "update_story",
+          "id": "st-17",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-18",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-20",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-21",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-22",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-23",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-24",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-25",
+          "highlight": "CONTACT"
+        },
+        {
+          "type": "update_story",
+          "id": "st-16",
+          "highlight": "PTR"
+        },
+        {
+          "type": "update_story",
+          "id": "st-28",
+          "highlight": "PTR"
+        },
+        {
+          "type": "create_story",
+          "name": "Hablemos de diseño: proyectos y colaboraciones",
+          "date": "2026-11-21",
+          "highlight": "CONTACT",
+          "format": "Sticker",
+          "status": "Idea"
+        },
+        {
+          "type": "create_story",
+          "name": "Respuesta en menos de 24 h — contacto directo",
+          "date": "2026-11-21",
+          "highlight": "CONTACT",
+          "format": "Foto",
+          "status": "Idea"
+        },
+        {
+          "type": "create_story",
+          "name": "8 semestres de formación, taller propio",
+          "date": "2026-11-22",
+          "highlight": "PTR",
+          "format": "Foto",
+          "status": "Idea"
+        },
+        {
+          "type": "create_story",
+          "name": "La firma: PTR",
+          "date": "2026-11-22",
+          "highlight": "PTR",
+          "format": "Foto",
+          "status": "Idea"
+        }
+      ],
+      "timestamp": "8/11/2026, 10:51:06 p. m."
     }
   ],
   "importedCustomContextNotes": ""
