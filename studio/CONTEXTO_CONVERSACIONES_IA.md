@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 2:32:06 a. m.
+**Última actualización:** 9/11/2026, 2:32:20 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.15536 USD (649181 tokens)
+**Gasto Acumulado en Sesión:** $0.15651 USD (657135 tokens)
 
 ---
 
@@ -81,7 +81,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (65 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (66 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1453,4 +1453,41 @@ Aquí está el bloque. Va sobre la historia que ya existe, así que se actualiza
 
 ### [65] 👤 **Peter Orostegui** — *9/11/2026, 2:32:03 a. m.*
 Oye, estaba revisando los post como seria el que tenemos programado para mañana?
+
+### [66] ✨ **Copilot IA** — *9/11/2026, 2:32:18 a. m.*
+## Mañana, 10.11: un solo post
+
+| Campo | Valor |
+|---|---|
+| Título | El fetiche del papel y lo tangible (Detalle Físico) |
+| Canal | Instagram |
+| Formato | Post (imagen única) |
+| Estado | **Idea** — sin estructura definida ni fecha de producción |
+
+**Caption actual:**
+
+> Cuando el vector se convierte en materia.
+> El rigor de un diseñador no se mide en cómo se ve en su pantalla Retina, sino en cómo se siente cuando sale de la imprenta.
+
+## Cómo lo ejecutaría
+
+- **Una sola imagen, macro.** Primer plano de una pieza impresa: el relieve de la tinta sobre papel de algodón, luz rasante de ventana para que se vea la huella. Sin mockups, sin laptop de fondo.
+- **Relación 4:5**, no 1:1. El vertical aguanta mejor el texto pequeño cuando la gente mira en el feed.
+- **Frase corta sobre la foto**, cuerpo 12–14 pt, abajo a la izquierda, en el mismo tono crema del papel. Nada más.
+- **Sin CTA de venta.** Es un post de criterio, no de lanzamiento. Coherente con la regla de no spoilers antes del 20.
+
+**Dos ajustes al copy:** «Retina» es marca registrada de Apple y aquí distrae; y la frase es larga para leerse en el feed. Yo la dejaría así:
+
+> Cuando el vector se convierte en materia.
+> El rigor no se mide en la pantalla, sino en cómo se siente al salir de la imprenta.
+
+## Las historias del mismo día lo sostienen
+
+`st-4` (muestra de texturas de papel, SETUP) y `st-5` (encuesta mate o brillante, DAILY) forman la secuencia natural: el post afirma *«se siente»*, la historia lo **muestra**, y la encuesta lo convierte en conversación. Van en ese orden: post en la mañana, texturas al mediodía, encuesta en la tarde.
+
+## Si tu «mañana» era el 11.11
+
+Ese día hay dos piezas: `post-ig-3` (Reel «3 errores de preprensa») y `post-li-2` (LinkedIn sobre vallas de 12x4 m). También están en **Idea**. Dime cuál revisamos y lo desgloso igual.
+
+**Lo que le falta a este post para estar listo:** pasar a *En Diseño*, definir el campo de estructura y cerrar el copy. Si quieres que lo aplique, dímelo y va el bloque en el mismo mensaje.
 
