@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:48:19 p. m.
+**Última actualización:** 8/11/2026, 10:48:34 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.07830 USD (225008 tokens)
 
@@ -79,7 +79,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (6 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (7 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -154,4 +154,7 @@ Tienes razón, cerramos en **19 piezas exactas** y no nos extendemos más.
 Calendario cerrado en **19 piezas**. Dime si pasamos a producción (marcar estados) o a los copies, y avanzamos sin desviarnos.
 
 > **Acción estructurada generada:** `[{"type":"update_post","id":"post-ai-1794128749201","title":"ARCHIVADO · Domingo de taller (fuera de campaña)","date":"2026-11-26","status":"Idea","caption":"Domingo de taller.\n\nHay una parte del diseño que nunca aparece en pantalla: la hoja de control de color, las marcas de registro, la barra que confirma que el cian sigue siendo cian.\n\nAprendí que un archivo no termina cuando se ve bonito. Termina cuando la máquina lo entiende y la hoja lo comprueba.\n\nUn domingo, con la lupa en la mano, ese es todo el plan.\n\n—\nPeter Orostegui · Diseño gráfico & identidad visual"}]`
+
+### [7] 👤 **Peter Orostegui** — *8/11/2026, 10:48:31 p. m.*
+Ok, trabajemos en las Destacadas
 
