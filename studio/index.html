@@ -500,7 +500,7 @@
     }
     .st-item {
       display: grid;
-      grid-template-columns: 42px 84px 56px minmax(160px, 1fr) 104px 92px 104px;
+      grid-template-columns: 42px 84px 56px minmax(150px, 1fr) 118px 100px 92px 104px;
       gap: 14px;
       padding: 10px 0;
       border-bottom: 1px solid var(--border);
@@ -515,9 +515,17 @@
     .st-name-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .st-context { font-size: 11.5px; color: var(--text-muted); font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .st-context-empty { color: var(--text-light); font-style: italic; }
+    .st-highlight {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
     .st-header {
       display: grid;
-      grid-template-columns: 42px 84px 56px minmax(160px, 1fr) 104px 92px 104px;
+      grid-template-columns: 42px 84px 56px minmax(150px, 1fr) 118px 100px 92px 104px;
       gap: 14px;
       padding: 0 0 8px;
       border-bottom: 1px solid var(--border-dark);
@@ -1713,7 +1721,7 @@
         <button class="btn-new" onclick="openStoryModal()"><span>+</span> Nueva historia</button>
       </div>
       <div class="st-header">
-        <span>#</span><span>Fecha</span><span>Hora</span><span>Historia &amp; contexto</span><span>Formato</span><span>Estado</span><span>Acciones</span>
+        <span>#</span><span>Fecha</span><span>Hora</span><span>Historia &amp; contexto</span><span>Destacada</span><span>Formato</span><span>Estado</span><span>Acciones</span>
       </div>
       <div id="stories-list"></div>
     </div>
@@ -2729,6 +2737,7 @@
               ? `<span class="st-context">${escapeHtmlForChat(s.context)}</span>`
               : `<span class="st-context st-context-empty">+ Añadir contexto</span>`}
           </span>
+          <span class="st-highlight" data-label="Destacada" title="${h ? escapeHtmlForChat((h.icon ? h.icon + " " : "") + h.name) : "Sin destacada"}">${h ? escapeHtmlForChat((h.icon ? h.icon + " " : "") + h.name) : "—"}</span>
           <span data-label="Formato"><span class="tag tag-gray">${escapeHtmlForChat(s.format || "—")}</span></span>
           <span data-label="Estado"><span class="tag ${getTagStatusClass(s.status || "Idea")}">${escapeHtmlForChat(s.status || "Idea")}</span></span>
           <span style="display:flex;gap:2px;justify-content:flex-end;" data-label="Acciones">
