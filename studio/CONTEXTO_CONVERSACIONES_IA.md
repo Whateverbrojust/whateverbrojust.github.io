@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:56:43 p. m.
+**Última actualización:** 8/11/2026, 10:56:57 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.08571 USD (259516 tokens)
+**Gasto Acumulado en Sesión:** $0.08700 USD (270319 tokens)
 
 ---
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (13 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (14 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -456,4 +456,61 @@ Ejemplos del cambio:
 
 ### [13] 👤 **Peter Orostegui** — *8/11/2026, 10:56:41 p. m.*
 No, solo queria saber las limitaciones dime que deberia tener cada entrada para que fuese completa y ayudara a ejecutarla de manera correcta?
+
+### [14] ✨ **Copilot IA** — *8/11/2026, 10:56:54 p. m.*
+Buena pregunta, y va al fondo del asunto: la historia no está incompleta por falta de un campo, sino porque **el título describe la producción, no la ejecución**. Son dos cosas distintas. `st-7` dice *«Preparando planchas de impresión»*: eso te dice qué grabar, pero no cuándo, con qué texto, ni qué debe quedar en pantalla.
+
+## Los campos que debería tener una entrada
+
+**Críticos** (sin ellos no puedes grabar ni publicar):
+
+| Campo | Para qué sirve |
+|---|---|
+| **Copy en pantalla** | El texto literal que se lee. Sin esto, el título es solo una nota mental. |
+| **Asset** | Qué archivo concreto: foto, video, captura, boomerang. Y si ya existe o hay que producirlo. |
+| **Hora** | El "cuándo" dentro del día. Una encuesta a las 8 a.m. y a las 9 p.m. no rinde igual. |
+
+**De ejecución** (evitan rehacer trabajo):
+
+| Campo | Para qué sirve |
+|---|---|
+| **Interacción** | Si lleva encuesta: las dos opciones exactas. Si lleva caja: la pregunta. Si lleva link: la URL. |
+| **Secuencia** | Orden dentro del día. Instagram es efímero: la historia 2 se ve después de la 1, no antes. |
+| **Notas de arte** | Composición, dónde va el texto, qué queda fuera de encuadre. |
+
+**De control** (opcionales, pero útiles):
+
+- **Responsable** — si alguien más graba o edita.
+- **Intención** — qué buscas: guardados, respuestas, clics al link. No es vanity metrics, es saber si la historia funcionó.
+
+## Cómo se ve una entrada completa
+
+**st-26 (Countdown 24 horas):**
+- **Copy:** «24 horas. Mañana se abre el archivo.»
+- **Asset:** video corto, fondo negro, tipografía del sistema. Ya existe la plantilla.
+- **Hora:** 7:00 p.m. (cuando la gente sale del trabajo)
+- **Interacción:** sticker de cuenta regresiva, sin link todavía
+- **Secuencia:** 1 de 1 ese día
+- **Arte:** texto centrado, ícono ● arriba, sin música
+- **Intención:** expectativa, no clics
+
+**st-5 (Encuesta papel):**
+- **Copy:** «¿Mate o brillante? Hoy defiendo el mate.»
+- **Asset:** foto macro de dos muestras de papel, lado a lado
+- **Hora:** 12:30 p.m.
+- **Interacción:** encuesta — opción A «Mate», opción B «Brillante»
+- **Secuencia:** única del día en SETUP
+- **Arte:** luz lateral para que se vea la textura
+- **Intención:** respuestas y conversación en DM
+
+## El problema de fondo
+
+**El esquema actual solo admite seis campos** y ninguno es copy, hora ni interacción. Así que la entrada completa, hoy, no cabe. Hay dos salidas:
+
+1. **Convención dentro del `name`** — usar `Producción | Copy` y dejar el resto en la descripción de la destacada. Es lo que ya permite el sistema, pero se vuelve ilegible con 30 historias.
+2. **Ampliar el esquema** — añadir `copy`, `time`, `interaction` y `asset` como campos reales. Es lo correcto si vamos a producir en serio los próximos diez días.
+
+Mi recomendación es la **2**, pero no la aplico sin tu visto bueno porque implica tocar el modelo, no solo el contenido.
+
+**No he modificado nada.** Dime si quieres que prepare la propuesta de esquema ampliado con las 30 historias ya cargadas en ese formato, o si prefieres quedarte con la convención en el `name` y avanzar a producción.
 
