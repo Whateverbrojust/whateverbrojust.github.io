@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:32:18 a. m.
+**Última actualización:** 9/11/2026, 12:33:52 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.11456 USD (405199 tokens)
+**Gasto Acumulado en Sesión:** $0.12243 USD (439033 tokens)
 
 ---
 
@@ -87,7 +87,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (23 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (24 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -841,4 +841,54 @@ Tres franjas según comportamiento: **mañana 07:00–09:30** (desplazamiento y 
 
 ### [23] 👤 **Peter Orostegui** — *9/11/2026, 12:32:16 a. m.*
 Lo que no sea compatible con estos criterios eliminalo.
+
+### [24] ✨ **Copilot IA** — *9/11/2026, 12:33:50 a. m.*
+**5 historias**, y ninguna habla de piezas instaladas: `st-...869` (cómo cotizar), `st-...548` (proceso en 4 pasos), `st-...974` (agenda 2027), `st-...508` (colaboraciones) y `st-...622` (respuesta en 24 h). Ese es exactamente el arco formal que definiste. CONTACT quedó coherente por primera vez.
+
+## Lo que efectivamente no tiene hogar
+
+Aplicando tus criterios al pie de la letra, tres historias no caben en ninguna carpeta:
+
+- **`st-6` «Marcas de corte y sangría en archivo real»**
+- **`st-14` «El orden de capas en un archivo maestro»**
+- **`st-25` «Comprobando resolución a escala 1:1»**
+
+Las tres son **capturas de pantalla de técnica de archivo**. No son espacio ni equipos (SETUP es espacial, dijiste), no son creación terminada (PORTFOLIO pide resultado), no son casuales (DAILY), no son contacto ni eres tú. Son proceso de preprensa documentado en pantalla, sin nada físico en el encuadre. **Las elimino.**
+
+## Lo que decidí conservar y por qué
+
+- **`st-2`** (pantalla con vectores) se queda en SETUP: hay escritorio, hay atrezzo, es tu espacio. Si quieres pureza total, esta también caería.
+- **`st-4`** (texturas de papel) y **`st-11`** (estampado dorado) se quedan: son material físico sobre mesa, hay un lugar. Sin st-4, además, la encuesta `st-5` se queda sin su "antes".
+- **`st-10`** (hojeando cuadernillo) se queda en PORTFOLIO: es una pieza terminada, aunque sea en video.
+
+## Distribución final
+
+| Carpeta | Historias |
+|---|---|
+| **SETUP** | 10 |
+| **DAILY** | 7 |
+| **PORTFOLIO** | 9 |
+| **CONTACT** | 5 |
+| **PTR** | 4 |
+| **Eliminadas** | 3 |
+
+Total: 32 historias activas de las 35 registradas.
+
+```json
+{ "action": "update_story", "id": "st-17", "name": "Pasando en carro frente a una valla en la avenida", "date": "2026-11-16", "time": "08:30", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Grabar en movimiento real desde el vehículo, sin trípode, cámara en mano y enfoque rápido. Es la única historia de la carpeta que prueba la pieza a la velocidad de lectura del transeúnte; abre la serie del día y prepara st-18." }
+{ "action": "update_story", "id": "st-18", "name": "La escala humana frente a una pieza OOH", "date": "2026-11-16", "time": "17:30", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Foto de una persona real parada bajo la valla, con la pieza completa en cuadro. Demuestra el tamaño y la contundencia del resultado; va después de st-17 para que el contraste movimiento-estatismo se lea como cierre." }
+{ "action": "update_story", "id": "st-20", "name": "Caravana de vehículos con gráfica instalada", "date": "2026-11-17", "time": "09:30", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Plano abierto de los vehículos ya rotulados en el punto de instalación, con sonido ambiente. Documenta el montaje en campo, que es la mitad espacial de SETUP; funciona como apertura del bloque de producción en vivo antes de la prueba de LED." }
+{ "action": "update_story", "id": "st-21", "name": "Prueba de pantallas LED en tarima de concierto", "date": "2026-11-17", "time": "16:00", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Grabar el técnico ajustando el mapeo y el primer render apareciendo en el LED. Muestra el rigor de campo antes del show; cierra la escalada técnica del día y deja paso a st-22 como evidencia del resultado." }
+{ "action": "update_story", "id": "st-22", "name": "El concierto en vivo lleno de visuales", "date": "2026-11-17", "time": "21:00", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Captura desde el público con los visuales a plena intensidad y la tarima llena. Es la prueba de que el sistema funcionó en producción real; se publica al final del día, cuando el concierto ocurre." }
+{ "action": "update_story", "id": "st-23", "name": "Detalle macro de hilo y bordado en gorra", "date": "2026-11-18", "time": "11:00", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Macro con luz rasante para revelar la puntada y la densidad del bordado. Habla del acabado dentro del resultado, no del proceso; inicia el bloque de piezas físicas de streetwear." }
+{ "action": "update_story", "id": "st-24", "name": "Pegatinas troqueladas listas en la mesa", "date": "2026-11-18", "time": "12:00", "highlight": "PORTFOLIO", "format": "Boomerang", "status": "Idea", "context": "Boomerang corto girando las pegatinas entre los dedos para mostrar la precisión del troquel. Complementa st-23 en la misma línea de acabado; el movimiento permite ver el borde donde la foto estática no llega." }
+{ "action": "update_story", "id": "st-3", "name": "Caja de preguntas: «¿Qué se viene?»", "date": "2026-11-09", "time": "19:00", "highlight": "DAILY", "format": "Sticker", "status": "Idea", "context": "Abrir la caja al cierre del primer día de campaña, cuando más gente está conectada. Es interacción pura, no creación, por eso sale de PORTFOLIO; recoge expectativa para el 20.11 y alimenta st-16." }
+{ "action": "delete_story", "id": "st-6" }
+{ "action": "delete_story", "id": "st-14" }
+{ "action": "delete_story", "id": "st-25" }
+```
+
+## Pendiente
+
+Estas trece están ya en su carpeta correcta y no las toqué: `st-1`, `st-2`, `st-4`, `st-5`, `st-7`, `st-8`, `st-9`, `st-10`, `st-11`, `st-12`, `st-13`, `st-15`, `st-16`, `st-26`, `st-27`, `st-28`, `st-29`, `st-30` y las cinco de CONTACT y PTR. **Ninguna tiene hora ni contexto todavía.** Dime si le doy la misma pasada al resto y te dejo el cronograma completo, día por día, listo para grabar.
 
