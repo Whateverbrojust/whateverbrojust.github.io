@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204780992,
-  "updatedAtISO": "2026-11-09T06:13:00.992Z",
+  "updatedAt": 1794204792753,
+  "updatedAtISO": "2026-11-09T06:13:12.753Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -576,13 +576,13 @@
     },
     {
       "id": "st-1794204531446-673",
-      "name": "Café y criterio: la pausa antes de producción",
+      "name": "Café en la U: la sangría que olvidé ayer",
       "date": "2026-11-09",
       "time": "08:00",
       "highlightId": "hl-criterio",
       "format": "Foto",
-      "status": "Idea",
-      "context": "Foto cenital de la taza junto al tablero de artes finales, con la marca de sangría visible en el impreso. Abre el día antes del carrusel de expectativa y siembra el tema del criterio sin revelar el portafolio: el cierre ('criterio también es saber esperar') invita a responder y deja la conversación lista para la caja de preguntas de la tarde.",
+      "status": "En Diseño",
+      "context": "Foto casual en la mesa de la universidad: taza, cuaderno y una frase corta al pie, sin diseño encima. Se publica a las 8:00 para abrir el día antes del carrusel de expectativa; el tono espontáneo humaniza el perfil y deja caer el tema de preprensa sin explicarlo todavía, para que conecte con el reel de errores del 11.11.",
       "order": 0
     },
     {
@@ -2739,6 +2739,25 @@
       "plainText": "Sigue sin verse",
       "actionData": null,
       "timestamp": "9/11/2026, 1:12:58 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Aquí está el bloque. Va sobre la historia que ya existe, así que se actualiza en su lugar y no suma una nueva.<br><br><div class=\"ai-md-li\" style=\"padding-left:4px;\">• <strong>08:00 del 09.11</strong>, para abrir la jornada antes de <code>st-1</code>.</div><div class=\"ai-md-li\" style=\"padding-left:4px;\">• <strong>Status:</strong> En Diseño, porque la grabas hoy.</div><div class=\"ai-md-li\" style=\"padding-left:4px;\">• El nombre lleva la frase para que la reconozcas de un vistazo en la lista.</div><br><strong>Pendiente contigo:</strong> el 09.11 quedaría con dos historias de café — esta y <code>st-1794204588972-274</code> («Café en la universidad: la manía de medir todo»). Se pisan. Dime si borro la segunda o la reconvierto en un sticker de pregunta para la tarde y lo cierro en el siguiente mensaje.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00106 USD</strong> (Acumulado sesión: $0.15536 USD)</span>\n          <span style=\"color:#64748b;\">6550 in + 1471 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Aquí está el bloque. Va sobre la historia que ya existe, así que se actualiza en su lugar y no suma una nueva.\n\n- **08:00 del 09.11**, para abrir la jornada antes de `st-1`.\n- **Status:** En Diseño, porque la grabas hoy.\n- El nombre lleva la frase para que la reconozcas de un vistazo en la lista.\n\n**Pendiente contigo:** el 09.11 quedaría con dos historias de café — esta y `st-1794204588972-274` («Café en la universidad: la manía de medir todo»). Se pisan. Dime si borro la segunda o la reconvierto en un sticker de pregunta para la tarde y lo cierro en el siguiente mensaje.",
+      "actionData": [
+        {
+          "type": "update_story",
+          "id": "st-1794204531446-673",
+          "name": "Café en la U: la sangría que olvidé ayer",
+          "date": "2026-11-09",
+          "time": "08:00",
+          "highlight": "DAILY",
+          "format": "Foto",
+          "status": "En Diseño",
+          "context": "Foto casual en la mesa de la universidad: taza, cuaderno y una frase corta al pie, sin diseño encima. Se publica a las 8:00 para abrir el día antes del carrusel de expectativa; el tono espontáneo humaniza el perfil y deja caer el tema de preprensa sin explicarlo todavía, para que conecte con el reel de errores del 11.11."
+        }
+      ],
+      "timestamp": "9/11/2026, 1:13:10 a. m."
     }
   ],
   "importedCustomContextNotes": ""
