@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794203071634,
-  "updatedAtISO": "2026-11-09T05:44:31.635Z",
+  "updatedAt": 1794203103604,
+  "updatedAtISO": "2026-11-09T05:45:03.604Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -1976,6 +1976,13 @@
         }
       ],
       "timestamp": "9/11/2026, 12:44:29 a. m."
+    },
+    {
+      "sender": "user",
+      "html": "Manda los botones de cada eliminacion separados en el chat y yo los presiono",
+      "plainText": "Manda los botones de cada eliminacion separados en el chat y yo los presiono",
+      "actionData": null,
+      "timestamp": "9/11/2026, 12:45:01 a. m."
     }
   ],
   "importedCustomContextNotes": ""
