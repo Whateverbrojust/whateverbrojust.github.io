@@ -1,8 +1,8 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 8:34:47 p. m.
-**Motor IA Activo:** DeepSeek (`deepseek-v4-pro`)
+**Última actualización:** 8/11/2026, 9:03:39 p. m.
+**Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.07521 USD (204565 tokens)
 
 ---
