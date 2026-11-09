@@ -1,14 +1,14 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:46:50 p. m.
+**Última actualización:** 8/11/2026, 10:48:19 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.07830 USD (225008 tokens)
 
 ---
 
-## 1. Estado Actual del Ecosistema de Publicaciones (20 piezas)
-- **💡 Idea / Planificado:** 18 piezas
+## 1. Estado Actual del Ecosistema de Publicaciones (19 piezas)
+- **💡 Idea / Planificado:** 17 piezas
 - **🎨 En Diseño / Proceso:** 2 piezas
 - **✅ Listo para publicar:** 0 piezas
 - **🚀 Publicado:** 0 piezas
@@ -34,7 +34,6 @@
 | `post-ig-11` | 2026-11-20 | Instagram | **Idea** | Portafolio 2026: Ya disponible (El Gran Lanzamiento) | Oficialmente publicado. 8 semestres de formación, marcas reales, empaq... |
 | `post-li-6` | 2026-11-20 | LinkedIn | **Idea** | Hoy presento oficialmente mi Portafolio Profesional 2026 | Hoy es un día decisivo: culmino mi etapa académica y presento mi Porta... |
 | `post-ig-12` | 2026-11-23 | Instagram | **Idea** | Recap: El viaje del taller a la calle | Un agradecimiento especial a todos los que hicieron parte de este proc... |
-| `post-ai-1794128749201` | 2026-11-26 | Instagram | **Idea** | ARCHIVADO · Domingo de taller (fuera de campaña) | Domingo de taller. Hay una parte del diseño que nunca aparece en panta... |
 
 ---
 
