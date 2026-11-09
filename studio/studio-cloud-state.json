@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204176988,
-  "updatedAtISO": "2026-11-09T06:02:56.988Z",
+  "updatedAt": 1794204193008,
+  "updatedAtISO": "2026-11-09T06:03:13.008Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -251,8 +251,8 @@
       "order": 2
     },
     {
-      "time": "12:30",
-      "context": "Macro de tres papeles con luz rasante para mostrar grano y relieve. Va antes de la encuesta porque no se puede votar sobre lo que no se ha visto.",
+      "time": "09:30",
+      "context": "Macro de tres papeles sobre la mesa de corte, el mismo día en que sale el post-ig-2 sobre lo tangible. Abre la jornada desde el taller y deja preparada la encuesta de la tarde.",
       "formatDetail": "Foto macro",
       "id": "st-4",
       "date": "2026-11-10",
@@ -264,7 +264,7 @@
     },
     {
       "time": "18:30",
-      "context": "Encuesta de dos opciones en horario de alta respuesta. Se publica horas después de la muestra para que el voto tenga referencia visual.",
+      "context": "Se lanza cuando la audiencia ya vio la textura del post y de la story de la mañana. Convierte una decisión técnica de taller en conversación de fin de jornada, en la franja de mayor tráfico.",
       "formatDetail": "",
       "id": "st-5",
       "date": "2026-11-10",
@@ -275,8 +275,8 @@
       "order": 1
     },
     {
-      "time": "15:00",
-      "context": "Boomerang de planchas apilándose en el taller. Cierra la secuencia técnica del día con evidencia física de producción.",
+      "time": "10:00",
+      "context": "Refuerza el post-ig-3 sobre errores de preprensa y el post-li-2 sobre vallas OOH. El boomerang del registro de planchas prueba en imagen lo que el caption del post afirma en texto.",
       "formatDetail": "Boomerang taller",
       "id": "st-7",
       "date": "2026-11-11",
@@ -284,11 +284,11 @@
       "highlightId": "hl-proceso",
       "format": "Boomerang",
       "status": "Idea",
-      "order": 1
+      "order": 0
     },
     {
-      "time": "11:00",
-      "context": "Sticker de debate con postura propia en el texto. Se lanza en la pausa de media mañana para provocar respuestas antes del almuerzo.",
+      "time": "09:00",
+      "context": "Abre el día del carrusel sobre la diferencia entre logo y sistema visual. El sticker invita a responder antes de que la audiencia llegue al carrusel, de modo que el post reciba comentarios ya calientes.",
       "formatDetail": "Sticker deslizador",
       "id": "st-8",
       "date": "2026-11-12",
@@ -299,8 +299,8 @@
       "order": 0
     },
     {
-      "time": "17:00",
-      "context": "Foto de la pila real de libros con el lomo legible. Humaniza el criterio y da tema de conversación en DM.",
+      "time": "13:00",
+      "context": "Muestra la biblioteca de referencia que sostiene el criterio del carrusel del día. Humaniza el proceso: no solo se ve el resultado, también de dónde viene la decisión.",
       "formatDetail": "Foto de biblioteca",
       "id": "st-9",
       "date": "2026-11-12",
@@ -311,20 +311,20 @@
       "order": 1
     },
     {
-      "time": "20:00",
-      "context": "Video de 8 s pasando las páginas de un cuadernillo ya impreso. Muestra el resultado físico sin revelar el proyecto del 20.11.",
+      "time": "19:30",
+      "context": "Sale del taller y pasa a PORTFOLIO: no es proceso, es pieza terminada. Se publica de noche para que el objeto encuadernado quede como cierre del día y adelante lo que se verá el 20.11.",
       "formatDetail": "Video rápido",
       "id": "st-10",
       "date": "2026-11-12",
       "name": "Hojeando rápido un cuadernillo impreso",
-      "highlightId": "hl-proceso",
+      "highlightId": "hl-hito",
       "format": "Video",
       "status": "Idea",
       "order": 2
     },
     {
-      "time": "13:00",
-      "context": "Toma fija moviendo la pieza para que el dorado revele relieve con la luz. Prueba de acabado, no de diseño: encaja en taller.",
+      "time": "10:00",
+      "context": "Acompaña el sneak peek 01 del ornamento geométrico. El video busca el ángulo donde la luz revela el estampado, el tipo de detalle físico que solo se aprecia en movimiento y no en una foto fija.",
       "formatDetail": "Video con luz",
       "id": "st-11",
       "date": "2026-11-13",
@@ -335,8 +335,8 @@
       "order": 0
     },
     {
-      "time": "19:30",
-      "context": "Encuesta nocturna con ejemplo visual de cada familia. Funciona como adelanto de la historia de tipografía del 14.11.",
+      "time": "18:00",
+      "context": "Cierra la tarde discutiendo lo que el post-ig-6 plantea sobre el tono de voz tipográfico. La encuesta obliga a elegir y genera respuestas rápidas con mínimo esfuerzo de la audiencia.",
       "formatDetail": "",
       "id": "st-12",
       "date": "2026-11-13",
@@ -347,8 +347,8 @@
       "order": 1
     },
     {
-      "time": "12:00",
-      "context": "Captura comparativa del antes y después del kerning en una palabra. Caso ambiguo: si se prioriza técnica sobre conversación, debe ir a SETUP.",
+      "time": "11:00",
+      "context": "Captura del panel con las métricas abiertas, publicada tras el post tipográfico del día anterior. Muestra el oficio detrás de una decisión que el ojo percibe pero no ve.",
       "formatDetail": "Captura antes/después",
       "id": "st-13",
       "date": "2026-11-14",
@@ -359,8 +359,8 @@
       "order": 0
     },
     {
-      "time": "10:00",
-      "context": "Caja de preguntas abierta el domingo, cuando hay tiempo de escribir. Debe ir antes de st-16, que necesita material recolectado.",
+      "time": "12:00",
+      "context": "Abre la caja de preguntas a mediodía para acumular consultas durante la tarde. Las respuestas se graban y salen al día siguiente como st-16, lo que crea continuidad y da razón para volver al perfil.",
       "formatDetail": "Cajita de preguntas",
       "id": "st-15",
       "date": "2026-11-15",
@@ -2130,6 +2130,124 @@
       "plainText": "REaliza nuevamente la solicitud",
       "actionData": null,
       "timestamp": "9/11/2026, 1:02:54 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Repito el envío desde donde se cortó, ahora en lote cerrado y verificado. Lo divido en tandas de diez para que ninguna se trunque a mitad de bloque; tres tandas cubren las 31 pendientes.<br><br><strong>Van las tres primeras del 09.11</strong> ya aplicadas (st-1 09:00, st-2 13:00, st-3 19:00) y aquí empieza el 10.11.<br><br>Dos cosas antes del bloque:<br><br><div class=\"ai-md-li\" style=\"padding-left:4px;\">• <strong>Ajuste de conteo:</strong> mi lista marca 31 pendientes, no 30. Si al terminar te sobra una, dime el nombre exacto y la corrijo. Prefiero que sobre una a que quede una sin hora.</div><div class=\"ai-md-li\" style=\"padding-left:4px;\">• <strong>Movimiento real de carpeta:</strong> <code>st-10</code> sale de SETUP y entra en PORTFOLIO. Es la única reasignación de toda la campaña; todo lo demás son horas y contexto.</div><br>Criterio de horarios: SETUP temprano (el taller abre), DAILY a mediodía y al cierre de tarde (ventana de interacción), PORTFOLIO de noche (revisión pausada), CONTACT en jornada laboral.<br><br>Con esto quedan <strong>21 pendientes</strong> en dos tandas: la del 16 al 18 y la del 19 al 25 (incluidas las seis de id largo de CONTACT y PTR). Dime <strong>aplicado</strong> y sigue la segunda.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00180 USD</strong> (Acumulado sesión: $0.14561 USD)</span>\n          <span style=\"color:#64748b;\">7876 in + 2815 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Repito el envío desde donde se cortó, ahora en lote cerrado y verificado. Lo divido en tandas de diez para que ninguna se trunque a mitad de bloque; tres tandas cubren las 31 pendientes.\n\n**Van las tres primeras del 09.11** ya aplicadas (st-1 09:00, st-2 13:00, st-3 19:00) y aquí empieza el 10.11.\n\nDos cosas antes del bloque:\n\n- **Ajuste de conteo:** mi lista marca 31 pendientes, no 30. Si al terminar te sobra una, dime el nombre exacto y la corrijo. Prefiero que sobre una a que quede una sin hora.\n- **Movimiento real de carpeta:** `st-10` sale de SETUP y entra en PORTFOLIO. Es la única reasignación de toda la campaña; todo lo demás son horas y contexto.\n\nCriterio de horarios: SETUP temprano (el taller abre), DAILY a mediodía y al cierre de tarde (ventana de interacción), PORTFOLIO de noche (revisión pausada), CONTACT en jornada laboral.\n\nCon esto quedan **21 pendientes** en dos tandas: la del 16 al 18 y la del 19 al 25 (incluidas las seis de id largo de CONTACT y PTR). Dime **aplicado** y sigue la segunda.",
+      "actionData": [
+        {
+          "type": "update_story",
+          "id": "st-4",
+          "name": "Muestra de texturas de papel especial",
+          "date": "2026-11-10",
+          "time": "09:30",
+          "highlight": "SETUP",
+          "format": "Foto",
+          "status": "Idea",
+          "context": "Macro de tres papeles sobre la mesa de corte, el mismo día en que sale el post-ig-2 sobre lo tangible. Abre la jornada desde el taller y deja preparada la encuesta de la tarde."
+        },
+        {
+          "type": "update_story",
+          "id": "st-5",
+          "name": "Encuesta: ¿Prefieres papel mate o brillante?",
+          "date": "2026-11-10",
+          "time": "18:30",
+          "highlight": "DAILY",
+          "format": "Encuesta",
+          "status": "Idea",
+          "context": "Se lanza cuando la audiencia ya vio la textura del post y de la story de la mañana. Convierte una decisión técnica de taller en conversación de fin de jornada, en la franja de mayor tráfico."
+        },
+        {
+          "type": "update_story",
+          "id": "st-7",
+          "name": "Preparando planchas de impresión",
+          "date": "2026-11-11",
+          "time": "10:00",
+          "highlight": "SETUP",
+          "format": "Boomerang",
+          "status": "Idea",
+          "context": "Refuerza el post-ig-3 sobre errores de preprensa y el post-li-2 sobre vallas OOH. El boomerang del registro de planchas prueba en imagen lo que el caption del post afirma en texto."
+        },
+        {
+          "type": "update_story",
+          "id": "st-8",
+          "name": "Debate: ¿Cuándo un logo necesita simplificarse?",
+          "date": "2026-11-12",
+          "time": "09:00",
+          "highlight": "DAILY",
+          "format": "Sticker",
+          "status": "Idea",
+          "context": "Abre el día del carrusel sobre la diferencia entre logo y sistema visual. El sticker invita a responder antes de que la audiencia llegue al carrusel, de modo que el post reciba comentarios ya calientes."
+        },
+        {
+          "type": "update_story",
+          "id": "st-9",
+          "name": "Libros y referencias de diseño que uso",
+          "date": "2026-11-12",
+          "time": "13:00",
+          "highlight": "DAILY",
+          "format": "Foto",
+          "status": "Idea",
+          "context": "Muestra la biblioteca de referencia que sostiene el criterio del carrusel del día. Humaniza el proceso: no solo se ve el resultado, también de dónde viene la decisión."
+        },
+        {
+          "type": "update_story",
+          "id": "st-10",
+          "name": "Hojeando rápido un cuadernillo impreso",
+          "date": "2026-11-12",
+          "time": "19:30",
+          "highlight": "PORTFOLIO",
+          "format": "Video",
+          "status": "Idea",
+          "context": "Sale del taller y pasa a PORTFOLIO: no es proceso, es pieza terminada. Se publica de noche para que el objeto encuadernado quede como cierre del día y adelante lo que se verá el 20.11."
+        },
+        {
+          "type": "update_story",
+          "id": "st-11",
+          "name": "Reflejo de luz en estampado dorado",
+          "date": "2026-11-13",
+          "time": "10:00",
+          "highlight": "SETUP",
+          "format": "Video",
+          "status": "Idea",
+          "context": "Acompaña el sneak peek 01 del ornamento geométrico. El video busca el ángulo donde la luz revela el estampado, el tipo de detalle físico que solo se aprecia en movimiento y no en una foto fija."
+        },
+        {
+          "type": "update_story",
+          "id": "st-12",
+          "name": "Votación: ¿Tipografía Serif o Sans?",
+          "date": "2026-11-13",
+          "time": "18:00",
+          "highlight": "DAILY",
+          "format": "Encuesta",
+          "status": "Idea",
+          "context": "Cierra la tarde discutiendo lo que el post-ig-6 plantea sobre el tono de voz tipográfico. La encuesta obliga a elegir y genera respuestas rápidas con mínimo esfuerzo de la audiencia."
+        },
+        {
+          "type": "update_story",
+          "id": "st-13",
+          "name": "Muestra de espaciado y kerning manual",
+          "date": "2026-11-14",
+          "time": "11:00",
+          "highlight": "DAILY",
+          "format": "Captura",
+          "status": "Idea",
+          "context": "Captura del panel con las métricas abiertas, publicada tras el post tipográfico del día anterior. Muestra el oficio detrás de una decisión que el ojo percibe pero no ve."
+        },
+        {
+          "type": "update_story",
+          "id": "st-15",
+          "name": "Q&A: Preguntas sobre diseño y dirección de arte",
+          "date": "2026-11-15",
+          "time": "12:00",
+          "highlight": "DAILY",
+          "format": "Sticker",
+          "status": "Idea",
+          "context": "Abre la caja de preguntas a mediodía para acumular consultas durante la tarde. Las respuestas se graban y salen al día siguiente como st-16, lo que crea continuidad y da razón para volver al perfil."
+        }
+      ],
+      "timestamp": "9/11/2026, 1:03:10 a. m."
     }
   ],
   "importedCustomContextNotes": ""
