@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794197725468,
-  "updatedAtISO": "2026-11-09T04:15:25.468Z",
+  "updatedAt": 1794197848892,
+  "updatedAtISO": "2026-11-09T04:17:28.892Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -1033,6 +1033,13 @@
       "plainText": "Buena pregunta, y va al fondo del asunto: la historia no está incompleta por falta de un campo, sino porque **el título describe la producción, no la ejecución**. Son dos cosas distintas. `st-7` dice *«Preparando planchas de impresión»*: eso te dice qué grabar, pero no cuándo, con qué texto, ni qué debe quedar en pantalla.\n\n## Los campos que debería tener una entrada\n\n**Críticos** (sin ellos no puedes grabar ni publicar):\n\n| Campo | Para qué sirve |\n|---|---|\n| **Copy en pantalla** | El texto literal que se lee. Sin esto, el título es solo una nota mental. |\n| **Asset** | Qué archivo concreto: foto, video, captura, boomerang. Y si ya existe o hay que producirlo. |\n| **Hora** | El \"cuándo\" dentro del día. Una encuesta a las 8 a.m. y a las 9 p.m. no rinde igual. |\n\n**De ejecución** (evitan rehacer trabajo):\n\n| Campo | Para qué sirve |\n|---|---|\n| **Interacción** | Si lleva encuesta: las dos opciones exactas. Si lleva caja: la pregunta. Si lleva link: la URL. |\n| **Secuencia** | Orden dentro del día. Instagram es efímero: la historia 2 se ve después de la 1, no antes. |\n| **Notas de arte** | Composición, dónde va el texto, qué queda fuera de encuadre. |\n\n**De control** (opcionales, pero útiles):\n\n- **Responsable** — si alguien más graba o edita.\n- **Intención** — qué buscas: guardados, respuestas, clics al link. No es vanity metrics, es saber si la historia funcionó.\n\n## Cómo se ve una entrada completa\n\n**st-26 (Countdown 24 horas):**\n- **Copy:** «24 horas. Mañana se abre el archivo.»\n- **Asset:** video corto, fondo negro, tipografía del sistema. Ya existe la plantilla.\n- **Hora:** 7:00 p.m. (cuando la gente sale del trabajo)\n- **Interacción:** sticker de cuenta regresiva, sin link todavía\n- **Secuencia:** 1 de 1 ese día\n- **Arte:** texto centrado, ícono ● arriba, sin música\n- **Intención:** expectativa, no clics\n\n**st-5 (Encuesta papel):**\n- **Copy:** «¿Mate o brillante? Hoy defiendo el mate.»\n- **Asset:** foto macro de dos muestras de papel, lado a lado\n- **Hora:** 12:30 p.m.\n- **Interacción:** encuesta — opción A «Mate», opción B «Brillante»\n- **Secuencia:** única del día en SETUP\n- **Arte:** luz lateral para que se vea la textura\n- **Intención:** respuestas y conversación en DM\n\n## El problema de fondo\n\n**El esquema actual solo admite seis campos** y ninguno es copy, hora ni interacción. Así que la entrada completa, hoy, no cabe. Hay dos salidas:\n\n1. **Convención dentro del `name`** — usar `Producción | Copy` y dejar el resto en la descripción de la destacada. Es lo que ya permite el sistema, pero se vuelve ilegible con 30 historias.\n2. **Ampliar el esquema** — añadir `copy`, `time`, `interaction` y `asset` como campos reales. Es lo correcto si vamos a producir en serio los próximos diez días.\n\nMi recomendación es la **2**, pero no la aplico sin tu visto bueno porque implica tocar el modelo, no solo el contenido.\n\n**No he modificado nada.** Dime si quieres que prepare la propuesta de esquema ampliado con las 30 historias ya cargadas en ese formato, o si prefieres quedarte con la convención en el `name` y avanzar a producción.",
       "actionData": null,
       "timestamp": "8/11/2026, 10:56:54 p. m."
+    },
+    {
+      "sender": "user",
+      "html": "Analiza las historias, agrega el contexto y ajusta la hora de publicación.",
+      "plainText": "Analiza las historias, agrega el contexto y ajusta la hora de publicación.",
+      "actionData": null,
+      "timestamp": "8/11/2026, 11:17:26 p. m."
     }
   ],
   "importedCustomContextNotes": ""
