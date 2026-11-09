@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:43:28 a. m.
+**Última actualización:** 9/11/2026, 12:44:00 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.12941 USD (480048 tokens)
+**Gasto Acumulado en Sesión:** $0.13293 USD (495528 tokens)
 
 ---
 
@@ -86,7 +86,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (31 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (32 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1033,4 +1033,45 @@ Dime si la prueba mínima borró `st-6` y con qué resultado, y ajusto el resto 
 
 ### [31] 👤 **Peter Orostegui** — *9/11/2026, 12:43:25 a. m.*
 Eliminado
+
+### [32] ✨ **Copilot IA** — *9/11/2026, 12:43:57 a. m.*
+Perfecto, la prueba mínima funcionó: el formato de bloque único sí llega al intérprete. Las otras dos van abajo con el mismo patrón corto.
+
+## Corrección honesta
+
+Al releer el estado real para armar los bloques, encontré que **varias de las reasignaciones que describí antes ya estaban aplicadas**: `st-17`, `st-20` y `st-21` ya vivían en SETUP; `st-18`, `st-22`, `st-23` y `st-24` ya estaban en PORTFOLIO; y `st-3` ya estaba en DAILY. Lo digo claro: **el único cambio real de carpeta es `st-10` → PORTFOLIO.** El resto del trabajo pendiente son las horas y el contexto de las 33 historias activas.
+
+## Lote 1 · Borrado + 09 al 14 de noviembre
+
+| Día | Historias |
+|---|---|
+| 09.11 | st-1 08:15 · st-2 13:00 · st-3 19:30 |
+| 10.11 | st-4 12:30 · st-5 18:30 |
+| 11.11 | st-7 09:30 |
+| 12.11 | st-8 11:00 · st-9 17:00 · st-10 20:00 |
+| 13.11 | st-11 13:00 · st-12 19:30 |
+| 14.11 | st-13 12:00 |
+
+Encadené tres secuencias: `st-1` → `st-2` (mesa y pantalla del mismo día), `st-4` → `st-5` (el papel termina en encuesta), y `st-10` que ahora sale del taller y entra en PORTFOLIO como pieza terminada.
+
+```json
+{ "action": "delete_story", "id": "st-14" }
+{ "action": "delete_story", "id": "st-25" }
+{ "action": "update_story", "id": "st-1", "name": "Detrás de cámaras de la mesa de trabajo", "date": "2026-11-09", "time": "08:15", "highlight": "SETUP", "format": "Foto", "status": "Idea", "context": "Plano cenital de la mesa real con hojas impresas y taza. Abre la campaña por la mañana mostrando el espacio antes que el resultado, para fijar el tono físico de SETUP." }
+{ "action": "update_story", "id": "st-2", "name": "Pantalla con vectores y curvas en Illustrator", "date": "2026-11-09", "time": "13:00", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Grabación de pantalla con el trazo en proceso. Complementa a st-1 al mediodía y muestra la otra mitad del taller: la mesa es física, esta es digital." }
+{ "action": "update_story", "id": "st-3", "name": "Caja de preguntas: «¿Qué se viene?»", "date": "2026-11-09", "time": "19:30", "highlight": "DAILY", "format": "Sticker", "status": "Idea", "context": "Caja de preguntas al cierre del día para abrir conversación sobre lo que viene. Es interacción pura sin proceso ni pieza, por eso vive en DAILY y no en PORTFOLIO." }
+{ "action": "update_story", "id": "st-4", "name": "Muestra de texturas de papel especial", "date": "2026-11-10", "time": "12:30", "highlight": "SETUP", "format": "Foto", "status": "Idea", "context": "Macro de papeles sobre la mesa. Establece la materia física del taller y deja sembrada la pregunta que st-5 recoge horas después." }
+{ "action": "update_story", "id": "st-5", "name": "Encuesta: ¿Prefieres papel mate o brillante?", "date": "2026-11-10", "time": "18:30", "highlight": "DAILY", "format": "Encuesta", "status": "Idea", "context": "Encuesta de acabados al final de la tarde. Convierte el detalle físico de st-4 en conversación con la audiencia y cierra el día con interacción." }
+{ "action": "update_story", "id": "st-7", "name": "Preparando planchas de impresión", "date": "2026-11-11", "time": "09:30", "highlight": "SETUP", "format": "Boomerang", "status": "Idea", "context": "Movimiento corto de planchas listas. Arranca la mañana mostrando la preprensa como acto físico y manual, sin capturas de pantalla." }
+{ "action": "update_story", "id": "st-8", "name": "Debate: ¿Cuándo un logo necesita simplificarse?", "date": "2026-11-12", "time": "11:00", "highlight": "DAILY", "format": "Sticker", "status": "Idea", "context": "Sticker de debate a media mañana. Es opinión de oficio para activar comentarios, no demostración técnica ni pieza terminada." }
+{ "action": "update_story", "id": "st-9", "name": "Libros y referencias de diseño que uso", "date": "2026-11-12", "time": "17:00", "highlight": "DAILY", "format": "Foto", "status": "Idea", "context": "Referencias sobre la mesa al caer la tarde. Humaniza el criterio mostrando de dónde viene y da textura cotidiana al feed." }
+{ "action": "update_story", "id": "st-10", "name": "Hojeando rápido un cuadernillo impreso", "date": "2026-11-12", "time": "20:00", "highlight": "PORTFOLIO", "format": "Video", "status": "Idea", "context": "Cambio de carpeta: el cuadernillo ya está impreso, es pieza terminada y no proceso. Entra en PORTFOLIO como previsualización del resultado enlazable a Behance." }
+{ "action": "update_story", "id": "st-11", "name": "Reflejo de luz en estampado dorado", "date": "2026-11-13", "time": "13:00", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Detalle de acabado en movimiento. Prueba la calidad del material físico del taller y sostiene el arco técnico del mediodía." }
+{ "action": "update_story", "id": "st-12", "name": "Votación: ¿Tipografía Serif o Sans?", "date": "2026-11-13", "time": "19:30", "highlight": "DAILY", "format": "Encuesta", "status": "Idea", "context": "Votación al cierre del día. Interacción ligera que acompaña el debate tipográfico de la semana y alimenta el algoritmo sin saturar de técnica." }
+{ "action": "update_story", "id": "st-13", "name": "Muestra de espaciado y kerning manual", "date": "2026-11-14", "time": "12:00", "highlight": "DAILY", "format": "Captura", "status": "Idea", "context": "Kerning ajustado a mano en pantalla. Se queda en DAILY porque es criterio tipográfico conversado, no equipo ni espacio de trabajo." }
+```
+
+Con esto quedan **33 historias activas** y el borrado completo de las tres capturas sin hogar.
+
+**Siguiente lote (15 al 20 de noviembre)**: st-15, st-16, st-17, st-18, st-19, st-20, st-21, st-22, st-23, st-24, st-26, st-27, st-28, st-29 y st-30 — incluye el countdown de 24 horas y la secuencia de sustentación. Dime “sigue” y lo mando con el mismo formato corto.
 
