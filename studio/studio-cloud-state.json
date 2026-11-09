@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204764913,
-  "updatedAtISO": "2026-11-09T06:12:44.913Z",
+  "updatedAt": 1794204780992,
+  "updatedAtISO": "2026-11-09T06:13:00.992Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -2732,6 +2732,13 @@
       "plainText": "El motivo es el mismo de antes y lo asumo: mi mensaje anterior anunció el bloque pero no lo emitió. Sin JSON no hay cambio en pantalla. Aquí va el comando, sobre la historia de café que ya existe (`st-1794204531446-673`), que es la que toca actualizar en lugar de sumar una nueva:\n\n- **Hora 08:00** del 09.11, para abrir el día antes de `st-1` (09:00).\n- **Frase:** «Café en la U. La sangría que olvidé ayer.»\n- **Status:** En Diseño, porque se graba hoy.\n\nUn detalle: en el 09.11 quedan dos historias de café, esta y `st-1794204588972-274` («Café en la universidad: la manía de medir todo»). Se pisan entre sí. Dime si la segunda la borro o la reconvierto en algo distinto y lo cierro.",
       "actionData": null,
       "timestamp": "9/11/2026, 1:12:42 a. m."
+    },
+    {
+      "sender": "user",
+      "html": "Sigue sin verse",
+      "plainText": "Sigue sin verse",
+      "actionData": null,
+      "timestamp": "9/11/2026, 1:12:58 a. m."
     }
   ],
   "importedCustomContextNotes": ""
