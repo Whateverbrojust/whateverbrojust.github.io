@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:29:46 p. m.
+**Última actualización:** 8/11/2026, 10:43:35 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.07521 USD (204565 tokens)
 
@@ -38,6 +38,50 @@
 
 ---
 
-## 3. Historial de Conversaciones y Acuerdos con Copilot IA (0 mensajes)
+## 2. Destacadas & Historias
 
-*Aún no se han registrado mensajes en el historial.*
+### Destacadas (4)
+- `hl-proceso` 🛠️ **PROCESO** — 9 historia(s) · Mesas de trabajo en Illustrator, sangrías, marcas de corte, pruebas de color e imprenta física.
+- `hl-criterio` 💡 **CRITERIO** — 7 historia(s) · Encuestas tipográficas, recomendaciones de libros, debates sobre simplificación y valor del diseño.
+- `hl-calle` ⚡ **EN LA CALLE** — 8 historia(s) · Vallas publicitarias en avenidas, caravanas de vehículos, pantallas LED en conciertos masivos.
+- `hl-hito` 🎯 **HITO 20.11** — 6 historia(s) · Teaser «Mientras tanto», sticker countdown, sustentación en vivo y enlace al Behance.
+
+### Historias (30)
+- `st-1` #1 · 2026-11-09 · PROCESO · **Detrás de cámaras de la mesa de trabajo** · Foto con retícula · Idea
+- `st-2` #2 · 2026-11-09 · PROCESO · **Pantalla con vectores y curvas en Illustrator** · Video corto · Idea
+- `st-3` #3 · 2026-11-09 · HITO 20.11 · **Caja de preguntas: «¿Qué se viene?»** · Sticker interactivo · Idea
+- `st-4` #4 · 2026-11-10 · PROCESO · **Muestra de texturas de papel especial** · Foto macro · Idea
+- `st-5` #5 · 2026-11-10 · CRITERIO · **Encuesta: ¿Prefieres papel mate o brillante?** · Encuesta · Idea
+- `st-6` #6 · 2026-11-11 · PROCESO · **Marcas de corte y sangría en archivo real** · Captura técnica · Idea
+- `st-7` #7 · 2026-11-11 · PROCESO · **Preparando planchas de impresión** · Boomerang taller · Idea
+- `st-8` #8 · 2026-11-12 · CRITERIO · **Debate: ¿Cuándo un logo necesita simplificarse?** · Sticker deslizador · Idea
+- `st-9` #9 · 2026-11-12 · CRITERIO · **Libros y referencias de diseño que uso** · Foto de biblioteca · Idea
+- `st-10` #10 · 2026-11-12 · PROCESO · **Hojeando rápido un cuadernillo impreso** · Video rápido · Idea
+- `st-11` #11 · 2026-11-13 · PROCESO · **Reflejo de luz en estampado dorado** · Video con luz · Idea
+- `st-12` #12 · 2026-11-13 · CRITERIO · **Votación: ¿Tipografía Serif o Sans?** · Encuesta · Idea
+- `st-13` #13 · 2026-11-14 · CRITERIO · **Muestra de espaciado y kerning manual** · Captura antes/después · Idea
+- `st-14` #14 · 2026-11-14 · PROCESO · **El orden de capas en un archivo maestro** · Captura de capas · Idea
+- `st-15` #15 · 2026-11-15 · CRITERIO · **Q&A: Preguntas sobre diseño y dirección de arte** · Cajita de preguntas · Idea
+- `st-16` #16 · 2026-11-15 · CRITERIO · **Respondiendo la pregunta más votada** · Hablando a cámara · Idea
+- `st-17` #17 · 2026-11-16 · EN LA CALLE · **Pasando en carro frente a una valla en la avenida** · Video en movimiento · Idea
+- `st-18` #18 · 2026-11-16 · EN LA CALLE · **La escala humana frente a una pieza OOH** · Foto urbana · Idea
+- `st-19` #19 · 2026-11-16 · PROCESO · **Render de visualizer en After Effects** · Video de pantalla · Idea
+- `st-20` #20 · 2026-11-17 · EN LA CALLE · **Caravana de vehículos con gráfica instalada** · Video de calle · Idea
+- `st-21` #21 · 2026-11-17 · EN LA CALLE · **Prueba de pantallas LED en tarima de concierto** · Video prueba luces · Idea
+- `st-22` #22 · 2026-11-17 · EN LA CALLE · **El concierto en vivo lleno de visuales** · Foto de multitud · Idea
+- `st-23` #23 · 2026-11-18 · EN LA CALLE · **Detalle macro de hilo y bordado en gorra** · Foto macro · Idea
+- `st-24` #24 · 2026-11-18 · EN LA CALLE · **Pegatinas troqueladas listas en la mesa** · Boomerang · Idea
+- `st-25` #25 · 2026-11-18 · EN LA CALLE · **Comprobando resolución a escala 1:1** · Captura técnica · Idea
+- `st-26` #26 · 2026-11-19 · HITO 20.11 · **Sticker oficial de Countdown: 24 Horas** · Cuenta regresiva · Idea
+- `st-27` #27 · 2026-11-19 · HITO 20.11 · **Mesa con los 4 tomos encuadernados listos** · Foto mesa de entrega · Idea
+- `st-28` #28 · 2026-11-19 · HITO 20.11 · **Reflexión previa al día de entrega** · Texto sobrio con audio · Idea
+- `st-29` #29 · 2026-11-20 · HITO 20.11 · **Sustentación del portafolio en directo** · Foto en auditorio · Idea
+- `st-30` #30 · 2026-11-20 · HITO 20.11 · **¡Portafolio online en Behance! Desliza arriba** · Link Sticker directo · Idea
+
+---
+
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (1 mensajes)
+
+### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
+Hola
+
