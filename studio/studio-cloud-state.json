@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204931843,
-  "updatedAtISO": "2026-11-09T06:15:31.843Z",
+  "updatedAt": 1794204942481,
+  "updatedAtISO": "2026-11-09T06:15:42.481Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -572,17 +572,6 @@
       "highlightId": "hl-calle",
       "format": "Foto",
       "status": "Idea",
-      "order": 0
-    },
-    {
-      "id": "st-1794204531446-673",
-      "name": "Café en la U: la sangría que olvidé ayer",
-      "date": "2026-11-09",
-      "time": "08:00",
-      "highlightId": "hl-criterio",
-      "format": "Foto",
-      "status": "En Diseño",
-      "context": "Foto casual en la mesa de la universidad: taza, cuaderno y una frase corta al pie, sin diseño encima. Se publica a las 8:00 para abrir el día antes del carrusel de expectativa; el tono espontáneo humaniza el perfil y deja caer el tema de preprensa sin explicarlo todavía, para que conecte con el reel de errores del 11.11.",
       "order": 0
     },
     {
