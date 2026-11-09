@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:48:34 p. m.
+**Última actualización:** 8/11/2026, 10:48:52 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.07830 USD (225008 tokens)
+**Gasto Acumulado en Sesión:** $0.08007 USD (233892 tokens)
 
 ---
 
@@ -40,10 +40,10 @@
 ## 2. Destacadas & Historias
 
 ### Destacadas (4)
-- `hl-proceso` 🛠️ **PROCESO** — 9 historia(s) · Mesas de trabajo en Illustrator, sangrías, marcas de corte, pruebas de color e imprenta física.
-- `hl-criterio` 💡 **CRITERIO** — 7 historia(s) · Encuestas tipográficas, recomendaciones de libros, debates sobre simplificación y valor del diseño.
-- `hl-calle` ⚡ **EN LA CALLE** — 8 historia(s) · Vallas publicitarias en avenidas, caravanas de vehículos, pantallas LED en conciertos masivos.
-- `hl-hito` 🎯 **HITO 20.11** — 6 historia(s) · Teaser «Mientras tanto», sticker countdown, sustentación en vivo y enlace al Behance.
+- `hl-hito` 🎯 **HITO 20.11** — 6 historia(s) · Del teaser «Mientras tanto» al archivo completo. Portafolio Profesional 2026.
+- `hl-calle` ⚡ **EN LA CALLE** — 8 historia(s) · Vallas a 80 km/h, caravanas y pantallas LED. El diseño verificándose en el mundo real.
+- `hl-proceso` 🛠️ **PROCESO** — 9 historia(s) · Del vector al pliego. Retículas, sangrías, marcas de corte y pruebas de color.
+- `hl-criterio` 💡 **CRITERIO** — 7 historia(s) · Encuestas, referentes y debates. Cómo se entrena el ojo que decide.
 
 ### Historias (30)
 - `st-1` #1 · 2026-11-09 · PROCESO · **Detrás de cámaras de la mesa de trabajo** · Foto con retícula · Idea
@@ -79,7 +79,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (7 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (8 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -157,4 +157,59 @@ Calendario cerrado en **19 piezas**. Dime si pasamos a producción (marcar estad
 
 ### [7] 👤 **Peter Orostegui** — *8/11/2026, 10:48:31 p. m.*
 Ok, trabajemos en las Destacadas
+
+### [8] ✨ **Copilot IA** — *8/11/2026, 10:48:50 p. m.*
+Vamos con las destacadas, que es donde se decide si el perfil se lee como "estudiante" o como "diseñador".
+
+## Diagnóstico: carga real por carpeta
+
+Revisé las 30 historias y así quedan distribuidas:
+
+- **PROCESO 🛠️ — 9 historias** (st-1, 2, 4, 6, 7, 10, 11, 14, 19)
+- **EN LA CALLE ⚡ — 8 historias** (st-17, 18, 20, 21, 22, 23, 24, 25)
+- **CRITERIO 💡 — 7 historias** (st-5, 8, 9, 12, 13, 15, 16)
+- **HITO 20.11 🎯 — 6 historias** (st-3, 26, 27, 28, 29, 30)
+
+El balance es sano: ninguna carpeta queda vacía ni desproporcionada. **No hace falta una quinta carpeta** — y esto es importante con el tiempo que tenemos: crear una destacada nueva sin historias que la alimenten produce una carpeta vacía, que es peor que no tenerla. Los proyectos de branding (gastronomía, salud, moda urbana) llegarán al perfil el 20.11 desde Behance, no desde una destacada.
+
+## Decisión de director de arte: cambiar el orden
+
+Hoy el orden es **PROCESO → CRITERIO → EN LA CALLE → HITO 20.11**. Eso pone el oficio primero, pero entierra lo único que convierte. El orden debe responder a qué necesita ver alguien que llega nuevo al perfil:
+
+1. **HITO 20.11 🎯** — es la razón del perfil ahora mismo. Tiene teaser, countdown y el enlace al archivo. Va primero.
+2. **EN LA CALLE ⚡** — la prueba. Es el diferenciador frente a cualquier portafolio de estudiante: trabajo instalado, en vallas, caravanas y pantallas LED.
+3. **PROCESO 🛠️** — el cómo. Sangrías, planchas, pruebas de color. Sostiene lo anterior.
+4. **CRITERIO 💡** — el criterio. Va al final porque es la carpeta que se consume cuando ya te interesó, no la que te convence de entrar.
+
+## Descripciones afinadas
+
+Las actuales describen la categoría; las ajusto para que digan qué gana quien abre la carpeta, sin perder precisión técnica.
+
+- **PROCESO:** del vector al pliego. Retículas, sangrías, marcas de corte y pruebas de color.
+- **CRITERIO:** encuestas, referentes y debates. Cómo se entrena el ojo que decide.
+- **EN LA CALLE:** vallas a 80 km/h, caravanas y pantallas LED. El diseño verificándose en el mundo real.
+- **HITO 20.11:** del teaser «Mientras tanto» al archivo completo. Portafolio Profesional 2026.
+
+Ese último está redactado para que **siga teniendo sentido después del 20**, cuando deje de ser cuenta regresiva y pase a ser la puerta de entrada al portafolio.
+
+## Lo que dejo sobre la mesa (sin ejecutar)
+
+- **Portadas de las destacadas:** las cuatro deberían compartir un mismo sistema —fondo negro, un solo peso tipográfico, el ícono como único acento—. Si quieres, definimos esa plantilla en el siguiente paso.
+- **Renombrar HITO 20.11 → PORTAFOLIO 2026 después del lanzamiento.** No lo toco ahora porque durante la campaña el nombre con fecha es parte del gancho. Lo dejamos agendado para el 21.
+
+Aplico el reordenamiento y las descripciones:
+
+
+
+
+
+
+
+
+
+
+
+¿Seguimos con la plantilla de portadas, o prefieres que pasemos a los estados de producción de las historias?
+
+> **Acción estructurada generada:** `[{"type":"reorder_highlights","order":["hl-hito","hl-calle","hl-proceso","hl-criterio"]},{"type":"update_highlight","id":"hl-hito","name":"HITO 20.11","icon":"🎯","desc":"Del teaser «Mientras tanto» al archivo completo. Portafolio Profesional 2026."},{"type":"update_highlight","id":"hl-calle","name":"EN LA CALLE","icon":"⚡","desc":"Vallas a 80 km/h, caravanas y pantallas LED. El diseño verificándose en el mundo real."},{"type":"update_highlight","id":"hl-proceso","name":"PROCESO","icon":"🛠️","desc":"Del vector al pliego. Retículas, sangrías, marcas de corte y pruebas de color."},{"type":"update_highlight","id":"hl-criterio","name":"CRITERIO","icon":"💡","desc":"Encuestas, referentes y debates. Cómo se entrena el ojo que decide."}]`
 
