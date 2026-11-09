@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:45:08 p. m.
+**Última actualización:** 8/11/2026, 10:45:17 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.07596 USD (210286 tokens)
+**Gasto Acumulado en Sesión:** $0.07702 USD (217196 tokens)
 
 ---
 
@@ -80,7 +80,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (3 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (4 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -110,4 +110,27 @@ Dime cuál tomamos (o si prefieres otra cosa) y lo ejecuto de una vez. También 
 
 ### [3] 👤 **Peter Orostegui** — *8/11/2026, 10:45:05 p. m.*
 Por que tienes 20 publicaciones? si son 12 para instagram, 1 en behance y 6 para linkedin
+
+### [4] ✨ **Copilot IA** — *8/11/2026, 10:45:15 p. m.*
+Buena observación, Peter. Tienes razón en la cuenta base y te explico exactamente de dónde sale el número que te di.
+
+**El plan original: 19 piezas**
+- **12 Instagram** → `post-ig-1` a `post-ig-12`
+- **6 LinkedIn** → `post-li-1` a `post-li-6`
+- **1 Behance** → `post-behance-1`
+
+**La vigésima**
+- `post-ai-1794128749201` — *«Domingo de taller: la hoja que nadie publica (Detalle Macro)»*, Instagram, **15.11**.
+
+Ese post llegó después, generado aparte, y por eso rompe el molde de 12. Lo conté dentro del total porque ya está en el calendario y se va a publicar, pero es honesto decir que es un **bonus** fuera de la estructura original: **13 posts de Instagram, no 12**.
+
+**Y hay un dato que justifica dejarlo**
+El 15 de noviembre estaba vacío en el plan original: `post-ig-5` cae el 13, `post-ig-6` el 14, y el siguiente es `post-ig-7` el 16. Justo el domingo 15 hay un hueco de dos días sin publicación en Instagram. Ese post macro lo llena perfectamente, además con el tono correcto (detalle de oficio, sin spoilers).
+
+**Tres caminos posibles**
+1. **Dejarlo como bonus y asumir 13 IG.** Actualizo el conteo mental del tablero y lo integro al flujo. Es el escenario más natural, porque el hueco del 15.11 ya existe.
+2. **Reasignarlo a otra fecha** si prefieres que el 15 quede en silencio y mantener la estructura de 12.
+3. **Absorberlo en otra pieza** — por ejemplo, fusionarlo con `post-ig-6` (tipografía) o usarlo solo como historia, no como post de feed.
+
+¿Cuál prefieres? Según lo que decidas, ajusto el calendario y te dejo el conteo cerrado.
 
