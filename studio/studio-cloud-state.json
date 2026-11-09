@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794195917627,
-  "updatedAtISO": "2026-11-09T03:45:17.627Z",
+  "updatedAt": 1794195996963,
+  "updatedAtISO": "2026-11-09T03:46:36.964Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -554,6 +554,13 @@
       "plainText": "Buena observación, Peter. Tienes razón en la cuenta base y te explico exactamente de dónde sale el número que te di.\n\n**El plan original: 19 piezas**\n- **12 Instagram** → `post-ig-1` a `post-ig-12`\n- **6 LinkedIn** → `post-li-1` a `post-li-6`\n- **1 Behance** → `post-behance-1`\n\n**La vigésima**\n- `post-ai-1794128749201` — *«Domingo de taller: la hoja que nadie publica (Detalle Macro)»*, Instagram, **15.11**.\n\nEse post llegó después, generado aparte, y por eso rompe el molde de 12. Lo conté dentro del total porque ya está en el calendario y se va a publicar, pero es honesto decir que es un **bonus** fuera de la estructura original: **13 posts de Instagram, no 12**.\n\n**Y hay un dato que justifica dejarlo**\nEl 15 de noviembre estaba vacío en el plan original: `post-ig-5` cae el 13, `post-ig-6` el 14, y el siguiente es `post-ig-7` el 16. Justo el domingo 15 hay un hueco de dos días sin publicación en Instagram. Ese post macro lo llena perfectamente, además con el tono correcto (detalle de oficio, sin spoilers).\n\n**Tres caminos posibles**\n1. **Dejarlo como bonus y asumir 13 IG.** Actualizo el conteo mental del tablero y lo integro al flujo. Es el escenario más natural, porque el hueco del 15.11 ya existe.\n2. **Reasignarlo a otra fecha** si prefieres que el 15 quede en silencio y mantener la estructura de 12.\n3. **Absorberlo en otra pieza** — por ejemplo, fusionarlo con `post-ig-6` (tipografía) o usarlo solo como historia, no como post de feed.\n\n¿Cuál prefieres? Según lo que decidas, ajusto el calendario y te dejo el conteo cerrado.",
       "actionData": null,
       "timestamp": "8/11/2026, 10:45:15 p. m."
+    },
+    {
+      "sender": "user",
+      "html": "Debe ser la cantidad que te dije, no tenemos mucho tiempo como para extendernos",
+      "plainText": "Debe ser la cantidad que te dije, no tenemos mucho tiempo como para extendernos",
+      "actionData": null,
+      "timestamp": "8/11/2026, 10:46:33 p. m."
     }
   ],
   "importedCustomContextNotes": ""
