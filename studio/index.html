@@ -511,7 +511,9 @@
     .st-item:last-child { border-bottom: none; }
     .st-idx { font-weight: 600; color: var(--blue-accent); white-space: nowrap; }
     .st-date, .st-time { white-space: nowrap; color: var(--text-muted); font-size: 12.5px; }
-    .st-name { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-name { display: flex; flex-direction: column; gap: 1px; min-width: 0; font-weight: 500; }
+    .st-name-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-context { font-size: 11.5px; color: var(--text-muted); font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .st-header {
       display: grid;
       grid-template-columns: 42px 84px 56px minmax(160px, 1fr) 104px 92px 104px;
@@ -1710,7 +1712,7 @@
         <button class="btn-new" onclick="openStoryModal()"><span>+</span> Nueva historia</button>
       </div>
       <div class="st-header">
-        <span>#</span><span>Fecha</span><span>Hora</span><span>Historia</span><span>Formato</span><span>Estado</span><span>Acciones</span>
+        <span>#</span><span>Fecha</span><span>Hora</span><span>Historia &amp; contexto</span><span>Formato</span><span>Estado</span><span>Acciones</span>
       </div>
       <div id="stories-list"></div>
     </div>
@@ -1882,7 +1884,7 @@
         </div>
         <div class="form-group">
           <label class="form-label">Contexto de la idea</label>
-          <textarea id="story-context" class="form-textarea" placeholder="Qué se cuenta, por qué, referencias, quién aparece…"></textarea>
+          <textarea id="story-context" class="form-textarea" style="min-height:120px;" placeholder="Cómo se ejecuta, qué se cuenta y por qué es relevante incluirla…"></textarea>
         </div>
       </div>
 
@@ -2644,6 +2646,16 @@
       });
     }
 
+    // Reordena un día: primero las historias con hora (cronológico),
+    // después las que no tienen hora (respetando su orden manual).
+    function reflowDayOrder(date) {
+      if (!date) return;
+      const dayStories = stories.filter(s => s.date === date);
+      const timed = dayStories.filter(s => s.time).sort((a, b) => String(a.time).localeCompare(String(b.time)));
+      const untimed = dayStories.filter(s => !s.time).sort((a, b) => (a.order || 0) - (b.order || 0));
+      [...timed, ...untimed].forEach((s, i) => { s.order = i; });
+    }
+
     function renderStoriesChrome() {
       const total = stories.length;
       const btnLabel = document.getElementById("btnStoriesLabel");
@@ -2710,7 +2722,10 @@
           <span class="st-idx" data-label="#">#${idx + 1}</span>
           <span class="st-date" data-label="Fecha" title="${s.date}">${formatShortDate(s.date)}</span>
           <span class="st-time" data-label="Hora">${s.time ? escapeHtmlForChat(s.time) : "—"}</span>
-          <span class="st-name" data-label="Historia" title="${escapeHtmlForChat(s.name)}">${escapeHtmlForChat(s.name)}${s.context ? ' <span title="Tiene contexto" style="font-size:10px;color:var(--text-light);">📝</span>' : ""}</span>
+          <span class="st-name" data-label="Historia" title="${escapeHtmlForChat(s.name + (s.context ? " — " + s.context : ""))}">
+            <span class="st-name-title">${escapeHtmlForChat(s.name)}</span>
+            ${s.context ? `<span class="st-context">${escapeHtmlForChat(s.context)}</span>` : ""}
+          </span>
           <span data-label="Formato"><span class="tag tag-gray">${escapeHtmlForChat(s.format || "—")}</span></span>
           <span data-label="Estado"><span class="tag ${getTagStatusClass(s.status || "Idea")}">${escapeHtmlForChat(s.status || "Idea")}</span></span>
           <span style="display:flex;gap:2px;justify-content:flex-end;" data-label="Acciones">
@@ -2726,6 +2741,10 @@
           e.preventDefault();
           const draggedId = e.dataTransfer.getData("text/plain");
           if (draggedId && draggedId !== s.id) reorderStoryBefore(draggedId, s.id);
+        });
+        div.addEventListener("click", (e) => {
+          if (e.target.closest("button")) return;
+          openStoryModal(s.id);
         });
         container.appendChild(div);
       });
@@ -2981,9 +3000,15 @@
         const context = document.getElementById("story-context").value.trim();
         if (id) {
           const s = stories.find(x => x.id === id);
-          if (s) { s.name = name; s.date = date; s.time = time; s.highlightId = highlightId; s.format = format; s.status = status; s.context = context; }
+          if (s) {
+            const oldDate = s.date;
+            s.name = name; s.date = date; s.time = time; s.highlightId = highlightId; s.format = format; s.status = status; s.context = context;
+            reflowDayOrder(oldDate);
+            reflowDayOrder(s.date);
+          }
         } else {
           stories.push({ id: "st-" + Date.now(), name, date, time, highlightId, format, status, context, order: nextStoryOrder(date) });
+          reflowDayOrder(date);
         }
       }
 
@@ -5203,6 +5228,8 @@ REGLAS ESPECÍFICAS:
 - Usa fechas ISO (YYYY-MM-DD) dentro de la campaña: 2026-11-09 a 2026-11-25.
 - Para asignar una historia a una destacada usa el nombre EXACTO de la lista DESTACADAS ACTUALES.
 - Para crear varias historias, envía un bloque JSON por cada una.
+- El campo "context" debe explicar CÓMO se ejecuta la historia y POR QUÉ es relevante incluirla; no repitas el título.
+- Si el usuario da una hora, inclúyela en "time" como HH:MM. La lista se reordena cronológicamente por hora dentro de cada día.
 - NUNCA elimines historias ni destacadas sin que el usuario lo haya pedido explícitamente.`;
 
       // Intentar primero con la API conectada (OpenAI, Claude, Gemini, DeepSeek, Groq, etc.)
@@ -5445,6 +5472,7 @@ REGLAS ESPECÍFICAS:
           order: nextStoryOrder(date)
         };
         stories.push(newStory);
+        reflowDayOrder(date);
         saveStoriesToStorage();
         renderCurrentView();
         return `Creada «${newStory.name}» → ${date}${newStory.time ? " " + newStory.time : ""} · ${highlightName(getHighlightById(highlightId))}`;
@@ -5453,6 +5481,7 @@ REGLAS ESPECÍFICAS:
       if (data.type === "update_story") {
         const s = findStory();
         if (!s) return "No encontré esa historia.";
+        const oldDate = s.date;
         if (data.name) s.name = data.name;
         if (data.date) { const d = normalizeDateParam(data.date); if (d) s.date = d; }
         if (data.time !== undefined && data.time !== null) s.time = data.time;
@@ -5460,6 +5489,8 @@ REGLAS ESPECÍFICAS:
         if (data.format) s.format = normalizeStoryFormat(data.format);
         if (data.status) s.status = data.status;
         if (data.context !== undefined && data.context !== null) s.context = data.context;
+        reflowDayOrder(oldDate);
+        reflowDayOrder(s.date);
         saveStoriesToStorage();
         renderCurrentView();
         return `Actualizada «${s.name}» → ${s.date}`;
@@ -5478,8 +5509,11 @@ REGLAS ESPECÍFICAS:
       if (data.type === "move_story") {
         const s = findStory();
         if (!s) return "No encontré esa historia.";
+        const oldDate = s.date;
         const d = normalizeDateParam(data.date);
         if (d) s.date = d;
+        reflowDayOrder(oldDate);
+        reflowDayOrder(s.date);
         saveStoriesToStorage();
         renderCurrentView();
         return `Movida «${s.name}» → ${s.date}`;
