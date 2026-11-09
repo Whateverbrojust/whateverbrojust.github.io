@@ -431,7 +431,7 @@
     }
     .highlights-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
     }
     .highlight-card {
@@ -458,6 +458,40 @@
     .hl-count { font-size: 12px; color: var(--text-muted); font-weight: 500; }
     .hl-desc { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
+    /* Botones mini para acciones inline (editar, borrar, reordenar) */
+    .ghost-mini {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      width: 22px;
+      height: 22px;
+      border-radius: 5px;
+      font-size: 11px;
+      line-height: 1;
+      padding: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .ghost-mini:hover {
+      background: var(--bg-hover);
+      color: var(--text-main);
+      border-color: var(--border-dark);
+    }
+    .ghost-mini.danger:hover {
+      background: var(--tag-red-bg);
+      color: var(--tag-red-text);
+      border-color: #fecaca;
+    }
+    .ghost-mini:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    .st-item[draggable="true"] { cursor: grab; }
+    .st-item[draggable="true"]:active { cursor: grabbing; }
+
     .stories-timeline {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -466,7 +500,7 @@
     }
     .st-item {
       display: grid;
-      grid-template-columns: 90px 130px 1fr 140px;
+      grid-template-columns: 90px 130px 1fr 130px 110px;
       gap: 12px;
       padding: 10px 0;
       border-bottom: 1px solid var(--border);
@@ -1500,7 +1534,7 @@
         <span>📸</span> <strong>Instagram:</strong> 12 Posts Feed (Sin spoilers)
       </div>
       <div class="kpi-chip">
-        <span>📱</span> <strong>30 Historias:</strong> en 4 Destacadas Permanentes
+        <span>📱</span> <strong><span id="kpiStoryCount">30</span> Historias:</strong> en <span id="kpiHighlightCount">4</span> Destacadas
       </div>
       <div class="kpi-chip" style="background: var(--tag-orange-bg); color: var(--tag-orange-text);">
         <span>🔥</span> Hito Día D: 20 de Noviembre
@@ -1521,7 +1555,7 @@
         <span>📑</span> Tabla Base (19 Piezas)
       </button>
       <button class="view-btn" onclick="switchView('stories')" id="btn-stories">
-        <span>📱</span> 30 Historias & Destacadas
+        <span>📱</span> <span id="btnStoriesLabel">30</span> Historias & Destacadas
       </button>
     </div>
 
@@ -1636,41 +1670,22 @@
   <!-- VISTA 4: HISTORIAS & DESTACADAS -->
   <div id="view-stories" style="display: none;" class="stories-container">
     <div>
-      <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Arquitectura de las 4 Carpetas Destacadas (Instagram)</h3>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px;">
+        <h3 style="font-size: 16px; font-weight: 700;">Carpetas Destacadas (Instagram)</h3>
+        <button class="btn-new" onclick="openHighlightModal()"><span>+</span> Nuevo destacado</button>
+      </div>
       <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
         Vitrinas permanentes para que cualquier visitante entienda tu criterio y solvencia en 1 minuto.
       </p>
-      
-      <div class="highlights-grid">
-        <div class="highlight-card">
-          <div class="hl-icon-wrap">🛠️</div>
-          <div class="hl-name">PROCESO</div>
-          <div class="hl-count">8 Historias asociadas</div>
-          <div class="hl-desc">Mesas de trabajo en Illustrator, sangrías, marcas de corte, pruebas de color e imprenta física.</div>
-        </div>
-        <div class="highlight-card">
-          <div class="hl-icon-wrap">💡</div>
-          <div class="hl-name">CRITERIO</div>
-          <div class="hl-count">7 Historias asociadas</div>
-          <div class="hl-desc">Encuestas tipográficas, recomendaciones de libros, debates sobre simplificación y valor del diseño.</div>
-        </div>
-        <div class="highlight-card">
-          <div class="hl-icon-wrap">⚡</div>
-          <div class="hl-name">EN LA CALLE</div>
-          <div class="hl-count">8 Historias asociadas</div>
-          <div class="hl-desc">Vallas publicitarias en avenidas, caravanas de vehículos, pantallas LED en conciertos masivos.</div>
-        </div>
-        <div class="highlight-card">
-          <div class="hl-icon-wrap">🎯</div>
-          <div class="hl-name">HITO 20.11</div>
-          <div class="hl-count">7 Historias asociadas</div>
-          <div class="hl-desc">Teaser "Mientras tanto", sticker countdown, sustentación en vivo y enlace al Behance.</div>
-        </div>
-      </div>
+
+      <div class="highlights-grid" id="highlights-grid"></div>
     </div>
 
     <div class="stories-timeline">
-      <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 12px;">Cronograma de las 30 Historias Diarias</h3>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
+        <h3 style="font-size: 15px; font-weight: 700;">Cronograma de Historias · <span id="storiesCountLabel">0</span></h3>
+        <button class="btn-new" onclick="openStoryModal()"><span>+</span> Nueva historia</button>
+      </div>
       <div id="stories-list"></div>
     </div>
   </div>
@@ -1767,6 +1782,67 @@
       <div class="drawer-actions">
         <button class="btn-delete" onclick="deleteCurrentPost()" id="btnDelete">Eliminar</button>
         <button class="btn-save" onclick="saveCurrentPost()">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAWER DE HISTORIAS & DESTACADAS -->
+  <div class="modal-overlay" id="storyOverlay" onclick="closeStoryModalOnOverlay(event)">
+    <div class="notion-drawer" id="storyDrawer">
+      <div class="drawer-top">
+        <span class="tag tag-blue" id="storyDrawerTag">Historia</span>
+        <button class="drawer-close" onclick="closeStoryModal()">✕</button>
+      </div>
+
+      <input type="hidden" id="story-mode">
+      <input type="hidden" id="story-id">
+
+      <div class="form-group">
+        <label class="form-label" id="storyNameLabel">Nombre</label>
+        <input type="text" id="story-name" class="form-input" placeholder="Ej. Detrás de cámaras de la mesa de trabajo">
+      </div>
+
+      <div class="form-group" id="storyIconGroup" style="display:none;">
+        <label class="form-label">Ícono</label>
+        <input type="text" id="story-icon" class="form-input" placeholder="🛠️" maxlength="4" style="max-width:110px;">
+      </div>
+
+      <div class="form-group" id="storyDescGroup" style="display:none;">
+        <label class="form-label">Descripción de la destacada</label>
+        <textarea id="story-desc" class="form-textarea" placeholder="Qué comunica esta carpeta..."></textarea>
+      </div>
+
+      <div id="storyFields" style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Fecha</label>
+            <input type="date" id="story-date" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Formato</label>
+            <input type="text" id="story-format" class="form-input" placeholder="Foto, Reel, Encuesta...">
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Destacada</label>
+            <select id="story-highlight" class="form-select"></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Estado</label>
+            <select id="story-status" class="form-select">
+              <option value="Idea">💡 Planificado / Idea</option>
+              <option value="En Diseño">🎨 En Diseño</option>
+              <option value="Listo">✅ Listo</option>
+              <option value="Publicado">🚀 Publicado</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-actions">
+        <button class="btn-delete" onclick="deleteFromStoryModal()" id="storyBtnDelete">Eliminar</button>
+        <button class="btn-save" onclick="saveStoryModal()">Guardar</button>
       </div>
     </div>
   </div>
@@ -2211,11 +2287,72 @@
       { num: 30, date: "20 Nov", name: "¡Portafolio online en Behance! Desliza arriba", highlight: "🎯 HITO 20.11", format: "Link Sticker directo" }
     ];
 
+    /* ============================================================
+       MODELO DE HISTORIAS & DESTACADAS (entidades editables, no código)
+       ============================================================ */
+    const defaultHighlights = [
+      { id: "hl-proceso",  name: "PROCESO",     icon: "🛠️", desc: "Mesas de trabajo en Illustrator, sangrías, marcas de corte, pruebas de color e imprenta física.", order: 0 },
+      { id: "hl-criterio", name: "CRITERIO",    icon: "💡", desc: "Encuestas tipográficas, recomendaciones de libros, debates sobre simplificación y valor del diseño.", order: 1 },
+      { id: "hl-calle",    name: "EN LA CALLE", icon: "⚡", desc: "Vallas publicitarias en avenidas, caravanas de vehículos, pantallas LED en conciertos masivos.", order: 2 },
+      { id: "hl-hito",     name: "HITO 20.11",  icon: "🎯", desc: "Teaser «Mientras tanto», sticker countdown, sustentación en vivo y enlace al Behance.", order: 3 }
+    ];
+
+    const LEGACY_HIGHLIGHT_MAP = {
+      "🛠️ PROCESO": "hl-proceso",
+      "💡 CRITERIO": "hl-criterio",
+      "⚡ EN LA CALLE": "hl-calle",
+      "🎯 HITO 20.11": "hl-hito"
+    };
+
+    function legacyDateToIso(raw) {
+      // "09 Nov" -> "2026-11-09"
+      const m = String(raw || "").match(/(\d{1,2})\s*([A-Za-zÁ-ú]{3,})/);
+      if (!m) return "2026-11-09";
+      const day = String(m[1]).padStart(2, "0");
+      const months = { ene: "01", feb: "02", mar: "03", abr: "04", may: "05", jun: "06", jul: "07", ago: "08", sep: "09", oct: "10", nov: "11", dic: "12" };
+      const monthName = m[2].toLowerCase().slice(0, 3);
+      return `2026-${months[monthName] || "11"}-${day}`;
+    }
+
+    function buildSeedStories() {
+      return storiesData.map((s, i) => ({
+        id: "st-" + (i + 1),
+        date: legacyDateToIso(s.date),
+        name: s.name,
+        highlightId: LEGACY_HIGHLIGHT_MAP[s.highlight] || "hl-proceso",
+        format: s.format,
+        status: "Idea",
+        order: i
+      }));
+    }
+
     let posts = JSON.parse(localStorage.getItem("po_posts_v6")) || defaultPosts;
+
+    let highlights;
+    try { highlights = JSON.parse(localStorage.getItem("po_highlights_v1")); } catch (e) { highlights = null; }
+    if (!Array.isArray(highlights) || highlights.length === 0) {
+      highlights = JSON.parse(JSON.stringify(defaultHighlights));
+      localStorage.setItem("po_highlights_v1", JSON.stringify(highlights));
+    }
+
+    let stories;
+    try { stories = JSON.parse(localStorage.getItem("po_stories_v1")); } catch (e) { stories = null; }
+    if (!Array.isArray(stories) || stories.length === 0) {
+      stories = buildSeedStories();
+      localStorage.setItem("po_stories_v1", JSON.stringify(stories));
+    }
+
     let activeView = "kanban";
 
     function saveToStorage() {
       localStorage.setItem("po_posts_v6", JSON.stringify(posts));
+      localStorage.setItem("po_last_updated_at", String(Date.now()));
+      if (typeof scheduleGitHubCloudSync === "function") scheduleGitHubCloudSync();
+    }
+
+    function saveStoriesToStorage() {
+      localStorage.setItem("po_stories_v1", JSON.stringify(stories));
+      localStorage.setItem("po_highlights_v1", JSON.stringify(highlights));
       localStorage.setItem("po_last_updated_at", String(Date.now()));
       if (typeof scheduleGitHubCloudSync === "function") scheduleGitHubCloudSync();
     }
@@ -2409,19 +2546,98 @@
     }
 
     /* RENDER STORIES LIST */
+    function getHighlightById(id) {
+      return highlights.find(h => h.id === id) || null;
+    }
+
+    function sortedStories() {
+      return stories.slice().sort((a, b) => {
+        if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+        return (a.order || 0) - (b.order || 0);
+      });
+    }
+
+    function renderStoriesChrome() {
+      const total = stories.length;
+      const btnLabel = document.getElementById("btnStoriesLabel");
+      if (btnLabel) btnLabel.innerText = String(total);
+      const kpiS = document.getElementById("kpiStoryCount");
+      if (kpiS) kpiS.innerText = String(total);
+      const kpiH = document.getElementById("kpiHighlightCount");
+      if (kpiH) kpiH.innerText = String(highlights.length);
+      const countLabel = document.getElementById("storiesCountLabel");
+      if (countLabel) countLabel.innerText = String(total);
+      const subLabel = document.getElementById("storiesSubLabel");
+      if (subLabel) subLabel.innerText = `${highlights.length} destacadas`;
+    }
+
+    function renderHighlights() {
+      const grid = document.getElementById("highlights-grid");
+      if (!grid) return;
+      grid.innerHTML = "";
+      const ordered = highlights.slice().sort((a, b) => (a.order || 0) - (b.order || 0));
+      if (ordered.length === 0) {
+        grid.innerHTML = `<div style="font-size:13px;color:var(--text-muted);">Sin destacadas. Crea la primera con «+ Nuevo destacado».</div>`;
+        return;
+      }
+      ordered.forEach((h, idx) => {
+        const count = stories.filter(s => s.highlightId === h.id).length;
+        const card = document.createElement("div");
+        card.className = "highlight-card";
+        card.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:6px;">
+            <div class="hl-icon-wrap">${escapeHtmlForChat(h.icon || "📌")}</div>
+            <div style="display:flex;gap:2px;">
+              <button class="ghost-mini" title="Subir" onclick="moveHighlight('${h.id}', -1)" ${idx === 0 ? "disabled" : ""}>↑</button>
+              <button class="ghost-mini" title="Bajar" onclick="moveHighlight('${h.id}', 1)" ${idx === ordered.length - 1 ? "disabled" : ""}>↓</button>
+              <button class="ghost-mini" title="Editar" onclick="openHighlightModal('${h.id}')">✎</button>
+              <button class="ghost-mini danger" title="Eliminar" onclick="deleteHighlight('${h.id}')">🗑</button>
+            </div>
+          </div>
+          <div class="hl-name">${escapeHtmlForChat(h.name)}</div>
+          <div class="hl-count">${count} ${count === 1 ? "Historia asociada" : "Historias asociadas"}</div>
+          <div class="hl-desc">${escapeHtmlForChat(h.desc || "")}</div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
     function renderStories() {
       const container = document.getElementById("stories-list");
+      if (!container) return;
       container.innerHTML = "";
-
-      storiesData.forEach(s => {
+      const list = sortedStories();
+      if (list.length === 0) {
+        container.innerHTML = `<div style="font-size:13px;color:var(--text-muted);padding:8px 0;">Sin historias todavía. Usa «+ Nueva historia» o pídeselas al Copilot.</div>`;
+        return;
+      }
+      list.forEach((s, idx) => {
+        const h = getHighlightById(s.highlightId);
+        const canUp = idx > 0 && list[idx - 1].date === s.date;
+        const canDown = idx < list.length - 1 && list[idx + 1].date === s.date;
         const div = document.createElement("div");
         div.className = "st-item";
+        div.setAttribute("draggable", "true");
+        div.dataset.storyId = s.id;
         div.innerHTML = `
-          <span style="font-weight: 600; color: var(--blue-accent);">#${s.num} · ${s.date}</span>
-          <span><span class="tag tag-gray">${s.highlight}</span></span>
-          <span style="font-weight: 500;">${s.name}</span>
-          <span style="color: var(--text-muted); font-size: 11.5px;">${s.format}</span>
+          <span style="font-weight:600;color:var(--blue-accent);">#${idx + 1} · ${s.date}</span>
+          <span><span class="tag tag-gray">${h ? escapeHtmlForChat((h.icon || "") + " " + h.name) : "Sin destacada"}</span></span>
+          <span style="font-weight:500;">${escapeHtmlForChat(s.name)}</span>
+          <span style="color:var(--text-muted);font-size:11.5px;">${escapeHtmlForChat(s.format || "—")}</span>
+          <span style="display:flex;gap:2px;justify-content:flex-end;">
+            <button class="ghost-mini" title="Subir" onclick="moveStory('${s.id}', -1)" ${canUp ? "" : "disabled"}>↑</button>
+            <button class="ghost-mini" title="Bajar" onclick="moveStory('${s.id}', 1)" ${canDown ? "" : "disabled"}>↓</button>
+            <button class="ghost-mini" title="Editar" onclick="openStoryModal('${s.id}')">✎</button>
+            <button class="ghost-mini danger" title="Eliminar" onclick="deleteStory('${s.id}')">🗑</button>
+          </span>
         `;
+        div.addEventListener("dragstart", (e) => { e.dataTransfer.setData("text/plain", s.id); });
+        div.addEventListener("dragover", (e) => { e.preventDefault(); });
+        div.addEventListener("drop", (e) => {
+          e.preventDefault();
+          const draggedId = e.dataTransfer.getData("text/plain");
+          if (draggedId && draggedId !== s.id) reorderStoryBefore(draggedId, s.id);
+        });
         container.appendChild(div);
       });
     }
@@ -2430,7 +2646,8 @@
       if (activeView === "kanban") renderKanban();
       else if (activeView === "table") renderTable();
       else if (activeView === "calendar") renderCalendar();
-      else if (activeView === "stories") renderStories();
+      else if (activeView === "stories") { renderHighlights(); renderStories(); }
+      renderStoriesChrome();
     }
 
     /* MODAL LOGIC */
@@ -2524,6 +2741,230 @@
         closeModal();
         renderCurrentView();
       }
+    }
+
+    /* =================== CRUD DE HISTORIAS & DESTACADAS =================== */
+    function nextHighlightOrder() {
+      return highlights.reduce((max, h) => Math.max(max, h.order || 0), -1) + 1;
+    }
+
+    function nextStoryOrder(dateIso) {
+      return stories.filter(s => s.date === dateIso)
+        .reduce((max, s) => Math.max(max, s.order || 0), -1) + 1;
+    }
+
+    function slugifyHighlight(name) {
+      const base = String(name || "destacada")
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .slice(0, 24) || "destacada";
+      let id = "hl-" + base;
+      let n = 2;
+      while (highlights.some(h => h.id === id)) { id = "hl-" + base + "-" + n; n++; }
+      return id;
+    }
+
+    function resolveHighlightId(value) {
+      if (!value) return (highlights[0] && highlights[0].id) || "";
+      const raw = String(value).trim();
+      if (highlights.some(h => h.id === raw)) return raw;
+      const clean = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+      const norm = clean(raw);
+      const exact = highlights.find(h => clean(h.name) === norm);
+      if (exact) return exact.id;
+      const partial = highlights.find(h => norm.includes(clean(h.name)) || clean(h.name).includes(norm));
+      if (partial) return partial.id;
+      return (highlights[0] && highlights[0].id) || "";
+    }
+
+    function normalizeDateParam(value) {
+      if (!value) return "";
+      const raw = String(value).trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+      const m = raw.match(/(\d{1,2})\s*(?:de\s*)?([A-Za-zÁ-ú]{3,})/);
+      if (m) {
+        const months = { ene: "01", feb: "02", mar: "03", abr: "04", may: "05", jun: "06", jul: "07", ago: "08", sep: "09", oct: "10", nov: "11", dic: "12" };
+        const day = String(m[1]).padStart(2, "0");
+        const mon = months[m[2].toLowerCase().slice(0, 3)];
+        if (mon) return `2026-${mon}-${day}`;
+      }
+      return "";
+    }
+
+    function fillStoryHighlightOptions(selectedId) {
+      const sel = document.getElementById("story-highlight");
+      if (!sel) return;
+      sel.innerHTML = "";
+      highlights.slice().sort((a, b) => (a.order || 0) - (b.order || 0)).forEach(h => {
+        const opt = document.createElement("option");
+        opt.value = h.id;
+        opt.textContent = `${h.icon || ""} ${h.name}`.trim();
+        if (h.id === selectedId) opt.selected = true;
+        sel.appendChild(opt);
+      });
+      if (highlights.length === 0) {
+        const opt = document.createElement("option");
+        opt.value = "";
+        opt.textContent = "Sin destacadas";
+        sel.appendChild(opt);
+      }
+    }
+
+    function showStoryModalMode(mode) {
+      const isStory = mode === "story";
+      document.getElementById("story-mode").value = mode;
+      document.getElementById("storyDrawerTag").innerText = isStory ? "Historia" : "Destacada";
+      document.getElementById("storyNameLabel").innerText = isStory ? "Nombre de la historia" : "Nombre de la destacada";
+      document.getElementById("storyFields").style.display = isStory ? "flex" : "none";
+      document.getElementById("storyIconGroup").style.display = isStory ? "none" : "block";
+      document.getElementById("storyDescGroup").style.display = isStory ? "none" : "block";
+    }
+
+    function openStoryModal(id) {
+      const item = id ? stories.find(s => s.id === id) : null;
+      showStoryModalMode("story");
+      fillStoryHighlightOptions(item ? item.highlightId : (highlights[0] && highlights[0].id));
+      document.getElementById("story-id").value = item ? item.id : "";
+      document.getElementById("story-name").value = item ? item.name : "";
+      document.getElementById("story-date").value = item ? item.date : new Date().toISOString().slice(0, 10);
+      document.getElementById("story-format").value = item ? (item.format || "") : "";
+      document.getElementById("story-status").value = item ? (item.status || "Idea") : "Idea";
+      document.getElementById("storyBtnDelete").style.display = item ? "block" : "none";
+      document.getElementById("storyOverlay").style.display = "flex";
+    }
+
+    function openHighlightModal(id) {
+      const hl = id ? highlights.find(h => h.id === id) : null;
+      showStoryModalMode("highlight");
+      document.getElementById("story-id").value = hl ? hl.id : "";
+      document.getElementById("story-name").value = hl ? hl.name : "";
+      document.getElementById("story-icon").value = hl ? (hl.icon || "") : "📌";
+      document.getElementById("story-desc").value = hl ? (hl.desc || "") : "";
+      document.getElementById("storyBtnDelete").style.display = hl ? "block" : "none";
+      document.getElementById("storyOverlay").style.display = "flex";
+      setTimeout(() => document.getElementById("story-name").focus(), 60);
+    }
+
+    function closeStoryModal() {
+      document.getElementById("storyOverlay").style.display = "none";
+    }
+
+    function closeStoryModalOnOverlay(e) {
+      if (e.target.id === "storyOverlay") closeStoryModal();
+    }
+
+    function saveStoryModal() {
+      const mode = document.getElementById("story-mode").value;
+      const id = document.getElementById("story-id").value;
+      const name = document.getElementById("story-name").value.trim();
+      if (!name) { alert("Escribe un nombre para continuar."); return; }
+
+      if (mode === "highlight") {
+        const icon = document.getElementById("story-icon").value.trim() || "📌";
+        const desc = document.getElementById("story-desc").value.trim();
+        if (id) {
+          const hl = highlights.find(h => h.id === id);
+          if (hl) { hl.name = name; hl.icon = icon; hl.desc = desc; }
+        } else {
+          highlights.push({ id: slugifyHighlight(name), name, icon, desc, order: nextHighlightOrder() });
+        }
+      } else {
+        const date = document.getElementById("story-date").value || new Date().toISOString().slice(0, 10);
+        const highlightId = resolveHighlightId(document.getElementById("story-highlight").value);
+        const format = document.getElementById("story-format").value.trim();
+        const status = document.getElementById("story-status").value;
+        if (id) {
+          const s = stories.find(x => x.id === id);
+          if (s) { s.name = name; s.date = date; s.highlightId = highlightId; s.format = format; s.status = status; }
+        } else {
+          stories.push({ id: "st-" + Date.now(), name, date, highlightId, format, status, order: nextStoryOrder(date) });
+        }
+      }
+
+      saveStoriesToStorage();
+      closeStoryModal();
+      renderCurrentView();
+    }
+
+    function deleteStory(id) {
+      const s = stories.find(x => x.id === id);
+      if (!s) return;
+      if (!confirm(`¿Eliminar la historia «${s.name}»?`)) return;
+      stories = stories.filter(x => x.id !== id);
+      saveStoriesToStorage();
+      renderCurrentView();
+    }
+
+    function deleteFromStoryModal() {
+      const mode = document.getElementById("story-mode").value;
+      const id = document.getElementById("story-id").value;
+      if (!id) return;
+      if (mode === "highlight") deleteHighlight(id);
+      else deleteStory(id);
+      closeStoryModal();
+    }
+
+    function deleteHighlight(id) {
+      const hl = highlights.find(h => h.id === id);
+      if (!hl) return;
+      const count = stories.filter(s => s.highlightId === id).length;
+      const msg = count > 0
+        ? `La destacada «${hl.name}» tiene ${count} historia(s). Si la eliminas, esas historias quedarán sin destacada. ¿Continuar?`
+        : `¿Eliminar la destacada «${hl.name}»?`;
+      if (!confirm(msg)) return;
+      highlights = highlights.filter(h => h.id !== id);
+      stories.forEach(s => { if (s.highlightId === id) s.highlightId = ""; });
+      saveStoriesToStorage();
+      renderCurrentView();
+    }
+
+    function moveHighlight(id, dir) {
+      const ordered = highlights.slice().sort((a, b) => (a.order || 0) - (b.order || 0));
+      const idx = ordered.findIndex(h => h.id === id);
+      const target = idx + dir;
+      if (idx < 0 || target < 0 || target >= ordered.length) return;
+      const tmp = ordered[idx];
+      ordered[idx] = ordered[target];
+      ordered[target] = tmp;
+      ordered.forEach((h, i) => { h.order = i; });
+      saveStoriesToStorage();
+      renderCurrentView();
+    }
+
+    function moveStory(id, dir) {
+      const list = sortedStories();
+      const idx = list.findIndex(s => s.id === id);
+      const target = idx + dir;
+      if (idx < 0 || target < 0 || target >= list.length) return;
+      const a = list[idx], b = list[target];
+      if (a.date !== b.date) return; // el orden manual solo aplica dentro del mismo día
+      const tmp = a.order || 0;
+      a.order = b.order || 0;
+      b.order = tmp;
+      saveStoriesToStorage();
+      renderCurrentView();
+    }
+
+    function reorderStoryBefore(draggedId, targetId) {
+      const dragged = stories.find(s => s.id === draggedId);
+      const target = stories.find(s => s.id === targetId);
+      if (!dragged || !target || dragged.id === target.id) return;
+      const originDate = dragged.date;
+      dragged.date = target.date;
+      const group = stories.filter(s => s.date === target.date && s.id !== dragged.id)
+        .sort((a, b) => (a.order || 0) - (b.order || 0));
+      const targetIdx = group.indexOf(target);
+      group.splice(targetIdx >= 0 ? targetIdx : group.length, 0, dragged);
+      group.forEach((s, i) => { s.order = i; });
+      if (originDate !== target.date) {
+        stories.filter(s => s.date === originDate)
+          .sort((a, b) => (a.order || 0) - (b.order || 0))
+          .forEach((s, i) => { s.order = i; });
+      }
+      saveStoriesToStorage();
+      renderCurrentView();
     }
 
     /* =================== MOTOR UNIVERSAL MULTI-PROVEEDOR DE IA (CATÁLOGO EN VIVO /models) =================== */
@@ -3876,11 +4317,24 @@
       });
       md += `\n---\n\n`;
 
+      md += `## 2. Destacadas & Historias\n\n`;
+      md += `### Destacadas (${highlights.length})\n`;
+      highlights.slice().sort((a, b) => (a.order || 0) - (b.order || 0)).forEach(h => {
+        const count = stories.filter(s => s.highlightId === h.id).length;
+        md += `- \`${h.id}\` ${h.icon || ""} **${h.name}** — ${count} historia(s)${h.desc ? ` · ${h.desc}` : ""}\n`;
+      });
+      md += `\n### Historias (${stories.length})\n`;
+      sortedStories().forEach((s, i) => {
+        const h = getHighlightById(s.highlightId);
+        md += `- \`${s.id}\` #${i + 1} · ${s.date} · ${h ? h.name : "Sin destacada"} · **${s.name}** · ${s.format || ""} · ${s.status || ""}\n`;
+      });
+      md += `\n---\n\n`;
+
       if (importedCustomContextNotes) {
-        md += `## 2. Notas de Contexto Importadas\n${importedCustomContextNotes}\n\n---\n\n`;
+        md += `## 3. Notas de Contexto Importadas\n${importedCustomContextNotes}\n\n---\n\n`;
       }
 
-      md += `## 3. Historial de Conversaciones y Acuerdos con Copilot IA (${chatHistory.length} mensajes)\n\n`;
+      md += `## 4. Historial de Conversaciones y Acuerdos con Copilot IA (${chatHistory.length} mensajes)\n\n`;
       if (chatHistory.length === 0) {
         md += `*Aún no se han registrado mensajes en el historial.*\n`;
       } else {
@@ -3944,12 +4398,15 @@
       const content = format === "json"
         ? JSON.stringify({
             updatedAt: new Date().toISOString(),
+            version: 3,
             provider: currentAiProvider,
             model: currentAiModel,
             sessionTotalCostUSD,
             sessionTotalTokens,
             chatHistory,
-            posts
+            posts,
+            stories,
+            highlights
           }, null, 2)
         : buildContextMarkdown();
 
@@ -4095,6 +4552,49 @@
       }
     }
 
+    function buildActionBoxFor(actionData, persist) {
+      if (!actionData) return null;
+      const box = document.createElement("div");
+      box.className = "chat-action-box";
+      box.style.cssText = "display: flex; justify-content: space-between; align-items: center; gap: 8px; border-left: 3px solid #16a34a; background: #f0fdf4; padding: 10px 12px; border-radius: 8px; margin-top: 8px;";
+
+      const badge = document.createElement("span");
+      badge.style.cssText = "font-size: 11px; font-weight: 700; color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 99px; white-space: nowrap;";
+      badge.innerText = "✅ Guardado";
+
+      const info = document.createElement("div");
+
+      if (actionData.type === "update_post") {
+        if (persist) applyDirectUpdate(actionData);
+        info.innerHTML = `<strong>⚡ Modificación Aplicada Automáticamente:</strong><br><span style="font-size:12px; color:#166534;">Post: <strong>${actionData.title || actionData.id}</strong> (Fecha: ${actionData.date || 'Sin cambio'} · Estado: ${actionData.status || 'Sin cambio'})</span>`;
+      } else if (actionData.type === "create_post") {
+        if (persist) applyDirectCreate(actionData);
+        info.innerHTML = `<strong>✨ Nueva Pieza Guardada Automáticamente:</strong><br><span style="font-size:12px; color:#166534;"><strong>${actionData.title}</strong> (${actionData.channel} · ${actionData.date})</span>`;
+      } else if (["create_story", "update_story", "delete_story", "move_story"].includes(actionData.type)) {
+        const summary = persist ? applyStoryAction(actionData) : "";
+        if (/cancelad/i.test(summary || "")) {
+          badge.innerText = "⏹ Cancelado";
+          badge.style.color = "#b91c1c";
+          badge.style.background = "#fee2e2";
+        }
+        info.innerHTML = `<strong>📱 Historia:</strong><br><span style="font-size:12px; color:#166534;">${escapeHtmlForChat(summary || "")}</span>`;
+      } else if (["create_highlight", "update_highlight", "delete_highlight", "reorder_highlights"].includes(actionData.type)) {
+        const summary = persist ? applyHighlightAction(actionData) : "";
+        if (/cancelad/i.test(summary || "")) {
+          badge.innerText = "⏹ Cancelado";
+          badge.style.color = "#b91c1c";
+          badge.style.background = "#fee2e2";
+        }
+        info.innerHTML = `<strong>📌 Destacada:</strong><br><span style="font-size:12px; color:#166534;">${escapeHtmlForChat(summary || "")}</span>`;
+      } else {
+        return null;
+      }
+
+      box.appendChild(info);
+      box.appendChild(badge);
+      return box;
+    }
+
     function appendAIChat(sender, text, actionData = null, persist = true, plainOverride = null) {
       const body = document.getElementById("aiChatBody");
       const div = document.createElement("div");
@@ -4102,34 +4602,11 @@
       div.innerHTML = text;
 
       if (actionData) {
-        const actionBox = document.createElement("div");
-        actionBox.className = "chat-action-box";
-        actionBox.style.cssText = "display: flex; justify-content: space-between; align-items: center; gap: 8px; border-left: 3px solid #16a34a; background: #f0fdf4; padding: 10px 12px; border-radius: 8px; margin-top: 8px;";
-        
-        if (actionData.type === "update_post") {
-          if (persist) {
-            applyDirectUpdate(actionData);
-          }
-          const info = document.createElement("div");
-          info.innerHTML = `<strong>⚡ Modificación Aplicada Automáticamente:</strong><br><span style="font-size:12px; color:#166534;">Post: <strong>${actionData.title || actionData.id}</strong> (Fecha: ${actionData.date || 'Sin cambio'} · Estado: ${actionData.status || 'Sin cambio'})</span>`;
-          const badge = document.createElement("span");
-          badge.style.cssText = "font-size: 11px; font-weight: 700; color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 99px; white-space: nowrap;";
-          badge.innerText = "✅ Guardado";
-          actionBox.appendChild(info);
-          actionBox.appendChild(badge);
-        } else if (actionData.type === "create_post") {
-          if (persist) {
-            applyDirectCreate(actionData);
-          }
-          const info = document.createElement("div");
-          info.innerHTML = `<strong>✨ Nueva Pieza Guardada Automáticamente:</strong><br><span style="font-size:12px; color:#166534;"><strong>${actionData.title}</strong> (${actionData.channel} · ${actionData.date})</span>`;
-          const badge = document.createElement("span");
-          badge.style.cssText = "font-size: 11px; font-weight: 700; color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 99px; white-space: nowrap;";
-          badge.innerText = "✅ Guardado";
-          actionBox.appendChild(info);
-          actionBox.appendChild(badge);
-        }
-        div.appendChild(actionBox);
+        const list = Array.isArray(actionData) ? actionData : [actionData];
+        list.forEach(item => {
+          const box = buildActionBoxFor(item, persist);
+          if (box) div.appendChild(box);
+        });
       }
 
       body.appendChild(div);
@@ -4569,33 +5046,60 @@
         caption: (p.caption || "").substring(0, 600)
       }));
 
+      const highlightsSummary = highlights.slice()
+        .sort((a, b) => (a.order || 0) - (b.order || 0))
+        .map(h => ({ id: h.id, name: h.name, icon: h.icon, desc: h.desc }));
+
+      const storiesSummary = sortedStories().map(s => ({
+        id: s.id,
+        date: s.date,
+        name: s.name,
+        highlight: (getHighlightById(s.highlightId) || {}).name || "Sin destacada",
+        format: s.format,
+        status: s.status
+      }));
+
       const historyForAI = buildConversationHistoryForAI();
 
       const systemPrompt = `Eres el Asistente Copilot y Director de Arte del calendario editorial de Peter Orostegui (@soyorostegui).
 Proyecto: Portafolio Profesional 2026 (Sustentación el 20 de Noviembre).
 Canales: Behance (landing oficial 20 nov), LinkedIn (criterio, negocio, preprensa) e Instagram (sin spoilers, oficio, detalles macro).
 
-ESTADO ACTUAL DE TODAS LAS PUBLICACIONES:
+ESTADO ACTUAL DE LAS PUBLICACIONES (posts):
 ${JSON.stringify(calendarSummary)}
+
+DESTACADAS ACTUALES (carpetas permanentes de Instagram):
+${JSON.stringify(highlightsSummary)}
+
+HISTORIAS ACTUALES (cronograma de stories):
+${JSON.stringify(storiesSummary)}
 
 ${importedCustomContextNotes ? `CONTEXTO ADICIONAL DE ARCHIVO:\n${importedCustomContextNotes.substring(0, 2000)}\n` : ""}
 REGLAS DE ORO:
-1. TIENES CONTROL TOTAL del calendario y MEMORIA ACTIVA de nuestra conversación (los mensajes anteriores del chat son tu memoria). NUNCA digas "no tengo acceso", "no puedo modificar tus archivos" o "hazlo tú manualmente", porque tu respuesta es leída por un intérprete JavaScript que APLICA tus cambios en la base de datos automáticamente.
+1. TIENES CONTROL TOTAL de las publicaciones, las historias y las destacadas, y MEMORIA ACTIVA de nuestra conversación (los mensajes anteriores del chat son tu memoria). NUNCA digas "no tengo acceso", "no puedo modificar tus archivos" o "hazlo tú manualmente", porque tu respuesta es leída por un intérprete JavaScript que APLICA tus cambios en la base de datos automáticamente.
 2. Responde SIEMPRE de forma completa, en español, con Markdown sencillo (negritas, listas, títulos cortos). Nunca dejes frases ni listas a medias.
-3. Si el usuario te pide cambiar una fecha, estado, título, copy o crear una nueva pieza, redacta una explicación breve y SIEMPRE agrega AL FINAL un único bloque de comando JSON válido (comillas dobles, sin comentarios) con la estructura:
+3. Redacta una explicación breve y agrega AL FINAL los bloques de comando JSON válidos (comillas dobles, sin comentarios). Si la petición requiere varias acciones, envía VARIOS bloques: el sistema los ejecutará todos.
+
+PUBLICACIONES (posts):
 \`\`\`json
-{
-  "action": "update_post" | "create_post",
-  "id": "id-del-post-si-es-update",
-  "title": "título",
-  "channel": "Instagram" | "LinkedIn" | "Behance",
-  "date": "YYYY-MM-DD",
-  "status": "Idea" | "En Diseño" | "Listo" | "Publicado",
-  "format": "formato",
-  "structure": "slides o visual",
-  "caption": "copywriting completo"
-}
-\`\`\``;
+{ "action": "update_post" | "create_post", "id": "id-del-post-si-es-update", "title": "título", "channel": "Instagram" | "LinkedIn" | "Behance", "date": "YYYY-MM-DD", "status": "Idea" | "En Diseño" | "Listo" | "Publicado", "format": "formato", "structure": "slides o visual", "caption": "copywriting completo" }
+\`\`\`
+
+HISTORIAS:
+\`\`\`json
+{ "action": "create_story" | "update_story" | "delete_story" | "move_story", "id": "st-... (solo update/delete/move)", "name": "título de la historia", "date": "YYYY-MM-DD", "highlight": "nombre exacto de la destacada", "format": "Foto | Reel | Encuesta | Boomerang | Sticker", "status": "Idea" | "En Diseño" | "Listo" | "Publicado" }
+\`\`\`
+
+DESTACADAS:
+\`\`\`json
+{ "action": "create_highlight" | "update_highlight" | "delete_highlight" | "reorder_highlights", "id": "hl-...", "name": "NOMBRE", "icon": "🎯", "desc": "descripción corta", "order": ["hl-a", "hl-b"] }
+\`\`\`
+
+REGLAS ESPECÍFICAS:
+- Usa fechas ISO (YYYY-MM-DD) dentro de la campaña: 2026-11-09 a 2026-11-25.
+- Para asignar una historia a una destacada usa el nombre EXACTO de la lista DESTACADAS ACTUALES.
+- Para crear varias historias, envía un bloque JSON por cada una.
+- NUNCA elimines historias ni destacadas sin que el usuario lo haya pedido explícitamente.`;
 
       // Intentar primero con la API conectada (OpenAI, Claude, Gemini, DeepSeek, Groq, etc.)
       if (hasActiveAI()) {
@@ -4663,55 +5167,93 @@ REGLAS DE ORO:
       return html;
     }
 
+    function buildActionDataFromParsed(parsed) {
+      if (!parsed || !parsed.action) return null;
+      if (parsed.action === "update_post") {
+        return {
+          type: "update_post",
+          id: parsed.id,
+          title: parsed.title,
+          date: parsed.date,
+          status: parsed.status,
+          caption: parsed.caption,
+          structure: parsed.structure
+        };
+      }
+      if (parsed.action === "create_post") {
+        return {
+          type: "create_post",
+          title: parsed.title,
+          channel: parsed.channel || "Instagram",
+          date: parsed.date || "2026-11-15",
+          status: parsed.status || "Idea",
+          phase: parsed.phase || "Fase 2: Archivo",
+          format: parsed.format || "Post",
+          structure: parsed.structure || "",
+          caption: parsed.caption || ""
+        };
+      }
+      if (["create_story", "update_story", "delete_story", "move_story"].includes(parsed.action)) {
+        return {
+          type: parsed.action,
+          id: parsed.id,
+          name: parsed.name || parsed.title,
+          date: parsed.date,
+          highlight: parsed.highlight || parsed.highlightId,
+          format: parsed.format,
+          status: parsed.status,
+          position: parsed.position,
+          dir: parsed.dir
+        };
+      }
+      if (["create_highlight", "update_highlight", "delete_highlight", "reorder_highlights"].includes(parsed.action)) {
+        return {
+          type: parsed.action,
+          id: parsed.id,
+          name: parsed.name || parsed.title,
+          icon: parsed.icon,
+          desc: parsed.desc || parsed.description,
+          order: parsed.order
+        };
+      }
+      return null;
+    }
+
     function processAndDisplayAIResponse(aiResponse) {
       let workText = String(aiResponse || "");
-      let actionData = null;
+      const actions = [];
       let commandNotice = "";
 
-      // Bloque JSON completo (```json ... ```) o bloque genérico que contenga "action"
-      let jsonMatch = workText.match(/```json\s*([\s\S]*?)```/i);
-      if (!jsonMatch) {
+      // Extrae TODOS los bloques ```json ... ``` (permite ejecutar varias acciones de una vez)
+      const blocks = [];
+      const re = /```json\s*([\s\S]*?)```/gi;
+      let match;
+      while ((match = re.exec(workText)) !== null) {
+        blocks.push({ raw: match[0], json: match[1] });
+      }
+      if (blocks.length === 0) {
         const generic = workText.match(/```\s*(\{[\s\S]*?"action"[\s\S]*?\})\s*```/);
-        if (generic) jsonMatch = generic;
+        if (generic) blocks.push({ raw: generic[0], json: generic[1] });
       }
 
-      if (jsonMatch) {
+      blocks.forEach(block => {
         try {
-          const parsed = JSON.parse(jsonMatch[1].trim());
-          if (parsed.action === "update_post") {
-            actionData = {
-              type: "update_post",
-              id: parsed.id,
-              title: parsed.title,
-              date: parsed.date,
-              status: parsed.status,
-              caption: parsed.caption,
-              structure: parsed.structure
-            };
-          } else if (parsed.action === "create_post") {
-            actionData = {
-              type: "create_post",
-              title: parsed.title,
-              channel: parsed.channel || "Instagram",
-              date: parsed.date || "2026-11-15",
-              status: parsed.status || "Idea",
-              phase: parsed.phase || "Fase 2: Archivo",
-              format: parsed.format || "Post",
-              structure: parsed.structure || "",
-              caption: parsed.caption || ""
-            };
-          }
-          workText = workText.replace(jsonMatch[0], "").trim();
+          const parsed = JSON.parse(block.json.trim());
+          const actionData = buildActionDataFromParsed(parsed);
+          if (actionData) actions.push(actionData);
+          workText = workText.replace(block.raw, "").trim();
         } catch (e) {
           console.error("Error parseando comando JSON de IA:", e);
-          commandNotice = `<div class="ai-md-quote" style="color:#b45309;">⚠️ La IA envió un comando con formato inválido. Pídele: <em>"repite solo el bloque JSON"</em>.</div>`;
+          commandNotice += `<div class="ai-md-quote" style="color:#b45309;">⚠️ La IA envió un comando con formato inválido. Pídele: <em>"repite solo el bloque JSON"</em>.</div>`;
         }
-      } else {
+      });
+
+      if (blocks.length === 0) {
         // Bloque JSON abierto y nunca cerrado (respuesta cortada): no mostrar el JSON roto
         const openIdx = workText.search(/```json/i);
         if (openIdx >= 0) {
           workText = workText.slice(0, openIdx).trim();
-          commandNotice = `<div class="ai-md-quote" style="color:#b45309;">⚠️ El comando para el calendario llegó incompleto. Escribe <em>"continúa"</em> o <em>"repite solo el bloque JSON"</em>.</div>`;
+          commandNotice += `<div class="ai-md-quote" style="color:#b45309;">⚠️ El comando para el calendario llegó incompleto. Escribe <em>"continúa"</em> o <em>"repite solo el bloque JSON"</em>.</div>`;
         }
       }
 
@@ -4719,7 +5261,7 @@ REGLAS DE ORO:
         ? `<div class="ai-md-quote" style="color:#b45309;">✂️ La respuesta era muy larga y alcanzó el límite del modelo. Escribe <em>"continúa"</em> para recibir el resto.</div>`
         : "";
 
-      appendAIChat("ai", formatAiMarkdown(workText) + commandNotice + truncNotice + (lastCallUsageFooter || ""), actionData, true, workText);
+      appendAIChat("ai", formatAiMarkdown(workText) + commandNotice + truncNotice + (lastCallUsageFooter || ""), actions.length ? actions : null, true, workText);
     }
 
     function applyDirectUpdate(data, btnEl = null) {
@@ -4770,9 +5312,181 @@ REGLAS DE ORO:
       }
     }
 
+    /* =================== ACCIONES DEL AGENTE SOBRE HISTORIAS & DESTACADAS =================== */
+    function applyStoryAction(data) {
+      if (!data) return "";
+      const findStory = () => {
+        let s = data.id ? stories.find(x => x.id === data.id) : null;
+        if (!s && data.name) {
+          s = stories.find(x => x.name.toLowerCase().includes(String(data.name).toLowerCase()));
+        }
+        return s;
+      };
+      const highlightName = hl => (hl ? hl.name : "Sin destacada");
+
+      if (data.type === "create_story") {
+        const date = normalizeDateParam(data.date) || new Date().toISOString().slice(0, 10);
+        const highlightId = resolveHighlightId(data.highlight);
+        const newStory = {
+          id: "st-" + Date.now() + "-" + Math.floor(Math.random() * 999),
+          name: data.name || "Nueva historia",
+          date,
+          highlightId,
+          format: data.format || "",
+          status: data.status || "Idea",
+          order: nextStoryOrder(date)
+        };
+        stories.push(newStory);
+        saveStoriesToStorage();
+        renderCurrentView();
+        return `Creada «${newStory.name}» → ${date} · ${highlightName(getHighlightById(highlightId))}`;
+      }
+
+      if (data.type === "update_story") {
+        const s = findStory();
+        if (!s) return "No encontré esa historia.";
+        if (data.name) s.name = data.name;
+        if (data.date) { const d = normalizeDateParam(data.date); if (d) s.date = d; }
+        if (data.highlight) s.highlightId = resolveHighlightId(data.highlight);
+        if (data.format) s.format = data.format;
+        if (data.status) s.status = data.status;
+        saveStoriesToStorage();
+        renderCurrentView();
+        return `Actualizada «${s.name}» → ${s.date}`;
+      }
+
+      if (data.type === "delete_story") {
+        const s = findStory();
+        if (!s) return "No encontré esa historia.";
+        if (!confirm(`El agente quiere eliminar la historia «${s.name}». ¿Confirmas?`)) return "Eliminación cancelada.";
+        stories = stories.filter(x => x.id !== s.id);
+        saveStoriesToStorage();
+        renderCurrentView();
+        return `Eliminada «${s.name}»`;
+      }
+
+      if (data.type === "move_story") {
+        const s = findStory();
+        if (!s) return "No encontré esa historia.";
+        const d = normalizeDateParam(data.date);
+        if (d) s.date = d;
+        saveStoriesToStorage();
+        renderCurrentView();
+        return `Movida «${s.name}» → ${s.date}`;
+      }
+
+      return "";
+    }
+
+    function applyHighlightAction(data) {
+      if (!data) return "";
+      const findHl = () => {
+        let h = data.id ? highlights.find(x => x.id === data.id) : null;
+        if (!h && data.name) {
+          h = highlights.find(x => x.name.toLowerCase().includes(String(data.name).toLowerCase()));
+        }
+        return h;
+      };
+
+      if (data.type === "create_highlight") {
+        const newHl = {
+          id: slugifyHighlight(data.name || "destacada"),
+          name: data.name || "Nueva destacada",
+          icon: data.icon || "📌",
+          desc: data.desc || "",
+          order: nextHighlightOrder()
+        };
+        highlights.push(newHl);
+        saveStoriesToStorage();
+        renderCurrentView();
+        return `Creada la destacada «${newHl.name}»`;
+      }
+
+      if (data.type === "update_highlight") {
+        const h = findHl();
+        if (!h) return "No encontré esa destacada.";
+        if (data.name) h.name = data.name;
+        if (data.icon) h.icon = data.icon;
+        if (data.desc !== undefined && data.desc !== null) h.desc = data.desc;
+        saveStoriesToStorage();
+        renderCurrentView();
+        return `Actualizada la destacada «${h.name}»`;
+      }
+
+      if (data.type === "delete_highlight") {
+        const h = findHl();
+        if (!h) return "No encontré esa destacada.";
+        const count = stories.filter(s => s.highlightId === h.id).length;
+        const msg = count > 0
+          ? `El agente quiere eliminar la destacada «${h.name}», que tiene ${count} historia(s). ¿Confirmas?`
+          : `El agente quiere eliminar la destacada «${h.name}». ¿Confirmas?`;
+        if (!confirm(msg)) return "Eliminación cancelada.";
+        highlights = highlights.filter(x => x.id !== h.id);
+        stories.forEach(s => { if (s.highlightId === h.id) s.highlightId = ""; });
+        saveStoriesToStorage();
+        renderCurrentView();
+        return `Eliminada la destacada «${h.name}»`;
+      }
+
+      if (data.type === "reorder_highlights") {
+        const ids = Array.isArray(data.order) ? data.order : [];
+        if (ids.length === 0) return "No recibí un orden válido.";
+        const ordered = ids.map(id => highlights.find(h => h.id === id)).filter(Boolean);
+        if (ordered.length !== highlights.length) return "El orden recibido no incluye todas las destacadas.";
+        ordered.forEach((h, i) => { h.order = i; });
+        saveStoriesToStorage();
+        renderCurrentView();
+        return "Destacadas reordenadas.";
+      }
+
+      return "";
+    }
+
     // Motor local resiliente que procesa cualquier petición en lenguaje natural
     function handleLocalAIResponse(userText) {
       const text = userText.toLowerCase();
+
+      // ---- Intents de HISTORIAS y DESTACADAS (fallback local sin API) ----
+      if (/(historia|storie)/i.test(userText)) {
+        const iso = normalizeDateParam(userText);
+        if (/(crea|agrega|añade|anade|nueva|genera|suma)/i.test(userText)) {
+          const m = userText.match(/(?:sobre|de|llamada)\s+(.+)$/i);
+          const name = (m ? m[1] : "Nueva historia de proceso").trim().replace(/[.]+$/, "");
+          const hl = highlights[0];
+          appendAIChat("ai", `Perfecto. Creo la historia <strong>${escapeHtmlForChat(name)}</strong>${iso ? ` para el <strong>${iso}</strong>` : ""}.`, {
+            type: "create_story", name, date: iso || "", highlight: hl ? hl.name : "", format: "Post", status: "Idea"
+          }, true);
+          return;
+        }
+        if (/(borra|elimina|quita)/i.test(userText)) {
+          const n = userText.match(/#\s*(\d{1,2})|(\d{1,2})/);
+          const idx = n ? parseInt(n[1] || n[2], 10) : NaN;
+          const list = sortedStories();
+          const s = (!isNaN(idx) && list[idx - 1]) ? list[idx - 1] : null;
+          if (s) {
+            appendAIChat("ai", `Voy a eliminar la historia <strong>#${idx} · ${escapeHtmlForChat(s.name)}</strong>.`, { type: "delete_story", id: s.id }, true);
+            return;
+          }
+        }
+      }
+
+      if (/destacad/i.test(userText)) {
+        if (/(crea|agrega|añade|anade|nueva|genera)/i.test(userText)) {
+          const m = userText.match(/(?:llamada|sobre|de)\s+(.+)$/i);
+          const name = (m ? m[1] : "Nueva destacada").trim().replace(/[.]+$/, "");
+          appendAIChat("ai", `Creo la destacada <strong>${escapeHtmlForChat(name)}</strong>.`, {
+            type: "create_highlight", name, icon: "📌", desc: ""
+          }, true);
+          return;
+        }
+        if (/(borra|elimina|quita)/i.test(userText)) {
+          const m = userText.match(/(?:destacada)\s+(.+)$/i);
+          if (m) {
+            appendAIChat("ai", `Voy a eliminar la destacada <strong>${escapeHtmlForChat(m[1].trim())}</strong>.`, { type: "delete_highlight", name: m[1].trim() }, true);
+            return;
+          }
+        }
+      }
 
       // Detectar peticiones de cambio de fecha
       const dateMatch = text.match(/(\d{1,2})\s+de\s+(noviembre|nov)/i) || text.match(/al\s+(\d{1,2})/i);
@@ -5247,10 +5961,12 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       // SEGURIDAD: las claves de API NO se sincronizan nunca al repositorio público.
       // Permanecen únicamente en el localStorage de este navegador.
       return {
-        version: 2,
+        version: 3,
         updatedAt: Number(localStorage.getItem("po_last_updated_at")) || Date.now(),
         updatedAtISO: new Date().toISOString(),
         posts: posts,
+        stories: stories,
+        highlights: highlights,
         chatHistory: chatHistory,
         importedCustomContextNotes: importedCustomContextNotes || ""
       };
@@ -5262,6 +5978,16 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
       if (Array.isArray(cloudObj.posts) && cloudObj.posts.length) {
         posts = cloudObj.posts;
         localStorage.setItem("po_posts_v6", JSON.stringify(posts));
+        changed = true;
+      }
+      if (Array.isArray(cloudObj.stories)) {
+        stories = cloudObj.stories;
+        localStorage.setItem("po_stories_v1", JSON.stringify(stories));
+        changed = true;
+      }
+      if (Array.isArray(cloudObj.highlights)) {
+        highlights = cloudObj.highlights;
+        localStorage.setItem("po_highlights_v1", JSON.stringify(highlights));
         changed = true;
       }
       if (Array.isArray(cloudObj.chatHistory)) {
