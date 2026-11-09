@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 11:22:09 p. m.
+**Última actualización:** 8/11/2026, 11:22:34 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.09450 USD (304862 tokens)
+**Gasto Acumulado en Sesión:** $0.09705 USD (318822 tokens)
 
 ---
 
@@ -41,9 +41,9 @@
 
 ### Destacadas (5)
 - `hl-criterio` ◼ **DAILY** — 6 historia(s) · Criterio + proceso diario
-- `hl-proceso` ▲ **SETUP** — 9 historia(s) · Taller + preprensa
+- `hl-proceso` ▲ **SETUP** — 10 historia(s) · Taller + preprensa
 - `hl-hito` ● **PORTFOLIO** — 5 historia(s) · Behance + lanzamiento 20.11
-- `hl-calle` ◈ **CONTACT** — 10 historia(s) · Proyectos + colaboraciones
+- `hl-calle` ◈ **CONTACT** — 9 historia(s) · Proyectos + colaboraciones
 - `hl-ptr` ▮ **PTR** — 4 historia(s) · Peter Orostegui + diseño gráfico
 
 ### Historias (34)
@@ -71,7 +71,7 @@
 - `st-22` #22 · 2026-11-17 21:00 · CONTACT · **El concierto en vivo lleno de visuales** · Foto · Idea · Contexto: Foto del público con el escenario al fondo y el visual ocupando toda la pantalla. Cierra el día en el bloque nocturno porque es el desenlace de st-20 y st-21: transforma dos pruebas técnicas en un resultado verificable y aporta la prueba social que ningún archivo de portafolio puede mostrar.
 - `st-23` #23 · 2026-11-18 11:00 · CONTACT · **Detalle macro de hilo y bordado en gorra** · Foto · Idea · Contexto: Macro a focal corta del bordado con las puntadas visibles y el relieve del hilo marcado por luz lateral. Se publica a media mañana porque anticipa el sneak peek de streetwear del mismo día sin descubrirlo: aporta textura y oficio en lugar de mostrar el producto completo antes del 20.
 - `st-24` #24 · 2026-11-18 16:00 · CONTACT · **Pegatinas troqueladas listas en la mesa** · Boomerang · Idea · Contexto: Boomerang de las pegatinas troqueladas girando sobre la mesa blanca con el troquel visible al borde. Va en la tarde para reforzar el costado táctil del sneak peek textil: la audiencia entiende que el proyecto salió del archivo y existe como objeto manipulable.
-- `st-25` #25 · 2026-11-18 19:30 · CONTACT · **Comprobando resolución a escala 1:1** · Captura · Idea · Contexto: Captura del visor al 100% con el valor de resolución y el tamaño real del archivo visibles en el panel. Cierra el día en horario nocturno como validación técnica de todo lo mostrado: es el detalle que separa un portafolio de estudiante de uno que pasó por imprenta y producción.
+- `st-25` #25 · 2026-11-18 18:30 · SETUP · **Comprobando resolución a escala 1:1** · Captura · Idea · Contexto: Verificación técnica en pantalla: archivo abierto al 100% con la regla de escala visible junto a una prueba impresa. Va en SETUP porque es control de archivo, no proyecto instalado. Demuestra rigor de preprensa, no cliente.
 - `st-26` #26 · 2026-11-19 07:00 · PORTFOLIO · **Sticker oficial de Countdown: 24 Horas** · Sticker · Idea · Contexto: Sticker de cuenta regresiva oficial sobre plantilla negra del sistema, activado al iniciar el día. Se publica a las 07:00 para que el contador corra durante las veinticuatro horas completas: es la pieza que transforma la víspera en evento y la que más veces se reenvía por mensaje directo.
 - `st-27` #27 · 2026-11-19 12:00 · PORTFOLIO · **Mesa con los 4 tomos encuadernados listos** · Foto · Idea · Contexto: Foto cenital de los cuatro tomos alineados con la portada visible y el lomo rotulado. Va al mediodía para sustituir la expectativa por evidencia física: la audiencia deja de imaginar el lanzamiento y ve el objeto terminado sobre la mesa, un día antes de la sustentación.
 - `st-28` #28 · 2026-11-19 21:00 · PTR · **Reflexión previa al día de entrega** · Texto · Idea · Contexto: Historia de texto sobre fondo negro con una reflexión breve y pausada, sin imagen ni sticker. Se publica en la noche cuando ya bajó el ritmo de interacción: es el único momento del calendario donde la voz personal reemplaza a la pieza técnica, y humaniza el perfil justo antes del hito.
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (17 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (18 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -637,4 +637,57 @@ Varias historias **no funcionan aisladas** y dependen de otra del mismo día. La
 
 ### [17] 👤 **Peter Orostegui** — *8/11/2026, 11:22:07 p. m.*
 Creo que estamos enfocando mal la generacion de las historias, cada destacada tiene una tematica en concreto y las ideas de historia deberian ir enfocadas a la destacada en donde van a vivir, por ejemplo
+
+### [18] ✨ **Copilot IA** — *8/11/2026, 11:22:31 p. m.*
+Tienes razón y el ejemplo se cortó, pero el punto se entiende perfectamente. Déjame nombrarlo con precisión porque es un error de origen, no de detalle.
+
+## El error de origen
+
+Las 34 historias se generaron **desde el calendario de campaña** (09–25 de noviembre), no desde las carpetas. Es decir: primero se decidió *qué pasa cada día* y después se repartió en la carpeta que parecía más cercana. Por eso hay historias que hoy viven en un lugar donde no pertenecen.
+
+Una destacada no es un segmento de fechas. **Es un arco temático permanente** que alguien abre meses después del 20.11. Si la historia no aporta a ese arco, no debería estar ahí, sin importar qué día se publique.
+
+## El test de pertenencia
+
+Toda historia debe responder dos preguntas:
+
+1. **¿De qué habla?** — el tema manda, no la fecha.
+2. **¿Sigue teniendo sentido en marzo de 2027?** — si solo funciona dentro de la campaña, va a PORTFOLIO o no va.
+
+## Desalineaciones que encontré
+
+**Movimientos claros:**
+
+- **`st-25` «Comprobando resolución a escala 1:1»** está en CONTACT. Pero no es un proyecto en la calle: es verificación técnica de archivo. **Va a SETUP.**
+- **`st-11` «Reflejo de luz en estampado dorado»** está en SETUP. Correcto: es prueba de acabado, no pieza instalada. Se queda.
+
+**Casos con matiz, para que decidas:**
+
+- **`st-5` «¿Papel mate o brillante?»** está en DAILY. El objeto es material físico (SETUP), pero la función es conversación (DAILY). Mi lectura: **se queda en DAILY**, porque DAILY es «criterio» y elegir papel es una decisión de criterio. Si lo mueves a SETUP, DAILY baja a 5 historias y pierde la única encuesta de oficio.
+- **`st-13` «Kerning manual»** está en DAILY. Es técnica, pero la tipografía como decisión es exactamente el criterio que DAILY representa. **Se queda.**
+
+## El desbalance de fondo
+
+| Carpeta | Historias | Problema |
+|---|---|---|
+| SETUP | 9 → 10 | Sana |
+| CONTACT | 10 → 9 | Sana, pero todo concentrado 16–21.11 |
+| DAILY | 6 | Sana |
+| PORTFOLIO | 5 | **4 de 5 son del 19–20.11.** No tiene proceso de construcción del portafolio. |
+| PTR | 4 | **Todo del 15.11 en adelante.** No tiene presentación. |
+
+Ahí está el problema real: **PORTFOLIO y PTR no tienen arco, tienen final.** Alguien que abre PORTFOLIO hoy ve un countdown y un lanzamiento, pero no ve cómo se construyó. Y PTR arranca en la mitad de la conversación: no hay una historia que diga quién eres antes de la firma.
+
+## Lo que debería tener cada arco
+
+- **PORTFOLIO** — apertura (qué es el archivo) → construcción (cómo se armó) → teasers → lanzamiento → disponible.
+- **PTR** — quién eres → formación → taller → voz personal → firma.
+- **CONTACT** — servicios → prueba en calle → cómo trabajar contigo → respuesta.
+- **SETUP** y **DAILY** ya están completas.
+
+## Ejecuto lo indiscutible
+
+Muevo `st-25` a SETUP, que es el único error objetivo de clasificación. Antes dime tú: **¿muevo `st-5` a SETUP y dejamos DAILY en 5?** Y si quieres cerrar los arcos de PORTFOLIO y PTR, creo las historias de apertura que hoy faltan (2 en cada una, fechas 09–10.11) para que ninguna carpeta empiece por el final.
+
+> **Acción estructurada generada:** `[{"type":"update_story","id":"st-25","name":"Comprobando resolución a escala 1:1","date":"2026-11-18","time":"18:30","highlight":"SETUP","format":"Captura","status":"Idea","context":"Verificación técnica en pantalla: archivo abierto al 100% con la regla de escala visible junto a una prueba impresa. Va en SETUP porque es control de archivo, no proyecto instalado. Demuestra rigor de preprensa, no cliente."}]`
 
