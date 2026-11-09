@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794196010956,
-  "updatedAtISO": "2026-11-09T03:46:50.956Z",
+  "updatedAt": 1794196099640,
+  "updatedAtISO": "2026-11-09T03:48:19.640Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -211,17 +211,6 @@
       "format": "Reel",
       "structure": "Video recap enérgico: tomas rápidas de la sustentación, la gente interactuando con los manuales impresos y el portafolio en pantalla.",
       "caption": "Un agradecimiento especial a todos los que hicieron parte de este proceso. El portafolio sigue disponible en el link de la bio."
-    },
-    {
-      "id": "post-ai-1794128749201",
-      "title": "ARCHIVADO · Domingo de taller (fuera de campaña)",
-      "channel": "Instagram",
-      "date": "2026-11-26",
-      "status": "Idea",
-      "phase": "Fase 2: Archivo",
-      "format": "Post",
-      "structure": "1 slide — fotografía macro de hoja de control de color / marcas de registro sobre papel impreso. Sin texto sobre la imagen. Opcional: barra de color y lupa en cuadro. Formato 4:5, luz natural lateral.",
-      "caption": "Domingo de taller.\n\nHay una parte del diseño que nunca aparece en pantalla: la hoja de control de color, las marcas de registro, la barra que confirma que el cian sigue siendo cian.\n\nAprendí que un archivo no termina cuando se ve bonito. Termina cuando la máquina lo entiende y la hoja lo comprueba.\n\nUn domingo, con la lupa en la mano, ese es todo el plan.\n\n—\nPeter Orostegui · Diseño gráfico & identidad visual"
     }
   ],
   "stories": [
