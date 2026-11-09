@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 1:02:56 a. m.
+**Última actualización:** 9/11/2026, 1:03:13 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.14380 USD (572464 tokens)
+**Gasto Acumulado en Sesión:** $0.14561 USD (583155 tokens)
 
 ---
 
@@ -41,8 +41,8 @@
 
 ### Destacadas (5)
 - `hl-criterio` ◼ **DAILY** — 7 historia(s) · Criterio + proceso diario
-- `hl-proceso` ▲ **SETUP** — 10 historia(s) · Taller + preprensa
-- `hl-hito` ● **PORTFOLIO** — 8 historia(s) · Behance + lanzamiento 20.11
+- `hl-proceso` ▲ **SETUP** — 9 historia(s) · Taller + preprensa
+- `hl-hito` ● **PORTFOLIO** — 9 historia(s) · Behance + lanzamiento 20.11
 - `hl-calle` ◈ **CONTACT** — 5 historia(s) · Proyectos + colaboraciones
 - `hl-ptr` ▮ **PTR** — 4 historia(s) · Peter Orostegui + diseño gráfico
 
@@ -50,16 +50,16 @@
 - `st-1` #1 · 2026-11-09 09:00 · SETUP · **Detrás de cámaras de la mesa de trabajo** · Foto · Idea · Contexto: Plano cenital de la mesa real: reglas, escalímetro, lápices y pruebas de color encima. Abre el día mostrando que hay un taller detrás y no solo una pantalla.
 - `st-2` #2 · 2026-11-09 13:00 · SETUP · **Pantalla con vectores y curvas en Illustrator** · Video · Idea · Contexto: Grabación de 6-8 s con zoom lento sobre los nodos mientras se ajusta una curva Bézier. Traduce el proceso técnico a algo que se entiende sin explicación.
 - `st-3` #3 · 2026-11-09 18:00 · DAILY · **Caja de preguntas: «¿Qué se viene?»** · Sticker · Idea · Contexto: Sticker de preguntas al cierre del día, con fondo neutro y texto grande. Sin revelar el lanzamiento: recoge expectativa y alimenta respuestas para las historias del 15.11.
-- `st-4` #4 · 2026-11-10 12:30 · SETUP · **Muestra de texturas de papel especial** · Foto · Idea · Contexto: Macro de tres papeles con luz rasante para mostrar grano y relieve. Va antes de la encuesta porque no se puede votar sobre lo que no se ha visto.
-- `st-5` #5 · 2026-11-10 18:30 · DAILY · **Encuesta: ¿Prefieres papel mate o brillante?** · Encuesta · Idea · Contexto: Encuesta de dos opciones en horario de alta respuesta. Se publica horas después de la muestra para que el voto tenga referencia visual.
-- `st-7` #6 · 2026-11-11 15:00 · SETUP · **Preparando planchas de impresión** · Boomerang · Idea · Contexto: Boomerang de planchas apilándose en el taller. Cierra la secuencia técnica del día con evidencia física de producción.
-- `st-8` #7 · 2026-11-12 11:00 · DAILY · **Debate: ¿Cuándo un logo necesita simplificarse?** · Sticker · Idea · Contexto: Sticker de debate con postura propia en el texto. Se lanza en la pausa de media mañana para provocar respuestas antes del almuerzo.
-- `st-9` #8 · 2026-11-12 17:00 · DAILY · **Libros y referencias de diseño que uso** · Foto · Idea · Contexto: Foto de la pila real de libros con el lomo legible. Humaniza el criterio y da tema de conversación en DM.
-- `st-10` #9 · 2026-11-12 20:00 · SETUP · **Hojeando rápido un cuadernillo impreso** · Video · Idea · Contexto: Video de 8 s pasando las páginas de un cuadernillo ya impreso. Muestra el resultado físico sin revelar el proyecto del 20.11.
-- `st-11` #10 · 2026-11-13 13:00 · SETUP · **Reflejo de luz en estampado dorado** · Video · Idea · Contexto: Toma fija moviendo la pieza para que el dorado revele relieve con la luz. Prueba de acabado, no de diseño: encaja en taller.
-- `st-12` #11 · 2026-11-13 19:30 · DAILY · **Votación: ¿Tipografía Serif o Sans?** · Encuesta · Idea · Contexto: Encuesta nocturna con ejemplo visual de cada familia. Funciona como adelanto de la historia de tipografía del 14.11.
-- `st-13` #12 · 2026-11-14 12:00 · DAILY · **Muestra de espaciado y kerning manual** · Captura · Idea · Contexto: Captura comparativa del antes y después del kerning en una palabra. Caso ambiguo: si se prioriza técnica sobre conversación, debe ir a SETUP.
-- `st-15` #13 · 2026-11-15 10:00 · DAILY · **Q&A: Preguntas sobre diseño y dirección de arte** · Sticker · Idea · Contexto: Caja de preguntas abierta el domingo, cuando hay tiempo de escribir. Debe ir antes de st-16, que necesita material recolectado.
+- `st-4` #4 · 2026-11-10 09:30 · SETUP · **Muestra de texturas de papel especial** · Foto · Idea · Contexto: Macro de tres papeles sobre la mesa de corte, el mismo día en que sale el post-ig-2 sobre lo tangible. Abre la jornada desde el taller y deja preparada la encuesta de la tarde.
+- `st-5` #5 · 2026-11-10 18:30 · DAILY · **Encuesta: ¿Prefieres papel mate o brillante?** · Encuesta · Idea · Contexto: Se lanza cuando la audiencia ya vio la textura del post y de la story de la mañana. Convierte una decisión técnica de taller en conversación de fin de jornada, en la franja de mayor tráfico.
+- `st-7` #6 · 2026-11-11 10:00 · SETUP · **Preparando planchas de impresión** · Boomerang · Idea · Contexto: Refuerza el post-ig-3 sobre errores de preprensa y el post-li-2 sobre vallas OOH. El boomerang del registro de planchas prueba en imagen lo que el caption del post afirma en texto.
+- `st-8` #7 · 2026-11-12 09:00 · DAILY · **Debate: ¿Cuándo un logo necesita simplificarse?** · Sticker · Idea · Contexto: Abre el día del carrusel sobre la diferencia entre logo y sistema visual. El sticker invita a responder antes de que la audiencia llegue al carrusel, de modo que el post reciba comentarios ya calientes.
+- `st-9` #8 · 2026-11-12 13:00 · DAILY · **Libros y referencias de diseño que uso** · Foto · Idea · Contexto: Muestra la biblioteca de referencia que sostiene el criterio del carrusel del día. Humaniza el proceso: no solo se ve el resultado, también de dónde viene la decisión.
+- `st-10` #9 · 2026-11-12 19:30 · PORTFOLIO · **Hojeando rápido un cuadernillo impreso** · Video · Idea · Contexto: Sale del taller y pasa a PORTFOLIO: no es proceso, es pieza terminada. Se publica de noche para que el objeto encuadernado quede como cierre del día y adelante lo que se verá el 20.11.
+- `st-11` #10 · 2026-11-13 10:00 · SETUP · **Reflejo de luz en estampado dorado** · Video · Idea · Contexto: Acompaña el sneak peek 01 del ornamento geométrico. El video busca el ángulo donde la luz revela el estampado, el tipo de detalle físico que solo se aprecia en movimiento y no en una foto fija.
+- `st-12` #11 · 2026-11-13 18:00 · DAILY · **Votación: ¿Tipografía Serif o Sans?** · Encuesta · Idea · Contexto: Cierra la tarde discutiendo lo que el post-ig-6 plantea sobre el tono de voz tipográfico. La encuesta obliga a elegir y genera respuestas rápidas con mínimo esfuerzo de la audiencia.
+- `st-13` #12 · 2026-11-14 11:00 · DAILY · **Muestra de espaciado y kerning manual** · Captura · Idea · Contexto: Captura del panel con las métricas abiertas, publicada tras el post tipográfico del día anterior. Muestra el oficio detrás de una decisión que el ojo percibe pero no ve.
+- `st-15` #13 · 2026-11-15 12:00 · DAILY · **Q&A: Preguntas sobre diseño y dirección de arte** · Sticker · Idea · Contexto: Abre la caja de preguntas a mediodía para acumular consultas durante la tarde. Las respuestas se graban y salen al día siguiente como st-16, lo que crea continuidad y da razón para volver al perfil.
 - `st-16` #14 · 2026-11-15 20:00 · PTR · **Respondiendo la pregunta más votada** · Otro · Idea · Contexto: Video a cámara respondiendo la pregunta ganadora. Va en PTR porque el valor no es la técnica sino tu criterio y tu voz.
 - `st-17` #15 · 2026-11-16 08:30 · SETUP · **Pasando en carro frente a una valla en la avenida** · Video · Idea · Contexto: Video grabado desde el vehículo en movimiento mostrando la pieza instalada en contexto real. Es instalación en campo, territorio de SETUP.
 - `st-18` #16 · 2026-11-16 13:00 · PORTFOLIO · **La escala humana frente a una pieza OOH** · Foto · Idea · Contexto: Persona de pie junto a la valla para dimensionar el formato. Es resultado terminado, no montaje: va a PORTFOLIO como previsualización con enlace a Behance.
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (49 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (50 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1309,4 +1309,20 @@ Si alguna no aparece con su hora, dime el nombre exacto y la reenvío sola. Con 
 
 ### [49] 👤 **Peter Orostegui** — *9/11/2026, 1:02:54 a. m.*
 REaliza nuevamente la solicitud
+
+### [50] ✨ **Copilot IA** — *9/11/2026, 1:03:10 a. m.*
+Repito el envío desde donde se cortó, ahora en lote cerrado y verificado. Lo divido en tandas de diez para que ninguna se trunque a mitad de bloque; tres tandas cubren las 31 pendientes.
+
+**Van las tres primeras del 09.11** ya aplicadas (st-1 09:00, st-2 13:00, st-3 19:00) y aquí empieza el 10.11.
+
+Dos cosas antes del bloque:
+
+- **Ajuste de conteo:** mi lista marca 31 pendientes, no 30. Si al terminar te sobra una, dime el nombre exacto y la corrijo. Prefiero que sobre una a que quede una sin hora.
+- **Movimiento real de carpeta:** `st-10` sale de SETUP y entra en PORTFOLIO. Es la única reasignación de toda la campaña; todo lo demás son horas y contexto.
+
+Criterio de horarios: SETUP temprano (el taller abre), DAILY a mediodía y al cierre de tarde (ventana de interacción), PORTFOLIO de noche (revisión pausada), CONTACT en jornada laboral.
+
+Con esto quedan **21 pendientes** en dos tandas: la del 16 al 18 y la del 19 al 25 (incluidas las seis de id largo de CONTACT y PTR). Dime **aplicado** y sigue la segunda.
+
+> **Acción estructurada generada:** `[{"type":"update_story","id":"st-4","name":"Muestra de texturas de papel especial","date":"2026-11-10","time":"09:30","highlight":"SETUP","format":"Foto","status":"Idea","context":"Macro de tres papeles sobre la mesa de corte, el mismo día en que sale el post-ig-2 sobre lo tangible. Abre la jornada desde el taller y deja preparada la encuesta de la tarde."},{"type":"update_story","id":"st-5","name":"Encuesta: ¿Prefieres papel mate o brillante?","date":"2026-11-10","time":"18:30","highlight":"DAILY","format":"Encuesta","status":"Idea","context":"Se lanza cuando la audiencia ya vio la textura del post y de la story de la mañana. Convierte una decisión técnica de taller en conversación de fin de jornada, en la franja de mayor tráfico."},{"type":"update_story","id":"st-7","name":"Preparando planchas de impresión","date":"2026-11-11","time":"10:00","highlight":"SETUP","format":"Boomerang","status":"Idea","context":"Refuerza el post-ig-3 sobre errores de preprensa y el post-li-2 sobre vallas OOH. El boomerang del registro de planchas prueba en imagen lo que el caption del post afirma en texto."},{"type":"update_story","id":"st-8","name":"Debate: ¿Cuándo un logo necesita simplificarse?","date":"2026-11-12","time":"09:00","highlight":"DAILY","format":"Sticker","status":"Idea","context":"Abre el día del carrusel sobre la diferencia entre logo y sistema visual. El sticker invita a responder antes de que la audiencia llegue al carrusel, de modo que el post reciba comentarios ya calientes."},{"type":"update_story","id":"st-9","name":"Libros y referencias de diseño que uso","date":"2026-11-12","time":"13:00","highlight":"DAILY","format":"Foto","status":"Idea","context":"Muestra la biblioteca de referencia que sostiene el criterio del carrusel del día. Humaniza el proceso: no solo se ve el resultado, también de dónde viene la decisión."},{"type":"update_story","id":"st-10","name":"Hojeando rápido un cuadernillo impreso","date":"2026-11-12","time":"19:30","highlight":"PORTFOLIO","format":"Video","status":"Idea","context":"Sale del taller y pasa a PORTFOLIO: no es proceso, es pieza terminada. Se publica de noche para que el objeto encuadernado quede como cierre del día y adelante lo que se verá el 20.11."},{"type":"update_story","id":"st-11","name":"Reflejo de luz en estampado dorado","date":"2026-11-13","time":"10:00","highlight":"SETUP","format":"Video","status":"Idea","context":"Acompaña el sneak peek 01 del ornamento geométrico. El video busca el ángulo donde la luz revela el estampado, el tipo de detalle físico que solo se aprecia en movimiento y no en una foto fija."},{"type":"update_story","id":"st-12","name":"Votación: ¿Tipografía Serif o Sans?","date":"2026-11-13","time":"18:00","highlight":"DAILY","format":"Encuesta","status":"Idea","context":"Cierra la tarde discutiendo lo que el post-ig-6 plantea sobre el tono de voz tipográfico. La encuesta obliga a elegir y genera respuestas rápidas con mínimo esfuerzo de la audiencia."},{"type":"update_story","id":"st-13","name":"Muestra de espaciado y kerning manual","date":"2026-11-14","time":"11:00","highlight":"DAILY","format":"Captura","status":"Idea","context":"Captura del panel con las métricas abiertas, publicada tras el post tipográfico del día anterior. Muestra el oficio detrás de una decisión que el ojo percibe pero no ve."},{"type":"update_story","id":"st-15","name":"Q&A: Preguntas sobre diseño y dirección de arte","date":"2026-11-15","time":"12:00","highlight":"DAILY","format":"Sticker","status":"Idea","context":"Abre la caja de preguntas a mediodía para acumular consultas durante la tarde. Las respuestas se graban y salen al día siguiente como st-16, lo que crea continuidad y da razón para volver al perfil."}]`
 
