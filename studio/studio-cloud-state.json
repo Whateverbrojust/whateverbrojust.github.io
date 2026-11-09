@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794196099640,
-  "updatedAtISO": "2026-11-09T03:48:19.640Z",
+  "updatedAt": 1794196114179,
+  "updatedAtISO": "2026-11-09T03:48:34.179Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -566,6 +566,13 @@
         }
       ],
       "timestamp": "8/11/2026, 10:46:47 p. m."
+    },
+    {
+      "sender": "user",
+      "html": "Ok, trabajemos en las Destacadas",
+      "plainText": "Ok, trabajemos en las Destacadas",
+      "actionData": null,
+      "timestamp": "8/11/2026, 10:48:31 p. m."
     }
   ],
   "importedCustomContextNotes": ""
