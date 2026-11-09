@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:46:36 p. m.
+**Última actualización:** 8/11/2026, 10:46:50 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.07702 USD (217196 tokens)
+**Gasto Acumulado en Sesión:** $0.07830 USD (225008 tokens)
 
 ---
 
@@ -34,7 +34,7 @@
 | `post-ig-11` | 2026-11-20 | Instagram | **Idea** | Portafolio 2026: Ya disponible (El Gran Lanzamiento) | Oficialmente publicado. 8 semestres de formación, marcas reales, empaq... |
 | `post-li-6` | 2026-11-20 | LinkedIn | **Idea** | Hoy presento oficialmente mi Portafolio Profesional 2026 | Hoy es un día decisivo: culmino mi etapa académica y presento mi Porta... |
 | `post-ig-12` | 2026-11-23 | Instagram | **Idea** | Recap: El viaje del taller a la calle | Un agradecimiento especial a todos los que hicieron parte de este proc... |
-| `post-ai-1794128749201` | 2026-11-15 | Instagram | **Idea** | Domingo de taller: la hoja que nadie publica (Detalle Macro) | Domingo de taller. Hay una parte del diseño que nunca aparece en panta... |
+| `post-ai-1794128749201` | 2026-11-26 | Instagram | **Idea** | ARCHIVADO · Domingo de taller (fuera de campaña) | Domingo de taller. Hay una parte del diseño que nunca aparece en panta... |
 
 ---
 
@@ -80,7 +80,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (5 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (6 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -136,4 +136,23 @@ El 15 de noviembre estaba vacío en el plan original: `post-ig-5` cae el 13, `po
 
 ### [5] 👤 **Peter Orostegui** — *8/11/2026, 10:46:33 p. m.*
 Debe ser la cantidad que te dije, no tenemos mucho tiempo como para extendernos
+
+### [6] ✨ **Copilot IA** — *8/11/2026, 10:46:47 p. m.*
+Tienes razón, cerramos en **19 piezas exactas** y no nos extendemos más.
+
+**Conteo definitivo**
+- **Instagram: 12** → `post-ig-1` a `post-ig-12`
+- **LinkedIn: 6** → `post-li-1` a `post-li-6`
+- **Behance: 1** → `post-behance-1`
+
+**Qué hago con el sobrante**
+`post-ai-1794128749201` (el macro del domingo) sale del calendario de campaña. Lo archivo con fecha fuera de la ventana para que no cuente ni aparezca en el tablero, conservando su copy por si algún día lo reutilizas.
+
+**Un apunte, sin abrir debate:** el 15.11 queda sin post de feed en Instagram. No es un problema real porque ese día ya tienes `st-15` (Q&A sobre diseño) y `st-16` (respuesta a la pregunta más votada). Las historias cubren el hueco y el feed respira antes del sneak peek del 18.
+
+
+
+Calendario cerrado en **19 piezas**. Dime si pasamos a producción (marcar estados) o a los copies, y avanzamos sin desviarnos.
+
+> **Acción estructurada generada:** `[{"type":"update_post","id":"post-ai-1794128749201","title":"ARCHIVADO · Domingo de taller (fuera de campaña)","date":"2026-11-26","status":"Idea","caption":"Domingo de taller.\n\nHay una parte del diseño que nunca aparece en pantalla: la hoja de control de color, las marcas de registro, la barra que confirma que el cian sigue siendo cian.\n\nAprendí que un archivo no termina cuando se ve bonito. Termina cuando la máquina lo entiende y la hoja lo comprueba.\n\nUn domingo, con la lupa en la mano, ese es todo el plan.\n\n—\nPeter Orostegui · Diseño gráfico & identidad visual"}]`
 
