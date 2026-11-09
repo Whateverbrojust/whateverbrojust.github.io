@@ -4713,6 +4713,14 @@
       } else if (actionData.type === "create_post") {
         if (persist) applyDirectCreate(actionData);
         info.innerHTML = `<strong>✨ Nueva Pieza Guardada Automáticamente:</strong><br><span style="font-size:12px; color:#166534;"><strong>${actionData.title}</strong> (${actionData.channel} · ${actionData.date})</span>`;
+      } else if (actionData.type === "delete_items") {
+        const summary = persist ? applyBatchDelete(actionData) : "";
+        if (/cancelad/i.test(summary || "")) {
+          badge.innerText = "⏹ Cancelado";
+          badge.style.color = "#b91c1c";
+          badge.style.background = "#fee2e2";
+        }
+        info.innerHTML = `<strong>🗑️ Eliminación por lote:</strong><br><span style="font-size:12px; color:#166534;">${escapeHtmlForChat(summary || "")}</span>`;
       } else if (["create_story", "update_story", "delete_story", "move_story"].includes(actionData.type)) {
         const summary = persist ? applyStoryAction(actionData) : "";
         if (/cancelad/i.test(summary || "")) {
@@ -5238,13 +5246,20 @@ DESTACADAS:
 { "action": "create_highlight" | "update_highlight" | "delete_highlight" | "reorder_highlights", "id": "hl-...", "name": "NOMBRE", "icon": "🎯", "desc": "descripción corta", "order": ["hl-a", "hl-b"] }
 \`\`\`
 
+ELIMINACIÓN POR LOTE (varias entradas de una vez, con una sola confirmación):
+\`\`\`json
+{ "action": "delete_items", "entity": "story" | "highlight" | "post", "ids": ["st-...", "hl-...", "post-..."], "names": ["título o nombre exacto (alternativa a ids)"] }
+\`\`\`
+
 REGLAS ESPECÍFICAS:
 - Usa fechas ISO (YYYY-MM-DD) dentro de la campaña: 2026-11-09 a 2026-11-25.
 - Para asignar una historia a una destacada usa el nombre EXACTO de la lista DESTACADAS ACTUALES.
 - Para crear varias historias, envía un bloque JSON por cada una.
 - El campo "context" debe explicar CÓMO se ejecuta la historia y POR QUÉ es relevante incluirla; no repitas el título.
 - Si el usuario da una hora, inclúyela en "time" como HH:MM. La lista se reordena cronológicamente por hora dentro de cada día.
-- NUNCA elimines historias ni destacadas sin que el usuario lo haya pedido explícitamente.`;
+- Para eliminar VARIAS entradas usa "delete_items" con la lista de ids (o names). NO envíes un delete_story por cada una: el sistema pide una sola confirmación para todo el lote.
+- Sí puedes eliminar publicaciones: {"action":"delete_items","entity":"post","ids":["post-ig-1", ...]}.
+- NUNCA elimines historias, destacadas ni publicaciones sin que el usuario lo haya pedido explícitamente.`;
 
       // Intentar primero con la API conectada (OpenAI, Claude, Gemini, DeepSeek, Groq, etc.)
       if (hasActiveAI()) {
@@ -5336,6 +5351,14 @@ REGLAS ESPECÍFICAS:
           format: parsed.format || "Post",
           structure: parsed.structure || "",
           caption: parsed.caption || ""
+        };
+      }
+      if (parsed.action === "delete_items") {
+        return {
+          type: "delete_items",
+          entity: parsed.entity || "story",
+          ids: Array.isArray(parsed.ids) ? parsed.ids : [],
+          names: Array.isArray(parsed.names) ? parsed.names : []
         };
       }
       if (["create_story", "update_story", "delete_story", "move_story"].includes(parsed.action)) {
@@ -5457,6 +5480,48 @@ REGLAS ESPECÍFICAS:
         btnEl.style.background = "#15803d";
         btnEl.disabled = true;
       }
+    }
+
+    /* =================== ELIMINACION POR LOTE (HISTORIAS, DESTACADAS Y PUBLICACIONES) =================== */
+    function applyBatchDelete(data) {
+      if (!data) return "";
+      const entity = data.entity === "post" ? "post" : (data.entity === "highlight" ? "highlight" : "story");
+      const ids = (Array.isArray(data.ids) ? data.ids : []).map(String);
+      const names = (Array.isArray(data.names) ? data.names : []).map(String);
+      const norm = v => String(v || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+
+      const source = entity === "post" ? posts : (entity === "highlight" ? highlights : stories);
+      const labelOf = it => it.name || it.title || it.id;
+      const matched = source.filter(it => {
+        if (ids.includes(String(it.id))) return true;
+        if (names.length === 0) return false;
+        const candidate = norm(labelOf(it));
+        return names.some(n => norm(n) === candidate);
+      });
+
+      if (matched.length === 0) return "No encontré entradas que coincidan.";
+
+      const label = entity === "post" ? "publicación(es)" : (entity === "highlight" ? "destacada(s)" : "historia(s)");
+      const preview = matched.slice(0, 10).map(it => "• " + labelOf(it)).join("\n");
+      const extra = matched.length > 10 ? `\n… y ${matched.length - 10} más` : "";
+      if (!confirm(`Se eliminarán ${matched.length} ${label}:\n\n${preview}${extra}\n\n¿Confirmas?`)) {
+        return "Eliminación cancelada.";
+      }
+
+      const idSet = new Set(matched.map(it => it.id));
+      if (entity === "post") {
+        posts = posts.filter(p => !idSet.has(p.id));
+        saveToStorage();
+      } else if (entity === "highlight") {
+        highlights = highlights.filter(h => !idSet.has(h.id));
+        stories.forEach(s => { if (idSet.has(s.highlightId)) s.highlightId = ""; });
+        saveStoriesToStorage();
+      } else {
+        stories = stories.filter(s => !idSet.has(s.id));
+        saveStoriesToStorage();
+      }
+      renderCurrentView();
+      return `${matched.length} ${label} eliminada(s).`;
     }
 
     /* =================== ACCIONES DEL AGENTE SOBRE HISTORIAS & DESTACADAS =================== */
