@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:51:09 p. m.
+**Última actualización:** 8/11/2026, 10:55:09 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.08389 USD (248375 tokens)
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (10 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (11 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -404,4 +404,7 @@ Quedan las 5 carpetas activas y ninguna vacía: **DAILY 6 · SETUP 9 · PORTFOLI
 **Pendiente para el diseño de portadas:** las cinco comparten fondo negro, mayúsculas con tracking amplio, ícono geométrico y línea fina — pero conviene que el ícono cambie de forma y no solo de glifo, para que se distingan a tamaño pulgar. Si quieres, el siguiente paso es redactar los textos exactos de las historias que faltan por día (21 al 25.11), que es donde el perfil se queda sin voz después del lanzamiento.
 
 > **Acción estructurada generada:** `[{"type":"update_highlight","id":"hl-criterio","name":"DAILY","icon":"◼","desc":"Criterio + proceso diario"},{"type":"update_highlight","id":"hl-proceso","name":"SETUP","icon":"▲","desc":"Taller + preprensa"},{"type":"update_highlight","id":"hl-hito","name":"PORTFOLIO","icon":"●","desc":"Behance + lanzamiento 20.11"},{"type":"update_highlight","id":"hl-calle","name":"CONTACT","icon":"◈","desc":"Proyectos + colaboraciones"},{"type":"create_highlight","id":"hl-ptr","name":"PTR","icon":"▮","desc":"Peter Orostegui + diseño gráfico"},{"type":"reorder_highlights","order":["hl-criterio","hl-proceso","hl-hito","hl-calle","hl-ptr"]},{"type":"update_story","id":"st-1","highlight":"SETUP"},{"type":"update_story","id":"st-2","highlight":"SETUP"},{"type":"update_story","id":"st-4","highlight":"SETUP"},{"type":"update_story","id":"st-6","highlight":"SETUP"},{"type":"update_story","id":"st-7","highlight":"SETUP"},{"type":"update_story","id":"st-10","highlight":"SETUP"},{"type":"update_story","id":"st-11","highlight":"SETUP"},{"type":"update_story","id":"st-14","highlight":"SETUP"},{"type":"update_story","id":"st-19","highlight":"SETUP"},{"type":"update_story","id":"st-5","highlight":"DAILY"},{"type":"update_story","id":"st-8","highlight":"DAILY"},{"type":"update_story","id":"st-9","highlight":"DAILY"},{"type":"update_story","id":"st-12","highlight":"DAILY"},{"type":"update_story","id":"st-13","highlight":"DAILY"},{"type":"update_story","id":"st-15","highlight":"DAILY"},{"type":"update_story","id":"st-3","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-26","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-27","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-29","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-30","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-17","highlight":"CONTACT"},{"type":"update_story","id":"st-18","highlight":"CONTACT"},{"type":"update_story","id":"st-20","highlight":"CONTACT"},{"type":"update_story","id":"st-21","highlight":"CONTACT"},{"type":"update_story","id":"st-22","highlight":"CONTACT"},{"type":"update_story","id":"st-23","highlight":"CONTACT"},{"type":"update_story","id":"st-24","highlight":"CONTACT"},{"type":"update_story","id":"st-25","highlight":"CONTACT"},{"type":"update_story","id":"st-16","highlight":"PTR"},{"type":"update_story","id":"st-28","highlight":"PTR"},{"type":"create_story","name":"Hablemos de diseño: proyectos y colaboraciones","date":"2026-11-21","highlight":"CONTACT","format":"Sticker","status":"Idea"},{"type":"create_story","name":"Respuesta en menos de 24 h — contacto directo","date":"2026-11-21","highlight":"CONTACT","format":"Foto","status":"Idea"},{"type":"create_story","name":"8 semestres de formación, taller propio","date":"2026-11-22","highlight":"PTR","format":"Foto","status":"Idea"},{"type":"create_story","name":"La firma: PTR","date":"2026-11-22","highlight":"PTR","format":"Foto","status":"Idea"}]`
+
+### [11] 👤 **Peter Orostegui** — *8/11/2026, 10:55:07 p. m.*
+Las historias no tienen contexto solo son un titulo?
 
