@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204520866,
-  "updatedAtISO": "2026-11-09T06:08:40.866Z",
+  "updatedAt": 1794204533962,
+  "updatedAtISO": "2026-11-09T06:08:53.962Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -224,7 +224,7 @@
       "highlightId": "hl-proceso",
       "format": "Foto",
       "status": "Idea",
-      "order": 0
+      "order": 1
     },
     {
       "time": "19:00",
@@ -572,6 +572,17 @@
       "highlightId": "hl-calle",
       "format": "Foto",
       "status": "Idea",
+      "order": 0
+    },
+    {
+      "id": "st-1794204531446-673",
+      "name": "Café y criterio: la pausa antes de producción",
+      "date": "2026-11-09",
+      "time": "08:00",
+      "highlightId": "hl-criterio",
+      "format": "Foto",
+      "status": "Idea",
+      "context": "Foto cenital de la taza junto al tablero de artes finales, con la marca de sangría visible en el impreso. Abre el día antes del carrusel de expectativa y siembra el tema del criterio sin revelar el portafolio: el cierre ('criterio también es saber esperar') invita a responder y deja la conversación lista para la caja de preguntas de la tarde.",
       "order": 0
     }
   ],
@@ -2627,6 +2638,24 @@
       "plainText": "Hoy voy hacer la historia del café con un mensaje de diseño, será en la mañana.",
       "actionData": null,
       "timestamp": "9/11/2026, 1:08:38 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Anotado: <strong>café + mensaje de diseño, mañana, en DAILY</strong>. El café funciona muy bien como metáfora del oficio — reposo, tempo, la pausa antes de mandar algo a producción — y encaja sin spoilers, justo el tono de Instagram.<br><br><div class=\"ai-md-h\">Copy sugerido para la pieza</div><br><div class=\"ai-md-quote\">El café no se apura.</div><div class=\"ai-md-quote\">Un archivo tampoco.</div><div class=\"ai-md-quote\"></div><div class=\"ai-md-quote\">Antes de soltar un diseño a producción hay una pausa que no se ve: revisar sangrías, medir, dudar un poco.</div><div class=\"ai-md-quote\">Ese es el trabajo que nadie aplaude.</div><br>Tres líneas cortas, sin jerga, y la última frase es la que se comparte. Si quieres algo más seco, cambia el cierre por: <em>«Criterio también es saber esperar.»</em><br><br><div class=\"ai-md-h\">Dos ajustes que necesitas saber</div><br><strong>1. La fecha.</strong> No me dijiste el día y lo puse en <strong>09.11 a las 08:00</strong> —apertura de campaña, antes del carrusel de expectativa—. Si tu «hoy» es otro, un <code>update_story</code> la mueve en un segundo; dime el día y lo hago.<br><br><strong>2. El conteo sube a 35.</strong> Con esta historia nueva, para aterrizar en 30 hay que eliminar <strong>5</strong>, no 4. Mi quinta candidata:<br><br><div class=\"ai-md-li\" style=\"padding-left:4px;\">• <strong><code>st-9</code></strong> (Libros y referencias, 12.11) — ese día ya tiene el debate del logo (<code>st-8</code>) y el cuadernillo (<code>st-10</code>). Los libros son la menos accionable de las tres y no empujan conversación.</div><br>Con las cuatro anteriores más <code>st-9</code> quedaría: SETUP 8 · PORTFOLIO 7 · DAILY 6 · CONTACT 5 · PTR 3 = <strong>30</strong>. Confírmame «borra las cinco» y va el lote completo.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00127 USD</strong> (Acumulado sesión: $0.15179 USD)</span>\n          <span style=\"color:#64748b;\">7430 in + 1791 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Anotado: **café + mensaje de diseño, mañana, en DAILY**. El café funciona muy bien como metáfora del oficio — reposo, tempo, la pausa antes de mandar algo a producción — y encaja sin spoilers, justo el tono de Instagram.\n\n## Copy sugerido para la pieza\n\n> El café no se apura.\n> Un archivo tampoco.\n>\n> Antes de soltar un diseño a producción hay una pausa que no se ve: revisar sangrías, medir, dudar un poco.\n> Ese es el trabajo que nadie aplaude.\n\nTres líneas cortas, sin jerga, y la última frase es la que se comparte. Si quieres algo más seco, cambia el cierre por: *«Criterio también es saber esperar.»*\n\n## Dos ajustes que necesitas saber\n\n**1. La fecha.** No me dijiste el día y lo puse en **09.11 a las 08:00** —apertura de campaña, antes del carrusel de expectativa—. Si tu «hoy» es otro, un `update_story` la mueve en un segundo; dime el día y lo hago.\n\n**2. El conteo sube a 35.** Con esta historia nueva, para aterrizar en 30 hay que eliminar **5**, no 4. Mi quinta candidata:\n\n- **`st-9`** (Libros y referencias, 12.11) — ese día ya tiene el debate del logo (`st-8`) y el cuadernillo (`st-10`). Los libros son la menos accionable de las tres y no empujan conversación.\n\nCon las cuatro anteriores más `st-9` quedaría: SETUP 8 · PORTFOLIO 7 · DAILY 6 · CONTACT 5 · PTR 3 = **30**. Confírmame «borra las cinco» y va el lote completo.",
+      "actionData": [
+        {
+          "type": "create_story",
+          "name": "Café y criterio: la pausa antes de producción",
+          "date": "2026-11-09",
+          "time": "08:00",
+          "highlight": "DAILY",
+          "format": "Foto",
+          "status": "Idea",
+          "context": "Foto cenital de la taza junto al tablero de artes finales, con la marca de sangría visible en el impreso. Abre el día antes del carrusel de expectativa y siembra el tema del criterio sin revelar el portafolio: el cierre ('criterio también es saber esperar') invita a responder y deja la conversación lista para la caja de preguntas de la tarde."
+        }
+      ],
+      "timestamp": "9/11/2026, 1:08:51 a. m."
     }
   ],
   "importedCustomContextNotes": ""
