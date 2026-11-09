@@ -497,11 +497,12 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 20px;
+      overflow-x: auto;
     }
     .st-item {
       display: grid;
       grid-template-columns: 42px 84px 56px 118px minmax(150px, 1fr) 100px 92px 104px;
-      gap: 14px;
+      gap: 24px;
       padding: 10px 0;
       border-bottom: 1px solid var(--border);
       font-size: 13px;
@@ -526,7 +527,7 @@
     .st-header {
       display: grid;
       grid-template-columns: 42px 84px 56px 118px minmax(150px, 1fr) 100px 92px 104px;
-      gap: 14px;
+      gap: 24px;
       padding: 0 0 8px;
       border-bottom: 1px solid var(--border-dark);
       font-size: 10.5px;
@@ -537,6 +538,7 @@
     }
     @media (max-width: 1024px) {
       .st-header { display: none; }
+      .st-item { gap: 14px; }
     }
     @media (max-width: 640px) {
       .st-item > * { display: flex; align-items: baseline; gap: 8px; }
