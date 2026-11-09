@@ -5244,23 +5244,15 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
     }
 
     function buildCloudStateObject() {
-      const keyHex = getExpectedPassHash();
-      const secretsObj = {
-        po_api_vault: localStorage.getItem("po_api_vault") || "",
-        po_ai_provider: localStorage.getItem("po_ai_provider") || "",
-        po_ai_model: localStorage.getItem("po_ai_model") || "",
-        po_ai_key: localStorage.getItem("po_ai_key") || "",
-        po_gemini_key: localStorage.getItem("po_gemini_key") || ""
-      };
-      const encryptedSecrets = xorCipherWithKeyHex(JSON.stringify(secretsObj), keyHex);
+      // SEGURIDAD: las claves de API NO se sincronizan nunca al repositorio público.
+      // Permanecen únicamente en el localStorage de este navegador.
       return {
-        version: 1,
+        version: 2,
         updatedAt: Number(localStorage.getItem("po_last_updated_at")) || Date.now(),
         updatedAtISO: new Date().toISOString(),
         posts: posts,
         chatHistory: chatHistory,
-        importedCustomContextNotes: importedCustomContextNotes || "",
-        encryptedSecrets: encryptedSecrets
+        importedCustomContextNotes: importedCustomContextNotes || ""
       };
     }
 
