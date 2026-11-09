@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:44:31 a. m.
+**Última actualización:** 9/11/2026, 12:45:03 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.13355 USD (505317 tokens)
 
@@ -85,7 +85,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (34 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (35 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1089,4 +1089,7 @@ Primero: borrar `st-14` («El orden de capas en un archivo maestro», 14.11, SET
 Confírmame si desapareció y sigo con `st-25`.
 
 > **Acción estructurada generada:** `[{"type":"delete_story","id":"st-14"}]`
+
+### [35] 👤 **Peter Orostegui** — *9/11/2026, 12:45:01 a. m.*
+Manda los botones de cada eliminacion separados en el chat y yo los presiono
 
