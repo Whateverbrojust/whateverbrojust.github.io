@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:44:25 a. m.
+**Última actualización:** 9/11/2026, 12:44:31 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.13293 USD (495528 tokens)
+**Gasto Acumulado en Sesión:** $0.13355 USD (505317 tokens)
 
 ---
 
@@ -41,12 +41,12 @@
 
 ### Destacadas (5)
 - `hl-criterio` ◼ **DAILY** — 7 historia(s) · Criterio + proceso diario
-- `hl-proceso` ▲ **SETUP** — 12 historia(s) · Taller + preprensa
+- `hl-proceso` ▲ **SETUP** — 11 historia(s) · Taller + preprensa
 - `hl-hito` ● **PORTFOLIO** — 8 historia(s) · Behance + lanzamiento 20.11
 - `hl-calle` ◈ **CONTACT** — 5 historia(s) · Proyectos + colaboraciones
 - `hl-ptr` ▮ **PTR** — 4 historia(s) · Peter Orostegui + diseño gráfico
 
-### Historias (36)
+### Historias (35)
 - `st-1` #1 · 2026-11-09 08:15 · SETUP · **Detrás de cámaras de la mesa de trabajo** · Foto · Idea · Contexto: Plano cenital de la mesa real con recortes, café y herramientas. Abre SETUP mostrando que el taller existe y está en uso.
 - `st-2` #2 · 2026-11-09 12:00 · SETUP · **Pantalla con vectores y curvas en Illustrator** · Video · Idea · Contexto: Grabación de pantalla de 10 s manipulando nodos y curvas Bézier. Demuestra dominio técnico sin revelar el proyecto del lanzamiento.
 - `st-3` #3 · 2026-11-09 19:00 · DAILY · **Caja de preguntas: «¿Qué se viene?»** · Sticker · Idea · Contexto: Sticker de preguntas en horario nocturno para captar curiosidad antes del primer spoiler. Alimenta el banco de respuestas para st-16.
@@ -59,34 +59,33 @@
 - `st-11` #10 · 2026-11-13 13:00 · SETUP · **Reflejo de luz en estampado dorado** · Video · Idea · Contexto: Toma fija moviendo la pieza para que el dorado revele relieve con la luz. Prueba de acabado, no de diseño: encaja en taller.
 - `st-12` #11 · 2026-11-13 19:30 · DAILY · **Votación: ¿Tipografía Serif o Sans?** · Encuesta · Idea · Contexto: Encuesta nocturna con ejemplo visual de cada familia. Funciona como adelanto de la historia de tipografía del 14.11.
 - `st-13` #12 · 2026-11-14 12:00 · DAILY · **Muestra de espaciado y kerning manual** · Captura · Idea · Contexto: Captura comparativa del antes y después del kerning en una palabra. Caso ambiguo: si se prioriza técnica sobre conversación, debe ir a SETUP.
-- `st-14` #13 · 2026-11-14 18:00 · SETUP · **El orden de capas en un archivo maestro** · Captura · Idea · Contexto: Captura del panel de capas con nomenclatura limpia y agrupación lógica. Habla de método de trabajo, que es lo que SETUP comunica.
-- `st-15` #14 · 2026-11-15 10:00 · DAILY · **Q&A: Preguntas sobre diseño y dirección de arte** · Sticker · Idea · Contexto: Caja de preguntas abierta el domingo, cuando hay tiempo de escribir. Debe ir antes de st-16, que necesita material recolectado.
-- `st-16` #15 · 2026-11-15 20:00 · PTR · **Respondiendo la pregunta más votada** · Otro · Idea · Contexto: Video a cámara respondiendo la pregunta ganadora. Va en PTR porque el valor no es la técnica sino tu criterio y tu voz.
-- `st-17` #16 · 2026-11-16 08:30 · SETUP · **Pasando en carro frente a una valla en la avenida** · Video · Idea · Contexto: Video grabado desde el vehículo en movimiento mostrando la pieza instalada en contexto real. Es instalación en campo, territorio de SETUP.
-- `st-18` #17 · 2026-11-16 13:00 · PORTFOLIO · **La escala humana frente a una pieza OOH** · Foto · Idea · Contexto: Persona de pie junto a la valla para dimensionar el formato. Es resultado terminado, no montaje: va a PORTFOLIO como previsualización con enlace a Behance.
-- `st-19` #18 · 2026-11-16 19:00 · SETUP · **Render de visualizer en After Effects** · Video · Idea · Contexto: Captura de la línea de tiempo con el render en curso. Cierra el día mostrando el software y el equipo que sostienen la producción.
-- `st-20` #19 · 2026-11-17 09:30 · SETUP · **Caravana de vehículos con gráfica instalada** · Video · Idea · Contexto: Plano abierto de la caravana en la calle el día de la instalación. Es logística y montaje, no la pieza terminada.
-- `st-21` #20 · 2026-11-17 14:00 · SETUP · **Prueba de pantallas LED en tarima de concierto** · Video · Idea · Contexto: Prueba técnica de pantallas antes de abrir puertas, con el equipo montado. Es el montaje complejo y grande que ubicaste en SETUP.
-- `st-22` #21 · 2026-11-17 21:00 · PORTFOLIO · **El concierto en vivo lleno de visuales** · Foto · Idea · Contexto: Foto del recinto lleno con los visuales en pantalla. Es el resultado funcionando ante público: creación terminada, va a PORTFOLIO.
-- `st-23` #22 · 2026-11-18 11:00 · PORTFOLIO · **Detalle macro de hilo y bordado en gorra** · Foto · Idea · Contexto: Macro extremo que muestra la puntada y el relieve del bordado. Detalle de pieza terminada, no de taller: funciona como calidad de acabado en PORTFOLIO.
-- `st-24` #23 · 2026-11-18 16:00 · PORTFOLIO · **Pegatinas troqueladas listas en la mesa** · Boomerang · Idea · Contexto: Boomerang de las pegatinas ya troqueladas sobre la mesa. El corte preciso es el argumento: pieza terminada, no proceso.
-- `st-25` #24 · 2026-11-18 19:30 · SETUP · **Comprobando resolución a escala 1:1** · Captura · Idea · Contexto: Captura del archivo al 100 % con el pixelado visible si no está a resolución. Cierra el bloque técnico justo antes del countdown.
-- `st-26` #25 · 2026-11-19 07:00 · PORTFOLIO · **Sticker oficial de Countdown: 24 Horas** · Sticker · Idea · Contexto: Cuenta regresiva activada a primera hora para que el contador corra todo el día. Es la pieza de lanzamiento más importante del calendario.
-- `st-27` #26 · 2026-11-19 12:00 · PORTFOLIO · **Mesa con los 4 tomos encuadernados listos** · Foto · Idea · Contexto: Foto cenitalde los cuatro tomos encuadernados recién salidos del taller, apilados con el lomo legible y la mesa despejada. Muestra el entregable físico completo y respalda lo que se sustenta al día siguiente.
-- `st-28` #27 · 2026-11-19 21:00 · PTR · **Reflexión previa al día de entrega** · Texto · Idea · Contexto: Texto en fondo negro, sin imagen, con una reflexión breve sobre cerrar una etapa. Va en PTR porque es personal, no técnico, y cierra la noche antes del lanzamiento.
-- `st-29` #28 · 2026-11-20 10:00 · PORTFOLIO · **Sustentación del portafolio en directo** · Foto · Idea · Contexto: Foto del momento de la sustentación: proyector, jurado, los cuatro tomos sobre la mesa. Es el hito de la jornada y prueba de que el lanzamiento ocurrió.
-- `st-30` #29 · 2026-11-20 18:00 · PORTFOLIO · **¡Portafolio online en Behance! Desliza arriba** · Sticker · Idea · Contexto: Sticker de enlace directo a Behance publicado en horario nocturno, cuando hay pico de consumo. Es la conversión del lanzamiento: la única historia con link que debe clicarse.
-- `st-1794196266553-508` #30 · 2026-11-21 10:00 · CONTACT · **Hablemos de diseño: proyectos y colaboraciones** · Sticker · Idea · Contexto: Primera historia post-lanzamiento: abre el canal formal justo cuando el portafolio ya es público. Sticker de preguntas orientado a recibir briefs, no a conversar.
-- `st-1794196266555-622` #31 · 2026-11-21 17:00 · CONTACT · **Respuesta en menos de 24 h — contacto directo** · Foto · Idea · Contexto: Foto del correo o del teléfono mostrando una bandeja en orden, con el correo legible. Concreta la promesa de respuesta rápida y reduce la fricción para escribir.
-- `st-1794196266559-552` #32 · 2026-11-22 12:00 · PTR · **8 semestres de formación, taller propio** · Foto · Idea · Contexto: Retrato en el taller, sin posar frente a la pantalla: el espacio real detrás. Cierra la campaña con la persona, no con el proyecto.
-- `st-1794196266562-575` #33 · 2026-11-22 20:00 · PTR · **La firma: PTR** · Foto · Idea · Contexto: Detalle del monograma PTR aplicado en papel o estampado. Última historia del cronograma y cierre de marca: deja la firma como huella visual del perfil.
-- `st-1794202219509-869` #34 · 2026-11-23 09:00 · CONTACT · **Cómo cotizar un proyecto de branding** · Carrusel · Idea · Contexto: Tres slides con las variables que determinan un presupuesto: alcance, entregables y número de aplicaciones. Formaliza la conversación de precio y evita el «¿cuánto cuesta un logo?» en DM.
-- `st-1794202219512-548` #35 · 2026-11-24 12:00 · CONTACT · **Mi proceso de trabajo en 4 pasos** · Carrusel · Idea · Contexto: Slide por etapa: brief, propuesta, producción y entrega. Muestra método y reduce el riesgo percibido por un cliente que contrata por primera vez.
-- `st-1794202219515-974` #36 · 2026-11-25 18:00 · CONTACT · **Agenda abierta: proyectos para 2027** · Foto · Idea · Contexto: Cierre del cronograma con disponibilidad declarada y enlace a Behance. Convierte el interés del lanzamiento en conversaciones reales de trabajo, que es el objetivo final de la campaña.
+- `st-15` #13 · 2026-11-15 10:00 · DAILY · **Q&A: Preguntas sobre diseño y dirección de arte** · Sticker · Idea · Contexto: Caja de preguntas abierta el domingo, cuando hay tiempo de escribir. Debe ir antes de st-16, que necesita material recolectado.
+- `st-16` #14 · 2026-11-15 20:00 · PTR · **Respondiendo la pregunta más votada** · Otro · Idea · Contexto: Video a cámara respondiendo la pregunta ganadora. Va en PTR porque el valor no es la técnica sino tu criterio y tu voz.
+- `st-17` #15 · 2026-11-16 08:30 · SETUP · **Pasando en carro frente a una valla en la avenida** · Video · Idea · Contexto: Video grabado desde el vehículo en movimiento mostrando la pieza instalada en contexto real. Es instalación en campo, territorio de SETUP.
+- `st-18` #16 · 2026-11-16 13:00 · PORTFOLIO · **La escala humana frente a una pieza OOH** · Foto · Idea · Contexto: Persona de pie junto a la valla para dimensionar el formato. Es resultado terminado, no montaje: va a PORTFOLIO como previsualización con enlace a Behance.
+- `st-19` #17 · 2026-11-16 19:00 · SETUP · **Render de visualizer en After Effects** · Video · Idea · Contexto: Captura de la línea de tiempo con el render en curso. Cierra el día mostrando el software y el equipo que sostienen la producción.
+- `st-20` #18 · 2026-11-17 09:30 · SETUP · **Caravana de vehículos con gráfica instalada** · Video · Idea · Contexto: Plano abierto de la caravana en la calle el día de la instalación. Es logística y montaje, no la pieza terminada.
+- `st-21` #19 · 2026-11-17 14:00 · SETUP · **Prueba de pantallas LED en tarima de concierto** · Video · Idea · Contexto: Prueba técnica de pantallas antes de abrir puertas, con el equipo montado. Es el montaje complejo y grande que ubicaste en SETUP.
+- `st-22` #20 · 2026-11-17 21:00 · PORTFOLIO · **El concierto en vivo lleno de visuales** · Foto · Idea · Contexto: Foto del recinto lleno con los visuales en pantalla. Es el resultado funcionando ante público: creación terminada, va a PORTFOLIO.
+- `st-23` #21 · 2026-11-18 11:00 · PORTFOLIO · **Detalle macro de hilo y bordado en gorra** · Foto · Idea · Contexto: Macro extremo que muestra la puntada y el relieve del bordado. Detalle de pieza terminada, no de taller: funciona como calidad de acabado en PORTFOLIO.
+- `st-24` #22 · 2026-11-18 16:00 · PORTFOLIO · **Pegatinas troqueladas listas en la mesa** · Boomerang · Idea · Contexto: Boomerang de las pegatinas ya troqueladas sobre la mesa. El corte preciso es el argumento: pieza terminada, no proceso.
+- `st-25` #23 · 2026-11-18 19:30 · SETUP · **Comprobando resolución a escala 1:1** · Captura · Idea · Contexto: Captura del archivo al 100 % con el pixelado visible si no está a resolución. Cierra el bloque técnico justo antes del countdown.
+- `st-26` #24 · 2026-11-19 07:00 · PORTFOLIO · **Sticker oficial de Countdown: 24 Horas** · Sticker · Idea · Contexto: Cuenta regresiva activada a primera hora para que el contador corra todo el día. Es la pieza de lanzamiento más importante del calendario.
+- `st-27` #25 · 2026-11-19 12:00 · PORTFOLIO · **Mesa con los 4 tomos encuadernados listos** · Foto · Idea · Contexto: Foto cenitalde los cuatro tomos encuadernados recién salidos del taller, apilados con el lomo legible y la mesa despejada. Muestra el entregable físico completo y respalda lo que se sustenta al día siguiente.
+- `st-28` #26 · 2026-11-19 21:00 · PTR · **Reflexión previa al día de entrega** · Texto · Idea · Contexto: Texto en fondo negro, sin imagen, con una reflexión breve sobre cerrar una etapa. Va en PTR porque es personal, no técnico, y cierra la noche antes del lanzamiento.
+- `st-29` #27 · 2026-11-20 10:00 · PORTFOLIO · **Sustentación del portafolio en directo** · Foto · Idea · Contexto: Foto del momento de la sustentación: proyector, jurado, los cuatro tomos sobre la mesa. Es el hito de la jornada y prueba de que el lanzamiento ocurrió.
+- `st-30` #28 · 2026-11-20 18:00 · PORTFOLIO · **¡Portafolio online en Behance! Desliza arriba** · Sticker · Idea · Contexto: Sticker de enlace directo a Behance publicado en horario nocturno, cuando hay pico de consumo. Es la conversión del lanzamiento: la única historia con link que debe clicarse.
+- `st-1794196266553-508` #29 · 2026-11-21 10:00 · CONTACT · **Hablemos de diseño: proyectos y colaboraciones** · Sticker · Idea · Contexto: Primera historia post-lanzamiento: abre el canal formal justo cuando el portafolio ya es público. Sticker de preguntas orientado a recibir briefs, no a conversar.
+- `st-1794196266555-622` #30 · 2026-11-21 17:00 · CONTACT · **Respuesta en menos de 24 h — contacto directo** · Foto · Idea · Contexto: Foto del correo o del teléfono mostrando una bandeja en orden, con el correo legible. Concreta la promesa de respuesta rápida y reduce la fricción para escribir.
+- `st-1794196266559-552` #31 · 2026-11-22 12:00 · PTR · **8 semestres de formación, taller propio** · Foto · Idea · Contexto: Retrato en el taller, sin posar frente a la pantalla: el espacio real detrás. Cierra la campaña con la persona, no con el proyecto.
+- `st-1794196266562-575` #32 · 2026-11-22 20:00 · PTR · **La firma: PTR** · Foto · Idea · Contexto: Detalle del monograma PTR aplicado en papel o estampado. Última historia del cronograma y cierre de marca: deja la firma como huella visual del perfil.
+- `st-1794202219509-869` #33 · 2026-11-23 09:00 · CONTACT · **Cómo cotizar un proyecto de branding** · Carrusel · Idea · Contexto: Tres slides con las variables que determinan un presupuesto: alcance, entregables y número de aplicaciones. Formaliza la conversación de precio y evita el «¿cuánto cuesta un logo?» en DM.
+- `st-1794202219512-548` #34 · 2026-11-24 12:00 · CONTACT · **Mi proceso de trabajo en 4 pasos** · Carrusel · Idea · Contexto: Slide por etapa: brief, propuesta, producción y entrega. Muestra método y reduce el riesgo percibido por un cliente que contrata por primera vez.
+- `st-1794202219515-974` #35 · 2026-11-25 18:00 · CONTACT · **Agenda abierta: proyectos para 2027** · Foto · Idea · Contexto: Cierre del cronograma con disponibilidad declarada y enlace a Behance. Convierte el interés del lanzamiento en conversaciones reales de trabajo, que es el objetivo final de la campaña.
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (33 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (34 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1077,4 +1076,17 @@ Con esto quedan **33 historias activas** y el borrado completo de las tres captu
 
 ### [33] 👤 **Peter Orostegui** — *9/11/2026, 12:44:23 a. m.*
 no sirvió
+
+### [34] ✨ **Copilot IA** — *9/11/2026, 12:44:29 a. m.*
+Entendido. El lote de ocho bloques volvió a fallar; el de uno solo funcionó. La conclusión es clara: **solo procesa un bloque por respuesta.**
+
+Así que voy así, uno a uno, esperando tu confirmación después de cada uno.
+
+Primero: borrar `st-14` («El orden de capas en un archivo maestro», 14.11, SETUP).
+
+
+
+Confírmame si desapareció y sigo con `st-25`.
+
+> **Acción estructurada generada:** `[{"type":"delete_story","id":"st-14"}]`
 
