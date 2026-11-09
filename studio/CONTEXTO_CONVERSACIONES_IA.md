@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:19:32 a. m.
+**Última actualización:** 9/11/2026, 12:27:29 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.09867 USD (331331 tokens)
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (20 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (21 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -734,4 +734,14 @@ Sin tus definiciones, cualquier reubicación que haga es otra suposición. Dime,
 Si prefieres, respóndeme solo las tres dudosas (**DAILY, PORTFOLIO, CONTACT**) y con eso ya puedo reubicar con criterio. También puedes redefinir a fondo —cambiar nombres si el concepto ya no coincide con la palabra—; eso lo puedo ejecutar igual.
 
 **No toco nada todavía.** Ya cometí el error de reordenar sobre una base no validada, y prefiero no repetirlo: cuando tenga tus definiciones, muevo las historias que no pertenezcan, creo las que falten para completar cada arco y dejo el cronograma coherente de una sola vez.
+
+### [21] 👤 **Peter Orostegui** — *9/11/2026, 12:27:26 a. m.*
+Daily para mi es el lugar donde puedo postear cualquier cosa que me sucede en el dia, la foto de un café con una frase de diseño o motivación, un cartel que me gustó porque tiene un diseño atractivo, algo interesante que me encontré en la web y quiero compartirlo, si quiero interactuar desde el preguntarle a las personas que opinan sobre un tema trend de diseño o tecnologia. cosas así obvio no subiré cualquier cosa pero si sera contenido mas diverso y casual.
+Setup, en cambio si va mas de acuerdo con mis equipos, mi lugar de trabajo, si estoy en grabacion y me gusta un esquema de luces, o el rig montado de una camara, o si un dia estoy viajando y trabajo desde una cafeteria, o si estoy en campo o en instalación de algo complejo y grande, no se, setup lo siento como mas espacial o de equipos.
+
+Portfolio será el lugar donde viviran mis creaciones, al principio lo usaremos como en lugar donde viviran las piezas del lanzamento pero posteriormente van a vivir proyectos pero no contados desde el proceso si no como previsualización del resultado, y con link a behance donde si estará todo el proceso.
+
+Contact, ya es mas formal, sobre todo el tema de como podemos trabajar, como contactarme, donde, como cotizar, etc, cosas asi.
+
+y en PTR, estaré yo, que soy, cosas que pueden o no ser de diseño pero que hablan sobre mi.
 
