@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 1:13:12 a. m.
+**Última actualización:** 9/11/2026, 1:15:31 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.15536 USD (649181 tokens)
 
@@ -48,7 +48,7 @@
 
 ### Historias (32)
 - `st-1794204531446-673` #1 · 2026-11-09 08:00 · DAILY · **Café en la U: la sangría que olvidé ayer** · Foto · En Diseño · Contexto: Foto casual en la mesa de la universidad: taza, cuaderno y una frase corta al pie, sin diseño encima. Se publica a las 8:00 para abrir el día antes del carrusel de expectativa; el tono espontáneo humaniza el perfil y deja caer el tema de preprensa sin explicarlo todavía, para que conecte con el reel de errores del 11.11.
-- `st-1794204588972-274` #2 · 2026-11-09 08:00 · DAILY · **Café en la universidad: la manía de medir todo** · Foto · En Diseño · Contexto: Foto casual en la universidad: taza de café, mesa y cuaderno, con una sola frase corta de diseño en cuerpo pequeño (por ejemplo 'La manía de medir todo'). Va a las 08:00, antes de la primera story del taller, para abrir el día con tono humano y sin spoilers del portafolio; el formato espontáneo busca comentarios, no alcance.
+- `st-1794204588972-274` #2 · 2026-11-09 08:10 · DAILY · **Café en la universidad: la manía de medir todo** · Foto · En Diseño · Contexto: Foto casual en la universidad: taza de café, mesa y cuaderno, con una sola frase corta de diseño en cuerpo pequeño (por ejemplo 'La manía de medir todo'). Va a las 08:00, antes de la primera story del taller, para abrir el día con tono humano y sin spoilers del portafolio; el formato espontáneo busca comentarios, no alcance.
 - `st-1` #3 · 2026-11-09 09:00 · SETUP · **Detrás de cámaras de la mesa de trabajo** · Foto · Idea · Contexto: Primera imagen de la campaña: la mesa real antes de cualquier publicación. Abre la semana mostrando que el trabajo existe desde antes, coherente con el copy del post-ig-1 sobre construir sin publicar de inmediato.
 - `st-3` #4 · 2026-11-09 19:00 · DAILY · **Caja de preguntas: «¿Qué se viene?»** · Sticker · Idea · Contexto: Cierra el día convirtiendo la expectativa en conversación. Sirve además como sondeo previo al lanzamiento: las respuestas anticipan qué proyecto interesa más antes del 20.11.
 - `st-4` #5 · 2026-11-10 09:30 · SETUP · **Muestra de texturas de papel especial** · Foto · Idea · Contexto: Macro de tres papeles sobre la mesa de corte, el mismo día del post-ig-2 sobre lo tangible. La imagen prueba en textura lo que el caption afirma en concepto.
