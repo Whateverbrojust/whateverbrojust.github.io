@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794198154223,
-  "updatedAtISO": "2026-11-09T04:22:34.223Z",
+  "updatedAt": 1794201553270,
+  "updatedAtISO": "2026-11-09T05:19:13.270Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -1437,6 +1437,13 @@
         }
       ],
       "timestamp": "8/11/2026, 11:22:31 p. m."
+    },
+    {
+      "sender": "user",
+      "html": "Creo que debemos entender que concepto maneja cada destacada, segun lo que a mi me parezca.",
+      "plainText": "Creo que debemos entender que concepto maneja cada destacada, segun lo que a mi me parezca.",
+      "actionData": null,
+      "timestamp": "9/11/2026, 12:19:10 a. m."
     }
   ],
   "importedCustomContextNotes": ""
