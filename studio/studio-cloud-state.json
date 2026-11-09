@@ -1,14 +1,14 @@
 {
   "version": 3,
-  "updatedAt": 1794204942481,
-  "updatedAtISO": "2026-11-09T06:15:42.481Z",
+  "updatedAt": 1794205247904,
+  "updatedAtISO": "2026-11-09T06:20:47.904Z",
   "posts": [
     {
       "id": "post-ig-1",
       "channel": "Instagram",
       "title": "Lanzamiento Expectativa: «Mientras tanto...»",
       "date": "2026-11-09",
-      "status": "En Diseño",
+      "status": "Listo",
       "phase": "Fase 1: Señal",
       "format": "Carrusel",
       "structure": "Slide 1: Mientras tanto...\nSlide 2: mucho se estuvo construyendo\nSlide 3: y pronto lo verás aquí.\n(Solo tipografía sobria sobre fondo claro y retícula tenue).",
@@ -575,14 +575,15 @@
       "order": 0
     },
     {
+      "time": "08:10",
+      "context": "Foto casual en la universidad: taza de café, mesa y cuaderno, con una sola frase corta de diseño en cuerpo pequeño (por ejemplo 'La manía de medir todo'). Va a las 08:00, antes de la primera story del taller, para abrir el día con tono humano y sin spoilers del portafolio; el formato espontáneo busca comentarios, no alcance.",
+      "formatDetail": "",
       "id": "st-1794204588972-274",
       "name": "Café en la universidad: la manía de medir todo",
       "date": "2026-11-09",
-      "time": "08:10",
       "highlightId": "hl-criterio",
       "format": "Foto",
       "status": "En Diseño",
-      "context": "Foto casual en la universidad: taza de café, mesa y cuaderno, con una sola frase corta de diseño en cuerpo pequeño (por ejemplo 'La manía de medir todo'). Va a las 08:00, antes de la primera story del taller, para abrir el día con tono humano y sin spoilers del portafolio; el formato espontáneo busca comentarios, no alcance.",
       "order": 1
     }
   ],
