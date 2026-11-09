@@ -5389,49 +5389,111 @@ REGLAS ESPECÍFICAS:
       return null;
     }
 
+    // Devuelve los rangos de cada objeto JSON balanceado dentro de un texto.
+    // Soporta varios objetos seguidos (NDJSON), objetos dentro de corchetes y
+    // llaves dentro de cadenas escapadas.
+    function extractJsonObjectRanges(text) {
+      const ranges = [];
+      let depth = 0, start = -1, inString = false, escape = false;
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (inString) {
+          if (escape) escape = false;
+          else if (ch === "\\") escape = true;
+          else if (ch === '"') inString = false;
+          continue;
+        }
+        if (ch === '"') { inString = true; continue; }
+        if (ch === "{") {
+          if (depth === 0) start = i;
+          depth++;
+        } else if (ch === "}") {
+          if (depth > 0) {
+            depth--;
+            if (depth === 0 && start >= 0) {
+              ranges.push({ start, end: i + 1, raw: text.slice(start, i + 1) });
+              start = -1;
+            }
+          }
+        }
+      }
+      return ranges;
+    }
+
+    function stripRanges(text, ranges) {
+      if (!ranges || ranges.length === 0) return text;
+      let out = "";
+      let cursor = 0;
+      ranges.slice().sort((a, b) => a.start - b.start).forEach(r => {
+        if (r.start > cursor) out += text.slice(cursor, r.start);
+        cursor = Math.max(cursor, r.end);
+      });
+      if (cursor < text.length) out += text.slice(cursor);
+      return out;
+    }
+
     function processAndDisplayAIResponse(aiResponse) {
-      let workText = String(aiResponse || "");
+      const original = String(aiResponse || "");
       const actions = [];
       let commandNotice = "";
 
-      // Extrae TODOS los bloques ```json ... ``` (permite ejecutar varias acciones de una vez)
-      const blocks = [];
-      const re = /```json\s*([\s\S]*?)```/gi;
-      let match;
-      while ((match = re.exec(workText)) !== null) {
-        blocks.push({ raw: match[0], json: match[1] });
-      }
-      if (blocks.length === 0) {
-        const generic = workText.match(/```\s*(\{[\s\S]*?"action"[\s\S]*?\})\s*```/);
-        if (generic) blocks.push({ raw: generic[0], json: generic[1] });
-      }
-
-      blocks.forEach(block => {
-        try {
-          const parsed = JSON.parse(block.json.trim());
-          const actionData = buildActionDataFromParsed(parsed);
-          if (actionData) actions.push(actionData);
-          workText = workText.replace(block.raw, "").trim();
-        } catch (e) {
-          console.error("Error parseando comando JSON de IA:", e);
-          commandNotice += `<div class="ai-md-quote" style="color:#b45309;">⚠️ La IA envió un comando con formato inválido. Pídele: <em>"repite solo el bloque JSON"</em>.</div>`;
-        }
+      // 1) Contenido de las cercas ```...``` (si existen)
+      const fenceBodies = [];
+      const withoutFences = original.replace(/```[ \t]*[a-zA-Z]*[ \t]*\r?\n?([\s\S]*?)```/g, (m, body) => {
+        fenceBodies.push(body);
+        return "\n";
       });
 
-      if (blocks.length === 0) {
-        // Bloque JSON abierto y nunca cerrado (respuesta cortada): no mostrar el JSON roto
-        const openIdx = workText.search(/```json/i);
-        if (openIdx >= 0) {
-          workText = workText.slice(0, openIdx).trim();
-          commandNotice += `<div class="ai-md-quote" style="color:#b45309;">⚠️ El comando para el calendario llegó incompleto. Escribe <em>"continúa"</em> o <em>"repite solo el bloque JSON"</em>.</div>`;
+      // 2) Objetos JSON sueltos que quedaron fuera de las cercas
+      const unfencedRanges = extractJsonObjectRanges(withoutFences);
+      let visibleText = stripRanges(withoutFences, unfencedRanges).replace(/```[a-zA-Z]*\s*/g, "");
+
+      // 3) Candidatos: lo que hay dentro de las cercas + lo suelto
+      const rawCandidates = [];
+      fenceBodies.forEach(body => {
+        extractJsonObjectRanges(body).forEach(r => rawCandidates.push(r.raw));
+      });
+      unfencedRanges.forEach(r => rawCandidates.push(r.raw));
+
+      // 4) Cada objeto se parsea por separado (varios seguidos = varios comandos)
+      const seen = new Set();
+      let invalid = 0;
+      rawCandidates.forEach(raw => {
+        const key = String(raw || "").trim();
+        if (!key || seen.has(key)) return;
+        seen.add(key);
+        let parsed;
+        try {
+          parsed = JSON.parse(key);
+        } catch (e) {
+          invalid += 1;
+          return;
         }
+        const actionData = buildActionDataFromParsed(parsed);
+        if (actionData) actions.push(actionData);
+      });
+
+      if (actions.length === 0 && invalid > 0) {
+        commandNotice += `<div class="ai-md-quote" style="color:#b45309;">⚠️ La IA envió un comando con formato inválido. Pídele: <em>"repite solo el bloque JSON"</em>.</div>`;
       }
+
+      // 5) Cerca abierta y sin cerrar (respuesta cortada)
+      const fenceCount = (original.match(/```/g) || []).length;
+      if (fenceCount % 2 === 1) {
+        commandNotice += `<div class="ai-md-quote" style="color:#b45309;">⚠️ El comando para el calendario llegó incompleto. Escribe <em>"continúa"</em> o <em>"repite solo el bloque JSON"</em>.</div>`;
+      }
+
+      // 6) Si quedó un objeto a medias visible, cortarlo
+      const partialIdx = visibleText.search(/\{\s*"action"\s*:/);
+      if (partialIdx >= 0) visibleText = visibleText.slice(0, partialIdx);
 
       const truncNotice = lastCallWasTruncated
         ? `<div class="ai-md-quote" style="color:#b45309;">✂️ La respuesta era muy larga y alcanzó el límite del modelo. Escribe <em>"continúa"</em> para recibir el resto.</div>`
         : "";
 
-      appendAIChat("ai", formatAiMarkdown(workText) + commandNotice + truncNotice + (lastCallUsageFooter || ""), actions.length ? actions : null, true, workText);
+      const visible = visibleText.replace(/\n{3,}/g, "\n\n").trim();
+
+      appendAIChat("ai", formatAiMarkdown(visible) + commandNotice + truncNotice + (lastCallUsageFooter || ""), actions.length ? actions : null, true, visible);
     }
 
     function applyDirectUpdate(data, btnEl = null) {
