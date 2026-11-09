@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:40:22 a. m.
+**Última actualización:** 9/11/2026, 12:41:02 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.12701 USD (457265 tokens)
 
@@ -87,7 +87,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (26 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (27 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -967,4 +967,7 @@ También asigno **hora y contexto a las 34 historias restantes**, que era la pet
 { "action": "update_story", "id": "st-1794202219512-548", "name": "Mi proceso de trabajo en 4 pasos", "date": "2026-11-24", "time": "11:00", "highlight": "CONTACT", "format": "Carrusel", "status": "Idea", "context": "Carrusel de 4 pasos con un esquema simple por lámina: diagnóstico, concepto, producción y entrega. Ordena la expectativa del cliente antes de contratar. Se publica al mediodía, en el mismo bloque horario que st-869 para crear continuidad." }
 { "action": "update_story", "id": "st-1794202219515-974", "name": "Agenda abierta: proyectos para 2027", "date": "2026-11-25", "time": "10:00", "highlight": "CONTACT", "format": "Foto", "status": "Idea", "context": "Foto de la agenda física abierta con el año 2027 visible y espacios libres. Cierra la campaña con una invitación concreta y sin presión. Va en la mañana para dejar el llamado activo el resto del día." }
 ```
+
+### [27] 👤 **Peter Orostegui** — *9/11/2026, 12:41:00 a. m.*
+Revisa el interfaz, tiene un boton para eliminar las entradas.
 
