@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "updatedAt": 1794194986434,
-  "updatedAtISO": "2026-11-09T03:29:46.434Z",
+  "version": 3,
+  "updatedAt": 1794195815999,
+  "updatedAtISO": "2026-11-09T03:43:35.999Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -224,6 +224,316 @@
       "caption": "Domingo de taller.\n\nHay una parte del diseño que nunca aparece en pantalla: la hoja de control de color, las marcas de registro, la barra que confirma que el cian sigue siendo cian.\n\nAprendí que un archivo no termina cuando se ve bonito. Termina cuando la máquina lo entiende y la hoja lo comprueba.\n\nUn domingo, con la lupa en la mano, ese es todo el plan.\n\n—\nPeter Orostegui · Diseño gráfico & identidad visual"
     }
   ],
-  "chatHistory": [],
+  "stories": [
+    {
+      "id": "st-1",
+      "date": "2026-11-09",
+      "name": "Detrás de cámaras de la mesa de trabajo",
+      "highlightId": "hl-proceso",
+      "format": "Foto con retícula",
+      "status": "Idea",
+      "order": 0
+    },
+    {
+      "id": "st-2",
+      "date": "2026-11-09",
+      "name": "Pantalla con vectores y curvas en Illustrator",
+      "highlightId": "hl-proceso",
+      "format": "Video corto",
+      "status": "Idea",
+      "order": 1
+    },
+    {
+      "id": "st-3",
+      "date": "2026-11-09",
+      "name": "Caja de preguntas: «¿Qué se viene?»",
+      "highlightId": "hl-hito",
+      "format": "Sticker interactivo",
+      "status": "Idea",
+      "order": 2
+    },
+    {
+      "id": "st-4",
+      "date": "2026-11-10",
+      "name": "Muestra de texturas de papel especial",
+      "highlightId": "hl-proceso",
+      "format": "Foto macro",
+      "status": "Idea",
+      "order": 3
+    },
+    {
+      "id": "st-5",
+      "date": "2026-11-10",
+      "name": "Encuesta: ¿Prefieres papel mate o brillante?",
+      "highlightId": "hl-criterio",
+      "format": "Encuesta",
+      "status": "Idea",
+      "order": 4
+    },
+    {
+      "id": "st-6",
+      "date": "2026-11-11",
+      "name": "Marcas de corte y sangría en archivo real",
+      "highlightId": "hl-proceso",
+      "format": "Captura técnica",
+      "status": "Idea",
+      "order": 5
+    },
+    {
+      "id": "st-7",
+      "date": "2026-11-11",
+      "name": "Preparando planchas de impresión",
+      "highlightId": "hl-proceso",
+      "format": "Boomerang taller",
+      "status": "Idea",
+      "order": 6
+    },
+    {
+      "id": "st-8",
+      "date": "2026-11-12",
+      "name": "Debate: ¿Cuándo un logo necesita simplificarse?",
+      "highlightId": "hl-criterio",
+      "format": "Sticker deslizador",
+      "status": "Idea",
+      "order": 7
+    },
+    {
+      "id": "st-9",
+      "date": "2026-11-12",
+      "name": "Libros y referencias de diseño que uso",
+      "highlightId": "hl-criterio",
+      "format": "Foto de biblioteca",
+      "status": "Idea",
+      "order": 8
+    },
+    {
+      "id": "st-10",
+      "date": "2026-11-12",
+      "name": "Hojeando rápido un cuadernillo impreso",
+      "highlightId": "hl-proceso",
+      "format": "Video rápido",
+      "status": "Idea",
+      "order": 9
+    },
+    {
+      "id": "st-11",
+      "date": "2026-11-13",
+      "name": "Reflejo de luz en estampado dorado",
+      "highlightId": "hl-proceso",
+      "format": "Video con luz",
+      "status": "Idea",
+      "order": 10
+    },
+    {
+      "id": "st-12",
+      "date": "2026-11-13",
+      "name": "Votación: ¿Tipografía Serif o Sans?",
+      "highlightId": "hl-criterio",
+      "format": "Encuesta",
+      "status": "Idea",
+      "order": 11
+    },
+    {
+      "id": "st-13",
+      "date": "2026-11-14",
+      "name": "Muestra de espaciado y kerning manual",
+      "highlightId": "hl-criterio",
+      "format": "Captura antes/después",
+      "status": "Idea",
+      "order": 12
+    },
+    {
+      "id": "st-14",
+      "date": "2026-11-14",
+      "name": "El orden de capas en un archivo maestro",
+      "highlightId": "hl-proceso",
+      "format": "Captura de capas",
+      "status": "Idea",
+      "order": 13
+    },
+    {
+      "id": "st-15",
+      "date": "2026-11-15",
+      "name": "Q&A: Preguntas sobre diseño y dirección de arte",
+      "highlightId": "hl-criterio",
+      "format": "Cajita de preguntas",
+      "status": "Idea",
+      "order": 14
+    },
+    {
+      "id": "st-16",
+      "date": "2026-11-15",
+      "name": "Respondiendo la pregunta más votada",
+      "highlightId": "hl-criterio",
+      "format": "Hablando a cámara",
+      "status": "Idea",
+      "order": 15
+    },
+    {
+      "id": "st-17",
+      "date": "2026-11-16",
+      "name": "Pasando en carro frente a una valla en la avenida",
+      "highlightId": "hl-calle",
+      "format": "Video en movimiento",
+      "status": "Idea",
+      "order": 16
+    },
+    {
+      "id": "st-18",
+      "date": "2026-11-16",
+      "name": "La escala humana frente a una pieza OOH",
+      "highlightId": "hl-calle",
+      "format": "Foto urbana",
+      "status": "Idea",
+      "order": 17
+    },
+    {
+      "id": "st-19",
+      "date": "2026-11-16",
+      "name": "Render de visualizer en After Effects",
+      "highlightId": "hl-proceso",
+      "format": "Video de pantalla",
+      "status": "Idea",
+      "order": 18
+    },
+    {
+      "id": "st-20",
+      "date": "2026-11-17",
+      "name": "Caravana de vehículos con gráfica instalada",
+      "highlightId": "hl-calle",
+      "format": "Video de calle",
+      "status": "Idea",
+      "order": 19
+    },
+    {
+      "id": "st-21",
+      "date": "2026-11-17",
+      "name": "Prueba de pantallas LED en tarima de concierto",
+      "highlightId": "hl-calle",
+      "format": "Video prueba luces",
+      "status": "Idea",
+      "order": 20
+    },
+    {
+      "id": "st-22",
+      "date": "2026-11-17",
+      "name": "El concierto en vivo lleno de visuales",
+      "highlightId": "hl-calle",
+      "format": "Foto de multitud",
+      "status": "Idea",
+      "order": 21
+    },
+    {
+      "id": "st-23",
+      "date": "2026-11-18",
+      "name": "Detalle macro de hilo y bordado en gorra",
+      "highlightId": "hl-calle",
+      "format": "Foto macro",
+      "status": "Idea",
+      "order": 22
+    },
+    {
+      "id": "st-24",
+      "date": "2026-11-18",
+      "name": "Pegatinas troqueladas listas en la mesa",
+      "highlightId": "hl-calle",
+      "format": "Boomerang",
+      "status": "Idea",
+      "order": 23
+    },
+    {
+      "id": "st-25",
+      "date": "2026-11-18",
+      "name": "Comprobando resolución a escala 1:1",
+      "highlightId": "hl-calle",
+      "format": "Captura técnica",
+      "status": "Idea",
+      "order": 24
+    },
+    {
+      "id": "st-26",
+      "date": "2026-11-19",
+      "name": "Sticker oficial de Countdown: 24 Horas",
+      "highlightId": "hl-hito",
+      "format": "Cuenta regresiva",
+      "status": "Idea",
+      "order": 25
+    },
+    {
+      "id": "st-27",
+      "date": "2026-11-19",
+      "name": "Mesa con los 4 tomos encuadernados listos",
+      "highlightId": "hl-hito",
+      "format": "Foto mesa de entrega",
+      "status": "Idea",
+      "order": 26
+    },
+    {
+      "id": "st-28",
+      "date": "2026-11-19",
+      "name": "Reflexión previa al día de entrega",
+      "highlightId": "hl-hito",
+      "format": "Texto sobrio con audio",
+      "status": "Idea",
+      "order": 27
+    },
+    {
+      "id": "st-29",
+      "date": "2026-11-20",
+      "name": "Sustentación del portafolio en directo",
+      "highlightId": "hl-hito",
+      "format": "Foto en auditorio",
+      "status": "Idea",
+      "order": 28
+    },
+    {
+      "id": "st-30",
+      "date": "2026-11-20",
+      "name": "¡Portafolio online en Behance! Desliza arriba",
+      "highlightId": "hl-hito",
+      "format": "Link Sticker directo",
+      "status": "Idea",
+      "order": 29
+    }
+  ],
+  "highlights": [
+    {
+      "id": "hl-proceso",
+      "name": "PROCESO",
+      "icon": "🛠️",
+      "desc": "Mesas de trabajo en Illustrator, sangrías, marcas de corte, pruebas de color e imprenta física.",
+      "order": 0
+    },
+    {
+      "id": "hl-criterio",
+      "name": "CRITERIO",
+      "icon": "💡",
+      "desc": "Encuestas tipográficas, recomendaciones de libros, debates sobre simplificación y valor del diseño.",
+      "order": 1
+    },
+    {
+      "id": "hl-calle",
+      "name": "EN LA CALLE",
+      "icon": "⚡",
+      "desc": "Vallas publicitarias en avenidas, caravanas de vehículos, pantallas LED en conciertos masivos.",
+      "order": 2
+    },
+    {
+      "id": "hl-hito",
+      "name": "HITO 20.11",
+      "icon": "🎯",
+      "desc": "Teaser «Mientras tanto», sticker countdown, sustentación en vivo y enlace al Behance.",
+      "order": 3
+    }
+  ],
+  "chatHistory": [
+    {
+      "sender": "user",
+      "html": "Hola",
+      "plainText": "Hola",
+      "actionData": null,
+      "timestamp": "8/11/2026, 10:43:33 p. m."
+    }
+  ],
   "importedCustomContextNotes": ""
 }
