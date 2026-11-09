@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794195823479,
-  "updatedAtISO": "2026-11-09T03:43:43.479Z",
+  "updatedAt": 1794195908073,
+  "updatedAtISO": "2026-11-09T03:45:08.073Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -540,6 +540,13 @@
       "plainText": "¡Hola, Peter! Qué bueno tenerte de vuelta en el taller. 👋\n\nYa tengo cargada toda la memoria de la campaña, así que retomamos exactamente donde lo dejamos. Este es el estado del tablero rumbo al **20.11**:\n\n**Panorama general**\n- **20 publicaciones** en el calendario (IG, LinkedIn y el landing de Behance).\n- **30 historias** programadas del 09 al 20 de noviembre.\n- **4 destacadas** permanentes: PROCESO 🛠️, CRITERIO 💡, EN LA CALLE ⚡ e HITO 20.11 🎯.\n\n**Lo que veo con ojo de director de arte**\n1. **Casi todo está en \"Idea\".** Solo `post-ig-1` y `post-li-1` (los del 09.11) están en \"En Diseño\". Faltan pocos días y la producción no ha arrancado formalmente: hay que mover a \"En Diseño\" y luego a \"Listo\" por bloques.\n2. **Huecos en el calendario:** los días **21, 22, 24 y 25 de noviembre** no tienen publicación. El 23 ya tiene el recap en IG, pero LinkedIn queda seco después del hito.\n3. **Desequilibrio de carga:** el 16, 17, 19 y 20 tienen 2-3 publicaciones el mismo día. El 20.11 es el más cargado (Behance + LinkedIn + IG), lo cual es correcto para un lanzamiento, pero conviene revisar horas.\n4. **El post macro del domingo (`post-ai-1794128749201`)** llegó suelto al calendario el 15.11. Funciona muy bien temáticamente, pero no está enlazado a ninguna historia ese día.\n\n**¿Por dónde arrancamos?** Te propongo tres frentes:\n- **A) Producción:** marcar en bloque qué piezas pasan a \"En Diseño\" y \"Listo\" según prioridad.\n- **B) Cierre de campaña:** llenar los huecos del 21 al 25 (post-hito, agradecimientos, lecciones del proceso).\n- **C) Consistencia de canal:** equilibrar LinkedIn, que después del 20 se queda sin voz.\n\nDime cuál tomamos (o si prefieres otra cosa) y lo ejecuto de una vez. También puedo revisar copies, formatos o la estructura de slides de cualquier pieza en concreto.",
       "actionData": null,
       "timestamp": "8/11/2026, 10:43:40 p. m."
+    },
+    {
+      "sender": "user",
+      "html": "Por que tienes 20 publicaciones? si son 12 para instagram, 1 en behance y 6 para linkedin",
+      "plainText": "Por que tienes 20 publicaciones? si son 12 para instagram, 1 en behance y 6 para linkedin",
+      "actionData": null,
+      "timestamp": "8/11/2026, 10:45:05 p. m."
     }
   ],
   "importedCustomContextNotes": ""
