@@ -500,14 +500,37 @@
     }
     .st-item {
       display: grid;
-      grid-template-columns: 90px 130px 1fr 130px 110px;
-      gap: 12px;
+      grid-template-columns: 42px 84px 56px minmax(160px, 1fr) 104px 92px 104px;
+      gap: 14px;
       padding: 10px 0;
       border-bottom: 1px solid var(--border);
       font-size: 13px;
       align-items: center;
     }
+    .st-item > * { min-width: 0; }
     .st-item:last-child { border-bottom: none; }
+    .st-idx { font-weight: 600; color: var(--blue-accent); white-space: nowrap; }
+    .st-date, .st-time { white-space: nowrap; color: var(--text-muted); font-size: 12.5px; }
+    .st-name { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-header {
+      display: grid;
+      grid-template-columns: 42px 84px 56px minmax(160px, 1fr) 104px 92px 104px;
+      gap: 14px;
+      padding: 0 0 8px;
+      border-bottom: 1px solid var(--border-dark);
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-light);
+    }
+    @media (max-width: 1024px) {
+      .st-header { display: none; }
+    }
+    @media (max-width: 640px) {
+      .st-item > * { display: flex; align-items: baseline; gap: 8px; }
+      .st-item > *::before { content: attr(data-label); min-width: 68px; flex-shrink: 0; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); }
+    }
 
     /* =================== DRAWER / MODAL DE EDICIÓN =================== */
     .modal-overlay {
@@ -1686,6 +1709,9 @@
         <h3 style="font-size: 15px; font-weight: 700;">Cronograma de Historias · <span id="storiesCountLabel">0</span></h3>
         <button class="btn-new" onclick="openStoryModal()"><span>+</span> Nueva historia</button>
       </div>
+      <div class="st-header">
+        <span>#</span><span>Fecha</span><span>Hora</span><span>Historia</span><span>Formato</span><span>Estado</span><span>Acciones</span>
+      </div>
       <div id="stories-list"></div>
     </div>
   </div>
@@ -1819,8 +1845,8 @@
             <input type="date" id="story-date" class="form-input">
           </div>
           <div class="form-group">
-            <label class="form-label">Formato</label>
-            <input type="text" id="story-format" class="form-input" placeholder="Foto, Reel, Encuesta...">
+            <label class="form-label">Hora estimada <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-light);">(opcional)</span></label>
+            <input type="time" id="story-time" class="form-input">
           </div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
@@ -1829,14 +1855,34 @@
             <select id="story-highlight" class="form-select"></select>
           </div>
           <div class="form-group">
-            <label class="form-label">Estado</label>
-            <select id="story-status" class="form-select">
-              <option value="Idea">💡 Planificado / Idea</option>
-              <option value="En Diseño">🎨 En Diseño</option>
-              <option value="Listo">✅ Listo</option>
-              <option value="Publicado">🚀 Publicado</option>
+            <label class="form-label">Formato</label>
+            <select id="story-format" class="form-select">
+              <option value="">— Sin definir —</option>
+              <option value="Foto">📷 Foto</option>
+              <option value="Video">🎬 Video</option>
+              <option value="Reel">🎥 Reel</option>
+              <option value="Boomerang">🔁 Boomerang</option>
+              <option value="Captura">🖥️ Captura</option>
+              <option value="Carrusel">🖼️ Carrusel</option>
+              <option value="Encuesta">📊 Encuesta</option>
+              <option value="Sticker">🏷️ Sticker</option>
+              <option value="Texto">✍️ Texto</option>
+              <option value="Otro">✳️ Otro</option>
             </select>
           </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Estado</label>
+          <select id="story-status" class="form-select">
+            <option value="Idea">💡 Planificado / Idea</option>
+            <option value="En Diseño">🎨 En Diseño</option>
+            <option value="Listo">✅ Listo</option>
+            <option value="Publicado">🚀 Publicado</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Contexto de la idea</label>
+          <textarea id="story-context" class="form-textarea" placeholder="Qué se cuenta, por qué, referencias, quién aparece…"></textarea>
         </div>
       </div>
 
@@ -2314,14 +2360,53 @@
       return `2026-${months[monthName] || "11"}-${day}`;
     }
 
+    const MONTHS_SHORT = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+
+    function formatShortDate(iso) {
+      const m = String(iso || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (!m) return iso || "—";
+      return `${m[3]} ${MONTHS_SHORT[parseInt(m[2], 10) - 1] || ""}`.trim();
+    }
+
+    const STORY_FORMATS = ["Foto", "Video", "Reel", "Boomerang", "Captura", "Carrusel", "Encuesta", "Sticker", "Texto", "Otro"];
+
+    function normalizeStoryFormat(raw) {
+      if (!raw) return "";
+      const exact = STORY_FORMATS.find(f => f.toLowerCase() === String(raw).trim().toLowerCase());
+      if (exact) return exact;
+      const t = String(raw).toLowerCase();
+      if (t.includes("boomerang")) return "Boomerang";
+      if (t.includes("reel")) return "Reel";
+      if (t.includes("video")) return "Video";
+      if (t.includes("encuesta") || t.includes("votaci")) return "Encuesta";
+      if (t.includes("sticker") || t.includes("caja") || t.includes("pregunta") || t.includes("deslizador") || t.includes("countdown") || t.includes("cuenta regresiva") || t.includes("link")) return "Sticker";
+      if (t.includes("captura")) return "Captura";
+      if (t.includes("carrusel")) return "Carrusel";
+      if (t.includes("foto") || t.includes("retrato") || t.includes("imagen")) return "Foto";
+      if (t.includes("texto") || t.includes("reflexi")) return "Texto";
+      return "Otro";
+    }
+
+    function normalizeStoryEntry(s) {
+      const norm = normalizeStoryFormat(s && s.format);
+      const entry = Object.assign({ time: "", context: "", formatDetail: "" }, s, { format: norm });
+      if (!entry.formatDetail && s && s.format && s.format !== norm) {
+        entry.formatDetail = s.format;
+      }
+      return entry;
+    }
+
     function buildSeedStories() {
       return storiesData.map((s, i) => ({
         id: "st-" + (i + 1),
         date: legacyDateToIso(s.date),
+        time: "",
         name: s.name,
         highlightId: LEGACY_HIGHLIGHT_MAP[s.highlight] || "hl-proceso",
-        format: s.format,
+        format: normalizeStoryFormat(s.format),
+        formatDetail: s.format || "",
         status: "Idea",
+        context: "",
         order: i
       }));
     }
@@ -2339,8 +2424,10 @@
     try { stories = JSON.parse(localStorage.getItem("po_stories_v1")); } catch (e) { stories = null; }
     if (!Array.isArray(stories) || stories.length === 0) {
       stories = buildSeedStories();
-      localStorage.setItem("po_stories_v1", JSON.stringify(stories));
     }
+    // Normaliza entradas antiguas (sin hora/contexto y con formato en texto libre)
+    stories = stories.map(normalizeStoryEntry);
+    localStorage.setItem("po_stories_v1", JSON.stringify(stories));
 
     let activeView = "kanban";
 
@@ -2620,11 +2707,13 @@
         div.setAttribute("draggable", "true");
         div.dataset.storyId = s.id;
         div.innerHTML = `
-          <span style="font-weight:600;color:var(--blue-accent);">#${idx + 1} · ${s.date}</span>
-          <span><span class="tag tag-gray">${h ? escapeHtmlForChat((h.icon || "") + " " + h.name) : "Sin destacada"}</span></span>
-          <span style="font-weight:500;">${escapeHtmlForChat(s.name)}</span>
-          <span style="color:var(--text-muted);font-size:11.5px;">${escapeHtmlForChat(s.format || "—")}</span>
-          <span style="display:flex;gap:2px;justify-content:flex-end;">
+          <span class="st-idx" data-label="#">#${idx + 1}</span>
+          <span class="st-date" data-label="Fecha" title="${s.date}">${formatShortDate(s.date)}</span>
+          <span class="st-time" data-label="Hora">${s.time ? escapeHtmlForChat(s.time) : "—"}</span>
+          <span class="st-name" data-label="Historia" title="${escapeHtmlForChat(s.name)}">${escapeHtmlForChat(s.name)}${s.context ? ' <span title="Tiene contexto" style="font-size:10px;color:var(--text-light);">📝</span>' : ""}</span>
+          <span data-label="Formato"><span class="tag tag-gray">${escapeHtmlForChat(s.format || "—")}</span></span>
+          <span data-label="Estado"><span class="tag ${getTagStatusClass(s.status || "Idea")}">${escapeHtmlForChat(s.status || "Idea")}</span></span>
+          <span style="display:flex;gap:2px;justify-content:flex-end;" data-label="Acciones">
             <button class="ghost-mini" title="Subir" onclick="moveStory('${s.id}', -1)" ${canUp ? "" : "disabled"}>↑</button>
             <button class="ghost-mini" title="Bajar" onclick="moveStory('${s.id}', 1)" ${canDown ? "" : "disabled"}>↓</button>
             <button class="ghost-mini" title="Editar" onclick="openStoryModal('${s.id}')">✎</button>
@@ -2829,10 +2918,23 @@
       document.getElementById("story-id").value = item ? item.id : "";
       document.getElementById("story-name").value = item ? item.name : "";
       document.getElementById("story-date").value = item ? item.date : new Date().toISOString().slice(0, 10);
-      document.getElementById("story-format").value = item ? (item.format || "") : "";
+      document.getElementById("story-time").value = item ? (item.time || "") : "";
+      document.getElementById("story-context").value = item ? (item.context || "") : "";
       document.getElementById("story-status").value = item ? (item.status || "Idea") : "Idea";
+
+      const fmtSel = document.getElementById("story-format");
+      const fmt = item ? (item.format || "") : "";
+      if (fmt && !Array.from(fmtSel.options).some(o => o.value === fmt)) {
+        const opt = document.createElement("option");
+        opt.value = fmt;
+        opt.textContent = fmt;
+        fmtSel.appendChild(opt);
+      }
+      fmtSel.value = fmt;
+
       document.getElementById("storyBtnDelete").style.display = item ? "block" : "none";
       document.getElementById("storyOverlay").style.display = "flex";
+      setTimeout(() => document.getElementById("story-name").focus(), 60);
     }
 
     function openHighlightModal(id) {
@@ -2872,14 +2974,16 @@
         }
       } else {
         const date = document.getElementById("story-date").value || new Date().toISOString().slice(0, 10);
+        const time = document.getElementById("story-time").value || "";
         const highlightId = resolveHighlightId(document.getElementById("story-highlight").value);
-        const format = document.getElementById("story-format").value.trim();
+        const format = normalizeStoryFormat(document.getElementById("story-format").value);
         const status = document.getElementById("story-status").value;
+        const context = document.getElementById("story-context").value.trim();
         if (id) {
           const s = stories.find(x => x.id === id);
-          if (s) { s.name = name; s.date = date; s.highlightId = highlightId; s.format = format; s.status = status; }
+          if (s) { s.name = name; s.date = date; s.time = time; s.highlightId = highlightId; s.format = format; s.status = status; s.context = context; }
         } else {
-          stories.push({ id: "st-" + Date.now(), name, date, highlightId, format, status, order: nextStoryOrder(date) });
+          stories.push({ id: "st-" + Date.now(), name, date, time, highlightId, format, status, context, order: nextStoryOrder(date) });
         }
       }
 
@@ -4326,7 +4430,7 @@
       md += `\n### Historias (${stories.length})\n`;
       sortedStories().forEach((s, i) => {
         const h = getHighlightById(s.highlightId);
-        md += `- \`${s.id}\` #${i + 1} · ${s.date} · ${h ? h.name : "Sin destacada"} · **${s.name}** · ${s.format || ""} · ${s.status || ""}\n`;
+        md += `- \`${s.id}\` #${i + 1} · ${s.date}${s.time ? " " + s.time : ""} · ${h ? h.name : "Sin destacada"} · **${s.name}** · ${s.format || "Sin formato"} · ${s.status || ""}${s.context ? ` · Contexto: ${s.context}` : ""}\n`;
       });
       md += `\n---\n\n`;
 
@@ -5087,7 +5191,7 @@ PUBLICACIONES (posts):
 
 HISTORIAS:
 \`\`\`json
-{ "action": "create_story" | "update_story" | "delete_story" | "move_story", "id": "st-... (solo update/delete/move)", "name": "título de la historia", "date": "YYYY-MM-DD", "highlight": "nombre exacto de la destacada", "format": "Foto | Reel | Encuesta | Boomerang | Sticker", "status": "Idea" | "En Diseño" | "Listo" | "Publicado" }
+{ "action": "create_story" | "update_story" | "delete_story" | "move_story", "id": "st-... (solo update/delete/move)", "name": "título de la historia", "date": "YYYY-MM-DD", "time": "HH:MM (opcional)", "highlight": "nombre exacto de la destacada", "format": "Foto | Video | Reel | Boomerang | Captura | Carrusel | Encuesta | Sticker | Texto | Otro", "status": "Idea" | "En Diseño" | "Listo" | "Publicado", "context": "contexto de la idea" }
 \`\`\`
 
 DESTACADAS:
@@ -5199,9 +5303,11 @@ REGLAS ESPECÍFICAS:
           id: parsed.id,
           name: parsed.name || parsed.title,
           date: parsed.date,
+          time: parsed.time,
           highlight: parsed.highlight || parsed.highlightId,
           format: parsed.format,
           status: parsed.status,
+          context: parsed.context || parsed.details || parsed.notes,
           position: parsed.position,
           dir: parsed.dir
         };
@@ -5331,15 +5437,17 @@ REGLAS ESPECÍFICAS:
           id: "st-" + Date.now() + "-" + Math.floor(Math.random() * 999),
           name: data.name || "Nueva historia",
           date,
+          time: data.time || "",
           highlightId,
-          format: data.format || "",
+          format: normalizeStoryFormat(data.format),
           status: data.status || "Idea",
+          context: data.context || "",
           order: nextStoryOrder(date)
         };
         stories.push(newStory);
         saveStoriesToStorage();
         renderCurrentView();
-        return `Creada «${newStory.name}» → ${date} · ${highlightName(getHighlightById(highlightId))}`;
+        return `Creada «${newStory.name}» → ${date}${newStory.time ? " " + newStory.time : ""} · ${highlightName(getHighlightById(highlightId))}`;
       }
 
       if (data.type === "update_story") {
@@ -5347,9 +5455,11 @@ REGLAS ESPECÍFICAS:
         if (!s) return "No encontré esa historia.";
         if (data.name) s.name = data.name;
         if (data.date) { const d = normalizeDateParam(data.date); if (d) s.date = d; }
+        if (data.time !== undefined && data.time !== null) s.time = data.time;
         if (data.highlight) s.highlightId = resolveHighlightId(data.highlight);
-        if (data.format) s.format = data.format;
+        if (data.format) s.format = normalizeStoryFormat(data.format);
         if (data.status) s.status = data.status;
+        if (data.context !== undefined && data.context !== null) s.context = data.context;
         saveStoriesToStorage();
         renderCurrentView();
         return `Actualizada «${s.name}» → ${s.date}`;
@@ -5454,7 +5564,7 @@ REGLAS ESPECÍFICAS:
           const name = (m ? m[1] : "Nueva historia de proceso").trim().replace(/[.]+$/, "");
           const hl = highlights[0];
           appendAIChat("ai", `Perfecto. Creo la historia <strong>${escapeHtmlForChat(name)}</strong>${iso ? ` para el <strong>${iso}</strong>` : ""}.`, {
-            type: "create_story", name, date: iso || "", highlight: hl ? hl.name : "", format: "Post", status: "Idea"
+            type: "create_story", name, date: iso || "", time: "", highlight: hl ? hl.name : "", format: "", status: "Idea", context: ""
           }, true);
           return;
         }
@@ -5981,7 +6091,7 @@ Slide 5: [Cierre / CTA] «Guarda este post para tu próxima entrega técnica».`
         changed = true;
       }
       if (Array.isArray(cloudObj.stories)) {
-        stories = cloudObj.stories;
+        stories = cloudObj.stories.map(normalizeStoryEntry);
         localStorage.setItem("po_stories_v1", JSON.stringify(stories));
         changed = true;
       }
