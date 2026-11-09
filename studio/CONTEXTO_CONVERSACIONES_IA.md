@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:43:35 p. m.
+**Última actualización:** 8/11/2026, 10:43:43 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.07521 USD (204565 tokens)
+**Gasto Acumulado en Sesión:** $0.07596 USD (210286 tokens)
 
 ---
 
@@ -80,8 +80,31 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (1 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (2 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
+
+### [2] ✨ **Copilot IA** — *8/11/2026, 10:43:40 p. m.*
+¡Hola, Peter! Qué bueno tenerte de vuelta en el taller. 👋
+
+Ya tengo cargada toda la memoria de la campaña, así que retomamos exactamente donde lo dejamos. Este es el estado del tablero rumbo al **20.11**:
+
+**Panorama general**
+- **20 publicaciones** en el calendario (IG, LinkedIn y el landing de Behance).
+- **30 historias** programadas del 09 al 20 de noviembre.
+- **4 destacadas** permanentes: PROCESO 🛠️, CRITERIO 💡, EN LA CALLE ⚡ e HITO 20.11 🎯.
+
+**Lo que veo con ojo de director de arte**
+1. **Casi todo está en "Idea".** Solo `post-ig-1` y `post-li-1` (los del 09.11) están en "En Diseño". Faltan pocos días y la producción no ha arrancado formalmente: hay que mover a "En Diseño" y luego a "Listo" por bloques.
+2. **Huecos en el calendario:** los días **21, 22, 24 y 25 de noviembre** no tienen publicación. El 23 ya tiene el recap en IG, pero LinkedIn queda seco después del hito.
+3. **Desequilibrio de carga:** el 16, 17, 19 y 20 tienen 2-3 publicaciones el mismo día. El 20.11 es el más cargado (Behance + LinkedIn + IG), lo cual es correcto para un lanzamiento, pero conviene revisar horas.
+4. **El post macro del domingo (`post-ai-1794128749201`)** llegó suelto al calendario el 15.11. Funciona muy bien temáticamente, pero no está enlazado a ninguna historia ese día.
+
+**¿Por dónde arrancamos?** Te propongo tres frentes:
+- **A) Producción:** marcar en bloque qué piezas pasan a "En Diseño" y "Listo" según prioridad.
+- **B) Cierre de campaña:** llenar los huecos del 21 al 25 (post-hito, agradecimientos, lecciones del proceso).
+- **C) Consistencia de canal:** equilibrar LinkedIn, que después del 20 se queda sin voz.
+
+Dime cuál tomamos (o si prefieres otra cosa) y lo ejecuto de una vez. También puedo revisar copies, formatos o la estructura de slides de cualquier pieza en concreto.
 
