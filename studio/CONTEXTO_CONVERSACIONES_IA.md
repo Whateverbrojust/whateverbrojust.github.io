@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:48:52 p. m.
+**Última actualización:** 8/11/2026, 10:50:31 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.08007 USD (233892 tokens)
 
@@ -79,7 +79,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (8 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (9 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -212,4 +212,123 @@ Aplico el reordenamiento y las descripciones:
 ¿Seguimos con la plantilla de portadas, o prefieres que pasemos a los estados de producción de las historias?
 
 > **Acción estructurada generada:** `[{"type":"reorder_highlights","order":["hl-hito","hl-calle","hl-proceso","hl-criterio"]},{"type":"update_highlight","id":"hl-hito","name":"HITO 20.11","icon":"🎯","desc":"Del teaser «Mientras tanto» al archivo completo. Portafolio Profesional 2026."},{"type":"update_highlight","id":"hl-calle","name":"EN LA CALLE","icon":"⚡","desc":"Vallas a 80 km/h, caravanas y pantallas LED. El diseño verificándose en el mundo real."},{"type":"update_highlight","id":"hl-proceso","name":"PROCESO","icon":"🛠️","desc":"Del vector al pliego. Retículas, sangrías, marcas de corte y pruebas de color."},{"type":"update_highlight","id":"hl-criterio","name":"CRITERIO","icon":"💡","desc":"Encuestas, referentes y debates. Cómo se entrena el ojo que decide."}]`
+
+### [9] 👤 **Peter Orostegui** — *8/11/2026, 10:50:28 p. m.*
+Mira esto: 
+Aquí tienes el texto exacto y el orden visual propuesto para cada destacada.
+Todas las portadas siguen el mismo sistema: fondo negro, tipografía en mayúsculas con tracking amplio, ícono geométrico blanco pequeño y una línea fina de separación.
+
+
+1. DAILY
+
+Portada:
+DAILY
+Criterio + proceso diario
+@soyorostegui
+
+Orden visual de historias:
+
+1. Portada DAILY.
+2. “Diseño casi todos los días. Publico cuando aporta.”
+3. “3 preguntas antes de elegir una tipografía.”
+4. “Boceto → vector → archivo final.”
+5. “Error común: saturar una pieza.”
+6. “Domingo de taller: nadie publica la hoja de control.”
+7. “Guarda esto en tus referencias.”
+
+
+2. SETUP
+
+Portada:
+SETUP
+Taller + preprensa
+@soyorostegui
+
+Orden visual de historias:
+
+1. Portada SETUP.
+2. “Mi estación de trabajo, versión 2026.”
+3. “Herramientas esenciales de producción.”
+4. “Preprensa: la hoja de control de color.”
+5. “La prueba física importa.”
+6. “Detalle macro: cian bajo la lupa.”
+7. “Un archivo no termina cuando se ve bonito.”
+
+
+3. PORTFOLIO
+
+Portada:
+PORTFOLIO
+Behance + lanzamiento 20.11
+@soyorostegui
+
+Orden visual de historias:
+
+1. Portada PORTFOLIO.
+2. “2026: el archivo completo.”
+3. “Enlace directo en bio.”
+4. “Sneak peek 01: ornamento geométrico.”
+5. “Sneak peek 02: streetwear & textil.”
+6. “20.11 — Lanzamiento oficial.”
+7. “Portafolio ya disponible.”
+
+
+4. CONTACT
+
+Portada:
+CONTACT
+Proyectos + colaboraciones
+@soyorostegui
+
+Orden visual de historias:
+
+1. Portada CONTACT.
+2. “Hablemos de diseño.”
+3. “Proyectos: branding, packaging, OOH.”
+4. “Email directo.”
+5. “Behance + LinkedIn.”
+6. “Respuesta en menos de 24 h.”
+
+
+5. PTR
+
+Portada:
+PTR
+Peter Orostegui
+Diseño gráfico
+
+Orden visual de historias:
+
+1. Portada PTR.
+2. “Peter Orostegui.”
+3. “Diseño gráfico + identidad visual.”
+4. “8 semestres de formación.”
+5. “Taller propio, calle y criterio.”
+6. “La firma: PTR.”
+
+
+Si quieres, el siguiente paso puede ser preparar los textos de historias para los días específicos del calendario o definir los íconos geométricos exactos de cada portada. 
+
+Listo, Peter. Ya quedaron aplicados los cambios visuales en el dashboard.
+
+Nuevo orden de destacadas:
+1. DAILY
+2. SETUP
+3. PORTFOLIO
+4. CONTACT
+5. PTR
+
+Sistema visual aplicado:
+• Fondo negro.
+• Tipografía uppercase con tracking amplio.
+• Ícono geométrico blanco pequeño.
+• Línea fina de separación.
+• Estética consistente con la identidad de @soyorostegui.
+
+Portadas actualizadas:
+• DAILY → Criterio + proceso diario.
+• SETUP → Taller + preprensa.
+• PORTFOLIO → Behance + lanzamiento 20.11.
+• CONTACT → Proyectos + colaboraciones.
+• PTR → Peter Orostegui + diseño gráfico.
 
