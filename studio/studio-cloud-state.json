@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794203065844,
-  "updatedAtISO": "2026-11-09T05:44:25.844Z",
+  "updatedAt": 1794203071634,
+  "updatedAtISO": "2026-11-09T05:44:31.635Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -357,18 +357,6 @@
       "format": "Captura",
       "status": "Idea",
       "order": 0
-    },
-    {
-      "time": "18:00",
-      "context": "Captura del panel de capas con nomenclatura limpia y agrupación lógica. Habla de método de trabajo, que es lo que SETUP comunica.",
-      "formatDetail": "Captura de capas",
-      "id": "st-14",
-      "date": "2026-11-14",
-      "name": "El orden de capas en un archivo maestro",
-      "highlightId": "hl-proceso",
-      "format": "Captura",
-      "status": "Idea",
-      "order": 1
     },
     {
       "time": "10:00",
@@ -1976,6 +1964,18 @@
       "plainText": "no sirvió",
       "actionData": null,
       "timestamp": "9/11/2026, 12:44:23 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Entendido. El lote de ocho bloques volvió a fallar; el de uno solo funcionó. La conclusión es clara: <strong>solo procesa un bloque por respuesta.</strong><br><br>Así que voy así, uno a uno, esperando tu confirmación después de cada uno.<br><br>Primero: borrar <code>st-14</code> («El orden de capas en un archivo maestro», 14.11, SETUP).<br><br><br><br>Confírmame si desapareció y sigo con <code>st-25</code>.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00061 USD</strong> (Acumulado sesión: $0.13355 USD)</span>\n          <span style=\"color:#64748b;\">9521 in + 268 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Entendido. El lote de ocho bloques volvió a fallar; el de uno solo funcionó. La conclusión es clara: **solo procesa un bloque por respuesta.**\n\nAsí que voy así, uno a uno, esperando tu confirmación después de cada uno.\n\nPrimero: borrar `st-14` («El orden de capas en un archivo maestro», 14.11, SETUP).\n\n\n\nConfírmame si desapareció y sigo con `st-25`.",
+      "actionData": [
+        {
+          "type": "delete_story",
+          "id": "st-14"
+        }
+      ],
+      "timestamp": "9/11/2026, 12:44:29 a. m."
     }
   ],
   "importedCustomContextNotes": ""
