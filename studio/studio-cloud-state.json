@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204792753,
-  "updatedAtISO": "2026-11-09T06:13:12.753Z",
+  "updatedAt": 1794204931843,
+  "updatedAtISO": "2026-11-09T06:15:31.843Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -589,7 +589,7 @@
       "id": "st-1794204588972-274",
       "name": "Café en la universidad: la manía de medir todo",
       "date": "2026-11-09",
-      "time": "08:00",
+      "time": "08:10",
       "highlightId": "hl-criterio",
       "format": "Foto",
       "status": "En Diseño",
