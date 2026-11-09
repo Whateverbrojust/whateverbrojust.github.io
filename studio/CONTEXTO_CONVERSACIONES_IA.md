@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:55:09 p. m.
+**Última actualización:** 8/11/2026, 10:55:29 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.08389 USD (248375 tokens)
+**Gasto Acumulado en Sesión:** $0.08571 USD (259516 tokens)
 
 ---
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (11 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (12 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -407,4 +407,50 @@ Quedan las 5 carpetas activas y ninguna vacía: **DAILY 6 · SETUP 9 · PORTFOLI
 
 ### [11] 👤 **Peter Orostegui** — *8/11/2026, 10:55:07 p. m.*
 Las historias no tienen contexto solo son un titulo?
+
+### [12] ✨ **Copilot IA** — *8/11/2026, 10:55:27 p. m.*
+Correcto, y es una limitación real del sistema: **las historias solo tienen título.** No existe campo de copy como en los posts.
+
+## Qué guarda hoy cada historia
+
+El esquema de historias solo admite cinco campos:
+
+- `name` — título descriptivo de producción
+- `date` — fecha
+- `highlight` — carpeta
+- `format` — Foto, Reel, Encuesta, Boomerang, Sticker
+- `status` — Idea, En Diseño, Listo, Publicado
+
+Los posts sí tienen `caption`; las historias no. Por eso `st-13` se llama *«Muestra de espaciado y kerning manual»*: eso describe **qué se graba**, no **qué se lee en pantalla**.
+
+## El problema que esto genera
+
+Llega el día de grabar y el título no te dice qué escribir. Y los textos que tú mismo propusiste —*«Diseño casi todos los días. Publico cuando aporta.»*— hoy no viven en ningún lado del calendario. Se pierden.
+
+## Tres formas de resolverlo
+
+**A) El `name` pasa a ser el copy en pantalla.**
+`st-13` → *«Ajustando kerning a mano: la diferencia que nadie nota hasta que la ves»*
+Ventaja: el calendario se lee como guion de producción. Desventaja: los nombres largos aprietan la tabla.
+
+**B) Nombre de producción + copy, separados por barra.**
+`st-13` → *«Kerning manual | Nadie nota el espaciado hasta que está mal»*
+Conserva ambas capas. Es el más útil para trabajar, aunque el más verboso.
+
+**C) Solo copy en las historias de texto.**
+Las de texto, sticker y encuesta llevan el copy literal en el `name`; las de foto y video (st-1, st-4, st-11, st-17, st-21, por ejemplo) conservan el título, porque ahí el mensaje es la imagen, no el texto.
+
+## Mi recomendación
+
+**Opción C.** No todas las historias necesitan copy: una foto macro del bordado de una gorra se explica sola, pero una encuesta *«¿mate o brillante?»* sin texto es un sticker vacío. Aplicaría copy redactado a las **17 historias de texto, encuesta, sticker y caja de preguntas**, y dejaría intactas las **17 de foto y video**. Eso deja el calendario legible y el guion completo.
+
+Ejemplos del cambio:
+
+- `st-5` → *«¿Papel mate o brillante? Vota. Hoy defiendo el mate.»*
+- `st-8` → *«¿Cuándo un logo pide simplificarse? Desliza tu respuesta.»*
+- `st-12` → *«Serif o Sans: elige una y te digo qué dice de ti.»*
+- `st-3` → *«¿Qué se viene el 20.11? Pregunta lo que quieras.»*
+- `st-26` → *«24 horas. Mañana se abre el archivo.»*
+
+**¿Le doy luz verde a la opción C?** Lo ejecuto en bloque y te dejo el listado completo con los 17 copies finales, listos para grabar. Si prefieres la A (todo el calendario como guion puro), también lo hago, pero conviene decidirlo antes de escribir.
 
