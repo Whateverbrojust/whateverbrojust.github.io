@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794203146137,
-  "updatedAtISO": "2026-11-09T05:45:46.137Z",
+  "updatedAt": 1794203150284,
+  "updatedAtISO": "2026-11-09T05:45:50.284Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -2002,6 +2002,13 @@
       "plainText": "Manda todos los botones juntos",
       "actionData": null,
       "timestamp": "9/11/2026, 12:45:43 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Aquí van las dos que quedan. Solo son dos, así que hay buena chance de que pasen juntas.<br><br><strong>Eliminar <code>st-14</code></strong> — «El orden de capas en un archivo maestro» · 14.11 · SETUP<br><strong>Eliminar <code>st-25</code></strong> — «Comprobando resolución a escala 1:1» · 18.11 · SETUP<br><br><pre class=\"ai-code\"><code>{ &quot;action&quot;: &quot;delete_story&quot;, &quot;id&quot;: &quot;st-14&quot; }\n{ &quot;action&quot;: &quot;delete_story&quot;, &quot;id&quot;: &quot;st-25&quot; }</code></pre><br>Si desaparecen las dos, el borrado queda cerrado y arranco con las horas de las 33 historias activas. Si vuelve a procesar solo una, me dices cuál quedó y te mando la otra sola.<div class=\"ai-md-quote\" style=\"color:#b45309;\">⚠️ La IA envió un comando con formato inválido. Pídele: <em>\"repite solo el bloque JSON\"</em>.</div><div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00060 USD</strong> (Acumulado sesión: $0.13478 USD)</span>\n          <span style=\"color:#64748b;\">7813 in + 424 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Aquí van las dos que quedan. Solo son dos, así que hay buena chance de que pasen juntas.\n\n**Eliminar `st-14`** — «El orden de capas en un archivo maestro» · 14.11 · SETUP\n**Eliminar `st-25`** — «Comprobando resolución a escala 1:1» · 18.11 · SETUP\n\n```json\n{ \"action\": \"delete_story\", \"id\": \"st-14\" }\n{ \"action\": \"delete_story\", \"id\": \"st-25\" }\n```\n\nSi desaparecen las dos, el borrado queda cerrado y arranco con las horas de las 33 historias activas. Si vuelve a procesar solo una, me dices cuál quedó y te mando la otra sola.",
+      "actionData": null,
+      "timestamp": "9/11/2026, 12:45:47 a. m."
     }
   ],
   "importedCustomContextNotes": ""
