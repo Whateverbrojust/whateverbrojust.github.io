@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:19:13 a. m.
+**Última actualización:** 9/11/2026, 12:19:32 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.09705 USD (318822 tokens)
+**Gasto Acumulado en Sesión:** $0.09867 USD (331331 tokens)
 
 ---
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (19 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (20 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -693,4 +693,45 @@ Muevo `st-25` a SETUP, que es el único error objetivo de clasificación. Antes 
 
 ### [19] 👤 **Peter Orostegui** — *9/11/2026, 12:19:10 a. m.*
 Creo que debemos entender que concepto maneja cada destacada, segun lo que a mi me parezca.
+
+### [20] ✨ **Copilot IA** — *9/11/2026, 12:19:29 a. m.*
+Correcto, y ahí está la raíz de todo: **estamos reordenando historias sobre conceptos que nunca definimos.** Yo inferí el concepto a partir del nombre de la carpeta y del contenido que ya existía. Eso es adivinar. Si tú defines el concepto, todo lo demás —qué historia va dónde, en qué orden, con qué copy— se resuelve solo.
+
+Te propongo el marco mínimo para definirlas, y luego te doy mi lectura con las tensiones que detecté para que las corrijas.
+
+## Qué debe definir un concepto
+
+Cinco respuestas por carpeta:
+
+1. **Promesa** — qué gana quien la abre, en una frase.
+2. **Pregunta que responde** — la duda del visitante que esa carpeta resuelve.
+3. **Qué admite** — los tipos de historia que sí pertenecen.
+4. **Qué excluye** — lo que, aunque sea buen contenido, va a otra parte.
+5. **Vigencia** — si funciona solo en campaña o sigue viva en 2027.
+
+## Mi lectura actual y sus tensiones
+
+**DAILY** — La tensión está en el nombre: *Daily* promete **frecuencia**, pero el contenido real es **criterio**, que no es diario. Hoy mezcla encuestas (st-5, st-12), debates (st-8), referentes (st-9) y técnica tipográfica (st-13). ¿DAILY es tu columna de opinión, o el registro ligero del día a día del taller?
+
+**SETUP** — La más coherente. Promete el taller y la técnica. Admite estación de trabajo, herramientas, preprensa, pruebas de color, acabados, verificación de archivo. Excluye piezas instaladas y conversación. Aquí sí encaja `st-25` (resolución 1:1), que hoy está mal ubicada.
+
+**PORTFOLIO** — La tensión es de fondo: ¿es **la carpeta del lanzamiento** (campaña, caduca el 21.11) o **la carpeta del portafolio** (permanente, se abre en 2027 para ver el trabajo)? Hoy es lo primero: 4 de 5 historias son countdown. Si es permanente, le falta mostrar los proyectos mismos.
+
+**CONTACT** — Aquí está la mezcla más fuerte. El nombre promete **cómo trabajar contigo**, pero contiene 8 historias de trabajo instalado (valla, caravana, LED, bordado, stickers): eso es **prueba de capacidad**, no invitación a contactar. ¿CONTACT es "así trabajo" o "así me contactas"?
+
+**PTR** — Promete **quién eres**, pero hoy mezcla tres cosas distintas: la firma gráfica (`st-...575`), la formación (`st-...552`) y la reflexión personal (`st-28`). ¿PTR es tu identidad visual de marca, o tu biografía de diseñador?
+
+## Lo que necesito de ti
+
+Sin tus definiciones, cualquier reubicación que haga es otra suposición. Dime, en una línea por carpeta, **qué es** y **qué no es**:
+
+- **DAILY** es ______, no es ______.
+- **SETUP** es ______, no es ______.
+- **PORTFOLIO** es ______, no es ______.
+- **CONTACT** es ______, no es ______.
+- **PTR** es ______, no es ______.
+
+Si prefieres, respóndeme solo las tres dudosas (**DAILY, PORTFOLIO, CONTACT**) y con eso ya puedo reubicar con criterio. También puedes redefinir a fondo —cambiar nombres si el concepto ya no coincide con la palabra—; eso lo puedo ejecutar igual.
+
+**No toco nada todavía.** Ya cometí el error de reordenar sobre una base no validada, y prefiero no repetirlo: cuando tenga tus definiciones, muevo las historias que no pertenezcan, creo las que falten para completar cada arco y dejo el cronograma coherente de una sola vez.
 
