@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 2:35:25 a. m.
+**Última actualización:** 9/11/2026, 2:35:33 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.15651 USD (657135 tokens)
+**Gasto Acumulado en Sesión:** $0.15728 USD (664523 tokens)
 
 ---
 
@@ -81,7 +81,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (67 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (68 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1493,4 +1493,36 @@ Ese día hay dos piezas: `post-ig-3` (Reel «3 errores de preprensa») y `post-l
 
 ### [67] 👤 **Peter Orostegui** — *9/11/2026, 2:35:22 a. m.*
 Disculpame, es hoy. que psotearemos hoy?
+
+### [68] ✨ **Copilot IA** — *9/11/2026, 2:35:30 a. m.*
+## Hoy, 09.11: dos publicaciones
+
+| Hora sugerida | Pieza | Canal | Formato | Estado |
+|---|---|---|---|---|
+| 11:00 a.m. | Lanzamiento Expectativa: «Mientras tanto...» | Instagram | Carrusel | **Listo** |
+| 6:00 p.m. | El valor de construir en silencio | LinkedIn | Reflexiones | **En Diseño** |
+
+**El de Instagram ya está cerrado**, es el único publicado como *Listo* en toda la campaña. Abre el arco de expectativa:
+
+> No todo lo que se construye se publica de inmediato.
+> Me tomé el tiempo para prepararlo.
+> Ahora toca mostrarlo.
+
+Va primero porque fija el tono y no revela nada: es una promesa, no un anuncio.
+
+**El de LinkedIn le contesta**, tres horas después y en otro registro. Mismo argumento, pero con la frase que da autoridad: *«el valor de un diseñador no está en la frecuencia con la que publica, sino en la solidez de lo que sostiene en las manos»*. Por eso va en la tarde: no compite con el carrusel, lo profundiza. **Le falta pasar a Listo** antes de que lo programes.
+
+## Las historias de hoy
+
+1. **Café en la universidad** — DAILY, *En Diseño*, con la frase que definimos. Es la tuya de esta mañana.
+2. **Detrás de cámaras de la mesa de trabajo** — SETUP, *Idea*. Mediodía, cuando ya estés en el taller.
+3. **Caja de preguntas: «¿Qué se viene?»** — DAILY, *Idea*. Al cierre, para recoger preguntas que alimenten los días siguientes.
+
+## Dos cosas que te van a morder
+
+**La caja de preguntas abre una ventana que no puedes cerrar.** Si hoy preguntas «¿qué se viene?», alguien va a pedir fecha o detalles del portafolio. Si no quieres spoilers, la respuesta tiene que ser evasiva y eso desgasta. Mi consejo: cámbiala por **«¿qué querías saber del oficio?»** — recoge preguntas de proceso, no de lanzamiento.
+
+**El calendario está en 30 historias**, pero hoy `st-1` y `st-3` siguen en *Idea*. Si no las grabas hoy, la curva se te corre.
+
+Si quieres, en el siguiente mensaje te mando los bloques para dejar `post-li-1` en *Listo*, la historia de café en *Listo*, y ajustar el texto de la caja de preguntas. Dime cuáles de los tres.
 
