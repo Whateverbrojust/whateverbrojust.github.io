@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794202935768,
-  "updatedAtISO": "2026-11-09T05:42:15.768Z",
+  "updatedAt": 1794202953481,
+  "updatedAtISO": "2026-11-09T05:42:33.481Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -273,18 +273,6 @@
       "format": "Encuesta",
       "status": "Idea",
       "order": 1
-    },
-    {
-      "time": "09:00",
-      "context": "Captura con las guías visibles y la sangría de 3 mm señalada. Es el contenido técnico más compartido del calendario: base del carrusel de preprensa.",
-      "formatDetail": "Captura técnica",
-      "id": "st-6",
-      "date": "2026-11-11",
-      "name": "Marcas de corte y sangría en archivo real",
-      "highlightId": "hl-proceso",
-      "format": "Captura",
-      "status": "Idea",
-      "order": 0
     },
     {
       "time": "15:00",
@@ -1955,6 +1943,18 @@
       "plainText": "No se está eliminando nada",
       "actionData": null,
       "timestamp": "9/11/2026, 12:42:13 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Entendido. Dejo de repetir el mismo comando, porque si tres intentos con el mismo formato no mueven nada, el problema no es el contenido sino el formato.<br><br><div class=\"ai-md-h\">Lo que sé hasta ahora</div><br><div class=\"ai-md-li\" style=\"padding-left:4px;\">• Mis respuestas anteriores se cortaron a mitad del JSON más de una vez. Un lote truncado se descarta entero.</div><div class=\"ai-md-li\" style=\"padding-left:4px;\">• Aun con bloques cortos y bien cerrados, el borrado no ocurre. Eso apunta a que <code>delete_story</code> no está aceptando solo el <code>id</code>, o a que el intérprete no recibe el bloque.</div><div class=\"ai-md-li\" style=\"padding-left:4px;\">• Tú mismo viste el botón de eliminar en la interfaz, así que la capacidad existe.</div><br><div class=\"ai-md-h\">Prueba mínima</div><br>Un solo bloque, un solo id, sin nada más alrededor. Si desaparece «Marcas de corte y sangría en archivo real», el formato sirve y sigo con las otras dos. Si no desaparece, la acción no está conectada y lo resolvemos por la interfaz.<br><br><br><br><div class=\"ai-md-h\">Ruta segura, por la interfaz</div><br>Si la prueba no funciona, elimina estas tres con el botón. Los nombres exactos para ubicarlas:<br><br>| ID | Nombre | Fecha | Destacada |<br>|---|---|---|---|<br>| <code>st-6</code> | Marcas de corte y sangría en archivo real | 11.11 | SETUP |<br>| <code>st-14</code> | El orden de capas en un archivo maestro | 14.11 | SETUP |<br>| <code>st-25</code> | Comprobando resolución a escala 1:1 | 18.11 | SETUP |<br><br>Ninguna otra historia depende de ellas. Las encuestas, la secuencia de papel (<code>st-4</code> → <code>st-5</code>) y los arcos de PORTFOLIO y CONTACT quedan intactos.<br><br><div class=\"ai-md-h\">Lo que queda esperando</div><br>El reordenamiento que acordamos sigue en pie y no se ha aplicado: 8 historias que salen de CONTACT (instalación → SETUP, pieza terminada → PORTFOLIO), <code>st-10</code> a PORTFOLIO, <code>st-3</code> a DAILY, y la asignación de horas por día. Son 32 cambios.<br><br>Dime si la prueba mínima borró <code>st-6</code> y con qué resultado, y ajusto el resto a ese formato en lugar de seguir mandando lotes que no llegan.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00106 USD</strong> (Acumulado sesión: $0.12941 USD)</span>\n          <span style=\"color:#64748b;\">9700 in + 1148 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Entendido. Dejo de repetir el mismo comando, porque si tres intentos con el mismo formato no mueven nada, el problema no es el contenido sino el formato.\n\n## Lo que sé hasta ahora\n\n- Mis respuestas anteriores se cortaron a mitad del JSON más de una vez. Un lote truncado se descarta entero.\n- Aun con bloques cortos y bien cerrados, el borrado no ocurre. Eso apunta a que `delete_story` no está aceptando solo el `id`, o a que el intérprete no recibe el bloque.\n- Tú mismo viste el botón de eliminar en la interfaz, así que la capacidad existe.\n\n## Prueba mínima\n\nUn solo bloque, un solo id, sin nada más alrededor. Si desaparece «Marcas de corte y sangría en archivo real», el formato sirve y sigo con las otras dos. Si no desaparece, la acción no está conectada y lo resolvemos por la interfaz.\n\n\n\n## Ruta segura, por la interfaz\n\nSi la prueba no funciona, elimina estas tres con el botón. Los nombres exactos para ubicarlas:\n\n| ID | Nombre | Fecha | Destacada |\n|---|---|---|---|\n| `st-6` | Marcas de corte y sangría en archivo real | 11.11 | SETUP |\n| `st-14` | El orden de capas en un archivo maestro | 14.11 | SETUP |\n| `st-25` | Comprobando resolución a escala 1:1 | 18.11 | SETUP |\n\nNinguna otra historia depende de ellas. Las encuestas, la secuencia de papel (`st-4` → `st-5`) y los arcos de PORTFOLIO y CONTACT quedan intactos.\n\n## Lo que queda esperando\n\nEl reordenamiento que acordamos sigue en pie y no se ha aplicado: 8 historias que salen de CONTACT (instalación → SETUP, pieza terminada → PORTFOLIO), `st-10` a PORTFOLIO, `st-3` a DAILY, y la asignación de horas por día. Son 32 cambios.\n\nDime si la prueba mínima borró `st-6` y con qué resultado, y ajusto el resto a ese formato en lugar de seguir mandando lotes que no llegan.",
+      "actionData": [
+        {
+          "type": "delete_story",
+          "id": "st-6"
+        }
+      ],
+      "timestamp": "9/11/2026, 12:42:30 a. m."
     }
   ],
   "importedCustomContextNotes": ""
