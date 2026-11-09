@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:41:02 a. m.
+**Última actualización:** 9/11/2026, 12:41:15 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.12701 USD (457265 tokens)
+**Gasto Acumulado en Sesión:** $0.12835 USD (469200 tokens)
 
 ---
 
@@ -87,7 +87,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (27 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (28 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -970,4 +970,27 @@ También asigno **hora y contexto a las 34 historias restantes**, que era la pet
 
 ### [27] 👤 **Peter Orostegui** — *9/11/2026, 12:41:00 a. m.*
 Revisa el interfaz, tiene un boton para eliminar las entradas.
+
+### [28] ✨ **Copilot IA** — *9/11/2026, 12:41:12 a. m.*
+Confirmado. Cada entrada tiene su control de eliminar, y ese detalle explica los dos intentos fallidos: **mis respuestas se cortaron a mitad del JSON**, quedó una llave abierta y el intérprete descartó el lote completo. No fue que el comando estuviera mal escrito: nunca llegó entero.
+
+Las tres entradas a borrar, con nombre exacto para que las ubiques en la lista:
+
+- **`st-6`** — «Marcas de corte y sangría en archivo real» · 11.11 · SETUP
+- **`st-14`** — «El orden de capas en un archivo maestro» · 14.11 · SETUP
+- **`st-25`** — «Comprobando resolución a escala 1:1» · 18.11 · SETUP
+
+Puedes eliminarlas con el botón si te resulta más rápido; los bloques de abajo hacen lo mismo.
+
+## Corrección de método
+
+Dejo de mandar 34 bloques en una sola respuesta. Van **por lotes de 6 a 8**, uno detrás de otro, para que nada se trunque. Este primer lote es solo el borrado:
+
+```json
+{ "action": "delete_story", "id": "st-6" }
+{ "action": "delete_story", "id": "st-14" }
+{ "action": "delete_story", "id": "st-25" }
+```
+
+Cuando confirmes que desaparecieron, sigo con el lote 2: las ocho historias que salen de CONTACT y se reparten entre SETUP (instalación y montaje) y PORTFOLIO (pieza terminada).
 
