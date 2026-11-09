@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794204654842,
-  "updatedAtISO": "2026-11-09T06:10:54.842Z",
+  "updatedAt": 1794204664551,
+  "updatedAtISO": "2026-11-09T06:11:04.551Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -592,8 +592,8 @@
       "time": "08:00",
       "highlightId": "hl-criterio",
       "format": "Foto",
-      "status": "Idea",
-      "context": "Foto casual en la universidad, taza y cuaderno sobre la mesa, con la frase en cuerpo pequeño. Abre la campaña desde lo cotidiano antes del carrusel de expectativa: muestra al diseñador pensando el oficio en su día normal, sin spoilers del portafolio.",
+      "status": "En Diseño",
+      "context": "Foto casual en la universidad: taza de café, mesa y cuaderno, con una sola frase corta de diseño en cuerpo pequeño (por ejemplo 'La manía de medir todo'). Va a las 08:00, antes de la primera story del taller, para abrir el día con tono humano y sin spoilers del portafolio; el formato espontáneo busca comentarios, no alcance.",
       "order": 1
     }
   ],
@@ -2699,6 +2699,25 @@
       "plainText": "ya bajamos a 30, pero el cambio en la historia no se reflejó",
       "actionData": null,
       "timestamp": "9/11/2026, 1:10:52 a. m."
+    },
+    {
+      "sender": "ai",
+      "html": "Ese cambio faltaba porque nunca salió como comando, solo como texto. Aquí va el bloque real:<br><br>Queda a las <strong>08:00 del 09.11</strong> para que abra el día antes de <code>st-1</code> (09:00). Si la quieres en otra fecha u hora, dime cuál y la muevo.<div style=\"margin-top:8px;padding-top:6px;border-top:1px dashed #e2e8f0;font-size:11px;color:#475569;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;\">\n          <span>💳 Costo de este uso: <strong style=\"color:#0369a1;\">$0.00095 USD</strong> (Acumulado sesión: $0.15338 USD)</span>\n          <span style=\"color:#64748b;\">7383 in + 1171 out tokens · deepseek-flash</span>\n        </div>",
+      "plainText": "Ese cambio faltaba porque nunca salió como comando, solo como texto. Aquí va el bloque real:\n\nQueda a las **08:00 del 09.11** para que abra el día antes de `st-1` (09:00). Si la quieres en otra fecha u hora, dime cuál y la muevo.",
+      "actionData": [
+        {
+          "type": "update_story",
+          "id": "st-1794204588972-274",
+          "name": "Café en la universidad: la manía de medir todo",
+          "date": "2026-11-09",
+          "time": "08:00",
+          "highlight": "DAILY",
+          "format": "Foto",
+          "status": "En Diseño",
+          "context": "Foto casual en la universidad: taza de café, mesa y cuaderno, con una sola frase corta de diseño en cuerpo pequeño (por ejemplo 'La manía de medir todo'). Va a las 08:00, antes de la primera story del taller, para abrir el día con tono humano y sin spoilers del portafolio; el formato espontáneo busca comentarios, no alcance."
+        }
+      ],
+      "timestamp": "9/11/2026, 1:11:02 a. m."
     }
   ],
   "importedCustomContextNotes": ""
