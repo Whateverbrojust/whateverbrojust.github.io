@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:39:32 a. m.
+**Última actualización:** 9/11/2026, 12:40:22 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.12243 USD (439033 tokens)
+**Gasto Acumulado en Sesión:** $0.12701 USD (457265 tokens)
 
 ---
 
@@ -87,7 +87,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (25 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (26 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -894,4 +894,77 @@ Estas trece están ya en su carpeta correcta y no las toqué: `st-1`, `st-2`, `s
 
 ### [25] 👤 **Peter Orostegui** — *9/11/2026, 12:39:30 a. m.*
 Que intentaste hacer, no se eliminaron las historias.
+
+### [26] ✨ **Copilot IA** — *9/11/2026, 12:40:19 a. m.*
+Tienes razón y el error fue mío: en el turno anterior el bloque JSON se cortó a la mitad, quedó un `{` abierto y el intérprete no ejecutó nada. Las historias siguen ahí porque **el comando nunca llegó completo**. Lo corrijo ahora con los bloques cerrados uno por uno.
+
+## Lo que elimino
+
+Aplicando tus criterios al pie de la letra, son las tres capturas de pantalla de técnica de archivo: no tienen espacio ni equipos (no son SETUP), no son creación terminada (no son PORTFOLIO), no son casuales ni conversación. Sin encuadre físico, no tienen hogar.
+
+## Lo que corrijo de paso
+
+Encontré un desajuste real: **`st-10`** («hojeando un cuadernillo impreso») vive en SETUP, pero es una **pieza terminada en video**. Por tu definición de PORTFOLIO, ahí va.
+
+También asigno **hora y contexto a las 34 historias restantes**, que era la petición que quedó sin completar. Las horas respetan cadenas de secuencia: `st-4` antes de `st-5`, `st-15` antes de `st-16`, `st-17` antes de `st-18`, y el countdown `st-26` a las 07:00 del 19.
+
+## Cronograma final
+
+| Día | Historias y horas |
+|---|---|
+| 09.11 | st-1 08:15 · st-2 13:00 · st-3 19:30 |
+| 10.11 | st-4 12:30 · st-5 18:30 |
+| 11.11 | st-7 09:30 |
+| 12.11 | st-8 11:00 · st-9 17:00 · st-10 20:00 |
+| 13.11 | st-11 13:00 · st-12 19:30 |
+| 14.11 | st-13 12:00 |
+| 15.11 | st-15 10:00 · st-16 20:00 |
+| 16.11 | st-17 08:30 · st-18 17:30 · st-19 19:00 |
+| 17.11 | st-20 09:30 · st-21 14:00 · st-22 21:00 |
+| 18.11 | st-23 11:00 · st-24 16:00 |
+| 19.11 | st-26 07:00 · st-27 12:00 · st-28 21:00 |
+| 20.11 | st-29 10:00 · st-30 18:00 |
+| 21.11 | CONTACT 10:00 · 17:00 |
+| 22.11 | PTR 12:00 · 20:00 |
+| 23–25.11 | CONTACT 11:00 · 11:00 · 10:00 |
+
+```json
+{ "action": "delete_story", "id": "st-6" }
+{ "action": "delete_story", "id": "st-14" }
+{ "action": "delete_story", "id": "st-25" }
+{ "action": "update_story", "id": "st-1", "name": "Detrás de cámaras de la mesa de trabajo", "date": "2026-11-09", "time": "08:15", "highlight": "SETUP", "format": "Foto", "status": "Idea", "context": "Plano cenital de la mesa real: hojas impresas, marcadores y taza. Es la primera historia de la campaña y define el tono del arco SETUP: mostrar el espacio antes que el resultado. Se publica en la mañana para abrir el día con textura física, no con pantalla." }
+{ "action": "update_story", "id": "st-2", "name": "Pantalla con vectores y curvas en Illustrator", "date": "2026-11-09", "time": "13:00", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Grabación de 8 segundos sobre el hombro mostrando la mesa de trabajo con curvas Bézier activas. Complementa a st-1 con el lado digital del mismo escritorio; va al mediodía porque el contenido de proceso rinde mejor en pausa de almuerzo." }
+{ "action": "update_story", "id": "st-3", "name": "Caja de preguntas: «¿Qué se viene?»", "date": "2026-11-09", "time": "19:30", "highlight": "DAILY", "format": "Sticker", "status": "Idea", "context": "Sticker de preguntas abierto sin responder en el momento. Cierra el primer día con interacción pura, no con contenido: busca conversación y respuestas en DM para alimentar st-16 más adelante. Va en la noche, franja de mayor consumo." }
+{ "action": "update_story", "id": "st-4", "name": "Muestra de texturas de papel especial", "date": "2026-11-10", "time": "12:30", "highlight": "SETUP", "format": "Foto", "status": "Idea", "context": "Macro de tres papeles distintos con luz lateral rasante para que se lea la fibra. Es el «antes» obligatorio de la encuesta st-5: no se puede votar mate o brillante sin haber visto la muestra primero. Publicar siempre antes de las 18:00." }
+{ "action": "update_story", "id": "st-5", "name": "Encuesta: ¿Prefieres papel mate o brillante?", "date": "2026-11-10", "time": "18:30", "highlight": "DAILY", "format": "Encuesta", "status": "Idea", "context": "Encuesta de dos opciones con la foto de st-4 como fondo para que la elección sea visual y no abstracta. Convierte la muestra de taller en conversación de criterio, que es exactamente lo que DAILY admite. Se publica en la tarde, cuando la audiencia responde más encuestas." }
+{ "action": "update_story", "id": "st-7", "name": "Preparando planchas de impresión", "date": "2026-11-11", "time": "09:30", "highlight": "SETUP", "format": "Boomerang", "status": "Idea", "context": "Boomerang corto de planchas de CTP apilándose en la mesa de la imprenta. Muestra herramienta física y oficio real, sin pantalla ni configuración de archivo. Va a media mañana porque es contenido de traslado al taller y funciona como apertura del día." }
+{ "action": "update_story", "id": "st-8", "name": "Debate: ¿Cuándo un logo necesita simplificarse?", "date": "2026-11-12", "time": "11:00", "highlight": "DAILY", "format": "Sticker", "status": "Idea", "context": "Sticker de encuesta binaria con dos versiones del mismo isotipo, una detallada y una reducida. Es opinión de oficio aplicada a un caso concreto, el formato que DAILY admite sin salirse del tema. Se publica al mediodía para capturar respuestas durante la pausa." }
+{ "action": "update_story", "id": "st-9", "name": "Libros y referencias de diseño que uso", "date": "2026-11-12", "time": "17:00", "highlight": "DAILY", "format": "Foto", "status": "Idea", "context": "Foto de cuatro o cinco libros reales con separadores y notas visibles, no una estantería ordenada. Comparte criterio y biblioteca personal, que es el lado casual y curado de DAILY. Se publica en la tarde para invitar a guardar la historia como referencia." }
+{ "action": "update_story", "id": "st-10", "name": "Hojeando rápido un cuadernillo impreso", "date": "2026-11-12", "time": "20:00", "highlight": "PORTFOLIO", "format": "Video", "status": "Idea", "context": "Video de tres segundos pasando las páginas de una pieza ya impresa y terminada. Se mueve de SETUP a PORTFOLIO porque el protagonista es la creación final, no el taller. Cierra el día con resultado tangible y prepara el arco de piezas que se intensifica desde el 16.11." }
+{ "action": "update_story", "id": "st-11", "name": "Reflejo de luz en estampado dorado", "date": "2026-11-13", "time": "13:00", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Video de 6 segundos moviendo la pieza para que el dorado haga el destello sobre fondo oscuro. Es prueba de acabado sobre mesa, con espacio y material, por eso pertenece a SETUP y no a PORTFOLIO. Va al mediodía porque el destello se ve mejor sin competir con el feed nocturno." }
+{ "action": "update_story", "id": "st-12", "name": "Votación: ¿Tipografía Serif o Sans?", "date": "2026-11-13", "time": "19:30", "highlight": "DAILY", "format": "Encuesta", "status": "Idea", "context": "Encuesta con la misma frase compuesta en serif y en sans, para votar con la evidencia al frente. Es conversación de criterio tipográfico, formato casual de DAILY. Se publica en la noche, cuando hay volumen de respuestas y se puede comentar el resultado al día siguiente." }
+{ "action": "update_story", "id": "st-13", "name": "Muestra de espaciado y kerning manual", "date": "2026-11-14", "time": "12:00", "highlight": "DAILY", "format": "Captura", "status": "Idea", "context": "Acercamiento a una palabra con el espaciado ajustado a mano, con las guías visibles. Es una decisión de criterio tipográfico, no una configuración de archivo, por eso se mantiene en DAILY. Va al mediodía con la pregunta abierta de si el lector lo nota." }
+{ "action": "update_story", "id": "st-15", "name": "Q&A: Preguntas sobre diseño y dirección de arte", "date": "2026-11-15", "time": "10:00", "highlight": "DAILY", "format": "Sticker", "status": "Idea", "context": "Caja de preguntas abierta durante toda la mañana para acumular material. Es el paso obligatorio previo a st-16: sin preguntas recogidas no hay respuesta que grabar. Abrir temprano maximiza el tiempo de recolección." }
+{ "action": "update_story", "id": "st-16", "name": "Respondiendo la pregunta más votada", "date": "2026-11-15", "time": "20:00", "highlight": "PTR", "format": "Otro", "status": "Idea", "context": "Video a cámara respondiendo la pregunta ganadora de st-15, con la captura de la pregunta insertada como recuadro. Vive en PTR porque el protagonista eres tú hablando, no el trabajo. Se publica en la noche para cerrar el domingo con tu voz." }
+{ "action": "update_story", "id": "st-17", "name": "Pasando en carro frente a una valla en la avenida", "date": "2026-11-16", "time": "08:30", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Grabación en movimiento desde el vehículo, cámara en mano y enfoque rápido. Es campo e instalación, no pieza terminada, por eso pertenece a SETUP. Va primero en el día para que st-18 se lea como su contrapunto estático." }
+{ "action": "update_story", "id": "st-18", "name": "La escala humana frente a una pieza OOH", "date": "2026-11-16", "time": "17:30", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Una persona real parada bajo la valla con la pieza completa en cuadro. Demuestra tamaño y contundencia del resultado, que es el criterio de PORTFOLIO. Se publica después de st-17 para cerrar el contraste movimiento-estatismo." }
+{ "action": "update_story", "id": "st-19", "name": "Render de visualizer en After Effects", "date": "2026-11-16", "time": "19:00", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Captura de pantalla reproduciendo el render final del visualizer, con la timeline visible al costado. Muestra herramienta y flujo de trabajo, no configuración de archivo, por eso se mantiene en SETUP. Va en la noche como enlace entre la valla del día y el concierto del 17." }
+{ "action": "update_story", "id": "st-20", "name": "Caravana de vehículos con gráfica instalada", "date": "2026-11-17", "time": "09:30", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Plano abierto de varios vehículos ya rotulados, en campo y en movimiento. Es instalación y montaje real, territorio de SETUP. Se publica temprano porque documenta trabajo de calle y abre el día con oficio en exteriores." }
+{ "action": "update_story", "id": "st-21", "name": "Prueba de pantallas LED en tarima de concierto", "date": "2026-11-17", "time": "14:00", "highlight": "SETUP", "format": "Video", "status": "Idea", "context": "Video de la prueba técnica en tarima con las pantallas encendidas y el equipo de producción alrededor. Es montaje y equipos, no resultado, por eso SETUP. Va en la tarde como antesala directa del concierto de st-22." }
+{ "action": "update_story", "id": "st-22", "name": "El concierto en vivo lleno de visuales", "date": "2026-11-17", "time": "21:00", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Foto del recinto lleno con los visuales proyectados y público en silueta. Es la creación funcionando en su contexto final, criterio exacto de PORTFOLIO. Se publica en la noche, coincidiendo con la hora real del evento." }
+{ "action": "update_story", "id": "st-23", "name": "Detalle macro de hilo y bordado en gorra", "date": "2026-11-18", "time": "11:00", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Macro extremo del bordado donde se vea la puntada y la textura del hilo. Es pieza terminada con acabado real, no proceso de taller. Va a media mañana para que la textura se aprecie en pantalla con buena luz." }
+{ "action": "update_story", "id": "st-24", "name": "Pegatinas troqueladas listas en la mesa", "date": "2026-11-18", "time": "16:00", "highlight": "PORTFOLIO", "format": "Boomerang", "status": "Idea", "context": "Boomerang de las pegatinas ya troqueladas acomodándose sobre la mesa. El protagonista es el acabado final del producto, por eso PORTFOLIO y no SETUP. Se publica en la tarde como cierre del bloque textil del día." }
+{ "action": "update_story", "id": "st-26", "name": "Sticker oficial de Countdown: 24 Horas", "date": "2026-11-19", "time": "07:00", "highlight": "PORTFOLIO", "format": "Sticker", "status": "Idea", "context": "Sticker de cuenta regresiva anclado a la publicación del 20.11. Se publica a las 07:00 para que el contador esté activo todo el día y funcione como recordatorio permanente en el perfil. Es el disparador de la recta final del lanzamiento." }
+{ "action": "update_story", "id": "st-27", "name": "Mesa con los 4 tomos encuadernados listos", "date": "2026-11-19", "time": "12:00", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Plano de los cuatro tomos encuadernados alineados sobre la mesa, con luz de ventana. Es la prueba física de que el portafolio existe antes de publicarse. Va al mediodía para sostener la expectativa mientras el countdown corre." }
+{ "action": "update_story", "id": "st-28", "name": "Reflexión previa al día de entrega", "date": "2026-11-19", "time": "21:00", "highlight": "PTR", "format": "Texto", "status": "Idea", "context": "Historia de texto sobre fondo neutro, sin foto, con una reflexión breve de cierre de etapa. Es personal y habla de ti, no del trabajo, por eso PTR. Se publica en la noche porque la carga emocional funciona mejor con la audiencia en calma." }
+{ "action": "update_story", "id": "st-29", "name": "Sustentación del portafolio en directo", "date": "2026-11-20", "time": "10:00", "highlight": "PORTFOLIO", "format": "Foto", "status": "Idea", "context": "Foto tomada durante la sustentación, con el público o la pantalla de fondo. Documenta el hito en tiempo real y da prueba de que el lanzamiento ocurrió. Se publica en la mañana, alineada con el momento real de la presentación." }
+{ "action": "update_story", "id": "st-30", "name": "¡Portafolio online en Behance! Desliza arriba", "date": "2026-11-20", "time": "18:00", "highlight": "PORTFOLIO", "format": "Sticker", "status": "Idea", "context": "Sticker de enlace directo a Behance con el texto de llamado a deslizar. Es el único momento de la campaña donde el objetivo es el clic, no la conversación. Se publica en la tarde para aprovechar el pico de tráfico del día de lanzamiento." }
+{ "action": "update_story", "id": "st-1794196266553-508", "name": "Hablemos de diseño: proyectos y colaboraciones", "date": "2026-11-21", "time": "10:00", "highlight": "CONTACT", "format": "Sticker", "status": "Idea", "context": "Sticker de preguntas abierto con la invitación explícita a escribir por proyectos. Es la apertura formal del canal de contacto después del lanzamiento. Va en la mañana para captar consultas durante todo el fin de semana." }
+{ "action": "update_story", "id": "st-1794196266555-622", "name": "Respuesta en menos de 24 h — contacto directo", "date": "2026-11-21", "time": "17:00", "highlight": "CONTACT", "format": "Foto", "status": "Idea", "context": "Foto del correo o del DM respondido, con el tiempo de respuesta visible y los datos tapados. Demuestra el compromiso de atención con prueba real. Se publica en la tarde como refuerzo del mensaje de st-508." }
+{ "action": "update_story", "id": "st-1794196266559-552", "name": "8 semestres de formación, taller propio", "date": "2026-11-22", "time": "12:00", "highlight": "PTR", "format": "Foto", "status": "Idea", "context": "Foto tuya en el taller, no un retrato de estudio: contexto real de trabajo. Presenta la formación y el espacio propio como parte de tu identidad. Va al mediodía para que sea la primera pieza del arco PTR post-lanzamiento." }
+{ "action": "update_story", "id": "st-1794196266562-575", "name": "La firma: PTR", "date": "2026-11-22", "time": "20:00", "highlight": "PTR", "format": "Foto", "status": "Idea", "context": "Composición cerrada de la firma PTR aplicada sobre papel o superficie real, no en pantalla. Cierra el arco de identidad personal abierto con st-552. Se publica en la noche como sello final del fin de semana." }
+{ "action": "update_story", "id": "st-1794202219509-869", "name": "Cómo cotizar un proyecto de branding", "date": "2026-11-23", "time": "11:00", "highlight": "CONTACT", "format": "Carrusel", "status": "Idea", "context": "Carrusel de 5 láminas explicando qué factores inciden en una cotización de branding, sin revelar precios. Responde la duda previa más común antes de escribir. Va a media mañana, franja de contenido útil y guardable." }
+{ "action": "update_story", "id": "st-1794202219512-548", "name": "Mi proceso de trabajo en 4 pasos", "date": "2026-11-24", "time": "11:00", "highlight": "CONTACT", "format": "Carrusel", "status": "Idea", "context": "Carrusel de 4 pasos con un esquema simple por lámina: diagnóstico, concepto, producción y entrega. Ordena la expectativa del cliente antes de contratar. Se publica al mediodía, en el mismo bloque horario que st-869 para crear continuidad." }
+{ "action": "update_story", "id": "st-1794202219515-974", "name": "Agenda abierta: proyectos para 2027", "date": "2026-11-25", "time": "10:00", "highlight": "CONTACT", "format": "Foto", "status": "Idea", "context": "Foto de la agenda física abierta con el año 2027 visible y espacios libres. Cierra la campaña con una invitación concreta y sin presión. Va en la mañana para dejar el llamado activo el resto del día." }
+```
 
