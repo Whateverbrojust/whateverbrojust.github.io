@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1794203150284,
-  "updatedAtISO": "2026-11-09T05:45:50.284Z",
+  "updatedAt": 1794203169692,
+  "updatedAtISO": "2026-11-09T05:46:09.692Z",
   "posts": [
     {
       "id": "post-ig-1",
@@ -2009,6 +2009,13 @@
       "plainText": "Aquí van las dos que quedan. Solo son dos, así que hay buena chance de que pasen juntas.\n\n**Eliminar `st-14`** — «El orden de capas en un archivo maestro» · 14.11 · SETUP\n**Eliminar `st-25`** — «Comprobando resolución a escala 1:1» · 18.11 · SETUP\n\n```json\n{ \"action\": \"delete_story\", \"id\": \"st-14\" }\n{ \"action\": \"delete_story\", \"id\": \"st-25\" }\n```\n\nSi desaparecen las dos, el borrado queda cerrado y arranco con las horas de las 33 historias activas. Si vuelve a procesar solo una, me dices cuál quedó y te mando la otra sola.",
       "actionData": null,
       "timestamp": "9/11/2026, 12:45:47 a. m."
+    },
+    {
+      "sender": "user",
+      "html": "No sirvio porque debes enviarlos para yo presionar para eliminar",
+      "plainText": "No sirvio porque debes enviarlos para yo presionar para eliminar",
+      "actionData": null,
+      "timestamp": "9/11/2026, 12:46:07 a. m."
     }
   ],
   "importedCustomContextNotes": ""
