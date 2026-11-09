@@ -1,7 +1,7 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 1:03:13 a. m.
+**Última actualización:** 9/11/2026, 1:04:59 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
 **Gasto Acumulado en Sesión:** $0.14561 USD (583155 tokens)
 
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (50 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (51 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1325,4 +1325,7 @@ Criterio de horarios: SETUP temprano (el taller abre), DAILY a mediodía y al ci
 Con esto quedan **21 pendientes** en dos tandas: la del 16 al 18 y la del 19 al 25 (incluidas las seis de id largo de CONTACT y PTR). Dime **aplicado** y sigue la segunda.
 
 > **Acción estructurada generada:** `[{"type":"update_story","id":"st-4","name":"Muestra de texturas de papel especial","date":"2026-11-10","time":"09:30","highlight":"SETUP","format":"Foto","status":"Idea","context":"Macro de tres papeles sobre la mesa de corte, el mismo día en que sale el post-ig-2 sobre lo tangible. Abre la jornada desde el taller y deja preparada la encuesta de la tarde."},{"type":"update_story","id":"st-5","name":"Encuesta: ¿Prefieres papel mate o brillante?","date":"2026-11-10","time":"18:30","highlight":"DAILY","format":"Encuesta","status":"Idea","context":"Se lanza cuando la audiencia ya vio la textura del post y de la story de la mañana. Convierte una decisión técnica de taller en conversación de fin de jornada, en la franja de mayor tráfico."},{"type":"update_story","id":"st-7","name":"Preparando planchas de impresión","date":"2026-11-11","time":"10:00","highlight":"SETUP","format":"Boomerang","status":"Idea","context":"Refuerza el post-ig-3 sobre errores de preprensa y el post-li-2 sobre vallas OOH. El boomerang del registro de planchas prueba en imagen lo que el caption del post afirma en texto."},{"type":"update_story","id":"st-8","name":"Debate: ¿Cuándo un logo necesita simplificarse?","date":"2026-11-12","time":"09:00","highlight":"DAILY","format":"Sticker","status":"Idea","context":"Abre el día del carrusel sobre la diferencia entre logo y sistema visual. El sticker invita a responder antes de que la audiencia llegue al carrusel, de modo que el post reciba comentarios ya calientes."},{"type":"update_story","id":"st-9","name":"Libros y referencias de diseño que uso","date":"2026-11-12","time":"13:00","highlight":"DAILY","format":"Foto","status":"Idea","context":"Muestra la biblioteca de referencia que sostiene el criterio del carrusel del día. Humaniza el proceso: no solo se ve el resultado, también de dónde viene la decisión."},{"type":"update_story","id":"st-10","name":"Hojeando rápido un cuadernillo impreso","date":"2026-11-12","time":"19:30","highlight":"PORTFOLIO","format":"Video","status":"Idea","context":"Sale del taller y pasa a PORTFOLIO: no es proceso, es pieza terminada. Se publica de noche para que el objeto encuadernado quede como cierre del día y adelante lo que se verá el 20.11."},{"type":"update_story","id":"st-11","name":"Reflejo de luz en estampado dorado","date":"2026-11-13","time":"10:00","highlight":"SETUP","format":"Video","status":"Idea","context":"Acompaña el sneak peek 01 del ornamento geométrico. El video busca el ángulo donde la luz revela el estampado, el tipo de detalle físico que solo se aprecia en movimiento y no en una foto fija."},{"type":"update_story","id":"st-12","name":"Votación: ¿Tipografía Serif o Sans?","date":"2026-11-13","time":"18:00","highlight":"DAILY","format":"Encuesta","status":"Idea","context":"Cierra la tarde discutiendo lo que el post-ig-6 plantea sobre el tono de voz tipográfico. La encuesta obliga a elegir y genera respuestas rápidas con mínimo esfuerzo de la audiencia."},{"type":"update_story","id":"st-13","name":"Muestra de espaciado y kerning manual","date":"2026-11-14","time":"11:00","highlight":"DAILY","format":"Captura","status":"Idea","context":"Captura del panel con las métricas abiertas, publicada tras el post tipográfico del día anterior. Muestra el oficio detrás de una decisión que el ojo percibe pero no ve."},{"type":"update_story","id":"st-15","name":"Q&A: Preguntas sobre diseño y dirección de arte","date":"2026-11-15","time":"12:00","highlight":"DAILY","format":"Sticker","status":"Idea","context":"Abre la caja de preguntas a mediodía para acumular consultas durante la tarde. Las respuestas se graban y salen al día siguiente como st-16, lo que crea continuidad y da razón para volver al perfil."}]`
+
+### [51] 👤 **Peter Orostegui** — *9/11/2026, 1:04:56 a. m.*
+sigo teniendo 34 historias, revisa por favor.
 
