@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 9/11/2026, 12:48:09 a. m.
+**Última actualización:** 9/11/2026, 12:48:20 a. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.13786 USD (541277 tokens)
+**Gasto Acumulado en Sesión:** $0.13887 USD (549838 tokens)
 
 ---
 
@@ -47,7 +47,7 @@
 - `hl-ptr` ▮ **PTR** — 4 historia(s) · Peter Orostegui + diseño gráfico
 
 ### Historias (34)
-- `st-1` #1 · 2026-11-09 08:15 · SETUP · **Detrás de cámaras de la mesa de trabajo** · Foto · Idea · Contexto: Plano cenital de la mesa real con recortes, café y herramientas. Abre SETUP mostrando que el taller existe y está en uso.
+- `st-1` #1 · 2026-11-09 08:15 · SETUP · **Detrás de cámaras de la mesa de trabajo** · Foto · Idea · Contexto: Plano cenital de la mesa con hojas impresas, regla metálica y taza. Se publica a primera hora para abrir la campaña mostrando el espacio antes que el resultado: el espectador ve dónde se fabrica, no qué se fabricó. Deja sensación de taller activo sin revelar ninguna pieza del portafolio.
 - `st-2` #2 · 2026-11-09 12:00 · SETUP · **Pantalla con vectores y curvas en Illustrator** · Video · Idea · Contexto: Grabación de pantalla de 10 s manipulando nodos y curvas Bézier. Demuestra dominio técnico sin revelar el proyecto del lanzamiento.
 - `st-3` #3 · 2026-11-09 19:00 · DAILY · **Caja de preguntas: «¿Qué se viene?»** · Sticker · Idea · Contexto: Sticker de preguntas en horario nocturno para captar curiosidad antes del primer spoiler. Alimenta el banco de respuestas para st-16.
 - `st-4` #4 · 2026-11-10 12:30 · SETUP · **Muestra de texturas de papel especial** · Foto · Idea · Contexto: Macro de tres papeles con luz rasante para mostrar grano y relieve. Va antes de la encuesta porque no se puede votar sobre lo que no se ha visto.
@@ -84,7 +84,7 @@
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (43 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (44 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -1199,4 +1199,32 @@ Si tras eso tu pantalla marca **34**, el canal sirve y rearmo las horas de las 3
 
 ### [43] 👤 **Peter Orostegui** — *9/11/2026, 12:48:06 a. m.*
 34
+
+### [44] ✨ **Copilot IA** — *9/11/2026, 12:48:18 a. m.*
+Confirmado: **34**. El bloque de `st-25` sí se aplicó. Mi diagnóstico anterior era falso y lo corrijo sin rodeos: **el canal funciona, el límite es un bloque por respuesta.** Cuando mandé dos, el intérprete tomó la primera y descartó el resto en silencio.
+
+## Estado real con 34
+
+- **SETUP** — 10 (sale st-25)
+- **PORTFOLIO** — 8
+- **DAILY** — 7
+- **CONTACT** — 5
+- **PTR** — 4
+
+## Cómo seguimos
+
+Queda el reordenamiento: horas y contexto para las 34. Eso son **34 respuestas mías y 34 confirmaciones tuyas**. Es viable, pero antes de gastar esa conversación dime cuál prefieres:
+
+- **Opción A — las 34 completas**, en orden cronológico del 09 al 25. Es lo que dejé planteado.
+- **Opción B — solo lo que cambia algo.** En la práctica, un único movimiento: `st-10` sale del taller y entra en PORTFOLIO. Las horas son cosméticas y el `context` no lo vas a leer salvo que abras la ficha de cada historia.
+
+Te recomiendo la **B** y usar el tiempo en lo que sí mueve la aguja: el copy de los posts del 16 al 19, donde LinkedIn e Instagram están publicando lo mismo el mismo día sin que uno alimente al otro.
+
+## Primer bloque (arranco por st-1, sirve igual para A o B)
+
+
+
+Presiona y dime **34 sin cambios** o **listo**. Si eliges A, el siguiente es `st-2` a las 13:00. Si eliges B, salto directo a `st-10`.
+
+> **Acción estructurada generada:** `[{"type":"update_story","id":"st-1","name":"Detrás de cámaras de la mesa de trabajo","date":"2026-11-09","time":"08:15","highlight":"SETUP","format":"Foto","status":"Idea","context":"Plano cenital de la mesa con hojas impresas, regla metálica y taza. Se publica a primera hora para abrir la campaña mostrando el espacio antes que el resultado: el espectador ve dónde se fabrica, no qué se fabricó. Deja sensación de taller activo sin revelar ninguna pieza del portafolio."}]`
 
