@@ -1,9 +1,9 @@
 # 🧠 Archivo de Contexto y Memoria de Conversaciones IA
 **Proyecto:** Portafolio Profesional 2026 — Peter Orostegui (`@soyorostegui`)
 **Concepto Rector:** *«Mientras tanto»* (Campaña: 9 al 25 de Noviembre de 2026 · Hito Día D: 20 de Noviembre)
-**Última actualización:** 8/11/2026, 10:50:31 p. m.
+**Última actualización:** 8/11/2026, 10:51:09 p. m.
 **Motor IA Activo:** DeepSeek (`deepseek-flash`)
-**Gasto Acumulado en Sesión:** $0.08007 USD (233892 tokens)
+**Gasto Acumulado en Sesión:** $0.08389 USD (248375 tokens)
 
 ---
 
@@ -39,47 +39,52 @@
 
 ## 2. Destacadas & Historias
 
-### Destacadas (4)
-- `hl-hito` 🎯 **HITO 20.11** — 6 historia(s) · Del teaser «Mientras tanto» al archivo completo. Portafolio Profesional 2026.
-- `hl-calle` ⚡ **EN LA CALLE** — 8 historia(s) · Vallas a 80 km/h, caravanas y pantallas LED. El diseño verificándose en el mundo real.
-- `hl-proceso` 🛠️ **PROCESO** — 9 historia(s) · Del vector al pliego. Retículas, sangrías, marcas de corte y pruebas de color.
-- `hl-criterio` 💡 **CRITERIO** — 7 historia(s) · Encuestas, referentes y debates. Cómo se entrena el ojo que decide.
+### Destacadas (5)
+- `hl-criterio` ◼ **DAILY** — 6 historia(s) · Criterio + proceso diario
+- `hl-proceso` ▲ **SETUP** — 9 historia(s) · Taller + preprensa
+- `hl-hito` ● **PORTFOLIO** — 5 historia(s) · Behance + lanzamiento 20.11
+- `hl-calle` ◈ **CONTACT** — 10 historia(s) · Proyectos + colaboraciones
+- `hl-ptr` ▮ **PTR** — 4 historia(s) · Peter Orostegui + diseño gráfico
 
-### Historias (30)
-- `st-1` #1 · 2026-11-09 · PROCESO · **Detrás de cámaras de la mesa de trabajo** · Foto con retícula · Idea
-- `st-2` #2 · 2026-11-09 · PROCESO · **Pantalla con vectores y curvas en Illustrator** · Video corto · Idea
-- `st-3` #3 · 2026-11-09 · HITO 20.11 · **Caja de preguntas: «¿Qué se viene?»** · Sticker interactivo · Idea
-- `st-4` #4 · 2026-11-10 · PROCESO · **Muestra de texturas de papel especial** · Foto macro · Idea
-- `st-5` #5 · 2026-11-10 · CRITERIO · **Encuesta: ¿Prefieres papel mate o brillante?** · Encuesta · Idea
-- `st-6` #6 · 2026-11-11 · PROCESO · **Marcas de corte y sangría en archivo real** · Captura técnica · Idea
-- `st-7` #7 · 2026-11-11 · PROCESO · **Preparando planchas de impresión** · Boomerang taller · Idea
-- `st-8` #8 · 2026-11-12 · CRITERIO · **Debate: ¿Cuándo un logo necesita simplificarse?** · Sticker deslizador · Idea
-- `st-9` #9 · 2026-11-12 · CRITERIO · **Libros y referencias de diseño que uso** · Foto de biblioteca · Idea
-- `st-10` #10 · 2026-11-12 · PROCESO · **Hojeando rápido un cuadernillo impreso** · Video rápido · Idea
-- `st-11` #11 · 2026-11-13 · PROCESO · **Reflejo de luz en estampado dorado** · Video con luz · Idea
-- `st-12` #12 · 2026-11-13 · CRITERIO · **Votación: ¿Tipografía Serif o Sans?** · Encuesta · Idea
-- `st-13` #13 · 2026-11-14 · CRITERIO · **Muestra de espaciado y kerning manual** · Captura antes/después · Idea
-- `st-14` #14 · 2026-11-14 · PROCESO · **El orden de capas en un archivo maestro** · Captura de capas · Idea
-- `st-15` #15 · 2026-11-15 · CRITERIO · **Q&A: Preguntas sobre diseño y dirección de arte** · Cajita de preguntas · Idea
-- `st-16` #16 · 2026-11-15 · CRITERIO · **Respondiendo la pregunta más votada** · Hablando a cámara · Idea
-- `st-17` #17 · 2026-11-16 · EN LA CALLE · **Pasando en carro frente a una valla en la avenida** · Video en movimiento · Idea
-- `st-18` #18 · 2026-11-16 · EN LA CALLE · **La escala humana frente a una pieza OOH** · Foto urbana · Idea
-- `st-19` #19 · 2026-11-16 · PROCESO · **Render de visualizer en After Effects** · Video de pantalla · Idea
-- `st-20` #20 · 2026-11-17 · EN LA CALLE · **Caravana de vehículos con gráfica instalada** · Video de calle · Idea
-- `st-21` #21 · 2026-11-17 · EN LA CALLE · **Prueba de pantallas LED en tarima de concierto** · Video prueba luces · Idea
-- `st-22` #22 · 2026-11-17 · EN LA CALLE · **El concierto en vivo lleno de visuales** · Foto de multitud · Idea
-- `st-23` #23 · 2026-11-18 · EN LA CALLE · **Detalle macro de hilo y bordado en gorra** · Foto macro · Idea
-- `st-24` #24 · 2026-11-18 · EN LA CALLE · **Pegatinas troqueladas listas en la mesa** · Boomerang · Idea
-- `st-25` #25 · 2026-11-18 · EN LA CALLE · **Comprobando resolución a escala 1:1** · Captura técnica · Idea
-- `st-26` #26 · 2026-11-19 · HITO 20.11 · **Sticker oficial de Countdown: 24 Horas** · Cuenta regresiva · Idea
-- `st-27` #27 · 2026-11-19 · HITO 20.11 · **Mesa con los 4 tomos encuadernados listos** · Foto mesa de entrega · Idea
-- `st-28` #28 · 2026-11-19 · HITO 20.11 · **Reflexión previa al día de entrega** · Texto sobrio con audio · Idea
-- `st-29` #29 · 2026-11-20 · HITO 20.11 · **Sustentación del portafolio en directo** · Foto en auditorio · Idea
-- `st-30` #30 · 2026-11-20 · HITO 20.11 · **¡Portafolio online en Behance! Desliza arriba** · Link Sticker directo · Idea
+### Historias (34)
+- `st-1` #1 · 2026-11-09 · SETUP · **Detrás de cámaras de la mesa de trabajo** · Foto con retícula · Idea
+- `st-2` #2 · 2026-11-09 · SETUP · **Pantalla con vectores y curvas en Illustrator** · Video corto · Idea
+- `st-3` #3 · 2026-11-09 · PORTFOLIO · **Caja de preguntas: «¿Qué se viene?»** · Sticker interactivo · Idea
+- `st-4` #4 · 2026-11-10 · SETUP · **Muestra de texturas de papel especial** · Foto macro · Idea
+- `st-5` #5 · 2026-11-10 · DAILY · **Encuesta: ¿Prefieres papel mate o brillante?** · Encuesta · Idea
+- `st-6` #6 · 2026-11-11 · SETUP · **Marcas de corte y sangría en archivo real** · Captura técnica · Idea
+- `st-7` #7 · 2026-11-11 · SETUP · **Preparando planchas de impresión** · Boomerang taller · Idea
+- `st-8` #8 · 2026-11-12 · DAILY · **Debate: ¿Cuándo un logo necesita simplificarse?** · Sticker deslizador · Idea
+- `st-9` #9 · 2026-11-12 · DAILY · **Libros y referencias de diseño que uso** · Foto de biblioteca · Idea
+- `st-10` #10 · 2026-11-12 · SETUP · **Hojeando rápido un cuadernillo impreso** · Video rápido · Idea
+- `st-11` #11 · 2026-11-13 · SETUP · **Reflejo de luz en estampado dorado** · Video con luz · Idea
+- `st-12` #12 · 2026-11-13 · DAILY · **Votación: ¿Tipografía Serif o Sans?** · Encuesta · Idea
+- `st-13` #13 · 2026-11-14 · DAILY · **Muestra de espaciado y kerning manual** · Captura antes/después · Idea
+- `st-14` #14 · 2026-11-14 · SETUP · **El orden de capas en un archivo maestro** · Captura de capas · Idea
+- `st-15` #15 · 2026-11-15 · DAILY · **Q&A: Preguntas sobre diseño y dirección de arte** · Cajita de preguntas · Idea
+- `st-16` #16 · 2026-11-15 · PTR · **Respondiendo la pregunta más votada** · Hablando a cámara · Idea
+- `st-17` #17 · 2026-11-16 · CONTACT · **Pasando en carro frente a una valla en la avenida** · Video en movimiento · Idea
+- `st-18` #18 · 2026-11-16 · CONTACT · **La escala humana frente a una pieza OOH** · Foto urbana · Idea
+- `st-19` #19 · 2026-11-16 · SETUP · **Render de visualizer en After Effects** · Video de pantalla · Idea
+- `st-20` #20 · 2026-11-17 · CONTACT · **Caravana de vehículos con gráfica instalada** · Video de calle · Idea
+- `st-21` #21 · 2026-11-17 · CONTACT · **Prueba de pantallas LED en tarima de concierto** · Video prueba luces · Idea
+- `st-22` #22 · 2026-11-17 · CONTACT · **El concierto en vivo lleno de visuales** · Foto de multitud · Idea
+- `st-23` #23 · 2026-11-18 · CONTACT · **Detalle macro de hilo y bordado en gorra** · Foto macro · Idea
+- `st-24` #24 · 2026-11-18 · CONTACT · **Pegatinas troqueladas listas en la mesa** · Boomerang · Idea
+- `st-25` #25 · 2026-11-18 · CONTACT · **Comprobando resolución a escala 1:1** · Captura técnica · Idea
+- `st-26` #26 · 2026-11-19 · PORTFOLIO · **Sticker oficial de Countdown: 24 Horas** · Cuenta regresiva · Idea
+- `st-27` #27 · 2026-11-19 · PORTFOLIO · **Mesa con los 4 tomos encuadernados listos** · Foto mesa de entrega · Idea
+- `st-28` #28 · 2026-11-19 · PTR · **Reflexión previa al día de entrega** · Texto sobrio con audio · Idea
+- `st-29` #29 · 2026-11-20 · PORTFOLIO · **Sustentación del portafolio en directo** · Foto en auditorio · Idea
+- `st-30` #30 · 2026-11-20 · PORTFOLIO · **¡Portafolio online en Behance! Desliza arriba** · Link Sticker directo · Idea
+- `st-1794196266553-508` #31 · 2026-11-21 · CONTACT · **Hablemos de diseño: proyectos y colaboraciones** · Sticker · Idea
+- `st-1794196266555-622` #32 · 2026-11-21 · CONTACT · **Respuesta en menos de 24 h — contacto directo** · Foto · Idea
+- `st-1794196266559-552` #33 · 2026-11-22 · PTR · **8 semestres de formación, taller propio** · Foto · Idea
+- `st-1794196266562-575` #34 · 2026-11-22 · PTR · **La firma: PTR** · Foto · Idea
 
 ---
 
-## 4. Historial de Conversaciones y Acuerdos con Copilot IA (9 mensajes)
+## 4. Historial de Conversaciones y Acuerdos con Copilot IA (10 mensajes)
 
 ### [1] 👤 **Peter Orostegui** — *8/11/2026, 10:43:33 p. m.*
 Hola
@@ -331,4 +336,72 @@ Portadas actualizadas:
 • PORTFOLIO → Behance + lanzamiento 20.11.
 • CONTACT → Proyectos + colaboraciones.
 • PTR → Peter Orostegui + diseño gráfico.
+
+### [10] ✨ **Copilot IA** — *8/11/2026, 10:51:06 p. m.*
+Recibido. Aplico el sistema de 5 portadas y reordeno todo, pero antes dos cosas que tienes que saber, porque afectan la integridad del perfil y las resuelvo en la misma ejecución:
+
+**1. No borro las carpetas viejas: las convierto.** Si eliminara `hl-hito`, `hl-proceso`, `hl-criterio` y `hl-calle`, las 30 historias quedarían apuntando a nombres que ya no existen — carpetas vacías y contenido huérfano. Reutilizo los IDs y reasigno cada historia a su nueva carpeta. El sistema de 5 queda completo y sin pérdidas.
+
+**2. El sistema de 5 no tiene dónde poner «EN LA CALLE».** Ocho historias (vallas a 80 km/h, caravana, LED, textil macro) no encajan en DAILY, SETUP, PORTFOLIO ni PTR. Las asigno a **CONTACT**, que en tu propio orden visual dice *«Proyectos: branding, packaging, OOH»*: es exactamente lo que esa carpeta demuestra cuando alguien quiere contratar. Si más adelante quieres recuperar «CALLE» como sexta destacada, se crea sin tocar nada.
+
+**Mapeo aplicado**
+
+| Carpeta | ID | Historias |
+|---|---|---|
+| DAILY | hl-criterio | 6 |
+| SETUP | hl-proceso | 9 |
+| PORTFOLIO | hl-hito | 5 |
+| CONTACT | hl-calle | 8 + 2 nuevas |
+| PTR | hl-ptr (nueva) | 2 + 2 nuevas |
+
+**3. PTR y CONTACT arrancaban vacías.** Una carpeta sin historias se ve rota. Creo 4 historias nuevas para el 21 y 22.11 — que además llenan los días muertos del calendario tras el lanzamiento. Nada más: no inflo el cronograma con las 5 portadas, porque son piezas de diseño gráfico, no stories del calendario.
+
+**Íconos geométricos** (coherentes con tu sistema): ◼ ▲ ● ◈ ▮
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quedan las 5 carpetas activas y ninguna vacía: **DAILY 6 · SETUP 9 · PORTFOLIO 5 · CONTACT 10 · PTR 4**.
+
+**Pendiente para el diseño de portadas:** las cinco comparten fondo negro, mayúsculas con tracking amplio, ícono geométrico y línea fina — pero conviene que el ícono cambie de forma y no solo de glifo, para que se distingan a tamaño pulgar. Si quieres, el siguiente paso es redactar los textos exactos de las historias que faltan por día (21 al 25.11), que es donde el perfil se queda sin voz después del lanzamiento.
+
+> **Acción estructurada generada:** `[{"type":"update_highlight","id":"hl-criterio","name":"DAILY","icon":"◼","desc":"Criterio + proceso diario"},{"type":"update_highlight","id":"hl-proceso","name":"SETUP","icon":"▲","desc":"Taller + preprensa"},{"type":"update_highlight","id":"hl-hito","name":"PORTFOLIO","icon":"●","desc":"Behance + lanzamiento 20.11"},{"type":"update_highlight","id":"hl-calle","name":"CONTACT","icon":"◈","desc":"Proyectos + colaboraciones"},{"type":"create_highlight","id":"hl-ptr","name":"PTR","icon":"▮","desc":"Peter Orostegui + diseño gráfico"},{"type":"reorder_highlights","order":["hl-criterio","hl-proceso","hl-hito","hl-calle","hl-ptr"]},{"type":"update_story","id":"st-1","highlight":"SETUP"},{"type":"update_story","id":"st-2","highlight":"SETUP"},{"type":"update_story","id":"st-4","highlight":"SETUP"},{"type":"update_story","id":"st-6","highlight":"SETUP"},{"type":"update_story","id":"st-7","highlight":"SETUP"},{"type":"update_story","id":"st-10","highlight":"SETUP"},{"type":"update_story","id":"st-11","highlight":"SETUP"},{"type":"update_story","id":"st-14","highlight":"SETUP"},{"type":"update_story","id":"st-19","highlight":"SETUP"},{"type":"update_story","id":"st-5","highlight":"DAILY"},{"type":"update_story","id":"st-8","highlight":"DAILY"},{"type":"update_story","id":"st-9","highlight":"DAILY"},{"type":"update_story","id":"st-12","highlight":"DAILY"},{"type":"update_story","id":"st-13","highlight":"DAILY"},{"type":"update_story","id":"st-15","highlight":"DAILY"},{"type":"update_story","id":"st-3","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-26","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-27","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-29","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-30","highlight":"PORTFOLIO"},{"type":"update_story","id":"st-17","highlight":"CONTACT"},{"type":"update_story","id":"st-18","highlight":"CONTACT"},{"type":"update_story","id":"st-20","highlight":"CONTACT"},{"type":"update_story","id":"st-21","highlight":"CONTACT"},{"type":"update_story","id":"st-22","highlight":"CONTACT"},{"type":"update_story","id":"st-23","highlight":"CONTACT"},{"type":"update_story","id":"st-24","highlight":"CONTACT"},{"type":"update_story","id":"st-25","highlight":"CONTACT"},{"type":"update_story","id":"st-16","highlight":"PTR"},{"type":"update_story","id":"st-28","highlight":"PTR"},{"type":"create_story","name":"Hablemos de diseño: proyectos y colaboraciones","date":"2026-11-21","highlight":"CONTACT","format":"Sticker","status":"Idea"},{"type":"create_story","name":"Respuesta en menos de 24 h — contacto directo","date":"2026-11-21","highlight":"CONTACT","format":"Foto","status":"Idea"},{"type":"create_story","name":"8 semestres de formación, taller propio","date":"2026-11-22","highlight":"PTR","format":"Foto","status":"Idea"},{"type":"create_story","name":"La firma: PTR","date":"2026-11-22","highlight":"PTR","format":"Foto","status":"Idea"}]`
 
